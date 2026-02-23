@@ -22,6 +22,15 @@ import { FormsModule } from '@angular/forms';
 import { TermsandconditionsComponent } from './pages/pages/termsandconditions/termsandconditions.component';
 import { PrivacypolicyComponent } from './pages/pages/privacypolicy/privacypolicy.component';
 import { FaqComponent } from './pages/pages/faq/faq.component';
+import { SearchBarComponent } from './shared/search-bar/search-bar.component';
+import { SearchResultsComponent } from './pages/search/search-results/search-results.component';
+import { ChemicalwearsComponent } from './pages/ppe/bycategory/clothing/chemicalwears/chemicalwears.component';
+import { BagclosermachinesComponent } from './pages/powertools/bycategories/bagclosermachines/bagclosermachines.component';
+import { WheellocksComponent } from './pages/workshopgarage/wheelserviceequipment/wheellocks/wheellocks.component';
+import { PuttyknifeComponent } from './pages/handtoolsandaccessories/category/puttyknife/puttyknife.component';
+import { BrandsComponent } from './pages/brands/brands.component';
+import { DashboardComponent } from './pages/dashboard/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,11 +51,21 @@ import { FaqComponent } from './pages/pages/faq/faq.component';
     TermsandconditionsComponent,
     PrivacypolicyComponent,
     FaqComponent,
+    SearchBarComponent,
+    SearchResultsComponent,
+    ChemicalwearsComponent,
+    BagclosermachinesComponent,
+    WheellocksComponent,
+    PuttyknifeComponent,
+    BrandsComponent,
+    DashboardComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
      FormsModule,
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

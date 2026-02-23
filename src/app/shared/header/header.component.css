@@ -31,9 +31,10 @@
 /* ★★★ MOST IMPORTANT FIX ★★★ 
    Allow mega menu to position relative to viewport/navbar, not the <li>
 */
-.navbar-nav .dropdown {
+.navbar-nav .dropdown.mega-parent {
   position: static !important;
 }
+
 
 /* Mega Dropdown Container */
 .mega-dropdown {
@@ -187,49 +188,15 @@
   }
 }
 
-/* === FIX MEGA MENU POSITION JUMPING === */
 
-/* Anchor dropdowns to navbar, not page */
-.navbar .dropdown {
-  position: static;
+
+
+/* Hover effect for Pages & Shop dropdown items ONLY */
+.navbar .dropdown:not(.mega-parent) .dropdown-item:hover {
+  background-color: #ffba00;   /* your yellow */
+  color: #001f3f !important;   /* navy text */
+  font-weight: 500;
 }
-
-/* Main mega dropdown stays centered */
-.navbar .dropdown-menu.mega-dropdown {
-  position: absolute;
-  left: 50% !important;
-  transform: translateX(-50%);
-  top: 100%;
-  margin-top: 0.5rem;
-}
-
-/* Prevent Bootstrap JS from forcing left alignment */
-.navbar .dropdown-menu {
-  right: auto !important;
-}
-
-/* Submenu positioning (no jumping left) */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu > .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-left: 0.25rem;
-}
-
-/* Desktop hover support (optional but recommended) */
-@media (min-width: 992px) {
-  .navbar .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-submenu:hover > .dropdown-menu {
-    display: block;
-  }
-}
-
 
 
 
@@ -365,4 +332,21 @@
 .top-bar .col-auto {
   overflow: visible !important;
 }
+
+/* Account dropdown hover */
+.top-bar .dropdown-menu .dropdown-item {
+  transition: all 0.25s ease;
+}
+
+.top-bar .dropdown-menu .dropdown-item:hover {
+  background-color: #ffba00;
+  color: #000;
+}
+
+/* Keep Logout red on hover */
+.top-bar .dropdown-menu .dropdown-item.text-danger:hover {
+  background-color: #ffe5e5;
+  color: #dc3545;
+}
+
 

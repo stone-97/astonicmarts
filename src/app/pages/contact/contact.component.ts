@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ContactService } from '../../core/services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,19 +9,21 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent {
 
-  successMessage: string = '';
+ successMessage = '';
+
+  constructor(private contactService: ContactService){}
 
   onSubmit(form: NgForm) {
-    if (form.invalid) {
-      this.successMessage = '';
+
+    if(form.invalid){
       return;
     }
 
-    // Show success message
-    this.successMessage = "Your message has been sent successfully!";
+    this.contactService.sendMessage(form.value).subscribe(res => {
 
-    // Reset form and validation state
-    form.resetForm();
+      this.successMessage = "Your message has been sent successfully!";
+      form.resetForm();
+
+    });
   }
-
 }

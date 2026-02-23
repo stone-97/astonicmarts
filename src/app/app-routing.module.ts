@@ -1,3 +1,4 @@
+import { FallarrestorsComponent } from './pages/ppe/bycategory/fallarrestors/fallarrestors.component';
 
 
 import { VacuumpumpsComponent } from './pages/pumpingmachines/vacuumpumps/vacuumpumps.component';
@@ -5,12 +6,8 @@ import { DrumtrucksComponent } from './pages/constructionequipment/drumtrucks/dr
 import { JumpingrammersComponent } from './pages/constructionequipment/jumpingrammers/jumpingrammers.component';
 import { CategoryComponent } from './pages/handtoolsandaccessories/category/category.component';
 import { ScrubbersandsweepersComponent } from './pages/cleaningandgardensupplies/scrubbersandsweepers/scrubbersandsweepers.component';
-import { BagclosersComponent } from './pages/electricalequipments/bagclosers/bagclosers.component';
 import { SpraygunsComponent } from './pages/powertools/bycategories/sprayguns/sprayguns.component';
 import { ReciprocatingsawsComponent } from './pages/powertools/bycategories/saws/reciprocatingsaws/reciprocatingsaws.component';
-
-
-
 import { ToolssetsComponent } from './pages/handtoolsandaccessories/category/toolssets/toolssets.component';
 
 
@@ -109,9 +106,7 @@ import { SafetyjoggersComponent } from './pages/ppe/bybrands/safetyjoggers/safet
 import { ThreeMComponent } from './pages/ppe/bybrands/three-m/three-m.component';
 import { UvexComponent } from './pages/ppe/bybrands/uvex/uvex.component';
 import { BycategoryComponent } from './pages/cleaningandgardensupplies/pressurewashers/bycategory/bycategory.component';
-import { FallarrestorsComponent } from './pages/constructionequipment/fallarrestors/fallarrestors.component';
 import { PowertoolsComponent } from './pages/powertools/powertools.component';
-import { BagcloserComponent } from './pages/powertools/bycategories/bagcloser/bagcloser.component';
 import { CordeddrillsComponent } from './pages/powertools/bycategories/drills/cordeddrills/cordeddrills.component';
 import { CordlessdrillsanddriversComponent } from './pages/powertools/bycategories/drills/cordlessdrillsanddrivers/cordlessdrillsanddrivers.component';
 import { CoredrillsComponent } from './pages/powertools/bycategories/drills/coredrills/coredrills.component';
@@ -323,12 +318,26 @@ import { WarrantyandreturnsComponent } from './pages/pages/warrantyandreturns/wa
 import { TermsandconditionsComponent } from './pages/pages/termsandconditions/termsandconditions.component';
 import { PrivacypolicyComponent } from './pages/pages/privacypolicy/privacypolicy.component';
 import { FaqComponent } from './pages/pages/faq/faq.component';
+import { SearchResultsComponent } from './pages/search/search-results/search-results.component';
+import { ChemicalwearsComponent } from './pages/ppe/bycategory/clothing/chemicalwears/chemicalwears.component';
+import { BagclosermachinesComponent } from './pages/powertools/bycategories/bagclosermachines/bagclosermachines.component';
+import { WheellocksComponent } from './pages/workshopgarage/wheelserviceequipment/wheellocks/wheellocks.component';
+import { DesielgeneratorsComponent } from './pages/electricalequipments/generators/desielgenerators/desielgenerators.component';
+import { AlcoholtestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterandlabtesters/alcoholtesters/alcoholtesters.component';
+import { PlatformscalesComponent } from './pages/measuringandtesting/measuringscales/digitalscales/platformscales/platformscales.component';
+import { BathroomscalesComponent } from './pages/measuringandtesting/measuringscales/digitalscales/bathroomscales/bathroomscales.component';
+import { CuttingandgrindingdiscComponent } from './pages/handtoolsandaccessories/category/handtoolsaccessories/cuttingandgrindingdisc/cuttingandgrindingdisc.component';
+import { PuttyknifeComponent } from './pages/handtoolsandaccessories/category/puttyknife/puttyknife.component';
+import { DashboardComponent } from './pages/dashboard/dashboard/dashboard.component';
 
 
 
 const routes: Routes = [
+
   {path: "", component: HomeComponent},
   {path: "index", component: HomeComponent},
+  {path: "dash", component: DashboardComponent},
+  {path: "search-results", component: SearchResultsComponent},
   {path: "shopcategories", component:ShopcategoriesComponent},
   {path:"shoppingcart", component:ShoppingcartComponent},
   {path: "productdetails", component: ProductdetailsComponent},
@@ -369,8 +378,9 @@ const routes: Routes = [
     {path: "coveralls", component: CoverallsComponent},
    {path: "fireresistantsuits", component: FireresistantwearsComponent},
     {path: "labcoats", component: LabcoatsComponent},
+   {path: "chemicalwears", component: ChemicalwearsComponent },
     {path: "rainwears", component:RainwearsComponent},
-    {path: "reflectivests", component:ReflectivevestsComponent},
+    {path: "reflectivevests", component:ReflectivevestsComponent},
      {path: "umbrellas", component: SupersteelComponent},
     {path: "emergencyeyewash", component: EmergencyeyewashComponent},
     {path: "fallarrestors", component: FallarrestorsComponent},
@@ -441,10 +451,10 @@ const routes: Routes = [
   {path: "pneumatic", component: PnuematicComponent},
   {path:"mixers", component:MixersComponent},
   {path:"sanders", component:SandersComponent},
-  {path:"polishers", component:JackhammersComponent},
-  {path:"saws", component:PolishersComponent},
-  {path:"bagcloser", component:BagcloserComponent},
-  {path:"planers", component:SawsComponent},
+  {path:"polishers", component: PolishersComponent},
+  {path:"saws", component:SawsComponent},
+  {path: "bagclosermachines", component: BagclosermachinesComponent},
+  {path:"planers", component:PlanersComponent},
   {path:"edgebandingmachines", component:EdgebandingmachinesComponent},   
   {path:"greaseguns", component:GreasegunsComponent},  
   {path:"gunsandtrimmers", component:GunsandtrimmersComponent},  
@@ -453,8 +463,7 @@ const routes: Routes = [
   {path:"ppr", component:PprComponent},
    {path:"wallchasers", component:WallchasersComponent},  
   {path:"routers", component:RoutersComponent},  
-  {path:"sprayguns", component:SpraygunsComponent},
-   {path:"bagsclosers", component:BagclosersComponent},  
+  {path:"sprayguns", component:SpraygunsComponent}, 
   {path:"saws", component:SawsComponent},  
   {path:"bandsaws", component:BandsawsComponent},  
   {path:"chainsaws", component:ChainsawsComponent},
@@ -474,9 +483,9 @@ const routes: Routes = [
    {path:"sealantadhesive", component:SealantadhesiveComponent},
     {path:"constructionadhesives", component:ConstructionadhesivesComponent},
      {path:"epoxyadhesives", component:EpoxyadhesivesComponent},
-   {path:"pufoamsealant", component:PufoamsealantsComponent},
+   {path:"pufoamsealants", component:PufoamsealantsComponent},
    {path:"siliconsealants", component:SiliconesealantsComponent},
-    {path:"tilesadhesive",component: TilesadhesivesComponent},
+    {path:"tilesadhesives",component: TilesadhesivesComponent},
      {path:"woodglues", component:WoodgluesComponent},
     {path:"gums", component:GumsComponent},
     {path:"contactadhesives", component:ContactadhesivesComponent},
@@ -488,10 +497,10 @@ const routes: Routes = [
        // Fire safety
       {path: "firesafety", component:FiresafetyComponent},
       {path: "fireblankets", component:FireblanketsComponent},
-       {path: "fireextinguisher", component:FireextinguishersComponent},
+       {path: "fireextinguishers", component:FireextinguishersComponent},
         {path: "smoke_firealarms", component:SmokeFirealarmsComponent},
        {path:"firehose", component:FirehoseComponent},
-       {path:"firecabinet", component:FirehosecabinetComponent},
+       {path:"firehosecabinet", component:FirehosecabinetComponent},
 
         // traffic safety
          {path: "cautionsigns", component:CautionsignsComponent},
@@ -501,7 +510,7 @@ const routes: Routes = [
          {path: "speedbumps", component:SpeedbumpsComponent},
          {path: "trafficcones", component:TrafficconesComponent},
          {path: "warningsigns", component:WarningsignsComponent},
-         {path: "wheelchocks", component:WheelchocksComponent},
+         {path: "wheelchokes", component:WheelchocksComponent},
          {path:"inspectionmirrors", component:InspectionmirrorsComponent},
          {path:"convexmirrors", component:ConvexmirrorsComponent},
          {path:"metaldetectors", component:MetaldetectorsComponent},
@@ -516,11 +525,11 @@ const routes: Routes = [
         {path:"workshopgarage", component:WorkshopgarageComponent},
          {path:"aircompressors", component:AircompressorsComponent},
          {path:"powerextensionandreels", component:PowerextensionandreelsComponent},
-         {path:"toolscabinet", component:ToolscabinetComponent},
+         {path:"toolscabinets", component:ToolscabinetComponent},
           {path:"toolssets", component:ToolssetComponent},
           {path:"workbenches", component:WorkbenchesComponent},
+          {path: "greasebuckets", component: GreasegunsComponent},
           {path:"carcreepers", component:CarcreepersComponent},
-          
             {path:"rotarypumps", component:RotarypumpsComponent}, 
            {path:"testingbuckets", component:TestingbucketsComponent},  
            
@@ -537,8 +546,8 @@ const routes: Routes = [
               {path:"wheeelserviceequipment", component:WheelserviceequipmentComponent}, 
               {path:"tirechangers", component:TirechangesComponent},
               {path:"wheelsalignmentguages", component:WheelalignmentguagesComponent},
-             {path:"wheelschock", component:WheelchocksComponent},
-             {path:"wheelslock", component:WheelchocksComponent},
+             {path:"wheelchock", component:WheelchocksComponent},
+             {path: "wheellocks", component: WheellocksComponent},
               {path:"wheelbalancers", component:WheelbalancersComponent},
                 
 
@@ -556,12 +565,11 @@ const routes: Routes = [
               {path:"autocompressors", component:AutocompressorsComponent},
                {path:"aircompressors", component:AircompressorsComponent},
               {path:"batteries", component:BatteriesComponent},
-              {path:"batterycharges", component:BatterychargersComponent},
-              {path:"batterytesters", component:GeneratorsComponent}, 
-               {path:"bagclosers", component:BagcloserComponent}, 
+              {path:"batterychargers", component:BatterychargersComponent},
+              {path:"batterytesters", component:BatterytestersComponent}, 
               {path:"extensioncablewires", component:ExtensioncablewiresComponent},  
               {path:"generators", component:GeneratorsComponent}, 
-              {path:"desielgenerators", component:StepladdersComponent}, 
+              {path:"desielgenerators", component:DesielgeneratorsComponent}, 
               {path:"invertergenerators", component:InvertergeneratorsComponent}, 
               {path:"petrolgenerators", component:PetrolgeneratorsComponent},      
               {path:"plasmacutters", component:PlasmacuttersComponent}, 
@@ -569,7 +577,7 @@ const routes: Routes = [
               {path:"weldingmachines", component:WeldingmachinesComponent},  
               {path:"migweldingmachines", component:MigweldingmachinesComponent},   
               {path:"mmaweldingmachines", component:MmaweldingmachinesComponent},  
-              {path:"tigweldingnachines", component:TigweldingmachinesComponent},
+              {path:"tigweldingmachines", component:TigweldingmachinesComponent},
               {path:"weldingaccessories", component:WeldingaccessoriesComponent},      
                {path:"arcweldingmachines", component:ArcweldingmachinesComponent},
 
@@ -608,6 +616,7 @@ const routes: Routes = [
                      {path:"meters",component:MetersComponent},
                     {path:"testers",component:TestersComponent},
                      {path:"waterandlabtesters", component:WaterandlabtestersComponent},
+                     {path: "alcoholtesters", component: AlcoholtestersComponent},
                      {path:"concretemeters", component:ConcretemetersComponent},
                      {path:"moisturetester", component:MoisturetestersComponent},
                    {path:"phmeters", component:PhmetersComponent}, 
@@ -617,12 +626,14 @@ const routes: Routes = [
                       // meaasuring scales 
                     {path:"measuringscales", component:MeasuringscalesComponent},
                     {path:"analoguescales", component:AnaloguescalesComponent},
-                  {path:"beambalancers", component:BeambalancesComponent},
+                  {path:"beambalances", component:BeambalancesComponent},
                     {path:"mechanicalplatformscales", component:MechanicalplatformscalesComponent},
-                   {path:"springbalances", component:SpringbalancesComponent},             
-                    {path:"digitalscales", component:DigitalscalesComponent},
-                  {path:"analyticalbalances", component:AnalyticalbalancesComponent},
-                  {path:" bathroomscales", component:BeambalancesComponent},
+                   {path:"springbalancers", component:SpringbalancesComponent},             
+                    {path:"digitalscalers", component:DigitalscalesComponent},
+                  {path:"analyticalbalancers", component:AnalyticalbalancesComponent},
+                  {path: "platformscales", component: PlatformscalesComponent},
+                
+                  {path:"bathroomscales", component:BathroomscalesComponent},
                   {path:"cranes", component:CranesComponent}, 
                   {path:"hangingscales", component:HangingscalesComponent},
                  {path:"kitchenscales", component:KitchenscalesComponent}, 
@@ -651,24 +662,26 @@ const routes: Routes = [
           {path:"flaringtools", component:FlaringtoolsComponent},
           {path:"hammersandmallets", component:HammersandmalletsComponent},
           {path:"handriveters", component:HandrivetersComponent}, 
-          {path:"pliersandcuttters", component:PliersandcuttersComponent},   
+          {path:"pliersandcutters", component:PliersandcuttersComponent},   
           {path:"screwdrivers", component:ScrewdriversComponent},   
-          {path:"socketsandratchets", component:SocketsandratchetsComponent},  
-          {path:"spannersandratchets", component:SpannersandwrenchesComponent},   
+          {path:"socketsandratchets", component:SocketsandratchetsComponent}, 
+          {path: 'chiselsandpunches', component: ChiselsandpunchesComponent},
+          {path:"spannersandwrenches", component:SpannersandwrenchesComponent},   
           {path:"tilescutters", component:TilescutterComponent},  
-          {path:"saws", component:SawsComponent}, 
+          {path:"handsaws", component:SawsComponent}, 
           {path:"bearingpullers", component:BearingpullersComponent},      
           {path:"measuringtapes", component:MeasuringtapesComponent},         
           {path:"toolsbags", component:ToolsbagsComponent}, 
           {path:"toolsboxes", component:ToolboxesComponent},  
           {path:"utilityknivesandblades", component:UtilityknicesandbladesComponent},
+          {path: "puttyknife", component:PuttyknifeComponent},
           {path:"handtoolsaccesories", component:HandtoolsaccessoriesComponent}, 
-          {path:"cuttingandgrindingdisc", component:SurveytripodsComponent}, 
+          {path:"cuttingandgrindingdisc", component:CuttingandgrindingdiscComponent}, 
           {path:"drillbits", component:DrillbitsComponent},  
           {path:"polishingpadsandbuffers", component:PolishingpadsandbuffersComponent},   
           {path:"sandingpads", component:SandingpadsComponent},    
           {path:"sawblades", component:SawbladesComponent},    
-          {path:"screwdriversbits", component:ScrewdriverbitsComponent},  
+          {path:"screwdriverbits", component:ScrewdriverbitsComponent},  
            {path:"toolssets", component:ToolssetComponent}, 
            {path:"allenkeys", component:AllenkeysComponent}, 
           
@@ -702,12 +715,12 @@ const routes: Routes = [
       // Pumpingmachines
 
          {path:"pumpingmachines", component:PumpingmachinesComponent}, 
-         {path:"fueltransferpumpps", component:FueltransferpumpsComponent}, 
+         {path:"fueltransferpumps", component:FueltransferpumpsComponent}, 
          {path:"pressurepumps", component:PressurepumpsComponent}, 
          {path:"rotarypumps", component:RotarypumpsComponent},    
          {path:"submersiblepumps", component:SubmersiblepumpsComponent},  
          {path:"waterpumps", component:WaterpumpsComponent},
-          {path:"vauumpumps", component:VacuumpumpsComponent},   
+          {path:"vacuumpumps", component:VacuumpumpsComponent},   
          
              
          
@@ -733,7 +746,7 @@ const routes: Routes = [
 
             //  Bycategory
             {path:"cordlessbrushcutters", component:CordlessbruschcuttersComponent}, 
-              {path:"gasolinebrushctters", component:GasolinebrushcuttersComponent}, 
+              {path:"gasolinebrushcutters", component:GasolinebrushcuttersComponent}, 
           
                    //  Bybrands
    {path:"bybrands", component:BybrandsComponent},
@@ -761,7 +774,7 @@ const routes: Routes = [
 
 
       // Scrubbersandsweepers
-   {path:"scrubbersandsweepers", component:TotalComponent},
+   {path:"scrubbersandsweepers", component:ScrubbersandsweepersComponent},
  {path:"cleaningaccessories", component:CleaningaccessoriesComponent},  
 
       // Pressurewashers
