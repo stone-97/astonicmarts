@@ -1,0 +1,24 @@
+.product-image{
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.watermark{
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 3px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+}

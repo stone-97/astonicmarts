@@ -1,440 +1,711 @@
 <section class="banner-area organic-breadcrumb">
-		<div class="container">
-			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-				<div class="col-first">
-					<h1>Product Details Page</h1>
-					<nav class="d-flex align-items-center">
-						<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-						<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
-						<a href="single-product.html">product-details</a>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Banner Area -->
+  <div class="container">
+    <div
+      class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end"
+    >
+      <div class="col-first">
+        <h1>Product Details Page</h1>
+        <nav class="d-flex align-items-center">
+          <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+          <a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
+          <a href="single-product.html">product-details</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Banner Area -->
 
-	<!--================Single Product Area =================-->
-	<div class="product_image_area">
-		<div class="container">
-			<div class="row s_product_inner">
-				<div class="col-lg-6">
-					<div class="s_Product_carousel">
-						<div class="single-prd-item">
-							<img class="img-fluid" src="../../../../assets/img/total pw 2000w copper motor.webp" alt="">
-						</div>
-						<div class="single-prd-item">
-							<img class="img-fluid" src="../../../../assets/img/total pw 2000w copper motor.webp 2.webp" alt="">
-						</div>
+<!--================Single Product Area =================-->
+<div class="product_image_area">
+  <div class="container" *ngIf="product as p">
+    <div class="row s_product_inner">
+      <div class="col-lg-6">
+        <div class="s_Product_carousel">
+  <div class="single-prd-item">
+    <img class="img-fluid" [src]="p.images[0]" alt="" />
+  </div>
 
-						<div class="single-prd-item">
-							<img class="img-fluid" src="../../../../assets/img/total pw 2000w copper motor.webp5.jpg" alt="">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-5 offset-lg-1">
-					<div class="s_product_text">
-						<h3>Total High Pressure Washer – 2000W (TGT11226)</h3>
-                          <h2>₦245,000</h2>
-						<ul class="list">
-                        	<li><a class="active" href="#"><span>Category</span> : Cleaning Machines</a></li>
-                           <li><a href="#"><span>Availability</span> : In Stock</a></li>
-                           <li><a href="#"><span>Power</span> : 2000 Watts</a></li>
+  <div class="single-prd-item">
+    <img class="img-fluid" [src]="p.images[1]" alt="" />
+  </div>
 
-						</ul>
-						<p>
-                        The Total 2000W High Pressure Washer is designed for heavy-duty cleaning tasks such as
-                         car washing, driveway cleaning, industrial equipment maintenance, and home exterior washing.
-                         It delivers powerful water pressure for fast and efficient dirt removal while maintaining
-                         energy efficiency.
-                         </p>
+  <div class="single-prd-item">
+    <img class="img-fluid" [src]="p.images[2]" alt="" />
+  </div>
+</div>
+      </div>
+      <div class="col-lg-5 offset-lg-1">
+        <div class="s_product_text">
+          <h3>{{p.name}}</h3>
+          <h2>{{p.price}}</h2>
+          <ul class="list">
+            <li>
+              <a class="active" href="#"
+                ><span>Category</span> :{{p.category}}</a
+              >
+            </li>
+            <li>
+              <a href="#"><span>Availability</span> : In Stock</a>
+            </li>
+            <li>
+              <a href="#"><span>Brand</span> : {{p.brand}}</a>
+            </li>
+          </ul>
+          <p>
+            The Total 2000W High Pressure Washer is designed for heavy-duty
+            cleaning tasks such as car washing, driveway cleaning, industrial
+            equipment maintenance, and home exterior washing. It delivers
+            powerful water pressure for fast and efficient dirt removal while
+            maintaining energy efficiency.
+          </p>
 
-						<div class="product_count">
-							<label for="qty">Quantity:</label>
-							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-							 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-							<!-- <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+          <!-- Product Variants -->
+
+<div class="mt-3">
+  <h5>Available Colors</h5>
+  <span
+    *ngFor="let color of p.colors"
+    class="badge bg-dark me-2 p-2"
+  >
+    {{ color }}
+  </span>
+</div>
+
+<div class="mt-3">
+  <h5>Available Sizes</h5>
+  <span
+    *ngFor="let size of p.sizes"
+    class="badge bg-secondary me-2 p-2"
+  >
+    {{ size }}
+  </span>
+</div>
+
+          <div class="product_count">
+            <label for="qty">Quantity:</label>
+            <input
+              type="text"
+              name="qty"
+              id="sst"
+              maxlength="12"
+              value="1"
+              title="Quantity:"
+              class="input-text qty"
+            />
+            <button
+              onclick="
+                var result = document.getElementById('sst');
+                var sst = result.value;
+                if (!isNaN(sst)) result.value++;
+                return false;
+              "
+              class="increase items-count"
+              type="button"
+            >
+              <i class="lnr lnr-chevron-up"></i>
+            </button>
+            <!-- <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
                             
 							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button> -->
-                             <button onclick="var result = document.getElementById('sst'); var sst = parseInt(result.value); if (!isNaN(sst) && sst > 0) result.value = sst - 1; return false;" 
-        class="reduced items-count" type="button">
-  <i class="lnr lnr-chevron-down"></i>
-</button>
-
-						</div>
-						<div class="card_area d-flex align-items-center gap-3">
-  <a class="primary-btn" href="#">Add to Cart</a>
-  <a class="primary-btn bg-dark text-white" href="#">Buy Now</a>
-  <a class="icon_btn" href="#"><i class="lnr lnr-heart"></i></a>
+            <button
+              onclick="
+                var result = document.getElementById('sst');
+                var sst = parseInt(result.value);
+                if (!isNaN(sst) && sst > 0) result.value = sst - 1;
+                return false;
+              "
+              class="reduced items-count"
+              type="button"
+            >
+              <i class="lnr lnr-chevron-down"></i>
+            </button>
+          </div>
+          <div class="card_area d-flex align-items-center gap-3">
+            <a class="primary-btn" href="#">Add to Cart</a>
+            <a class="primary-btn bg-dark text-white" href="#">Buy Now</a>
+            <a class="icon_btn" href="#"><i class="lnr lnr-heart"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<!--================End Single Product Area =================-->
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--================End Single Product Area =================-->
+<!--================Product Description Area =================-->
+<section class="product_description_area" *ngIf="product as p">
+  <div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="home-tab"
+          data-toggle="tab"
+          href="#home"
+          role="tab"
+          aria-controls="home"
+          aria-selected="true"
+          >Description</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="profile-tab"
+          data-toggle="tab"
+          href="#profile"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+          >Specification</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="contact-tab"
+          data-toggle="tab"
+          href="#contact"
+          role="tab"
+          aria-controls="contact"
+          aria-selected="false"
+          >Features</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          id="review-tab"
+          data-toggle="tab"
+          href="#review"
+          role="tab"
+          aria-controls="review"
+          aria-selected="false"
+          >Reviews</a
+        >
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div
+        class="tab-pane fade"
+        id="home"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+      >
+        <p>
+          {{p.description}}
+        </p>
 
-	<!--================Product Description Area =================-->
-	<section class="product_description_area">
-		<div class="container">
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
-				<li class="nav-item">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-					 aria-selected="false">Specification</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-					 aria-selected="false">Features</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
-					 aria-selected="false">Reviews</a>
-				</li>
-			</ul>
-			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-					<p>
-The Total 2000W High Pressure Washer is a powerful and reliable cleaning solution designed to handle tough dirt and grime with ease. Built for both home and light commercial use, this machine delivers strong water pressure that makes cleaning faster, more efficient, and less stressful.
+        <ul>
+          <li>• Ideal for car wash, floor cleaning, and outdoor maintenance</li>
+          <li>• High-performance 2000W copper motor</li>
+          <li>• Strong water pressure for deep cleaning</li>
+          <li>• Energy efficient and easy to operate</li>
+        </ul>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="profile"
+        role="tabpanel"
+        aria-labelledby="profile-tab"
+      >
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><h5>Product Name</h5></td>
+                <td><h5>Total Pressure Washer</h5></td>
+              </tr>
+              <tr>
+                <td><h5>Power</h5></td>
+                <td><h5>2000W</h5></td>
+              </tr>
+              <tr>
+                <td><h5>Voltage</h5></td>
+                <td><h5>220–240V</h5></td>
+              </tr>
+              <tr>
+                <td><h5>Max Pressure</h5></td>
+                <td><h5>150 Bar</h5></td>
+              </tr>
+              <tr>
+                <td><h5>Flow Rate</h5></td>
+                <td><h5>6.5 L/min</h5></td>
+              </tr>
+              <tr>
+                <td><h5>Motor Type</h5></td>
+                <td><h5>Copper Motor</h5></td>
+              </tr>
+              <tr>
+                <td><h5>Warranty</h5></td>
+                <td><h5>6 Months</h5></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade show active"
+        id="home"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+      >
+        <h4 class="mt-3 mb-3">Key Features</h4>
 
-Equipped with a high-performance 2000-watt copper motor, the washer provides consistent pressure for demanding tasks such as car washing, driveway cleaning, floor washing, wall cleaning, outdoor furniture maintenance, and industrial equipment cleaning. The copper motor ensures durability, better heat resistance, and long-lasting performance even with frequent use.
+        <ul class="list">
+          <li>
+            <strong>2000W Powerful Motor</strong> – Strong pressure for deep
+            cleaning
+          </li>
+          <li>
+            <strong>High Pressure Output</strong> – Removes tough dirt and grime
+            easily
+          </li>
+          <li>
+            <strong>Copper Motor</strong> – Durable and long-lasting performance
+          </li>
+          <li>
+            <strong>Auto Stop System</strong> – Saves power and improves safety
+          </li>
+          <li><strong>Portable Design</strong> – Easy to move and store</li>
+          <li>
+            <strong>Quick Connect Hose</strong> – Fast setup without tools
+          </li>
+          <li>
+            <strong>Water Efficient</strong> – Cleans more using less water
+          </li>
+          <li>
+            <strong>Home & Commercial Use</strong> – Ideal for cars, patios,
+            walls
+          </li>
+        </ul>
+      </div>
 
-This pressure washer features a high-pressure water output that easily removes stubborn stains, mud, grease, and algae without damaging surfaces. Its auto-stop system enhances safety and energy efficiency by automatically shutting off the motor when the trigger is released, reducing power consumption and extending the machine’s lifespan.
-
-Designed with user convenience in mind, the Total 2000W Pressure Washer has a compact and portable body, making it easy to move, store, and operate. The quick-connect hose system allows fast setup without tools, saving time during use. Despite its powerful performance, the machine is water-efficient, delivering excellent cleaning results while using less water.
-
-Whether you’re a homeowner looking to maintain your surroundings or a professional needing a dependable cleaning tool, the Total 2000W High Pressure Washer offers the perfect balance of power, efficiency, and durability.
-
-  <ul>
-  <li>• Ideal for car wash, floor cleaning, and outdoor maintenance</li>
-  <li>• High-performance 2000W copper motor</li>
-  <li>• Strong water pressure for deep cleaning</li>
-  <li>• Energy efficient and easy to operate</li>
-</ul>
-				</div>
-				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-					<div class="table-responsive">
-						<table class="table">
-							<tbody>
-								<tr>
-  <td><h5>Product Name</h5></td>
-  <td><h5>Total Pressure Washer</h5></td>
-</tr>
-<tr>
-  <td><h5>Power</h5></td>
-  <td><h5>2000W</h5></td>
-</tr>
-<tr>
-  <td><h5>Voltage</h5></td>
-  <td><h5>220–240V</h5></td>
-</tr>
-<tr>
-  <td><h5>Max Pressure</h5></td>
-  <td><h5>150 Bar</h5></td>
-</tr>
-<tr>
-  <td><h5>Flow Rate</h5></td>
-  <td><h5>6.5 L/min</h5></td>
-</tr>
-<tr>
-  <td><h5>Motor Type</h5></td>
-  <td><h5>Copper Motor</h5></td>
-</tr>
-<tr>
-  <td><h5>Warranty</h5></td>
-  <td><h5>6 Months</h5></td>
-</tr>
-
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-  <h4 class="mt-3 mb-3">Key Features</h4>
-
-  <ul class="list">
-    <li><strong>2000W Powerful Motor</strong> – Strong pressure for deep cleaning</li>
-    <li><strong>High Pressure Output</strong> – Removes tough dirt and grime easily</li>
-    <li><strong>Copper Motor</strong> – Durable and long-lasting performance</li>
-    <li><strong>Auto Stop System</strong> – Saves power and improves safety</li>
-    <li><strong>Portable Design</strong> – Easy to move and store</li>
-    <li><strong>Quick Connect Hose</strong> – Fast setup without tools</li>
-    <li><strong>Water Efficient</strong> – Cleans more using less water</li>
-    <li><strong>Home & Commercial Use</strong> – Ideal for cars, patios, walls</li>
-  </ul>
-
-</div>
-
-				<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="row total_rate">
-								<div class="col-6">
-									<div class="box_total">
-										<h5>Overall</h5>
-										<h4>4.0</h4>
-										<h6>(03 Reviews)</h6>
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="rating_list">
-										<h3>Based on 3 Reviews</h3>
-										<ul class="list">
-											<li><a href="#">5 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-													 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-											<li><a href="#">4 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-													 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-											<li><a href="#">3 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-													 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-											<li><a href="#">2 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-													 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-											<li><a href="#">1 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-													 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="review_list">
-								<div class="review_item">
-									<div class="media">
-										<div class="d-flex">
-											<img src="img/product/review-1.png" alt="">
-										</div>
-										<div class="media-body">
-											<h4>Blake Ruiz</h4>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
-								</div>
-								<div class="review_item">
-									<div class="media">
-										<div class="d-flex">
-											<img src="img/product/review-2.png" alt="">
-										</div>
-										<div class="media-body">
-											<h4>Blake Ruiz</h4>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
-								</div>
-								<div class="review_item">
-									<div class="media">
-										<div class="d-flex">
-											<img src="img/product/review-3.png" alt="">
-										</div>
-										<div class="media-body">
-											<h4>Blake Ruiz</h4>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="review_box">
-								<h4>Add a Review</h4>
-								<p>Your Rating:</p>
-								<ul class="list">
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-									<li><a href="#"><i class="fa fa-star"></i></a></li>
-								</ul>
-								<p>Outstanding</p>
-								<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="text" class="form-control" id="name" name="name" placeholder="Your Full name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Full name'">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="email" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="text" class="form-control" id="number" name="number" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea class="form-control" name="message" id="message" rows="1" placeholder="Review" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Review'"></textarea>
-										</div>
-									</div>
-									<div class="col-md-12 text-right">
-										<button type="submit" value="submit" class="primary-btn">Submit Now</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Product Description Area =================-->
+      <div
+        class="tab-pane fade show active"
+        id="review"
+        role="tabpanel"
+        aria-labelledby="review-tab"
+      >
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row total_rate">
+              <div class="col-6">
+                <div class="box_total">
+                  <h5>Overall</h5>
+                  <h4>4.0</h4>
+                  <h6>(03 Reviews)</h6>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="rating_list">
+                  <h3>Based on 3 Reviews</h3>
+                  <ul class="list">
+                    <li>
+                      <a href="#"
+                        >5 Star <i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i> 01</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >4 Star <i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i> 01</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >3 Star <i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i> 01</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >2 Star <i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i> 01</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >1 Star <i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i
+                        ><i class="fa fa-star"></i> 01</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="review_list">
+              <div class="review_item">
+                <div class="media">
+                  <div class="d-flex">
+                    <img src="img/product/review-1.png" alt="" />
+                  </div>
+                  <div class="media-body">
+                    <h4>Blake Ruiz</h4>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo
+                </p>
+              </div>
+              <div class="review_item">
+                <div class="media">
+                  <div class="d-flex">
+                    <img src="img/product/review-2.png" alt="" />
+                  </div>
+                  <div class="media-body">
+                    <h4>Blake Ruiz</h4>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo
+                </p>
+              </div>
+              <div class="review_item">
+                <div class="media">
+                  <div class="d-flex">
+                    <img src="img/product/review-3.png" alt="" />
+                  </div>
+                  <div class="media-body">
+                    <h4>Blake Ruiz</h4>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="review_box">
+              <h4>Add a Review</h4>
+              <p>Your Rating:</p>
+              <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <p>Outstanding</p>
+              <form
+                class="row contact_form"
+                action="contact_process.php"
+                method="post"
+                id="contactForm"
+                novalidate="novalidate"
+              >
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="Your Full name"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Your Full name'"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="Email Address"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Email Address'"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="number"
+                      name="number"
+                      placeholder="Phone Number"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Phone Number'"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      id="message"
+                      rows="1"
+                      placeholder="Review"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Review'"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12 text-right">
+                  <button type="submit" value="submit" class="primary-btn">
+                    Submit Now
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--================End Product Description Area =================-->
 
 <!-- Start related-product Area -->
 <section class="related-product-area section_gap_bottom">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-6 text-center">
-				<div class="section-title" style="color: black;">
-					<h1>Deals of the Week</h1>
-                   <p style="font-size: large; color: black;">Gear up with our hottest deals! Safety, industrial,
-					 and security essentials at prices you can’t ignore—shop today!</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-9">
-				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../assets/img/helmet with face shield.jpg" height="50px" width="50px" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">face shield with helmet</a>
-								<div class="price">
-									<h6>₦9,000</h6>
-									<h6 class="l-through">₦15,000</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../assets/img/ingco angle G & drill.jpg" height="60px" width="60px" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Ingco Angle Grinder & Drill</a>
-								<div class="price">
-									<h6>₦250,000</h6>
-									<h6 class="l-through">₦300,000</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../assets/img/3m-peltor-h520a-optime-earmuff.jpg"  height="60px" width="60px" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">3M PELTOR Optime 105 Earmuffs H520A, Hard Hat Attached</a>
-								<div class="price">
-									<h6>₦45000</h6>
-									<h6 class="l-through">₦40,000</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../assets/img/2000w ingco cyclone vc.jpeg"  height="60px" width="60px" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">ingco Cyclone vacuum cleaner-2000w</a>
-								<div class="price">
-									<h6>₦170,000</h6>
-									<h6 class="l-through">₦190,000</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../assets/img/total 147pcs.webp" height="70px" width="70px" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">total 162 pcs tools set</a>
-								<div class="price">
-									<h6>₦1,500,000</h6>
-									<h6 class="l-through">₦1,800,000</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../assets/img/total 24' chainsaw.webp"  height="70px" width="70px"alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">TOTAL Gasoline lawn mower hand push 196cc / 4.8hp / 51cm (TGT196201)</a>
-								<div class="price">
-									<h6>₦175,000</h6>
-									<h6 class="l-through">₦195,000</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../assets/img/combination coveralls.webp"  height="70px" width="70px" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Blue combinatiion coveralls</a>
-								<div class="price">
-									<h6>₦30,000</h6>
-									<h6 class="l-through">₦35,000</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../assets/img/5kg Co2 Fire Extinguisher.jpeg"  height="70px" width="70px" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">fire Extinguisher</a>
-								<div class="price">
-									<h6>₦38,000</h6>
-									<h6 class="l-through">₦42,000</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../assets/img/3 ton hydraulic floor jack with 3 ton jack stand.jpg" height="70px" width="70px alt="></a>
-							<div class="desc">
-								<a href="#" class="title">3 ton hydraulic floor jack with 3 ton jack stand</a>
-								<div class="price">
-									<h6>₦220,000</h6>
-									<h6 class="l-through">₦250,000</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="ctg-right">
-					<a href="#" target="_blank">
-						<img class="img-fluid d-block mx-auto" src="../../../assets/img/category/c5.jpg" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        <div class="section-title" style="color: black">
+          <h1>Deals of the Week</h1>
+          <p style="font-size: large; color: black">
+            Gear up with our hottest deals! Safety, industrial, and security
+            essentials at prices you can’t ignore—shop today!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+            <div class="single-related-product d-flex">
+              <a href="#"
+                ><img
+                  src="../../../assets/img/helmet with face shield.jpg"
+                  height="50px"
+                  width="50px"
+                  alt=""
+              /></a>
+              <div class="desc">
+                <a href="#" class="title">face shield with helmet</a>
+                <div class="price">
+                  <h6>₦9,000</h6>
+                  <h6 class="l-through">₦15,000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+            <div class="single-related-product d-flex">
+              <a href="#"
+                ><img
+                  src="../../../assets/img/ingco angle G & drill.jpg"
+                  height="60px"
+                  width="60px"
+                  alt=""
+              /></a>
+              <div class="desc">
+                <a href="#" class="title">Ingco Angle Grinder & Drill</a>
+                <div class="price">
+                  <h6>₦250,000</h6>
+                  <h6 class="l-through">₦300,000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+            <div class="single-related-product d-flex">
+              <a href="#"
+                ><img
+                  src="../../../assets/img/3m-peltor-h520a-optime-earmuff.jpg"
+                  height="60px"
+                  width="60px"
+                  alt=""
+              /></a>
+              <div class="desc">
+                <a href="#" class="title"
+                  >3M PELTOR Optime 105 Earmuffs H520A, Hard Hat Attached</a
+                >
+                <div class="price">
+                  <h6>₦45000</h6>
+                  <h6 class="l-through">₦40,000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+            <div class="single-related-product d-flex">
+              <a href="#"
+                ><img
+                  src="../../../assets/img/2000w ingco cyclone vc.jpeg"
+                  height="60px"
+                  width="60px"
+                  alt=""
+              /></a>
+              <div class="desc">
+                <a href="#" class="title">ingco Cyclone vacuum cleaner-2000w</a>
+                <div class="price">
+                  <h6>₦170,000</h6>
+                  <h6 class="l-through">₦190,000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+            <div class="single-related-product d-flex">
+              <a href="#"
+                ><img
+                  src="../../../assets/img/total 147pcs.webp"
+                  height="70px"
+                  width="70px"
+                  alt=""
+              /></a>
+              <div class="desc">
+                <a href="#" class="title">total 162 pcs tools set</a>
+                <div class="price">
+                  <h6>₦1,500,000</h6>
+                  <h6 class="l-through">₦1,800,000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+            <div class="single-related-product d-flex">
+              <a href="#"
+                ><img
+                  src="../../../assets/img/total 24' chainsaw.webp"
+                  height="70px"
+                  width="70px"
+                  alt=""
+              /></a>
+              <div class="desc">
+                <a href="#" class="title"
+                  >TOTAL Gasoline lawn mower hand push 196cc / 4.8hp / 51cm
+                  (TGT196201)</a
+                >
+                <div class="price">
+                  <h6>₦175,000</h6>
+                  <h6 class="l-through">₦195,000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-related-product d-flex">
+              <a href="#"
+                ><img
+                  src="../../../assets/img/combination coveralls.webp"
+                  height="70px"
+                  width="70px"
+                  alt=""
+              /></a>
+              <div class="desc">
+                <a href="#" class="title">Blue combinatiion coveralls</a>
+                <div class="price">
+                  <h6>₦30,000</h6>
+                  <h6 class="l-through">₦35,000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-related-product d-flex">
+              <a href="#"
+                ><img
+                  src="../../../assets/img/5kg Co2 Fire Extinguisher.jpeg"
+                  height="70px"
+                  width="70px"
+                  alt=""
+              /></a>
+              <div class="desc">
+                <a href="#" class="title">fire Extinguisher</a>
+                <div class="price">
+                  <h6>₦38,000</h6>
+                  <h6 class="l-through">₦42,000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-related-product d-flex">
+              <a href="#"
+                ><img
+                  src="../../../assets/img/3 ton hydraulic floor jack with 3 ton jack stand.jpg"
+                  height="70px"
+                  width="70px alt="
+              /></a>
+              <div class="desc">
+                <a href="#" class="title"
+                  >3 ton hydraulic floor jack with 3 ton jack stand</a
+                >
+                <div class="price">
+                  <h6>₦220,000</h6>
+                  <h6 class="l-through">₦250,000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="ctg-right">
+          <a href="#" target="_blank">
+            <img
+              class="img-fluid d-block mx-auto"
+              src="../../../assets/img/category/c5.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- End related-product Area -->

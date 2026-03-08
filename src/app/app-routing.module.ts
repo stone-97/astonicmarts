@@ -268,13 +268,11 @@ import { NosemasksComponent } from './pages/ppe/bycategory/respiratoryandhearing
 import { SafetybootsComponent } from './pages/ppe/bycategory/safetyboots/safetyboots.component';
 import { SafetygooglesComponent } from './pages/ppe/bycategory/safetygoogles/safetygoogles.component';
 import { SafetyhelmetsComponent } from './pages/ppe/bycategory/headprotections/safetyhelmets/safetyhelmets.component';
-import { SafetyraincoatsandbootsComponent } from './pages/ppe/bycategory/safetyraincoatsandboots/safetyraincoatsandboots.component';
 import { SafetyshoesComponent } from './pages/ppe/bycategory/safetyshoes/safetyshoes.component';
 import { SpillkitsComponent } from './pages/ppe/bycategory/spillkits/spillkits.component';
 import { FirstaidsComponent } from './pages/ppe/bycategory/firstaids/firstaids.component';
 import { LifebuoyComponent } from './pages/ppe/bycategory/lifesavingequipments/lifebuoy/lifebuoy.component';
 import { RespiratoryandhearingComponent } from './pages/ppe/bycategory/respiratoryandhearing/respiratoryandhearing.component';
-import { SafetyhelmetsandlayardsComponent } from './pages/ppe/bycategory/safetyhelmetsandlayards/safetyhelmetsandlayards.component';
 import { JackhammersComponent } from './pages/powertools/bycategories/jackhammers/jackhammers.component';
 import { DemolitionbreakersComponent } from './pages/powertools/bycategories/jackhammers/demolitionbreakers/demolitionbreakers.component';
 import { PneumaticjackhammersComponent } from './pages/powertools/bycategories/jackhammers/pneumaticjackhammers/pneumaticjackhammers.component';
@@ -329,6 +327,9 @@ import { BathroomscalesComponent } from './pages/measuringandtesting/measuringsc
 import { CuttingandgrindingdiscComponent } from './pages/handtoolsandaccessories/category/handtoolsaccessories/cuttingandgrindingdisc/cuttingandgrindingdisc.component';
 import { PuttyknifeComponent } from './pages/handtoolsandaccessories/category/puttyknife/puttyknife.component';
 import { DashboardComponent } from './pages/dashboard/dashboard/dashboard.component';
+import { SafetyharnessandlanyardsComponent } from './pages/ppe/bycategory/safetyharnessandlanyards/safetyharnessandlanyards.component';
+import { SafeKeyedRead } from '@angular/compiler';
+import { SafetyrainwearsComponent } from './pages/ppe/bycategory/safetyrainwears/safetyrainwears.component';
 
 
 
@@ -340,7 +341,7 @@ const routes: Routes = [
   {path: "search-results", component: SearchResultsComponent},
   {path: "shopcategories", component:ShopcategoriesComponent},
   {path:"shoppingcart", component:ShoppingcartComponent},
-  {path: "productdetails", component: ProductdetailsComponent},
+  { path: 'product/:id', component: ProductdetailsComponent},
   {path: "productcheckout" , component: ProductcheckoutComponent},
   {path: "pages", component:PagesComponent},
   {path: "login", component: LoginComponent},
@@ -379,7 +380,6 @@ const routes: Routes = [
    {path: "fireresistantsuits", component: FireresistantwearsComponent},
     {path: "labcoats", component: LabcoatsComponent},
    {path: "chemicalwears", component: ChemicalwearsComponent },
-    {path: "rainwears", component:RainwearsComponent},
     {path: "reflectivevests", component:ReflectivevestsComponent},
      {path: "umbrellas", component: SupersteelComponent},
     {path: "emergencyeyewash", component: EmergencyeyewashComponent},
@@ -403,12 +403,12 @@ const routes: Routes = [
          {path: "nosemasks", component:NosemasksComponent},
           {path: "safetyboots", component: SafetybootsComponent},
            {path: "safetygoogles", component:SafetygooglesComponent},
-            {path: "safetyharnessandlanyards", component: SafetyhelmetsandlayardsComponent},
+           {path: "safetyharnessandlanyards", component: SafetyharnessandlanyardsComponent},
              {path: "safetyhelmets", component: SafetyhelmetsComponent},
-              {path: "safetyraincoatsandboots", component: SafetyraincoatsandbootsComponent},
                {path: "safetyshoes", component: SafetyshoesComponent},
                {path: "spillkits", component: SpillkitsComponent},
                {path: "firstaids", component: FirstaidsComponent},
+               {path: 'safetyrainwears', component: SafetyrainwearsComponent},
              {path: "securityandsurveillance", component: SecurityandsurveillanceComponent}, 
               {path: "securitygears", component: SecuritygearsComponent},
                {path: "stanchions", component: StanchionsComponent},      

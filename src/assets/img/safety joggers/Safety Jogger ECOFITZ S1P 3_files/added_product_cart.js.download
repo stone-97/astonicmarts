@@ -1,0 +1,39 @@
+function getCartToken() {
+  let idx = document.cookie.indexOf('cart=');
+  if (idx == -1) {
+    return null;
+  }
+
+  let end = document.cookie.indexOf(';', idx);
+  return document.cookie.substring(idx + 5, end);
+}
+function sendCartDataToFm(shopifyCartData) {
+  if (shopifyCartData.item_count && shopifyCartData.item_count > 0) {
+    shopifyCartData.customer = FreshMarketerSourceMap.currentCustomer;
+
+    let timesRun = 0;
+    let cartTimerId = setInterval(function () {
+      timesRun++;
+
+      try {
+        shopifyCartData.token = getCartToken();
+        FM.trackMasEvent('shopify.added_product_to_cart', true, shopifyCartData);
+        clearInterval(cartTimerId);
+      } catch (err) {
+        if (timesRun === 20) {
+          clearInterval(cartTimerId);
+          console.info('FM not loaded yet at sendCartDataToFm', err);
+        }
+      }
+    }, 300);
+  }
+}
+
+if (typeof FreshMarketerSourceMap !== 'undefined') {
+  const shopifyCartData = FreshMarketerSourceMap.shopifyCartEventData;
+  if (shopifyCartData) {
+    sendCartDataToFm(shopifyCartData);
+  }
+} else {
+  console.log('FreshMarketSourceMap is not defined');
+}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { SearchService } from '../../core/services/search.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../core/models/Product';
 import { DUMMY_PRODUCTS } from '../../core/models/DummyProduct';
 
@@ -16,6 +16,7 @@ export class SearchBarComponent {
   query: string = '';
   suggestions: Product[] = [];
   showSuggestions: boolean = false;
+  filteredProducts: Product[] = [];
 
   constructor(
     private router: Router,
@@ -23,9 +24,9 @@ export class SearchBarComponent {
   ) {}
 
   ngOnInit() {
-    this.searchService.currentSearchQuery$.subscribe(q => {
-      if (!q) this.clearSuggestions();
-    });
+  this.suggestions = this.searchService.getProducts();
+    
+    
   }
 
   onInputChange() {
@@ -41,24 +42,19 @@ export class SearchBarComponent {
       return;
     }
 
-    this.suggestions = DUMMY_PRODUCTS.filter(p =>
-      p.name.toLowerCase().includes(term) ||
-      p.category.toLowerCase().includes(term) ||
-      p.brand.toLowerCase().includes(term)
-    ).slice(0, 8); // limit to 8 suggestions
+    this.suggestions = this.searchService.searchProducts(term).slice(0,8)
 
     this.showSuggestions = this.suggestions.length > 0;
   }
 
-  onSearch() {
-    if (this.query.trim()) {
-      this.searchService.setSearchQuery(this.query.trim());
-      this.router.navigate(['/search-results'], {
-        queryParams: { q: this.query.trim() }
-      });
-      this.clearSuggestions();
-    }
+ onSearch() {
+  if (this.query.trim()) {
+    this.router.navigate(['/shopcategory'], {
+      queryParams: { search: this.query.trim() }
+    });
+    this.clearSuggestions();
   }
+}
 
   selectSuggestion(product: Product) {
     this.query = product.name;
@@ -74,6 +70,19 @@ export class SearchBarComponent {
   clearSuggestions() {
     this.suggestions = [];
     this.showSuggestions = false;
+  }
+
+  selectProduct(product: Product){
+    this.query = product.name;
+    this.filteredProducts = [];
+
+     this.router.navigate(['/shopcategory'], {
+      queryParams:{
+        search: product.name,
+        
+      }
+     })
+
   }
   
 }

@@ -1,1 +1,13 @@
 
+.banner-area.organic-breadcrumb{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.banner-area + .container{
+  margin-top: -20px;
+}
+
+.section_gap{
+  padding: 30px 0;
+}

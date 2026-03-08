@@ -92,32 +92,7 @@
 
 
 
-  h
-  document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".dropdown-submenu > a").forEach(function (menu) {
-    menu.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      let submenu = this.nextElementSibling;
-      let parent = this.parentElement;
-
-      // Close other open submenus at the same level
-      parent.parentElement.querySelectorAll(".dropdown-submenu.show").forEach(function (openMenu) {
-        if (openMenu !== parent) {
-          openMenu.classList.remove("show");
-          openMenu.querySelector(".dropdown-menu").style.display = "none";
-        }
-      });
-
-      // Toggle current submenu
-      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-      parent.classList.toggle("show");
-    });
-  });
-});
-
-</script>
+ 
 
 
 
@@ -167,7 +142,10 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+
 <!--End of Tawk.to Script-->
+
+
 
 </body>
 </html>

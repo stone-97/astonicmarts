@@ -1,3 +1,4 @@
+import { SafetyshoesComponent } from './pages/ppe/bycategory/safetyshoes/safetyshoes.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
@@ -31,6 +32,20 @@ import { PuttyknifeComponent } from './pages/handtoolsandaccessories/category/pu
 import { BrandsComponent } from './pages/brands/brands.component';
 import { DashboardComponent } from './pages/dashboard/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ShopcategoriesComponent } from './pages/shops/shopcategories/shopcategories.component';
+import { ProductdetailsComponent } from './pages/shops/productdetails/productdetails.component';
+import { HandglovesComponent } from './pages/ppe/bycategory/handgloves/handgloves.component';
+import { SafetybootsComponent } from './pages/ppe/bycategory/safetyboots/safetyboots.component';
+import { SafetygooglesComponent } from './pages/ppe/bycategory/safetygoogles/safetygoogles.component';
+import { CombokitsComponent } from './pages/powertools/bycategories/combokits/combokits.component';
+import { SafetyharnessandlanyardsComponent } from './pages/ppe/bycategory/safetyharnessandlanyards/safetyharnessandlanyards.component';
+import { FallarrestorsComponent } from './pages/constructionequipment/fallarrestors/fallarrestors.component';
+import { BumpcapsComponent } from './pages/ppe/bycategory/headprotections/bumpcaps/bumpcaps.component';
+import { FlashlightsComponent } from './pages/ppe/bycategory/flashlights/flashlights.component';
+import { SafetyrainwearsComponent } from './pages/ppe/bycategory/safetyrainwears/safetyrainwears.component';
+import { GasdetectorsComponent } from './pages/ppe/bycategory/gasdetectors/gasdetectors.component';
+import { EmergencyeyewashComponent } from './pages/ppe/bycategory/emergencyeyewash/emergencyeyewash.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +74,23 @@ import { HttpClientModule } from '@angular/common/http';
     PuttyknifeComponent,
     BrandsComponent,
     DashboardComponent,
+    ShopcategoriesComponent,
+    ProductdetailsComponent,  
+    HandglovesComponent,
+    SafetybootsComponent,
+    SafetyshoesComponent,
+    SafetygooglesComponent,
+    CombokitsComponent,
+    SafetyharnessandlanyardsComponent,
+    FallarrestorsComponent,
+    BumpcapsComponent,
+    FlashlightsComponent,
+    SafetyrainwearsComponent,
+    GasdetectorsComponent,
+    EmergencyeyewashComponent,
+
+    
+   
   
   ],
   imports: [
