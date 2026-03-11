@@ -45,6 +45,14 @@ import { FlashlightsComponent } from './pages/ppe/bycategory/flashlights/flashli
 import { SafetyrainwearsComponent } from './pages/ppe/bycategory/safetyrainwears/safetyrainwears.component';
 import { GasdetectorsComponent } from './pages/ppe/bycategory/gasdetectors/gasdetectors.component';
 import { EmergencyeyewashComponent } from './pages/ppe/bycategory/emergencyeyewash/emergencyeyewash.component';
+import { SecuritygearsComponent } from './pages/ppe/bycategory/securityandsurveillance/securitygears/securitygears.component';
+import { StanchionsComponent } from './pages/ppe/bycategory/securityandsurveillance/stanchions/stanchions.component';
+import { DisposablesComponent } from './pages/ppe/bycategory/clothing/disposables/disposables.component';
+import { CoverallsComponent } from './pages/ppe/bycategory/clothing/coveralls/coveralls.component';
+import { ReflectivevestsComponent } from './pages/ppe/bycategory/clothing/reflectivevests/reflectivevests.component';
+import { LabcoatsComponent } from './pages/ppe/bycategory/clothing/labcoats/labcoats.component';
+import { FireresistantwearsComponent } from './pages/ppe/bycategory/clothing/fireresistantwears/fireresistantwears.component';
+import { ElectricpressurewashersComponent } from './pages/cleaningandgardensupplies/pressurewashers/bycategory/electricpressurewashers/electricpressurewashers.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +82,6 @@ import { EmergencyeyewashComponent } from './pages/ppe/bycategory/emergencyeyewa
     PuttyknifeComponent,
     BrandsComponent,
     DashboardComponent,
-    ShopcategoriesComponent,
     ProductdetailsComponent,  
     HandglovesComponent,
     SafetybootsComponent,
@@ -88,6 +95,16 @@ import { EmergencyeyewashComponent } from './pages/ppe/bycategory/emergencyeyewa
     SafetyrainwearsComponent,
     GasdetectorsComponent,
     EmergencyeyewashComponent,
+    SecuritygearsComponent,
+    StanchionsComponent,
+    DisposablesComponent,
+    ShopcategoriesComponent,
+    CoverallsComponent,
+    ReflectivevestsComponent,
+    LabcoatsComponent,
+    FireresistantwearsComponent,
+    ElectricpressurewashersComponent
+    
 
     
    

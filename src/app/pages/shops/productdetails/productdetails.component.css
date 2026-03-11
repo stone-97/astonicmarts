@@ -1,0 +1,165 @@
+.social-links{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.social-icon{
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:18px;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+/* Facebook */
+.facebook{
+  background:#1877F2;
+}
+
+/* Instagram */
+.instagram{
+  background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+
+/* Twitter */
+.twitter{
+  background:#1DA1F2;
+}
+
+/* LinkedIn */
+.linkedin{
+  background:#0077B5;
+}
+
+/* Hover effect */
+.social-icon:hover{
+  transform:scale(1.15);
+}
+
+/* marketplace */
+.marketplace-text{
+margin-bottom:6px;
+}
+
+.marketplace-buttons{
+display:flex;
+gap:10px;
+margin-top:5px;
+}
+
+
+
+.product-text{
+  white-space: pre-line;
+  font-size:18px;
+  line-height:1.8;
+  font-weight:500;
+}
+
+/* delivery info */
+.delivery-info p{
+display:flex;
+align-items:center;
+gap:8px;
+margin:3px 0;
+font-size:14px;
+color:#555;
+}
+
+/* trust section */
+.trust-section{
+border:1px solid #eee;
+padding:20px;
+border-radius:6px;
+background:#fafafa;
+}
+
+.trust-section h4{
+margin-bottom:15px;
+font-weight:600;
+}
+
+.trust-box p{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:8px;
+font-size:14px;
+}
+
+.trust-box i{
+color:#28a745;
+font-size:16px;
+}
+
+.product-assurance{
+padding:40px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+font-weight:600;
+}
+
+.assurance-box{
+background:#f9f9f9;
+padding:25px;
+border-radius:6px;
+margin-bottom:25px;
+text-align:center;
+transition:0.3s;
+border:1px solid #eee;
+}
+
+.assurance-box:hover{
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+transform:translateY(-4px);
+}
+
+.assurance-box i{
+font-size:28px;
+color:#28a745;
+margin-bottom:15px;
+}
+
+.assurance-box h4{
+font-size:18px;
+margin-bottom:10px;
+font-weight:600;
+}
+
+.assurance-box p{
+font-size:14px;
+color:#666;
+}
+
+
+/* product spec */
+.product-specs p{
+  margin-bottom: 3px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* prouct image */
+.single-prd-item{
+  width:450px;
+  height:450px;
+  padding:5px;   /* reduced so image becomes bigger */
+  background:#fff;
+  border:none;    /* removes the visible line */
+  border-radius:6px;
+}
+
+.single-prd-item img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}

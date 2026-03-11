@@ -1,4 +1,4 @@
-<section class="banner-area organic-breadcrumb">
+<!-- <section class="banner-area organic-breadcrumb">
   <div class="container">
     <div
       class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end"
@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End Banner Area -->
 
 <!--================Single Product Area =================-->
@@ -38,7 +38,63 @@
       <div class="col-lg-5 offset-lg-1">
         <div class="s_product_text">
           <h3>{{p.name}}</h3>
-          <h2>{{p.price}}</h2>
+          <div class="product-rating mb-2">
+
+<i class="fa fa-star text-warning"></i>
+<i class="fa fa-star text-warning"></i>
+<i class="fa fa-star text-warning"></i>
+<i class="fa fa-star text-warning"></i>
+<i class="fa fa-star-half-o text-warning"></i>
+
+<span class="ms-2">(4.5 rating)</span>
+</div>
+          <h2>₦{{p.price}}</h2>
+  <!-- delivery info -->
+<div class="delivery-info mt-3">
+<!-- <p>
+<i class="fa fa-truck"></i>
+Nationwide Delivery Available
+</p>
+<p>
+<i class="fa fa-clock-o"></i>
+Delivery: 2 – 5 working days outside Lagos
+</p>
+<p>
+<i class="fa fa-check-circle"></i>
+Free Delivery on selected items within Lagos
+</p> -->
+<p>
+<a routerLink="/deliverypolicy" class="delivery-link">
+View full delivery policy
+</a>
+</p>
+</div>
+          
+          <div class="marketplace-box mt-3"
+     *ngIf="p.jumiaLink || p.kongaLink">
+
+  <p class="marketplace-text" style="margin-top: 20px;">
+    You can also order through our marketplace stores
+  </p>
+
+  <div class="marketplace-buttons">
+<a *ngIf="p.jumiaLink"
+   [href]="p.jumiaLink"
+   target="_blank"
+   class="jumia-btn">
+   Buy on Jumia
+</a>
+
+<a *ngIf="p.kongaLink"
+   [href]="p.kongaLink"
+   target="_blank"
+   class="konga-btn">
+   Buy on Konga
+</a>
+
+  </div>
+
+</div>
           <ul class="list">
             <li>
               <a class="active" href="#"
@@ -52,13 +108,7 @@
               <a href="#"><span>Brand</span> : {{p.brand}}</a>
             </li>
           </ul>
-          <p>
-            The Total 2000W High Pressure Washer is designed for heavy-duty
-            cleaning tasks such as car washing, driveway cleaning, industrial
-            equipment maintenance, and home exterior washing. It delivers
-            powerful water pressure for fast and efficient dirt removal while
-            maintaining energy efficiency.
-          </p>
+          <!-- <p>{{p.description}}</p> -->
 
           <!-- Product Variants -->
 
@@ -72,16 +122,52 @@
   </span>
 </div>
 
-<div class="mt-3">
+<div class="mt-3" *ngIf="p.sizes?.length">
   <h5>Available Sizes</h5>
-  <span
-    *ngFor="let size of p.sizes"
-    class="badge bg-secondary me-2 p-2"
-  >
-    {{ size }}
+
+  <span *ngFor="let size of p.sizes"
+        class="badge bg-secondary me-2 p-2">
+        {{size}}
   </span>
 </div>
 
+<div class="mt-3" *ngIf="p.powerOptions?.length">
+
+  <h5>Available Power</h5>
+
+  <span
+    *ngFor="let option of p.powerOptions"
+    class="badge me-2 p-2"
+    [class.bg-secondary]="option.inStock"
+    [class.bg-light]="!option.inStock"
+  >
+    {{ option.power }}
+
+    <small *ngIf="!option.inStock">(Out of stock)</small>
+  </span>
+
+</div>
+
+
+<div class="product-specs mt-3">
+
+<p *ngIf="p.model">
+<strong>Model:</strong> {{p.model}}
+</p>
+
+<p *ngIf="p.power">
+<strong>Power:</strong> {{p.power}}
+</p>
+
+<p *ngIf="p.pressure">
+<strong>Pressure:</strong> {{p.pressure}}
+</p>
+
+<p *ngIf="p.flowRate">
+<strong>Flow Rate:</strong> {{p.flowRate}}
+</p>
+
+</div>
           <div class="product_count">
             <label for="qty">Quantity:</label>
             <input
@@ -126,384 +212,223 @@
             <a class="primary-btn bg-dark text-white" href="#">Buy Now</a>
             <a class="icon_btn" href="#"><i class="lnr lnr-heart"></i></a>
           </div>
+
+  <a
+    href="https://wa.me/2349030736173"
+    target="_blank"
+    class="primary-btn"
+    style="background:#25D366;color:white;"
+  >
+    <i class="fa fa-whatsapp"></i> Order on WhatsApp
+  </a>
+
+  <a class="icon_btn" href="#">
+    <i class="lnr lnr-heart"></i>
+  </a>
+
+</div>
+
+<div class="trust-badges mt-3">
+  <span>✔ Secure Payment</span>
+  <span>✔ Fast Delivery</span>
+  <span>✔ Quality Products</span>
+</div>
         </div>
       </div>
     </div>
   </div>
+ <!-- social media links -->
+<div class="mt-4 social-links">
+  <h6>Follow us for updates</h6>
+
+  <a href="https://facebook.com/yourpage" target="_blank" class="social-icon facebook">
+    <i class="fa fa-facebook"></i>
+  </a>
+
+  <a href="https://www.instagram.com/astonic_mart?utm_source=qr&igsh=MTh3dmJ1azlxejRyOA%3D%3D" target="_blank" class="social-icon instagram">
+    <i class="fa fa-instagram"></i>
+  </a>
+
+  <a href="https://x.com/astonicmart97?t=ZhWPDZwyIrQCYLrPbVQpxA&s=09" target="_blank" class="social-icon twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+
+  <a href="https://linkedin.com/company/yourpage" target="_blank" class="social-icon linkedin">
+    <i class="fa fa-linkedin"></i>
+  </a>
 </div>
 <!--================End Single Product Area =================-->
 
 <!--================Product Description Area =================-->
 <section class="product_description_area" *ngIf="product as p">
   <div class="container">
+
     <ul class="nav nav-tabs" id="myTab" role="tablist">
+
       <li class="nav-item">
-        <a
-          class="nav-link"
-          id="home-tab"
-          data-toggle="tab"
-          href="#home"
-          role="tab"
-          aria-controls="home"
-          aria-selected="true"
-          >Description</a>
+        <a class="nav-link active"
+           id="description-tab"
+           data-toggle="tab"
+           href="#description"
+           role="tab">
+          Description
+        </a>
       </li>
+
       <li class="nav-item">
-        <a
-          class="nav-link"
-          id="profile-tab"
-          data-toggle="tab"
-          href="#profile"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-          >Specification</a
-        >
+        <a class="nav-link"
+           id="specification-tab"
+           data-toggle="tab"
+           href="#specification"
+           role="tab">
+          Specification
+        </a>
       </li>
+
       <li class="nav-item">
-        <a
-          class="nav-link"
-          id="contact-tab"
-          data-toggle="tab"
-          href="#contact"
-          role="tab"
-          aria-controls="contact"
-          aria-selected="false"
-          >Features</a
-        >
+        <a class="nav-link"
+           id="features-tab"
+           data-toggle="tab"
+           href="#features"
+           role="tab">
+          Features
+        </a>
       </li>
+
       <li class="nav-item">
-        <a
-          class="nav-link active"
-          id="review-tab"
-          data-toggle="tab"
-          href="#review"
-          role="tab"
-          aria-controls="review"
-          aria-selected="false"
-          >Reviews</a
-        >
+        <a class="nav-link"
+           id="review-tab"
+           data-toggle="tab"
+           href="#review"
+           role="tab">
+          Reviews
+        </a>
       </li>
+
     </ul>
+
+
     <div class="tab-content" id="myTabContent">
-      <div
-        class="tab-pane fade"
-        id="home"
-        role="tabpanel"
-        aria-labelledby="home-tab"
-      >
+
+      <!-- DESCRIPTION -->
+
+      <div class="tab-pane fade show active"
+           id="description"
+           role="tabpanel">
+
+        <pre class="product-text">
+{{p.description}}
+        </pre>
+
+      </div>
+
+
+      <!-- SPECIFICATION -->
+
+     <div class="tab-pane fade"
+     id="specification"
+     role="tabpanel">
+
+<pre class="product-text">
+{{p.specification}}
+</pre>
+
+</div>
+      <!-- FEATURES -->
+
+      <div class="tab-pane fade"
+     id="features"
+     role="tabpanel">
+
+<pre class="product-text">
+{{p.features}}
+</pre>
+
+</div>
+      </div>
+
+     <div class="product-assurance mt-5">
+
+  <h3 class="section-title">Why Buy From Our Store</h3>
+
+  <div class="row">
+
+    <!-- Column 1 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="assurance-box">
+        <i class="fa fa-check-circle"></i>
+        <h4>Genuine Products</h4>
         <p>
-          {{p.description}}
+          We supply only original industrial tools, safety equipment, and
+          machinery sourced from trusted manufacturers.
         </p>
-
-        <ul>
-          <li>• Ideal for car wash, floor cleaning, and outdoor maintenance</li>
-          <li>• High-performance 2000W copper motor</li>
-          <li>• Strong water pressure for deep cleaning</li>
-          <li>• Energy efficient and easy to operate</li>
-        </ul>
-      </div>
-      <div
-        class="tab-pane fade"
-        id="profile"
-        role="tabpanel"
-        aria-labelledby="profile-tab"
-      >
-        <div class="table-responsive">
-          <table class="table">
-            <tbody>
-              <tr>
-                <td><h5>Product Name</h5></td>
-                <td><h5>Total Pressure Washer</h5></td>
-              </tr>
-              <tr>
-                <td><h5>Power</h5></td>
-                <td><h5>2000W</h5></td>
-              </tr>
-              <tr>
-                <td><h5>Voltage</h5></td>
-                <td><h5>220–240V</h5></td>
-              </tr>
-              <tr>
-                <td><h5>Max Pressure</h5></td>
-                <td><h5>150 Bar</h5></td>
-              </tr>
-              <tr>
-                <td><h5>Flow Rate</h5></td>
-                <td><h5>6.5 L/min</h5></td>
-              </tr>
-              <tr>
-                <td><h5>Motor Type</h5></td>
-                <td><h5>Copper Motor</h5></td>
-              </tr>
-              <tr>
-                <td><h5>Warranty</h5></td>
-                <td><h5>6 Months</h5></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div
-        class="tab-pane fade show active"
-        id="home"
-        role="tabpanel"
-        aria-labelledby="home-tab"
-      >
-        <h4 class="mt-3 mb-3">Key Features</h4>
-
-        <ul class="list">
-          <li>
-            <strong>2000W Powerful Motor</strong> – Strong pressure for deep
-            cleaning
-          </li>
-          <li>
-            <strong>High Pressure Output</strong> – Removes tough dirt and grime
-            easily
-          </li>
-          <li>
-            <strong>Copper Motor</strong> – Durable and long-lasting performance
-          </li>
-          <li>
-            <strong>Auto Stop System</strong> – Saves power and improves safety
-          </li>
-          <li><strong>Portable Design</strong> – Easy to move and store</li>
-          <li>
-            <strong>Quick Connect Hose</strong> – Fast setup without tools
-          </li>
-          <li>
-            <strong>Water Efficient</strong> – Cleans more using less water
-          </li>
-          <li>
-            <strong>Home & Commercial Use</strong> – Ideal for cars, patios,
-            walls
-          </li>
-        </ul>
-      </div>
-
-      <div
-        class="tab-pane fade show active"
-        id="review"
-        role="tabpanel"
-        aria-labelledby="review-tab"
-      >
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="row total_rate">
-              <div class="col-6">
-                <div class="box_total">
-                  <h5>Overall</h5>
-                  <h4>4.0</h4>
-                  <h6>(03 Reviews)</h6>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="rating_list">
-                  <h3>Based on 3 Reviews</h3>
-                  <ul class="list">
-                    <li>
-                      <a href="#"
-                        >5 Star <i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i> 01</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        >4 Star <i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i> 01</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        >3 Star <i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i> 01</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        >2 Star <i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i> 01</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        >1 Star <i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i
-                        ><i class="fa fa-star"></i> 01</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="review_list">
-              <div class="review_item">
-                <div class="media">
-                  <div class="d-flex">
-                    <img src="img/product/review-1.png" alt="" />
-                  </div>
-                  <div class="media-body">
-                    <h4>Blake Ruiz</h4>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo
-                </p>
-              </div>
-              <div class="review_item">
-                <div class="media">
-                  <div class="d-flex">
-                    <img src="img/product/review-2.png" alt="" />
-                  </div>
-                  <div class="media-body">
-                    <h4>Blake Ruiz</h4>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo
-                </p>
-              </div>
-              <div class="review_item">
-                <div class="media">
-                  <div class="d-flex">
-                    <img src="img/product/review-3.png" alt="" />
-                  </div>
-                  <div class="media-body">
-                    <h4>Blake Ruiz</h4>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="review_box">
-              <h4>Add a Review</h4>
-              <p>Your Rating:</p>
-              <ul class="list">
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-              </ul>
-              <p>Outstanding</p>
-              <form
-                class="row contact_form"
-                action="contact_process.php"
-                method="post"
-                id="contactForm"
-                novalidate="novalidate"
-              >
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      name="name"
-                      placeholder="Your Full name"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Your Full name'"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      placeholder="Email Address"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Email Address'"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="number"
-                      name="number"
-                      placeholder="Phone Number"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Phone Number'"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <textarea
-                      class="form-control"
-                      name="message"
-                      id="message"
-                      rows="1"
-                      placeholder="Review"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Review'"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="col-md-12 text-right">
-                  <button type="submit" value="submit" class="primary-btn">
-                    Submit Now
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+
+    <!-- Column 2 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="assurance-box">
+        <i class="fa fa-truck"></i>
+        <h4>Nationwide Delivery</h4>
+        <p>
+          We deliver across Nigeria within 2–4 working days depending on
+          your location.
+        </p>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="assurance-box">
+        <i class="fa fa-shield"></i>
+        <h4>Secure Payments</h4>
+        <p>
+          Safe transactions through our website or trusted marketplaces
+          like Jumia and Konga.
+        </p>
+      </div>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="assurance-box">
+        <i class="fa fa-shopping-cart"></i>
+        <h4>Multiple Purchase Options</h4>
+        <p>
+          Order directly on our website or through our official stores on
+          Jumia and Konga.
+        </p>
+      </div>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="assurance-box">
+        <i class="fa fa-whatsapp"></i>
+        <h4>Quick Customer Support</h4>
+        <p>
+          Need help choosing the right product? Chat with us instantly
+          on WhatsApp for assistance.
+        </p>
+      </div>
+    </div>
+
+    <!-- Column 6 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="assurance-box">
+        <i class="fa fa-refresh"></i>
+        <h4>Reliable After-Sales Support</h4>
+        <p>
+          Our team is available to help with product usage,
+          technical questions, and order assistance.
+        </p>
+      </div>
+    </div>
+
   </div>
+
+</div>
+    </div>
 </section>
 <!--================End Product Description Area =================-->
 
