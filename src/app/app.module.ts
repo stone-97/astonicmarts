@@ -53,6 +53,38 @@ import { ReflectivevestsComponent } from './pages/ppe/bycategory/clothing/reflec
 import { LabcoatsComponent } from './pages/ppe/bycategory/clothing/labcoats/labcoats.component';
 import { FireresistantwearsComponent } from './pages/ppe/bycategory/clothing/fireresistantwears/fireresistantwears.component';
 import { ElectricpressurewashersComponent } from './pages/cleaningandgardensupplies/pressurewashers/bycategory/electricpressurewashers/electricpressurewashers.component';
+import { HeatgunsComponent } from './pages/powertools/bycategories/heatguns/heatguns.component';
+import { HeadprotectionsComponent } from './pages/ppe/bycategory/headprotections/headprotections.component';
+import { FaceshieldsComponent } from './pages/ppe/bycategory/headprotections/faceshields/faceshields.component';
+import { SpillkitsComponent } from './pages/ppe/bycategory/spillkits/spillkits.component';
+import { FirstaidsComponent } from './pages/ppe/bycategory/firstaids/firstaids.component';
+import { NosemasksComponent } from './pages/ppe/bycategory/respiratoryandhearing/nosemasks/nosemasks.component';
+import { EarmuffsComponent } from './pages/ppe/bycategory/respiratoryandhearing/earmuffs/earmuffs.component';
+import { EarplugsComponent } from './pages/ppe/bycategory/respiratoryandhearing/earplugs/earplugs.component';
+import { LifebuoyComponent } from './pages/ppe/bycategory/lifesavingequipments/lifebuoy/lifebuoy.component';
+import { LifejacketsComponent } from './pages/ppe/bycategory/lifesavingequipments/lifejackets/lifejackets.component';
+import { CuttingmachinesComponent } from './pages/powertools/bycategories/cuttingmachines/cuttingmachines.component';
+import { MixersComponent } from './pages/powertools/bycategories/mixers/mixers.component';
+import { PolishersComponent } from './pages/powertools/bycategories/polishers/polishers.component';
+import { SpraygunsComponent } from './pages/powertools/bycategories/sprayguns/sprayguns.component';
+import { NailersComponent } from './pages/powertools/bycategories/nailers/nailers.component';
+import { GunsandtrimmersComponent } from './pages/powertools/bycategories/gunsandtrimmers/gunsandtrimmers.component';
+import { ImpulsesealersComponent } from './pages/powertools/bycategories/impulsesealers/impulsesealers.component';
+import { TrimmersComponent } from './pages/powertools/bycategories/trimmers/trimmers.component';
+import { PlanersComponent } from './pages/powertools/bycategories/planers/planers.component';
+import { PprComponent } from './pages/powertools/bycategories/ppr/ppr.component';
+import { RoutersComponent } from './pages/powertools/bycategories/routers/routers.component';
+import { SandersComponent } from './pages/powertools/bycategories/sanders/sanders.component';
+import { EdgebandingmachinesComponent } from './pages/powertools/bycategories/edgebandingmachines/edgebandingmachines.component';
+import { WallchasersComponent } from './pages/powertools/bycategories/wallchasers/wallchasers.component';
+import { GreasegunsComponent } from './pages/powertools/bycategories/greaseguns/greaseguns.component';
+import { CordeddrillsComponent } from './pages/powertools/bycategories/drills/cordeddrills/cordeddrills.component';
+import { CordlessdrillsanddriversComponent } from './pages/powertools/bycategories/drills/cordlessdrillsanddrivers/cordlessdrillsanddrivers.component';
+import { CoredrillsComponent } from './pages/powertools/bycategories/drills/coredrills/coredrills.component';
+import { RotaryhammerdrillsComponent } from './pages/powertools/bycategories/drills/rotaryhammerdrills/rotaryhammerdrills.component';
+import { MagneticdrillsComponent } from './pages/powertools/bycategories/drills/magneticdrills/magneticdrills.component';
+import { DrillpressesComponent } from './pages/powertools/bycategories/drills/drillpresses/drillpresses.component';
+
 
 @NgModule({
   declarations: [
@@ -103,7 +135,40 @@ import { ElectricpressurewashersComponent } from './pages/cleaningandgardensuppl
     ReflectivevestsComponent,
     LabcoatsComponent,
     FireresistantwearsComponent,
-    ElectricpressurewashersComponent
+    ElectricpressurewashersComponent,
+    HeatgunsComponent,
+    HeadprotectionsComponent,
+    FaceshieldsComponent,
+    SpillkitsComponent,
+    FirstaidsComponent,
+    NosemasksComponent,
+    EarmuffsComponent,
+    EarplugsComponent,
+    FallarrestorsComponent,
+    LifebuoyComponent,
+    LifejacketsComponent,
+    CuttingmachinesComponent,
+    MixersComponent,
+    PolishersComponent,
+    SpraygunsComponent,
+    BagclosermachinesComponent,
+    NailersComponent,
+    GunsandtrimmersComponent,
+    TrimmersComponent,
+    ImpulsesealersComponent,
+    PlanersComponent,
+    PprComponent,
+    RoutersComponent,
+    SandersComponent,
+    EdgebandingmachinesComponent,
+    WallchasersComponent,
+    GreasegunsComponent,
+    CordeddrillsComponent,
+    CordlessdrillsanddriversComponent,
+    CoredrillsComponent,
+    RotaryhammerdrillsComponent,
+    MagneticdrillsComponent,
+    DrillpressesComponent,
     
 
     

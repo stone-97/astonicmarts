@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from '../../../../../core/models/Product';
+import { SearchService } from '../../../../../core/services/search.service';
 
 @Component({
   selector: 'app-cordeddrills',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './cordeddrills.component.css'
 })
 export class CordeddrillsComponent {
+
+     products: Product[] = [];
+      
+        constructor(private SearchService: SearchService) {}
+      
+        ngOnInit() {
+          this.products = this.SearchService.getProductsByCategory('corded drills');
+        }
 
 }

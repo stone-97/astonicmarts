@@ -57,9 +57,10 @@ margin-top:5px;
 
 .product-text{
   white-space: pre-line;
-  font-size:18px;
+  font-size:20px;
   line-height:1.8;
   font-weight:500;
+ font-style: normal;
 }
 
 /* delivery info */
@@ -162,4 +163,206 @@ color:#666;
   width:100%;
   height:100%;
   object-fit:contain;
+}
+
+
+
+
+
+/* Logistics logos - higher specificity to override any defaults */
+.logistics-partners .partner-logo {
+  height: 75px !important;                  /* bigger size - try 70px, 80px or 90px */
+  width: auto !important;
+  transition: all 0.35s ease !important;
+  filter: grayscale(40%) opacity(0.92);
+}
+
+.logistics-partners .partner-logo:hover {
+  transform: scale(1.15) translateY(-8px) !important;
+  filter: grayscale(0%) brightness(1.08) !important;
+  opacity: 1 !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Optional: subtle continuous float animation */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.logistics-partners .partner-logo {
+  animation: gentle-float 5s ease-in-out infinite !important;
+}
+
+
+/* similar products */
+.infinite-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.scroll-container {
+  cursor: pointer;
+  user-select: none;
+}
+
+.infinite-scroll-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scroll-left 35s linear infinite;
+}
+
+.scroll-container:not(.paused) .infinite-scroll-track {
+  animation-play-state: running;
+}
+
+.scroll-container.paused .infinite-scroll-track,
+.scroll-container:hover .infinite-scroll-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Optional: visual feedback when paused */
+.scroll-container.paused::after {
+  content: "Paused – click to play";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Card styling improvements */
+.single-related-product {
+  min-width: 260px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+}
+
+.single-related-product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+/* product-gallery */
+
+.product-gallery{
+  width:100%;
+}
+
+.main-image img{
+  width:100%;
+  height:420px;
+  object-fit:contain;
+  border:1px solid #eee;
+  padding:10px;
+}
+.thumbnail-container{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+
+.thumbnail-img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+  border:1px solid #ddd;
+  padding:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.thumbnail-img:hover{
+  border:2px solid #ff6a00;
+}
+
+.active-thumb{
+  border:2px solid #ff6a00;
+}
+
+.main-image img{
+  width:100%;
+  height:420px;
+  object-fit:contain;
+}
+
+
+
+.main-image{
+position:relative;
+}
+
+.nav-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:white;
+border:none;
+font-size:24px;
+padding:8px 12px;
+cursor:pointer;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+.prev{
+left:0;
+}
+
+.next{
+right:0;
+}
+
+
+/* Color variant */
+.color-badge{
+background-color:#001f54;
+color:white;
+cursor:pointer;
+transition:0.2s;
+}
+
+.color-badge:hover{
+transform:scale(1.05);
+}
+
+/* Selected color */
+.active-color{
+background-color:#ff6a00;
+color:white;
+border:2px solid #ff6a00;
+}
+
+
+/* Size variant */
+.size-badge{
+background-color:#ffd700;
+color:black;
+cursor:pointer;
+transition:0.2s;
+}
+
+.size-badge:hover{
+transform:scale(1.05);
+}
+
+/* Selected size */
+.active-size{
+background-color:black;
+color:white;
+border:2px solid black;
 }

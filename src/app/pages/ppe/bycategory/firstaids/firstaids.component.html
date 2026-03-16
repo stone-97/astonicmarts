@@ -1,25 +1,5 @@
-<!-- Start Banner Area -->
-<!-- Start Banner Area -->
-<section class="banner-area organic-breadcrumb" style="pointer-events: none ;">
-  <div class="container">
-    <div
-      class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end"
-    >
-      <div class="col-first">
-        <h1>Industrial & Safety Equipment</h1>
-        <nav class="d-flex align-items-center">
-          <a href="index.html" style="margin-left: 40px"
-            >Home<span class="lnr lnr-arrow-right"></span
-          ></a>
-          <a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
-          <a href="category.html">>Safety Tools & Industrial Supplies</a>
-        </nav>
-      </div>
-    </div>
-  </div>
-</section>
-	<!-- End Banner Area -->
-	<div class="container">
+
+	<div class="container" style="margin-top: 20px;">
 		<div class="row">
 			<div class="col-xl-3 col-lg-4 col-md-5">
 				<div class="sidebar-categories">
@@ -64,8 +44,7 @@
                   <li><a href="/safetyshoes">Safety Shoes</a></li>
                   <li><a href="/flashlights">Flash lights</a></li>
                   <li>
-                    <a href="/safetyraincoatsandboots"
-                      >Safety Raincoats & Boots</a
+                    <a href="/safetyrainwears">Safety Rainwears</a
                     >
                   </li>
                   <li><a href="/gasdetectors">Gas Detectors</a></li>
@@ -87,7 +66,7 @@
                       Clothing
                     </a>
                     <ul class="collapse" id="clothingCat">
-                      <li><a href="/disposbles">Disposables </a></li>
+                      <li><a href="/disposables">Disposables </a></li>
                       <li><a href="/coveralls">Coveralls / Overalls</a></li>
                       <li><a href="/reflectivevests">Reflective Jackets</a></li>
                       <li><a href="/labcoats">Lab Coats</a></li>
@@ -205,7 +184,7 @@
             >
               <span class="lnr lnr-arrow-right"></span> Power Hand Tools<span
                 class="number"
-                >(53)</span
+                ></span
               >
             </a>
 
@@ -218,7 +197,7 @@
                   aria-expanded="false"
                   aria-controls="powerByCategory"
                 >
-                  By Category <span class="number">(08)</span>
+                  By Category <span class="number"></span>
                 </a>
                 <ul class="collapse" id="powerByCategory">
                   <!-- Single-level categories -->
@@ -383,7 +362,7 @@
                   aria-expanded="false"
                   aria-controls="powerByBrands"
                 >
-                  By Brands <span class="number">(03)</span>
+                  By Brands <span class="number"></span>
                 </a>
                 <ul class="collapse" id="powerByBrands">
                   <li><a href="/ingco">Ingco</a></li>
@@ -408,7 +387,7 @@
               aria-controls="sealantAdhesive"
             >
               <span class="lnr lnr-arrow-right"></span> Sealant & Adhesive
-              <span class="number">(47)</span>
+              <span class="number"></span>
             </a>
             <ul
               class="collapse"
@@ -428,32 +407,32 @@
               </li>
               <li class="main-nav-list child">
                 <a href="constructioadhesives"
-                  >Construction Adhesives <span class="number">(08)</span></a
+                  >Construction Adhesives <span class="number"></span></a
                 >
               </li>
               <li class="main-nav-list child">
-                <a href="woodglues"> Glues <span class="number">(05)</span></a>
+                <a href="woodglues"> Glues <span class="number"></span></a>
               </li>
               <li class="main-nav-list child">
                 <a href="tileadhesives"
-                  >Tile Adhesives <span class="number">(06)</span></a
+                  >Tile Adhesives <span class="number"></span></a
                 >
               </li>
               <li class="main-nav-list child">
                 <a href="contactadhesives"
-                  >Contact Adhesives <span class="number">(05)</span></a
+                  >Contact Adhesives <span class="number"></span></a
                 >
               </li>
               <li class="main-nav-list child">
                 <a href="waterproofsealants"
-                  >Waterproof Sealants<span class="number">(05)</span></a
+                  >Waterproof Sealants<span class="number"></span></a
                 >
               </li>
               <li class="main-nav-list child">
                 <a href="spraypaints">Spray Paints & leak Fiilers</a>
               </li>
               <li class="main-nav-list child">
-                <a href="gums">Gums<span class="number">(07)</span></a>
+                <a href="gums">Gums<span class="number"></span></a>
               </li>
             </ul>
           </li>
@@ -1700,15 +1679,14 @@
 				<section class="lattest-product-area pb-40 category-list">
 					<div class="row">
 						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
+						<div class="col-lg-4 col-md-6" *ngFor="let prod of products">
 							<div class="single-product">
-								<img class="img-fluid" src="../../../../assets/img/dakar.jpg3.jpg" alt="">
+								<img class="img-fluid" [src]="prod.images" alt="">
 								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
+									<h6>{{prod.name}}</h6>
 									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
+										<h6>{{prod.price}}</h6>
+										
 									</div>
 									<div class="prd-bottom">
 
@@ -1724,7 +1702,7 @@
 											<span class="lnr lnr-sync"></span>
 											<p class="hover-text">compare</p>
 										</a>
-										<a href="" class="social-info">
+										<a [routerLink]="['/product', prod.id]" class="social-info">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">view more</p>
 										</a>
@@ -1732,171 +1710,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p2.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
-											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p3.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
-											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p4.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
-											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p5.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
-											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p6.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
-											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
+					
 					</div>
 				</section>
 				<!-- End Best Seller -->

@@ -1,3 +1,4 @@
+
 import { FallarrestorsComponent } from './pages/ppe/bycategory/fallarrestors/fallarrestors.component';
 
 
@@ -330,6 +331,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard/dashboard.compon
 import { SafetyharnessandlanyardsComponent } from './pages/ppe/bycategory/safetyharnessandlanyards/safetyharnessandlanyards.component';
 import { SafeKeyedRead } from '@angular/compiler';
 import { SafetyrainwearsComponent } from './pages/ppe/bycategory/safetyrainwears/safetyrainwears.component';
+import { RotaryhammerdrillsComponent } from './pages/powertools/bycategories/drills/rotaryhammerdrills/rotaryhammerdrills.component';
+import { ShoppressComponent } from './pages/powertools/bycategories/shoppress/shoppress.component';
 
 
 
@@ -428,15 +431,16 @@ const routes: Routes = [
   {path:"cuttingmachines", component:CuttingmachinesComponent},
   {path:"drills", component:DrillsComponent},
   {path:"cordeddrills", component:CordeddrillsComponent},
+  {path: 'shoppress', component:ShoppressComponent},
   {path:"cordlessdrillsanddrivers", component:CordlessdrillsanddriversComponent},
-  {path:"coredrilss", component:CoredrillsComponent}, 
+  {path:"coredrills", component:CoredrillsComponent}, 
   {path:"magneticdrills", component:MagneticdrillsComponent}, 
   {path:"drillpresses", component:DrillpressesComponent}, 
   {path:"blowers", component:BlowersComponent},  
   {path:"cordlessblowers", component:CordlessblowersComponent}, 
   {path:"electricblowers", component:ElectricblowersComponent},  
   {path:"gasolineblowers", component:GasolineblowersComponent},   
-  {path:"rotaryhammerdrills", component:MagneticdrillsComponent},     
+  {path:"rotaryhammerdrills", component:RotaryhammerdrillsComponent},     
   {path:"grinders", component:GrindersComponent},
   {path:"anglegrinders", component:AnglegrindersComponent},   
   {path:"benchgrinders", component:BenchgrindersComponent}, 
@@ -468,7 +472,7 @@ const routes: Routes = [
   {path:"bandsaws", component:BandsawsComponent},  
   {path:"chainsaws", component:ChainsawsComponent},
    {path:"trimmers", component:TrimmersComponent},  
-    {path:"trimmers", component:TrimmersComponent},  
+    {path:"gunsandtrimmers", component:GunsandtrimmersComponent},  
     {path:"planers", component:PlanersComponent},   
    {path:"jackhammers", component:JackhammersComponent},
    {path:"demolitionbreakers", component:DemolitionbreakersComponent},
@@ -477,6 +481,7 @@ const routes: Routes = [
   {path:"jigsaws", component:JigsawsComponent}, 
   {path:"mitresaws", component:TablesawsComponent},           
   {path:"tablesaws", component:TablesawsComponent},
+  {path:"heatguns", component: HeatgunsComponent},
   {path: "reciprocatingsaws", component:ReciprocatingsawsComponent},  
 
   // sealantadhesive

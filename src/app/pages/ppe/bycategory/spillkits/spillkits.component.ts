@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from '../../../../core/models/Product';
+import { SearchService } from '../../../../core/services/search.service';
 
 @Component({
   selector: 'app-spillkits',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './spillkits.component.css'
 })
 export class SpillkitsComponent {
+  products: Product[] = [];
+    
+      constructor(private SearchService: SearchService) {}
+    
+      ngOnInit() {
+        this.products = this.SearchService.getProductsByCategory('spill kits');
+      }
 
 }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from '../../../../core/models/Product';
+import { SearchService } from '../../../../core/services/search.service';
 
 @Component({
   selector: 'app-headprotections',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './headprotections.component.css'
 })
 export class HeadprotectionsComponent {
+
 
 }
