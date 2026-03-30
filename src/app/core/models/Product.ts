@@ -1,3 +1,10 @@
+export interface ProductVariation {
+  size?: string;
+  color?: string;
+  price: number;
+  inStock: boolean;
+}
+
 export interface Product {
   id: number;
   name: string;
@@ -6,10 +13,16 @@ export interface Product {
   price: number;
 
   images: string[];
+  group?: string;
 
+  // 👇 For simple products (clothes, shoes)
   sizes?: (number | string)[];
   colors?: string[];
 
+  // 👇 For complex products (ladders, machines, etc.)
+  variations?: ProductVariation[];
+
+  // 👇 Keep this (good for generators, pumps, etc.)
   powerOptions?: {
     power: string;
     inStock: boolean;
@@ -27,10 +40,10 @@ export interface Product {
   pressure?: string;
   power?: string;
 
-  // ── Add this line ──
-  oldPrice?: number;     // optional, for discount/crossed-out price
+  // 👇 Pricing extras
+  oldPrice?: number;   // for discounts
+  inStock?: boolean;
 
+  // 👇 UI control
   showSimilar?: boolean;
- inStock?: boolean;
-  
 }

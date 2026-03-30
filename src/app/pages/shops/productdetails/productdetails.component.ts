@@ -92,7 +92,19 @@ selectColor(color: string) {
   this.selectedColor = color;
 }
 
-selectSize(size: string | number) {
+selectSize(size: string | number | undefined) {
+  if (!size) return; // prevent error
+
   this.selectedSize = size;
+
+  const found = this.product?.variations?.find(
+    v => v.size === size
+  );
+
+  if (found) {
+    this.selectedPrice = found.price;
+  }
 }
+
+selectedPrice: number = 0;
 }

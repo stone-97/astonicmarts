@@ -10,8 +10,8 @@ describe('FlowmetersComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [FlowmetersComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(FlowmetersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

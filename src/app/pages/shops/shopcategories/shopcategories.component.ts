@@ -4,9 +4,6 @@ import { SearchService } from '../../../core/services/search.service';
 import { Product } from '../../../core/models/Product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PaginationService } from '../../../core/services/pagination.service';
-import { ElectricalequipmentsComponent } from '../../electricalequipments/electricalequipments.component';
-import { MeasuringandtestingComponent } from '../../measuringandtesting/measuringandtesting.component';
-import { CleaningandgardensuppliesComponent } from '../../cleaningandgardensupplies/cleaningandgardensupplies.component';
 
 interface CategoryItem {
   name: string;
@@ -35,35 +32,42 @@ export class ShopcategoriesComponent implements OnInit {
   filteredProducts: Product[] = [];
 
   constructor(private searchService: SearchService, private route: ActivatedRoute, private router: Router, public paginationService: PaginationService) { }
+  goToPagination() {
+  this.router.navigate(['/pagnation']);
+}
 
-  ngOnInit() {
+ ngOnInit() {
 
+  // always load latest products
+  this.products = this.searchService.getProducts();
 
-    // load all products
-    this.products = this.searchService.getProducts();
+  this.route.paramMap.subscribe(params => {
 
-    // listen to url search param
-    this.route.queryParams.subscribe(params => {
+  const category = params.get('category');
 
-      const query = params['search'];
+  if (category) {
+    // category click
+    this.filteredProducts = this.searchService.getProductsByCategory(category);
+  } else {
+    // search fallback
+    this.route.queryParams.subscribe(queryParams => {
+
+      const query = queryParams['search'];
 
       if (!query) {
-  this.filteredProducts = this.products;
-  this.paginationService.calculateTotalpages(this.filteredProducts.length);
-  return;
-}
-      
+        this.filteredProducts = this.products;
+      } else {
+        this.filteredProducts = this.searchService.searchProducts(query);
+      }
 
-      this.filteredProducts = this.searchService.searchProducts(query);
-      // recalculate pagination after filtering
       this.paginationService.calculateTotalpages(this.filteredProducts.length);
-    
     });
-
-
-
-
   }
+
+  this.paginationService.calculateTotalpages(this.filteredProducts.length);
+});
+
+}
   //end of oninit 
 
   openProduct(product: Product) {
@@ -128,6 +132,7 @@ export class ShopcategoriesComponent implements OnInit {
     })
 
   }
+
 
 // safety ppes
   ppeMainItems = [
@@ -209,7 +214,7 @@ powerToolCategories = [
   { name: 'Mixers', link: '/mixers' },
   { name: 'Polishers', link: '/polishers' },
   { name: 'Spray Guns', link: '/sprayguns' },
-  { name: 'Bag Closer Machines', link: '/bagcloser' },
+  { name: 'Bag Closer Machines', link: '/bagclosermachines' },
   { name: 'Nailers', link: '/nailers' },
   { name: 'Guns & Trimmers', link: '/trimmers' },
   { name: 'Impulse Sealers', link: '/impulsesealers' },
@@ -266,6 +271,13 @@ blowerCategories = [
   { name: 'Gasoline Blowers', link: '/gasolineblowers' }
 ];
 
+blowerBrands = [
+  { name: 'Bosch', link: '/bosch-blowers' },
+  { name: 'Makita', link: '/makita-blowers' },
+  { name: 'Ingco', link: '/ingco-blowers' }
+];
+
+
 powerBrands = [
   { name: 'Ingco', link: '/ingco' },
   { name: 'Maxmech', link: '/maxmech' },
@@ -283,13 +295,13 @@ sealantAdhesiveCategories = [
   { name: 'Silicone Sealants', link: '/siliconsealants' },
   { name: 'PU (Polyurethane) Sealants', link: '/pufoamsealants' },
   { name: 'Epoxy Adhesives', link: '/epoxyadhesives' },
-  { name: 'Construction Adhesives', link: '/constructioadhesives' },
+  { name: 'Construction Adhesives', link: '/constructionadhesives' },
   { name: 'Glues', link: '/woodglues' },
-  { name: 'Tile Adhesives', link: '/tileadhesives' },
+  // { name: 'Tile Adhesives', link: '/tileadhesives' },
   { name: 'Contact Adhesives', link: '/contactadhesives' },
   { name: 'Waterproof Sealants', link: '/waterproofsealants' },
   { name: 'Spray Paints & Leak Fillers', link: '/spraypaints' },
-  { name: 'Gums', link: '/gums' }
+  // { name: 'Gums', link: '/gums' }
 ];
 
 // traffic safety
@@ -300,7 +312,6 @@ trafficSafetyCategories = [
   { name: 'Speed Bumps', link: '/speedbumps', count: '' },
   { name: 'Reflectors', link: '/reflectors', count: '' },
   { name: 'Safety Vests', link: '/safetyvests', count: '' },
-  { name: 'Caution Signs', link: '/cautionsigns', count: '' },
   { name: 'Caution Tapes', link: '/cautiontapes', count: '' },
   { name: 'Wheel Chokes', link: '/wheelchokes', count: '' },
   { name: 'Convex Mirrors', link: '/convexmirrors', count: '' },
@@ -311,7 +322,7 @@ trafficSafetyCategories = [
 fireSafetyCategories = [
   { name: 'Fire Extinguishers', link: '/fireextinguishers', count: '' },
   { name: 'Fire Blankets', link: '/fireblankets', count: '' },
-  { name: 'Smoke & Fire Alarms', link: '/smokeandfirealarms', count: '' },
+  { name: 'Smoke & Fire Alarms', link: '/smokefirealarms', count: '' },
   { name: 'Fire Hose', link: '/firehose', count: '' },
   { name: 'Fire Hose Cabinet', link: '/firehosecabinet', count: '' }
 ];
@@ -319,7 +330,7 @@ fireSafetyCategories = [
 // workshop and garage
 workshopGarageCategories = [
   { name: 'Tool Cabinets', link: '/toolscabinets' },
-  { name: 'Work Benches', link: '/workbenches' },
+  { name: 'Work Bench vices', link: '/workbenches' },
   { name: 'Air Compressors', link: '/aircompressors' },
   { name: 'Power Extension & Reels', link: '/powerextensionandreels' },
   { name: 'Tools Sets', link: '/toolssets' },
@@ -327,7 +338,11 @@ workshopGarageCategories = [
   { name: 'Grease Buckets', link: '/greasebuckets' },
   { name: 'Testing Buckets', link: '/testingbuckets' },
   { name: 'Rotary Hand Pumps', link: '/rotarypumps' },
-  { name: 'Pallet Trucks', link: '/palletetrucks' }
+  { name: 'hydraulicshoppress', link: '/hydraulicshoppress' },
+
+  
+   
+
 ];
 
 liftingHandlingCategories = [
@@ -351,18 +366,18 @@ wheelServiceCategories = [
 
 
 ladderCategories = [
-  { name: 'Step Ladders', link: '/stepladders', count: '(02)' },
-  { name: 'Extension Ladders', link: '/extensionladders', count: '(02)' },
-  { name: 'Folding Ladders', link: '/foldingladders', count: '(02)' }
+  { name: 'Step Ladders', link: '/stepladders', count: '' },
+  { name: 'Extension Ladders', link: '/extensionladders', count: '' },
+  { name: 'Folding Ladders', link: '/foldingladders', count: '' }
 ];
 
 // Electricalequipments
 electricalCategories = [
   { name: 'Batteries', link: '/batteries' },
-  { name: 'Bag Closers', link: '/bagclosers' },
+  { name: 'Bag Closer Machines', link: '/bagclosermachines' },
   { name: 'Auto Compressors', link: '/autocompressors' },
-  { name: 'Cable Wires & Cable Boosters', link: '/cablewiresandboosters' },
-  { name: 'Extension Cable Wires', link: '/extensioncablewires' },
+  { name: 'Cable Wires & Cable Boosters', link: '/cablewireandboosters' },
+  // { name: 'Extension Cable Wires', link: '/extensioncablewires' },
   { name: 'Plasma Cutters', link: '/plasmacutters' },
   { name: 'Air Compressors', link: '/aircompressors' },
   { name: 'Battery Testers', link: '/batterychargers' },
@@ -372,7 +387,7 @@ electricalCategories = [
 generatorCategories = [
   { name: 'Diesel Generators', link: '/desielgenerators' },
   { name: 'Petrol Generators', link: '/petrolgenerators' },
-  { name: 'Inverter Generators', link: '/inverters' }
+  { name: 'Inverter Generators', link: '/invertergenerators' }
 ];
 
 weldingCategories = [
@@ -391,15 +406,15 @@ measuringTestingCategories: Category[] = [
   id: 'fuelTesting',
   number: 15,
   items: [
-    { name: 'Fuel Meters', link: '/fuelmeters' },
+
     { name: 'Hydrometers', link: '/hydrometers' },
-    { name: 'Flow Meters', link: '/flowmeters', number: 3 },
-    { name: 'Fuel & Diesel Testing Kits', link: '/fuelanddieseltestingkits' },
+    { name: 'Flow Meters', link: '/flowmeters'},
     { name: 'Thermometers', link: '/thermometers' },
     { name: 'Measuring Cans', link: '/measuringcans' },
-    { name: 'Testing Paste', link: '/paste' },
+    { name: 'Testing Paste', link: '/testingpastes' },
     { name: 'Measuring Cylinders', link: '/measuringcylinders' },
-    { name: 'LPG Counting Meters', link: '/lpgcountingmeters' }
+    { name: 'Fuel Testing Kits', link: '/fueltestingkits' },
+  
   ]
 },
 
@@ -408,16 +423,19 @@ measuringTestingCategories: Category[] = [
   id: 'generalMeasuring',
   number: 20,
   items: [
-    { name: 'Meters', link: '/meters' },
-    { name: 'Measuring Testers', link: '/testers' },
+    { name: 'General Meters', link: '/generalmeters' },
+    { name: 'General Testers', link: '/generaltesters' },
     { name: 'Multimeters', link: '/multimeters' },
     { name: 'Clamp Meters', link: '/clampmeters' },
     { name: 'Battery Testers', link: '/batterytesters' },
     { name: 'Measuring Tapes', link: '/measuringtapes' },
     { name: 'Laser Distance Meters', link: '/laserdistancemeters' },
     { name: 'Dial Indicators', link: '/dialindicators' },
-    { name: 'Gauges', link: '/gauges' },
-    { name: 'Measuring Wheels', link: '/measuringwheels' }
+    { name: 'General Gauges', link: '/gauges'},
+    { name: 'Measuring Wheels', link: '/measuringwheels' },
+    { name: 'General Testers', link: '/generaltesters' },
+    { name: 'Infrared Thermometers', link: '/infraredthermometers' },
+    { name: 'Digital Thermometers', link: '/digitalthermometers' }
   ],
 
   children: [
@@ -466,7 +484,7 @@ measuringTestingCategories: Category[] = [
   number: 12,
   items: [
     { name: 'Spirit Levels', link: '/spiritlevels' },
-    { name: 'Dumping Levels (Auto Levels)', link: '/dumpinglevels' },
+    { name: 'Dumpy Levels (Auto Levels)', link: '/dumpinglevels' },
     { name: 'Survey Tripods', link: '/surveytripods' },
     { name: 'Laser Levels', link: '/laserlevels' }
   ]
@@ -484,7 +502,9 @@ measuringTestingCategories: Category[] = [
       items: [
         { name: 'Spring Balances', link: '/springbalances' },
         { name: 'Beam Balances', link: '/beambalances' },
-        { name: 'Mechanical Platform Scales', link: '/mechanicalplatformscales' }
+        { name: 'Mechanical Platform Scales', link: '/mechanicalplatformscales' },
+        { name: 'Analogue Scales(Analogue)', link: '/analoguekitchenscales' }
+
       ]
     },
 
@@ -493,14 +513,13 @@ measuringTestingCategories: Category[] = [
       id: 'digitalScales',
       items: [
         { name: 'Platform Scales', link: '/platformscales' },
-        { name: 'Crane Scales', link: '/cranes' },
+        { name: 'Crane Scales', link: '/cranescales' },
         { name: 'Hanging Scales', link: '/hangingscales' },
-        { name: 'Bench Scales', link: '/benchscales' },
         { name: 'Analytical & Lab Balances', link: '/analyticalbalances' },
         { name: 'Bathroom Scales', link: '/bathroomscales' },
-        { name: 'Kitchen Scales', link: '/kitchenscales' },
+        { name: 'Kitchen Scales(Digital)', link: '/kitchenscales' },
         { name: 'Pocket Scales', link: '/pocketscales' },
-        { name: 'Weighbridges', link: '/weighbridges' },
+        // { name: 'Weighbridges', link: '/weighbridges' },
         { name: 'Pricing Scales', link: '/pricingscales' }
       ]
     }
@@ -517,19 +536,21 @@ handToolsCategories = [
   { name: 'Screwdrivers', link: '/screwdrivers' },
   { name: 'Pliers & Cutters', link: '/pliersandcutters' },
   { name: 'Sockets & Ratchets', link: '/socketsandracthets' },
-  { name: 'Measuring Tapes', link: '/measuringtapes' },
-  { name: 'Utility Knives & Blades', link: '/utilityknivesandblades' },
+  { name: 'Measuring Tapes', link: '/handtoolsmeasuringtapes' },
+  { name: 'Utility Knives & Blades', link: '/utilityknicesandblades' },
   { name: 'Chisels & Punches', link: '/chiselsandpunches' },
   { name: 'Tools Bags', link: '/toolsbags' },
   { name: 'Tools Boxes', link: '/toolsboxes' },
   { name: 'Hand Riveters', link: '/handriveters' },
   { name: 'Crimping Tools', link: '/crimpingtools' },
   { name: 'Tiles Cutters', link: '/tilescutters' },
-  { name: 'Drivers', link: '/drivers' },
+  { name: 'General Drivers', link: '/drivers' },
   { name: 'Flaring Tools', link: '/flaringtools' },
-  { name: 'Bearing Pullers', link: '/bearingpullers' },
+  { name: 'Bearing Pullers', link: 'bearingpullers' },
   { name: 'Toolssets', link: '/toolssets' },
-  { name: 'Saw', link: '/saws' }
+  { name: 'Hand Saw', link: '/saws' },
+  { name: 'Allen Keys', link: '/allenkeys' },
+  { name: 'puttyknives', link: '/puttyknife' },
 ];
 
 handToolAccessories = [
@@ -538,7 +559,6 @@ handToolAccessories = [
   { name: 'Sanding Pads', link: '/sandingpads' },
   { name: 'Polishing Pads & Buffers', link: '/polishingpadsandbuffers' },
   { name: 'Cutting & Grinding Disc', link: '/cuttingandgrindingdisc' },
-  { name: 'Allen Keys', link: '/allenkeys' },
   { name: 'Screw Driver Bits', link: '/screwdriverbits' }
 ];
 
@@ -556,11 +576,11 @@ handToolsBrands = [
   { name: 'Concrete Mixers', link: '/concretemixers' },
   { name: 'Jumping Rammers', link: '/jumpingrammers' },
   { name: 'Wheelbarrows', link: '/wheelbarrows' },
-  { name: 'Plate Compactors', link: '/compactors' },
-  { name: 'Concrete Vibrators', link: '/concretevibrators' },
+    { name: 'Plate Compactors', link: '/platecompactors' },
+    { name: 'Concrete Vibrators', link: '/concretevibrators' },
   { name: 'Power Trowels', link: '/powertrowels' },
-  { name: 'Construction Safety Gears', link: '/constructionsafetygear' },
-  { name: 'Fall Arrestors', link: '/fallarrestors' },
+  // { name: 'Construction Safety Gears', link: '/constructionsafetygear' },
+    { name: 'Fall Arrestors', link: '/fallarresters' },
   { name: 'Ropes', link: '/ropes' },
   { name: 'Poker Hoses', link: '/pokerhoses' },
   { name: 'Rod Benders', link: '/rodbenders' },
@@ -574,7 +594,7 @@ pumpingMachines = [
   { name: 'Water Pumps', link: '/waterpumps' },
   { name: 'Submersible Pumps', link: '/submersiblepumps' },
   { name: 'Fuel Transfer Pumps', link: '/fueltransferpumps' },
-  { name: 'Hand/Rotary Pumps', link: '/handrotarypumps' },
+  { name: 'Hand Rotary Pumps', link: '/rotarypumps' },
   { name: 'Pressure Pumps', link: '/pressurepumps' },
   { name: 'Vacuum Pumps', link: '/vacuumpumps' }
 ];
@@ -602,19 +622,10 @@ cleaningGardenSupplies = {
     accessories: { name: 'Accessories', link: '/accessories' }
   },
 
-  blowers: {
-    categories: [
-      { name: 'Cordless Blowers', link: '/cordlessblowers' },
-      { name: 'Electric Blowers', link: '/electricblowers' },
-      { name: 'Gasoline Blowers', link: '/gasolineblowers' }
-    ],
-    brands: [
-      { name: 'Ingco', link: '/ingco' },
-      { name: 'Total', link: '/total' },
-      { name: 'Bosch', link: '/bosch' },
-      { name: 'Maxmech', link: '/maxmech' }
-    ]
-  },
+ blowers: {
+  categories: this.blowerCategories,
+  brands: this.blowerBrands
+},
 
   hose: [
     { name: 'Water Hose', link: '/waterhose' },
@@ -662,4 +673,15 @@ cleaningGardenSupplies = {
     accessories: { name: 'Accessories', link: '/accessories' }
   }
 };
+
+// farm equipments
+
+farmCategories = [
+  { name: 'Farm Machines', link: '/farm-machines' },
+  { name: 'Farm Tools', link: '/farm-tools' }
+];
+
+
 }
+
+  

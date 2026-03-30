@@ -1,0 +1,66 @@
+<div class="container mt-5">
+
+  <!-- Marketplace Header -->
+  <div class="card shadow-lg p-4 text-center mb-5 marketplace-header">
+
+    <h2>Our Marketplace</h2>
+
+    <p>
+      Our marketplace is professionally designed to provide high quality
+      industrial, safety and technical products. Browse our collection
+      and discover reliable equipment built for performance and safety.
+    </p>
+
+  </div>
+
+
+  <div class="row">
+
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let prod of paginatedProducts">
+
+      <div class="single-product card shadow-sm h-100">
+
+        <img [src]="prod.image" class="img-fluid product-img">
+
+        <div class="card-body text-center">
+
+          <h5 class="product-title">{{prod.name}}</h5>
+
+          <p class="product-price">{{prod.price}}</p>
+
+          <button class="btn btn-primary view-btn"
+                  (click)="openProduct(prod)">
+            View More
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Pagination buttons -->
+
+  <div class="text-center mt-5 pagination-controls">
+
+    <button class="btn btn-outline-dark me-3 px-4 py-2"
+            (click)="prevPage()"
+            [disabled]="currentPage === 1">
+
+      Previous
+
+    </button>
+
+    <button class="btn btn-primary px-4 py-2"
+            (click)="nextPage()">
+
+      Next
+
+    </button>
+
+  </div>
+
+</div>

@@ -15,6 +15,6 @@ export class GreasegunsComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('grease guns');
+            this.products = this.SearchService.getProductsByCategory('grease-guns');
           }
 }

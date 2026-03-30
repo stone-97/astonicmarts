@@ -1,7 +1,6 @@
 
 import { FallarrestorsComponent } from './pages/ppe/bycategory/fallarrestors/fallarrestors.component';
 
-
 import { VacuumpumpsComponent } from './pages/pumpingmachines/vacuumpumps/vacuumpumps.component';
 import { DrumtrucksComponent } from './pages/constructionequipment/drumtrucks/drumtrucks.component';
 import { JumpingrammersComponent } from './pages/constructionequipment/jumpingrammers/jumpingrammers.component';
@@ -10,8 +9,6 @@ import { ScrubbersandsweepersComponent } from './pages/cleaningandgardensupplies
 import { SpraygunsComponent } from './pages/powertools/bycategories/sprayguns/sprayguns.component';
 import { ReciprocatingsawsComponent } from './pages/powertools/bycategories/saws/reciprocatingsaws/reciprocatingsaws.component';
 import { ToolssetsComponent } from './pages/handtoolsandaccessories/category/toolssets/toolssets.component';
-
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -60,7 +57,6 @@ import { FiresafetyComponent } from './pages/safety_traffic/firesafety/firesafet
 import { FireblanketsComponent } from './pages/safety_traffic/firesafety/fireblankets/fireblankets.component';
 import { FireextinguishersComponent } from './pages/safety_traffic/firesafety/fireextinguishers/fireextinguishers.component';
 import { SmokeFirealarmsComponent } from './pages/safety_traffic/firesafety/smoke-firealarms/smoke-firealarms.component';
-import { CautionsignsComponent } from './pages/safety_traffic/trafficsafety/cautionsigns/cautionsigns.component';
 import { RoadbarriersComponent } from './pages/safety_traffic/trafficsafety/roadbarriers/roadbarriers.component';
 import { SafetyvestsComponent } from './pages/safety_traffic/trafficsafety/safetyvests/safetyvests.component';
 import { SpeedbumpsComponent } from './pages/safety_traffic/trafficsafety/speedbumps/speedbumps.component';
@@ -80,16 +76,14 @@ import { StepladdersComponent } from './pages/workshopgarage/ladders/stepladders
 import { MeasuringandtestingComponent } from './pages/measuringandtesting/measuringandtesting.component';
 import { FlowmetersComponent } from './pages/measuringandtesting/fueltestingandmeasuring/flowmeters/flowmeters.component';
 import { FueltestingandmeasuringComponent } from './pages/measuringandtesting/fueltestingandmeasuring/fueltestingandmeasuring.component';
-import { FuelmetersComponent } from './pages/measuringandtesting/fueltestingandmeasuring/fuelmeters/fuelmeters.component';
 import { FueltestingkitsComponent } from './pages/measuringandtesting/fueltestingandmeasuring/fueltestingkits/fueltestingkits.component';
 import { HydrometersComponent } from './pages/measuringandtesting/fueltestingandmeasuring/hydrometers/hydrometers.component';
 import { MeasuringcansComponent } from './pages/measuringandtesting/fueltestingandmeasuring/measuringcans/measuringcans.component';
 import { MeasuringcylindersComponent } from './pages/measuringandtesting/fueltestingandmeasuring/measuringcylinders/measuringcylinders.component';
-import { PasteComponent } from './pages/measuringandtesting/fueltestingandmeasuring/paste/paste.component';
+import { TestingpasteComponent } from './pages/measuringandtesting/fueltestingandmeasuring/testingpaste/testingpaste.component';
 import { ThermometersComponent } from './pages/measuringandtesting/fueltestingandmeasuring/thermometers/thermometers.component';
 import { GeneralmeasuringinstrumentsComponent } from './pages/measuringandtesting/generalmeasuringinstruments/generalmeasuringinstruments.component';
 import { ClampmetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/clampmeters/clampmeters.component';
-
 import { MeasuringtapesComponent } from './pages/measuringandtesting/generalmeasuringinstruments/measuringtapes/measuringtapes.component';
 import { MultimetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/multimeters/multimeters.component';
 import { CalipersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/calipers/calipers.component';
@@ -151,13 +145,12 @@ import { WheelserviceequipmentComponent } from './pages/workshopgarage/wheelserv
 import { TirechangesComponent } from './pages/workshopgarage/wheelserviceequipment/tirechanges/tirechanges.component';
 import { WheelalignmentguagesComponent } from './pages/workshopgarage/wheelserviceequipment/wheelalignmentguages/wheelalignmentguages.component';
 import { WheelbalancersComponent } from './pages/workshopgarage/wheelserviceequipment/wheelbalancers/wheelbalancers.component';
-import { LpgcountingmetersComponent } from './pages/measuringandtesting/fueltestingandmeasuring/lpgcountingmeters/lpgcountingmeters.component';
 import { BatterytestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/batterytesters/batterytesters.component';
 import { DialindicatorsComponent } from './pages/measuringandtesting/generalmeasuringinstruments/dialindicators/dialindicators.component';
 import { GuagesComponent } from './pages/measuringandtesting/generalmeasuringinstruments/guages/guages.component';
 import { LaserdistancemetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/laserdistancemeters/laserdistancemeters.component';
 import { WaterandlabtestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterandlabtesters/waterandlabtesters.component';
-import { ConcretemetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterandlabtesters/concretemeters/concretemeters.component';
+import { ConcretetestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterandlabtesters/concretetesters/concretetesters.component';
 import { MoisturetestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterandlabtesters/moisturetesters/moisturetesters.component';
 import { PhmetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterandlabtesters/phmeters/phmeters.component';
 import { WatertestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterandlabtesters/watertesters/watertesters.component';
@@ -165,7 +158,7 @@ import { MeasuringscalesComponent } from './pages/measuringandtesting/measurings
 import { AnaloguescalesComponent } from './pages/measuringandtesting/measuringscales/analoguescales/analoguescales.component';
 import { DigitalscalesComponent } from './pages/measuringandtesting/measuringscales/digitalscales/digitalscales.component';
 import { MeasuringwheelsComponent } from './pages/measuringandtesting/generalmeasuringinstruments/measuringwheels/measuringwheels.component';
-import { MetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/meters/meters.component';
+import { GeneralMetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/generalmeters/generalmeters.component';
 import { ConstructionequipmentComponent } from './pages/constructionequipment/constructionequipment.component';
 import { ConcretemixersComponent } from './pages/constructionequipment/concretemixers/concretemixers.component';
 import { ConcretevibratorsComponent } from './pages/constructionequipment/concretevibrators/concretevibrators.component';
@@ -185,16 +178,16 @@ import { CleaningandgardensuppliesComponent } from './pages/cleaningandgardensup
 import { BrushcuttersComponent } from './pages/cleaningandgardensupplies/brushcutters/brushcutters.component';
 import { CordlessbruschcuttersComponent } from './pages/cleaningandgardensupplies/brushcutters/bycategory/cordlessbruschcutters/cordlessbruschcutters.component';
 import { GasolinebrushcuttersComponent } from './pages/cleaningandgardensupplies/brushcutters/bycategory/gasolinebrushcutters/gasolinebrushcutters.component';
-import { AccessoriesComponent } from './pages/cleaningandgardensupplies/pressurewashers/accessories/accessories.component';
+import {PressurewashersaccessoriesComponent } from './pages/cleaningandgardensupplies/pressurewashers/pressurewashersaccessories/pressurewashersaccessories.component';
 import { HoseComponent } from './pages/cleaningandgardensupplies/hose/hose.component';
 import { HoseaccessoriesComponent } from './pages/cleaningandgardensupplies/hose/hoseaccessories/hoseaccessories.component';
 import { PressurehoseComponent } from './pages/cleaningandgardensupplies/hose/pressurehose/pressurehose.component';
 import { PumphoseComponent } from './pages/cleaningandgardensupplies/hose/pumphose/pumphose.component';
 import { WaterhoseComponent } from './pages/cleaningandgardensupplies/hose/waterhose/waterhose.component';
 import { LawnmowersComponent } from './pages/cleaningandgardensupplies/lawnmowers/lawnmowers.component';
-import { ElectricComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/electric/electric.component';
-import { HandpushComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/handpush/handpush.component';
-import { SelfpropelledComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/selfpropelled/selfpropelled.component';
+import { ElectriclawnmowerComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/electriclawnmower/electriclawnmowers.component';
+import { HandpushlawnmowersComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/handpushlawnmowers/handpushlawnmowers.component';
+import {  SelfpropelledlawnmowerComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/selfpropelledlawnmower/selfpropelledlawnmower.component';
 import { PrincegardenComponent } from './pages/cleaningandgardensupplies/lawnmowers/bybrands/princegarden/princegarden.component';
 import { PressurewashersComponent } from './pages/cleaningandgardensupplies/pressurewashers/pressurewashers.component';
 import { CordlesspressurewashersComponent } from './pages/cleaningandgardensupplies/pressurewashers/bycategory/cordlesspressurewashers/cordlesspressurewashers.component';
@@ -241,18 +234,16 @@ import { ToolsbagsComponent } from './pages/handtoolsandaccessories/category/too
 import { ScrewdriversComponent } from './pages/handtoolsandaccessories/category/screwdrivers/screwdrivers.component';
 import { TilescutterComponent } from './pages/handtoolsandaccessories/category/tilescutter/tilescutter.component';
 import { ToolboxesComponent } from './pages/handtoolsandaccessories/category/toolboxes/toolboxes.component';
-import { UtilityknicesandbladesComponent } from './pages/handtoolsandaccessories/category/utilityknicesandblades/utilityknicesandblades.component';
+import { UtilityknivesandbladesComponent } from './pages/handtoolsandaccessories/category/utilityknivesandblades/utilityknivesandblades.component';
 import { DrillbitsComponent } from './pages/handtoolsandaccessories/category/handtoolsaccessories/drillbits/drillbits.component';
 import { PolishingpadsandbuffersComponent } from './pages/handtoolsandaccessories/category/handtoolsaccessories/polishingpadsandbuffers/polishingpadsandbuffers.component';
 import { SandingpadsComponent } from './pages/handtoolsandaccessories/category/handtoolsaccessories/sandingpads/sandingpads.component';
 import { SawbladesComponent } from './pages/handtoolsandaccessories/category/handtoolsaccessories/sawblades/sawblades.component';
 import { ScrewdriverbitsComponent } from './pages/handtoolsandaccessories/category/handtoolsaccessories/screwdriverbits/screwdriverbits.component';
-import { AllenkeysComponent } from './pages/handtoolsandaccessories/category/handtoolsaccessories/allenkeys/allenkeys.component';
 import { CoverallsComponent } from './pages/ppe/bycategory/clothing/coveralls/coveralls.component';
 import { FireresistantwearsComponent } from './pages/ppe/bycategory/clothing/fireresistantwears/fireresistantwears.component';
 import { FlashlightsComponent } from './pages/ppe/bycategory/flashlights/flashlights.component';
 import { LabcoatsComponent } from './pages/ppe/bycategory/clothing/labcoats/labcoats.component';
-import { RainwearsComponent } from './pages/ppe/bycategory/clothing/rainwears/rainwears.component';
 import { ReflectivevestsComponent } from './pages/ppe/bycategory/clothing/reflectivevests/reflectivevests.component';
 import { EmergencyeyewashComponent } from './pages/ppe/bycategory/emergencyeyewash/emergencyeyewash.component';
 import { HandglovesComponent } from './pages/ppe/bycategory/handgloves/handgloves.component';
@@ -296,7 +287,7 @@ import { WeighbridgesComponent } from './pages/measuringandtesting/measuringscal
 import { GasdetectorsComponent } from './pages/ppe/bycategory/gasdetectors/gasdetectors.component';
 import { DisposablesComponent } from './pages/ppe/bycategory/clothing/disposables/disposables.component';
 import { CleaningaccessoriesComponent } from './pages/cleaningandgardensupplies/cleaningaccessories/cleaningaccessories.component';
-import { TestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/testers/testers.component';
+import { GeneralTestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/generaltesters/generaltesters.component';
 import { LiftingComponent } from './pages/workshopgarage/lifting/lifting.component';
 import { DrumhandlingequimentsComponent } from './pages/workshopgarage/lifting/drumhandlingequiments/drumhandlingequiments.component';
 import { EnginecranesComponent } from './pages/workshopgarage/lifting/enginecranes/enginecranes.component';
@@ -311,7 +302,7 @@ import { EdonComponent } from './pages/powertools/bybrands/edon/edon.component';
 import { SecurityandsurveillanceComponent } from './pages/ppe/bycategory/securityandsurveillance/securityandsurveillance.component';
 import { SecuritygearsComponent } from './pages/ppe/bycategory/securityandsurveillance/securitygears/securitygears.component';
 import { StanchionsComponent } from './pages/ppe/bycategory/securityandsurveillance/stanchions/stanchions.component';
-import { PagesComponent } from './pages/pages/pages.component';
+import { PagesComponent } from './pages/pages.component';
 import { DeliverypolicyComponent } from './pages/pages/deliverypolicy/deliverypolicy.component';
 import { WarrantyandreturnsComponent } from './pages/pages/warrantyandreturns/warrantyandreturns.component';
 import { TermsandconditionsComponent } from './pages/pages/termsandconditions/termsandconditions.component';
@@ -333,511 +324,529 @@ import { SafeKeyedRead } from '@angular/compiler';
 import { SafetyrainwearsComponent } from './pages/ppe/bycategory/safetyrainwears/safetyrainwears.component';
 import { RotaryhammerdrillsComponent } from './pages/powertools/bycategories/drills/rotaryhammerdrills/rotaryhammerdrills.component';
 import { ShoppressComponent } from './pages/powertools/bycategories/shoppress/shoppress.component';
+import { PagesinfoComponent } from './pages/pages/pagesinfo.component';
+import { PagnationComponent } from './pages/pagnation/pagnation.component';
+import { GluegunsComponent } from './pages/powertools/bycategories/glueguns/glueguns.component';
+import { GreasebucketsComponent } from './pages/workshopgarage/greasebuckets/greasebuckets.component';
+import { InfraredthermometersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/infraredthermometers/infraredthermometers.component';
+import { DigitalthermometersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/digitalthermometers/digitalthermometers.component';
+import { AnaloguekitchenscalesComponent } from './pages/measuringandtesting/measuringscales/analoguescales/analoguekitchenscales/analoguekitchenscales.component';
+import { HandtoolsMeasuringtapesComponent } from './pages/handtoolsandaccessories/category/handtoolsmeasuringtapes/handtoolsmeasuringtapes.component';
+import { WaterseperatorsComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterseperators/waterseperators.component';
+import { AllenkeysComponent } from './pages/handtoolsandaccessories/category/allenkeys/allenkeys.component';
+import { PowertrowelsComponent } from './pages/constructionequipment/powertrowels/powertrowels.component';
+import { BrushcuttersaccessoriesComponent } from './pages/cleaningandgardensupplies/brushcutters/brushcuttersaccessories/brushcuttersaccessoriescomponent';
+import { FallarrestersComponent } from './pages/constructionequipment/fallarrestors/fallarresters.component';
+import { HydraulicshoppressComponent } from './pages/workshopgarage/hydraulicshoppress/hydraulicshoppress.component';
 
 
 
 const routes: Routes = [
 
-  {path: "", component: HomeComponent},
-  {path: "index", component: HomeComponent},
-  {path: "dash", component: DashboardComponent},
-  {path: "search-results", component: SearchResultsComponent},
-  {path: "shopcategories", component:ShopcategoriesComponent},
-  {path:"shoppingcart", component:ShoppingcartComponent},
-  { path: 'product/:id', component: ProductdetailsComponent},
-  {path: "productcheckout" , component: ProductcheckoutComponent},
-  {path: "pages", component:PagesComponent},
-  {path: "login", component: LoginComponent},
-  {path: "trackorder", component: TrackorderComponent},
-  {path: "faq", component:FaqComponent},
-  {path: "termsandconditions", component: TermsandconditionsComponent},
-  {path: "privacypolicy", component: PrivacypolicyComponent},
-  {path: "deliverypolicy", component: DeliverypolicyComponent},
-   {path: "warrantyandreturns", component: WarrantyandreturnsComponent},
-  {path: "confirmation", component: ConfirmationComponent},
-  {path: "contact", component: ContactComponent},
-   {path: "blog", component: BlogComponent},
-   {path: "blogdetails", component: BlogdetailsComponent},
-  {path: "aboutus", component:AboutusComponent},
+  { path: "", component: HomeComponent },
+  { path: "index", component: HomeComponent },
+  { path: "dash", component: DashboardComponent },
+  { path: "search-results", component: SearchResultsComponent },
+  { path: "shopcategories", component: ShopcategoriesComponent },
+  { path: "shoppingcart", component: ShoppingcartComponent },
+  { path: 'product/:id', component: ProductdetailsComponent },
+  { path: "productcheckout", component: ProductcheckoutComponent },
+  { path: "pages", component: PagesComponent },
+  { path: "login", component: LoginComponent },
+  { path: "trackorder", component: TrackorderComponent },
+  { path: "faq", component: FaqComponent },
+  { path: "termsandconditions", component: TermsandconditionsComponent },
+  { path: "privacypolicy", component: PrivacypolicyComponent },
+  { path: "deliverypolicy", component: DeliverypolicyComponent },
+  { path: "warrantyandreturns", component: WarrantyandreturnsComponent },
+  { path: "confirmation", component: ConfirmationComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "blog", component: BlogComponent },
+  { path: "pagesinfo", component: PagesinfoComponent },
+  { path: "blogdetails", component: BlogdetailsComponent },
+  { path: "aboutus", component: AboutusComponent },
+  { path: "pagnation", component: PagnationComponent },
 
-
-      // ppe
-  {path: "ppe", component: PPeComponent},
+  // ppe
+  { path: "ppe", component: PPeComponent },
   // bybrands
-  {path: "bybrands", component: BybrandsComponent},
-  {path: "beta", component: BetaComponent},
-  {path: "dickies", component:DickiesComponent},
-  {path: "portwest", component: PortwestComponent},
-  {path: "redwings", component: RedwingsComponent},
-  {path: "supersteel", component: SupersteelComponent},
-  {path: "safetyjoggers", component:SafetyjoggersComponent},
-  {path: "threem", component: ThreeMComponent},
-  {path: "msa", component:MsaComponent},
-  {path:"uvex", component:UvexComponent},
+  { path: "bybrands", component: BybrandsComponent },
+  { path: "beta", component: BetaComponent },
+  { path: "dickies", component: DickiesComponent },
+  { path: "portwest", component: PortwestComponent },
+  { path: "redwings", component: RedwingsComponent },
+  { path: "supersteel", component: SupersteelComponent },
+  { path: "safetyjoggers", component: SafetyjoggersComponent },
+  { path: "threem", component: ThreeMComponent },
+  { path: "msa", component: MsaComponent },
+  { path: "uvex", component: UvexComponent },
 
   //  Bycategory
-   {path: "bycategory", component:BycategoryComponent},
-   {path: "clothing", component: SupersteelComponent},
-    {path: "disposables", component: DisposablesComponent},
-    {path: "coveralls", component: CoverallsComponent},
-   {path: "fireresistantsuits", component: FireresistantwearsComponent},
-    {path: "labcoats", component: LabcoatsComponent},
-   {path: "chemicalwears", component: ChemicalwearsComponent },
-    {path: "reflectivevests", component:ReflectivevestsComponent},
-     {path: "umbrellas", component: SupersteelComponent},
-    {path: "emergencyeyewash", component: EmergencyeyewashComponent},
-    {path: "fallarrestors", component: FallarrestorsComponent},
-    {path: "flashlights", component: FlashlightsComponent},
-    {path: "gasdetectors", component:GasdetectorsComponent},
-     {path: "handgloves", component: HandglovesComponent},
-    {path: "headprotections", component: HeadprotectionsComponent},
-    {path: "flashlights", component: FlashlightsComponent},
-     {path: "bumpcaps", component: BumpcapsComponent},
-      {path: "faceshields", component: FaceshieldsComponent},
-      {path: "safetyhelmets", component: SafetyhelmetsComponent},
-       {path: "weldinghelmets", component: WeldinghelmetsComponent},
-     {path: "lifesavingequipments", component: LifesavingequipmentsComponent},
-     {path: "lifebuoys", component: LifebuoyComponent},
-      {path: "lifejackets", component: LifejacketsComponent},
-      {path: "lifevests", component: LifevestsComponent},
-      {path: "respiratoryandhearings", component: RespiratoryandhearingComponent},
-       {path: "earmuffs", component: EarmuffsComponent},
-         {path: "earplugs", component: EarplugsComponent},
-         {path: "nosemasks", component:NosemasksComponent},
-          {path: "safetyboots", component: SafetybootsComponent},
-           {path: "safetygoogles", component:SafetygooglesComponent},
-           {path: "safetyharnessandlanyards", component: SafetyharnessandlanyardsComponent},
-             {path: "safetyhelmets", component: SafetyhelmetsComponent},
-               {path: "safetyshoes", component: SafetyshoesComponent},
-               {path: "spillkits", component: SpillkitsComponent},
-               {path: "firstaids", component: FirstaidsComponent},
-               {path: 'safetyrainwears', component: SafetyrainwearsComponent},
-             {path: "securityandsurveillance", component: SecurityandsurveillanceComponent}, 
-              {path: "securitygears", component: SecuritygearsComponent},
-               {path: "stanchions", component: StanchionsComponent},      
-      // powertools
-  {path:"powertools",component:PowertoolsComponent},
-   {path:"bybrands", component:BybrandsComponent},
-  {path:"bosch", component:BoschComponent},
-  {path:"ingco", component:IngcoComponent},
-  {path:"makita", component:MakitaComponent},
-  {path:"maxmech", component:MaxmechComponent},
-  {path:"stanley", component:StanleyComponent},
-  {path:"total", component:TotalComponent},
-  {path:"dewalt", component:DewaltComponent},
- {path:"edon", component:EdonComponent}, 
-  
+  { path: "bycategory", component: BycategoryComponent },
+  { path: "clothing", component: SupersteelComponent },
+  { path: "disposables", component: DisposablesComponent },
+  { path: "coveralls", component: CoverallsComponent },
+  { path: "fireresistantsuits", component: FireresistantwearsComponent },
+  { path: "labcoats", component: LabcoatsComponent },
+  { path: "chemicalwears", component: ChemicalwearsComponent },
+  { path: "reflectivevests", component: ReflectivevestsComponent },
+  { path: "umbrellas", component: SupersteelComponent },
+  { path: "emergencyeyewash", component: EmergencyeyewashComponent },
+  { path: "fallarrestors", component: FallarrestorsComponent },
+  { path: "flashlights", component: FlashlightsComponent },
+  { path: "gasdetectors", component: GasdetectorsComponent },
+  { path: "handgloves", component: HandglovesComponent },
+  { path: "headprotections", component: HeadprotectionsComponent },
+  { path: "flashlights", component: FlashlightsComponent },
+  { path: "bumpcaps", component: BumpcapsComponent },
+  { path: "faceshields", component: FaceshieldsComponent },
+  { path: "safetyhelmets", component: SafetyhelmetsComponent },
+  { path: "weldinghelmets", component: WeldinghelmetsComponent },
+  { path: "lifesavingequipments", component: LifesavingequipmentsComponent },
+  { path: "lifebuoys", component: LifebuoyComponent },
+  { path: "lifejackets", component: LifejacketsComponent },
+  { path: "lifevests", component: LifevestsComponent },
+  { path: "respiratoryandhearings", component: RespiratoryandhearingComponent },
+  { path: "earmuffs", component: EarmuffsComponent },
+  { path: "earplugs", component: EarplugsComponent },
+  { path: "nosemasks", component: NosemasksComponent },
+  { path: "safetyboots", component: SafetybootsComponent },
+  { path: "safetygoogles", component: SafetygooglesComponent },
+  { path: "safetyharnessandlanyards", component: SafetyharnessandlanyardsComponent },
+  { path: "safetyhelmets", component: SafetyhelmetsComponent },
+  { path: "safetyshoes", component: SafetyshoesComponent },
+  { path: "spillkits", component: SpillkitsComponent },
+  { path: "firstaids", component: FirstaidsComponent },
+  { path: 'safetyrainwears', component: SafetyrainwearsComponent },
+  { path: "securityandsurveillance", component: SecurityandsurveillanceComponent },
+  { path: "securitygears", component: SecuritygearsComponent },
+  { path: "stanchions", component: StanchionsComponent },
+  // powertools
+  { path: "powertools", component: PowertoolsComponent },
+  { path: "bybrands", component: BybrandsComponent },
+  { path: "bosch", component: BoschComponent },
+  { path: "ingco", component: IngcoComponent },
+  { path: "makita", component: MakitaComponent },
+  { path: "maxmech", component: MaxmechComponent },
+  { path: "stanley", component: StanleyComponent },
+  { path: "total", component: TotalComponent },
+  { path: "dewalt", component: DewaltComponent },
+  { path: "edon", component: EdonComponent },
+
   // Bycategory
-  {path:"cuttingmachines", component:CuttingmachinesComponent},
-  {path:"drills", component:DrillsComponent},
-  {path:"cordeddrills", component:CordeddrillsComponent},
-  {path: 'shoppress', component:ShoppressComponent},
-  {path:"cordlessdrillsanddrivers", component:CordlessdrillsanddriversComponent},
-  {path:"coredrills", component:CoredrillsComponent}, 
-  {path:"magneticdrills", component:MagneticdrillsComponent}, 
-  {path:"drillpresses", component:DrillpressesComponent}, 
-  {path:"blowers", component:BlowersComponent},  
-  {path:"cordlessblowers", component:CordlessblowersComponent}, 
-  {path:"electricblowers", component:ElectricblowersComponent},  
-  {path:"gasolineblowers", component:GasolineblowersComponent},   
-  {path:"rotaryhammerdrills", component:RotaryhammerdrillsComponent},     
-  {path:"grinders", component:GrindersComponent},
-  {path:"anglegrinders", component:AnglegrindersComponent},   
-  {path:"benchgrinders", component:BenchgrindersComponent}, 
-  {path:"combokits", component:CombokitsComponent},  
-  {path:"diegrinders", component:DiegrindersComponent},   
-  {path:"minigrinders", component:MinigrindersComponent},     
-  {path:"heatguns", component:HeatgunsComponent},
-  {path:"mixers", component:MixersComponent},
-  {path:"impactwrenches", component:ImpactwrenchesComponent},
-  {path: "cordlessimpactwrenches", component: CordlessimpactwrenchesComponent},
-  {path: "electricimpactwrenches", component: LifejacketsComponent},
-  {path: "pneumatic", component: PnuematicComponent},
-  {path:"mixers", component:MixersComponent},
-  {path:"sanders", component:SandersComponent},
-  {path:"polishers", component: PolishersComponent},
-  {path:"saws", component:SawsComponent},
-  {path: "bagclosermachines", component: BagclosermachinesComponent},
-  {path:"planers", component:PlanersComponent},
-  {path:"edgebandingmachines", component:EdgebandingmachinesComponent},   
-  {path:"greaseguns", component:GreasegunsComponent},  
-  {path:"gunsandtrimmers", component:GunsandtrimmersComponent},  
-  {path:"impulsesealers", component:ImpulsesealersComponent},     
-  {path:"nailers", component:NailersComponent}, 
-  {path:"ppr", component:PprComponent},
-   {path:"wallchasers", component:WallchasersComponent},  
-  {path:"routers", component:RoutersComponent},  
-  {path:"sprayguns", component:SpraygunsComponent}, 
-  {path:"saws", component:SawsComponent},  
-  {path:"bandsaws", component:BandsawsComponent},  
-  {path:"chainsaws", component:ChainsawsComponent},
-   {path:"trimmers", component:TrimmersComponent},  
-    {path:"gunsandtrimmers", component:GunsandtrimmersComponent},  
-    {path:"planers", component:PlanersComponent},   
-   {path:"jackhammers", component:JackhammersComponent},
-   {path:"demolitionbreakers", component:DemolitionbreakersComponent},
-  {path:"pneumaticjackhammers", component:PneumaticjackhammersComponent},
-  {path:"circularsaws", component:CircularsawsComponent}, 
-  {path:"jigsaws", component:JigsawsComponent}, 
-  {path:"mitresaws", component:TablesawsComponent},           
-  {path:"tablesaws", component:TablesawsComponent},
-  {path:"heatguns", component: HeatgunsComponent},
-  {path: "reciprocatingsaws", component:ReciprocatingsawsComponent},  
+  { path: "cuttingmachines", component: CuttingmachinesComponent },
+  { path: "drills", component: DrillsComponent },
+  { path: "cordeddrills", component: CordeddrillsComponent },
+  { path: 'shoppress', component: ShoppressComponent },
+  { path: "cordlessdrillsanddrivers", component: CordlessdrillsanddriversComponent },
+  { path: "coredrills", component: CoredrillsComponent },
+  { path: "magneticdrills", component: MagneticdrillsComponent },
+  { path: "drillpresses", component: DrillpressesComponent },
+  { path: "blowers", component: BlowersComponent },
+  { path: "cordlessblowers", component: CordlessblowersComponent },
+  { path: "electricblowers", component: ElectricblowersComponent },
+  { path: "gasolineblowers", component: GasolineblowersComponent },
+  { path: "rotaryhammerdrills", component: RotaryhammerdrillsComponent },
+  { path: "grinders", component: GrindersComponent },
+  { path: "anglegrinders", component: AnglegrindersComponent },
+  { path: "benchgrinders", component: BenchgrindersComponent },
+  { path: "combokits", component: CombokitsComponent },
+  { path: "diegrinders", component: DiegrindersComponent },
+  { path: "minigrinders", component: MinigrindersComponent },
+  { path: "heatguns", component: HeatgunsComponent },
+  { path: "mixers", component: MixersComponent },
+  { path: "impactwrenches", component: ImpactwrenchesComponent },
+  { path: "cordlessimpactwrenches", component: CordlessimpactwrenchesComponent },
+  { path: "electricimpactwrenches", component: LifejacketsComponent },
+  { path: "pneumatic", component: PnuematicComponent },
+  { path: "mixers", component: MixersComponent },
+  { path: "sanders", component: SandersComponent },
+  { path: "polishers", component: PolishersComponent },
+  { path: "saws", component: SawsComponent },
+  { path: "bagclosermachines", component: BagclosermachinesComponent },
+  { path: "planers", component: PlanersComponent },
+  { path: "edgebandingmachines", component: EdgebandingmachinesComponent },
+  { path: "greaseguns", component: GreasegunsComponent },
+  { path: "gunsandtrimmers", component: GunsandtrimmersComponent },
+  { path: "impulsesealers", component: ImpulsesealersComponent },
+  { path: "nailers", component: NailersComponent },
+  { path: "ppr", component: PprComponent },
+  { path: "wallchasers", component: WallchasersComponent },
+  { path: "routers", component: RoutersComponent },
+  { path: "sprayguns", component: SpraygunsComponent },
+  { path: "saws", component: SawsComponent },
+  { path: "bandsaws", component: BandsawsComponent },
+  { path: "chainsaws", component: ChainsawsComponent },
+  { path: "trimmers", component: TrimmersComponent },
+  { path: "gunsandtrimmers", component: GunsandtrimmersComponent },
+  { path: "planers", component: PlanersComponent },
+  { path: "jackhammers", component: JackhammersComponent },
+  { path: "demolitionbreakers", component: DemolitionbreakersComponent },
+  { path: "pneumaticjackhammers", component: PneumaticjackhammersComponent },
+  { path: "circularsaws", component: CircularsawsComponent },
+  { path: "jigsaws", component: JigsawsComponent },
+  { path: "mitresaws", component: TablesawsComponent },
+  { path: "tablesaws", component: TablesawsComponent },
+  { path: "heatguns", component: HeatgunsComponent },
+  { path: "reciprocatingsaws", component: ReciprocatingsawsComponent },
+  { path: "glueguns", component: GluegunsComponent },
 
   // sealantadhesive
-   {path:"sealantadhesive", component:SealantadhesiveComponent},
-    {path:"constructionadhesives", component:ConstructionadhesivesComponent},
-     {path:"epoxyadhesives", component:EpoxyadhesivesComponent},
-   {path:"pufoamsealants", component:PufoamsealantsComponent},
-   {path:"siliconsealants", component:SiliconesealantsComponent},
-    {path:"tilesadhesives",component: TilesadhesivesComponent},
-     {path:"woodglues", component:WoodgluesComponent},
-    {path:"gums", component:GumsComponent},
-    {path:"contactadhesives", component:ContactadhesivesComponent},
-    {path:"spraypaints", component:SpraypaintsComponent},
-    {path:"waterproofsealants", component:WaterproofsealantsComponent},
+  { path: "sealantadhesive", component: SealantadhesiveComponent },
+  { path: "constructionadhesives", component: ConstructionadhesivesComponent },
+  { path: "epoxyadhesives", component: EpoxyadhesivesComponent },
+  { path: "pufoamsealants", component: PufoamsealantsComponent },
+  { path: "siliconsealants", component: SiliconesealantsComponent },
+  { path: "tilesadhesives", component: TilesadhesivesComponent },
+  { path: "woodglues", component: WoodgluesComponent },
+  { path: "gums", component: GumsComponent },
+  { path: "contactadhesives", component: ContactadhesivesComponent },
+  { path: "spraypaints", component: SpraypaintsComponent },
+  { path: "waterproofsealants", component: WaterproofsealantsComponent },
 
-        //  safety&traffic
-    {path:"safety_traffic", component:TrafficsafetyComponent},
-       // Fire safety
-      {path: "firesafety", component:FiresafetyComponent},
-      {path: "fireblankets", component:FireblanketsComponent},
-       {path: "fireextinguishers", component:FireextinguishersComponent},
-        {path: "smoke_firealarms", component:SmokeFirealarmsComponent},
-       {path:"firehose", component:FirehoseComponent},
-       {path:"firehosecabinet", component:FirehosecabinetComponent},
+  //  safety&traffic
+  { path: "safety_traffic", component: TrafficsafetyComponent },
+  //  Fire safety
+  { path: "firesafety", component: FiresafetyComponent },
+  { path: "fireblankets", component: FireblanketsComponent },
+  { path: "fireextinguishers", component: FireextinguishersComponent },
+  { path: "smokefirealarms", component: SmokeFirealarmsComponent },
+  { path: "firehose", component: FirehoseComponent },
+  { path: "firehosecabinet", component: FirehosecabinetComponent },
 
-        // traffic safety
-         {path: "cautionsigns", component:CautionsignsComponent},
-         {path:"cautiontapes", component:CautiontapesComponent},
-          {path: "roadbarriers", component:RoadbarriersComponent},
-         {path: "safetyvests", component:SafetyvestsComponent},
-         {path: "speedbumps", component:SpeedbumpsComponent},
-         {path: "trafficcones", component:TrafficconesComponent},
-         {path: "warningsigns", component:WarningsignsComponent},
-         {path: "wheelchokes", component:WheelchocksComponent},
-         {path:"inspectionmirrors", component:InspectionmirrorsComponent},
-         {path:"convexmirrors", component:ConvexmirrorsComponent},
-         {path:"metaldetectors", component:MetaldetectorsComponent},
-         {path:"reflectors", component:ReflectorsComponent},
-        {path:"wheelchocks", component:WheelchocksComponent}, 
-        
-
-
-       
-
-        // WorkshopGarage
-        {path:"workshopgarage", component:WorkshopgarageComponent},
-         {path:"aircompressors", component:AircompressorsComponent},
-         {path:"powerextensionandreels", component:PowerextensionandreelsComponent},
-         {path:"toolscabinets", component:ToolscabinetComponent},
-          {path:"toolssets", component:ToolssetComponent},
-          {path:"workbenches", component:WorkbenchesComponent},
-          {path: "greasebuckets", component: GreasegunsComponent},
-          {path:"carcreepers", component:CarcreepersComponent},
-            {path:"rotarypumps", component:RotarypumpsComponent}, 
-           {path:"testingbuckets", component:TestingbucketsComponent},  
-           
-           {path:"lifting", component:LiftingComponent},  
-            {path:"drumhandlingequipments", component:DrumhandlingequimentsComponent}, 
-             {path:"enginecranes", component:EnginecranesComponent},   
-             {path:"jackandlifts", component:JackandliftsComponent}, 
-            {path:"liftingbelts", component:LiftingbeltsComponent},  
-            {path:"pallettetrucks", component:PalletetrucksComponent}, 
-             {path:"palletestackers", component:PalletstackersComponent}, 
-            {path:"trolleys", component:TrolleysComponent}, 
-             {path:"chainblocksandhoists", component:ChainblocksandhoistsComponent},  
-              {path:"workbenches", component:WorkbenchesComponent}, 
-              {path:"wheeelserviceequipment", component:WheelserviceequipmentComponent}, 
-              {path:"tirechangers", component:TirechangesComponent},
-              {path:"wheelsalignmentguages", component:WheelalignmentguagesComponent},
-             {path:"wheelchock", component:WheelchocksComponent},
-             {path: "wheellocks", component: WheellocksComponent},
-              {path:"wheelbalancers", component:WheelbalancersComponent},
-                
-
-                  
-              // ladder
-               {path:"ladders", component:LaddersComponent},
-                {path:"extensionladders", component:ExtensionladdersComponent},
-                 {path:"foldingladders", component:FoldingladdersComponent},
-                  {path:"stepladders", component:StepladdersComponent},
+  // traffic safety
+  { path: "cautiontapes", component: CautiontapesComponent },
+  { path: "roadbarriers", component: RoadbarriersComponent },
+  { path: "safetyvests", component: SafetyvestsComponent },
+  { path: "speedbumps", component: SpeedbumpsComponent },
+  { path: "trafficcones", component: TrafficconesComponent },
+  { path: "warningsigns", component: WarningsignsComponent },
+  { path: "wheelchokes", component: WheelchocksComponent },
+  { path: "inspectionmirrors", component: InspectionmirrorsComponent },
+  { path: "convexmirrors", component: ConvexmirrorsComponent },
+  { path: "metaldetectors", component: MetaldetectorsComponent },
+  { path: "reflectors", component: ReflectorsComponent },
+  { path: "wheelchocks", component: WheelchocksComponent },
 
 
 
-                  // Electricalequipments
-              {path:"electricalequipments", component:ElectricalequipmentsComponent},
-              {path:"autocompressors", component:AutocompressorsComponent},
-               {path:"aircompressors", component:AircompressorsComponent},
-              {path:"batteries", component:BatteriesComponent},
-              {path:"batterychargers", component:BatterychargersComponent},
-              {path:"batterytesters", component:BatterytestersComponent}, 
-              {path:"extensioncablewires", component:ExtensioncablewiresComponent},  
-              {path:"generators", component:GeneratorsComponent}, 
-              {path:"desielgenerators", component:DesielgeneratorsComponent}, 
-              {path:"invertergenerators", component:InvertergeneratorsComponent}, 
-              {path:"petrolgenerators", component:PetrolgeneratorsComponent},      
-              {path:"plasmacutters", component:PlasmacuttersComponent}, 
-               {path:"cablewireandboosters", component:CablewiresandboostersComponent}, 
-              {path:"weldingmachines", component:WeldingmachinesComponent},  
-              {path:"migweldingmachines", component:MigweldingmachinesComponent},   
-              {path:"mmaweldingmachines", component:MmaweldingmachinesComponent},  
-              {path:"tigweldingmachines", component:TigweldingmachinesComponent},
-              {path:"weldingaccessories", component:WeldingaccessoriesComponent},      
-               {path:"arcweldingmachines", component:ArcweldingmachinesComponent},
 
-                  // Measuringandtesting
-                   {path:"measuringandtesting", component:MeasuringandtestingComponent},
 
-                  // Fueltestingandmeasuring
-                   {path:"fueltestingandmeasuring", component:FueltestingandmeasuringComponent},
-                    {path:"flowmeters", component:FlowmetersComponent},
-                     {path:"fuelmeters", component:FuelmetersComponent},
-                       {path:"fueltestingkits", component:FueltestingkitsComponent},
-                         {path:"hydrometers", component:HydrometersComponent},
-                        {path:"measuringcans", component:MeasuringcansComponent},
-                         {path:"measuringcylinders", component:MeasuringcylindersComponent},
-                           {path:"paste", component:PasteComponent},
-                           {path:"thermometers", component:ThermometersComponent},
-                             {path:"lpgcountingmeters", component:LpgcountingmetersComponent},
+  // WorkshopGarage
+  { path: "workshopgarage", component: WorkshopgarageComponent },
+  { path: "aircompressors", component: AircompressorsComponent },
+  { path: "powerextensionandreels", component: PowerextensionandreelsComponent },
+  { path: "toolscabinets", component: ToolscabinetComponent },
+  { path: "toolssets", component: ToolssetComponent },
+  { path: "workbenches", component: WorkbenchesComponent },
+  { path: "greasebuckets", component: GreasebucketsComponent },
+  { path: "carcreepers", component: CarcreepersComponent },
+  { path: "rotarypumps", component: RotarypumpsComponent },
+  { path: "testingbuckets", component: TestingbucketsComponent },
+  { path: "hydrualicshoppress", component: HydraulicshoppressComponent},
 
-                           //  GeneralmeasuringinstrumentsComponent
-                   {path:"generalmeasuring", component:GeneralmeasuringinstrumentsComponent},
-                     {path:"clampmeters", component:ClampmetersComponent},
-                     {path:"batterytesters", component:BatterytestersComponent},
-                    {path:"calipers", component:CalipersComponent},
-                     {path:"digitalcalipers", component:DigitalcalipersComponent},
-                     {path:"verniercalpers", component:VerniercalipersComponent},
-                     {path:"measuringtapes", component:MeasuringtapesComponent},
-                     {path:"measuringwheels", component:MeasuringwheelsComponent},
-                      {path:"multimeters", component:MultimetersComponent},
-                       {path:"micrometers", component:MicrometersComponent},
-                       {path:"measuringtapes", component:MeasuringtapesComponent},
-                       {path:"analoguemicromter", component:AnaloguemicrometersComponent}, 
-                       {path:"digitalmicromters", component:DigitalmicrometersComponent}, 
-                     {path:"dialindicators", component:DialindicatorsComponent}, 
-                     {path:"guages", component:GuagesComponent},  
-                     {path:"laserdistancemeters", component:LaserlevelsComponent},
-                     {path:"meters",component:MetersComponent},
-                    {path:"testers",component:TestersComponent},
-                     {path:"waterandlabtesters", component:WaterandlabtestersComponent},
-                     {path: "alcoholtesters", component: AlcoholtestersComponent},
-                     {path:"concretemeters", component:ConcretemetersComponent},
-                     {path:"moisturetester", component:MoisturetestersComponent},
-                   {path:"phmeters", component:PhmetersComponent}, 
-                   {path:"testingbuckets", component:TestingbucketsComponent}, 
-                    {path:"watertesters", component:WatertestersComponent},
-                    {path:"moisturetesters", component:MoisturetestersComponent}, 
-                      // meaasuring scales 
-                    {path:"measuringscales", component:MeasuringscalesComponent},
-                    {path:"analoguescales", component:AnaloguescalesComponent},
-                  {path:"beambalances", component:BeambalancesComponent},
-                    {path:"mechanicalplatformscales", component:MechanicalplatformscalesComponent},
-                   {path:"springbalancers", component:SpringbalancesComponent},             
-                    {path:"digitalscalers", component:DigitalscalesComponent},
-                  {path:"analyticalbalancers", component:AnalyticalbalancesComponent},
-                  {path: "platformscales", component: PlatformscalesComponent},
-                
-                  {path:"bathroomscales", component:BathroomscalesComponent},
-                  {path:"cranes", component:CranesComponent}, 
-                  {path:"hangingscales", component:HangingscalesComponent},
-                 {path:"kitchenscales", component:KitchenscalesComponent}, 
-                 {path:"pocketscales", component:PocketscalesComponent}, 
-                 {path:"pricingscales", component:PricingscalesComponent},
-                 {path:"weighbridges", component:WeighbridgesComponent}, 
-                    
-                                  // levelingtools
-                    {path:"leveltools", component:LeveltoolsComponent},
-                    {path:"dumpinglevels", component:DumpinglevelsComponent},
-                    {path:"laserlevels", component:LaserlevelsComponent},
-                    {path:"spiritlevels", component:SpiritlevelsComponent},
-                     {path:"surveytripods", component:SurveytripodsComponent},
+
+  { path: "lifting", component: LiftingComponent },
+  { path: "drumhandlingequipments", component: DrumhandlingequimentsComponent },
+  { path: "enginecranes", component: EnginecranesComponent },
+  { path: "jackandlifts", component: JackandliftsComponent },
+  { path: "liftingbelts", component: LiftingbeltsComponent },
+  { path: "palletetrucks", component: PalletetrucksComponent },
+  { path: "palletestackers", component: PalletstackersComponent },
+  { path: "trolleys", component: TrolleysComponent },
+  { path: "chainblocksandhoists", component: ChainblocksandhoistsComponent },
+  { path: "workbenches", component: WorkbenchesComponent },
+  { path: "wheeelserviceequipment", component: WheelserviceequipmentComponent },
+  { path: "tirechangers", component: TirechangesComponent },
+  { path: "wheelsalignmentguages", component: WheelalignmentguagesComponent },
+  { path: "wheelchock", component: WheelchocksComponent },
+  { path: "wheellocks", component: WheellocksComponent },
+  { path: "wheelbalancers", component: WheelbalancersComponent },
 
 
 
-                     
+  // ladder
+  { path: "ladders", component: LaddersComponent },
+  { path: "extensionladders", component: ExtensionladdersComponent },
+  { path: "foldingladders", component: FoldingladdersComponent },
+  { path: "stepladders", component: StepladdersComponent },
 
-      // Handtoolsaccessories
-         {path:"handtoolsandaccessories", component:HandtoolsaccessoriesComponent},
-        //  Bycategory
-         {path:"category", component:CategoryComponent},
-          {path:"chieselsandpunches", component:ChiselsandpunchesComponent},
-          {path:"crimpingtools", component:CrimpingtoolsComponent},
-          {path:"drivers", component:DriversComponent},
-          {path:"flaringtools", component:FlaringtoolsComponent},
-          {path:"hammersandmallets", component:HammersandmalletsComponent},
-          {path:"handriveters", component:HandrivetersComponent}, 
-          {path:"pliersandcutters", component:PliersandcuttersComponent},   
-          {path:"screwdrivers", component:ScrewdriversComponent},   
-          {path:"socketsandratchets", component:SocketsandratchetsComponent}, 
-          {path: 'chiselsandpunches', component: ChiselsandpunchesComponent},
-          {path:"spannersandwrenches", component:SpannersandwrenchesComponent},   
-          {path:"tilescutters", component:TilescutterComponent},  
-          {path:"handsaws", component:SawsComponent}, 
-          {path:"bearingpullers", component:BearingpullersComponent},      
-          {path:"measuringtapes", component:MeasuringtapesComponent},         
-          {path:"toolsbags", component:ToolsbagsComponent}, 
-          {path:"toolsboxes", component:ToolboxesComponent},  
-          {path:"utilityknivesandblades", component:UtilityknicesandbladesComponent},
-          {path: "puttyknife", component:PuttyknifeComponent},
-          {path:"handtoolsaccesories", component:HandtoolsaccessoriesComponent}, 
-          {path:"cuttingandgrindingdisc", component:CuttingandgrindingdiscComponent}, 
-          {path:"drillbits", component:DrillbitsComponent},  
-          {path:"polishingpadsandbuffers", component:PolishingpadsandbuffersComponent},   
-          {path:"sandingpads", component:SandingpadsComponent},    
-          {path:"sawblades", component:SawbladesComponent},    
-          {path:"screwdriverbits", component:ScrewdriverbitsComponent},  
-           {path:"toolssets", component:ToolssetComponent}, 
-           {path:"allenkeys", component:AllenkeysComponent}, 
-          
 
-          //  Bybrands
-   {path:"bybrands", component:BybrandsComponent},
-  {path:"bosch", component:BoschComponent},
-  {path:"ingco", component:IngcoComponent},
-  {path:"makita", component:MakitaComponent},
-  {path:"maxmech", component:MaxmechComponent},
-  {path:"stanley", component:StanleyComponent},
-  {path:"total", component:TotalComponent},
+
+  // Electricalequipments
+  { path: "electricalequipments", component: ElectricalequipmentsComponent },
+  { path: "autocompressors", component: AutocompressorsComponent },
+  { path: "aircompressors", component: AircompressorsComponent },
+  { path: "batteries", component: BatteriesComponent },
+  { path: "batterychargers", component: BatterychargersComponent },
+  { path: "batterytesters", component: BatterytestersComponent },
+  { path: "extensioncablewires", component: ExtensioncablewiresComponent },
+  { path: "generators", component: GeneratorsComponent },
+  { path: "desielgenerators", component: DesielgeneratorsComponent },
+  { path: "invertergenerators", component: InvertergeneratorsComponent },
+  { path: "petrolgenerators", component: PetrolgeneratorsComponent },
+  { path: "plasmacutters", component: PlasmacuttersComponent },
+  { path: "cablewireandboosters", component: CablewiresandboostersComponent },
+  { path: "weldingmachines", component: WeldingmachinesComponent },
+  { path: "migweldingmachines", component: MigweldingmachinesComponent },
+  { path: "mmaweldingmachines", component: MmaweldingmachinesComponent },
+  { path: "tigweldingmachines", component: TigweldingmachinesComponent },
+  { path: "weldingaccessories", component: WeldingaccessoriesComponent },
+  { path: "arcweldingmachines", component: ArcweldingmachinesComponent },
+
+  // Measuringandtesting
+  { path: "measuringandtesting", component: MeasuringandtestingComponent },
+
+  // Fueltestingandmeasuring
+  { path: "fueltestingandmeasuring", component: FueltestingandmeasuringComponent },
+  { path: "fueltestingkits", component: FueltestingkitsComponent },
+  { path: "flowmeters", component: FlowmetersComponent },
+  { path: "hydrometers", component: HydrometersComponent },
+  { path: "measuringcans", component: MeasuringcansComponent },
+  { path: "measuringcylinders", component: MeasuringcylindersComponent },
+  { path: "testingpastes", component: TestingpasteComponent },
+  { path: "thermometers", component: ThermometersComponent },
+
+
+  //  GeneralmeasuringinstrumentsComponent
+  { path: "generalmeasuring", component: GeneralmeasuringinstrumentsComponent },
+  { path: "clampmeters", component: ClampmetersComponent },
+  { path: "batterytesters", component: BatterytestersComponent },
+  { path: "calipers", component: CalipersComponent },
+  { path: "digitalcalipers", component: DigitalcalipersComponent },
+  { path: "verniercalipers", component: VerniercalipersComponent },
+  { path: "measuringtapes", component: MeasuringtapesComponent },
+  { path: "measuringwheels", component: MeasuringwheelsComponent },
+  { path: "multimeters", component: MultimetersComponent },
+  { path: "micrometers", component: MicrometersComponent },
+  { path: "analoguemicromters", component: AnaloguemicrometersComponent },
+  { path: "digitalmicrometers", component: DigitalmicrometersComponent },
+  { path: "dialindicators", component: DialindicatorsComponent },
+  { path: "guages", component: GuagesComponent },
+  { path: "laserdistancemeters", component: LaserdistancemetersComponent },
+  { path: "generalmeters", component: GeneralMetersComponent },
+  { path: "generaltesters", component: GeneralTestersComponent },
+  { path: "waterandlabtesters", component: WaterandlabtestersComponent },
+  { path: "waterseperators", component: WaterseperatorsComponent },
+  { path: "alcoholtesters", component: AlcoholtestersComponent },
+  { path: "concretemeters", component: ConcretetestersComponent },
+  { path: "moisturetester", component: MoisturetestersComponent },
+  { path: "phmeters", component: PhmetersComponent },
+  { path: "testingbuckets", component: TestingbucketsComponent },
+  { path: "watertesters", component: WatertestersComponent },
+  { path: "infraredthermometers", component: InfraredthermometersComponent },
+  { path: "digitalthermometers", component: DigitalthermometersComponent },
+  // meaasuring scales 
+  { path: "measuringscales", component: MeasuringscalesComponent },
+  { path: "analoguescales", component: AnaloguescalesComponent },
+  { path: "beambalances", component: BeambalancesComponent },
+  { path: "mechanicalplatformscales", component: MechanicalplatformscalesComponent },
+  { path: "springbalances", component: SpringbalancesComponent },
+  { path: "analoguekitchenscales", component: AnaloguekitchenscalesComponent },
+  { path: "digitalscalers", component: DigitalscalesComponent },
+  { path: "analyticalbalances", component: AnalyticalbalancesComponent },
+  { path: "platformscales", component: PlatformscalesComponent },
+  { path: "bathroomscales", component: BathroomscalesComponent },
+  { path: "cranescales", component: CranesComponent },
+  { path: "hangingscales", component: HangingscalesComponent },
+  { path: "kitchenscales", component: KitchenscalesComponent },
+  { path: "pocketscales", component: PocketscalesComponent },
+  { path: "pricingscales", component: PricingscalesComponent },
+  { path: "weighbridges", component: WeighbridgesComponent },
+
+  // levelingtools
+  { path: "leveltools", component: LeveltoolsComponent },
+  { path: "dumpinglevels", component: DumpinglevelsComponent },
+  { path: "laserlevels", component: LaserlevelsComponent },
+  { path: "spiritlevels", component: SpiritlevelsComponent },
+  { path: "surveytripods", component: SurveytripodsComponent },
+
+
+
+
+
+  // Handtoolsaccessories
+  { path: "handtoolsandaccessories", component: HandtoolsaccessoriesComponent },
+  //  Bycategory
+  { path: "category", component: CategoryComponent },
+  { path: "chieselsandpunches", component: ChiselsandpunchesComponent },
+  { path: "crimpingtools", component: CrimpingtoolsComponent },
+  { path: "drivers", component: DriversComponent },
+  { path: "flaringtools", component: FlaringtoolsComponent },
+  { path: "hammersandmallets", component: HammersandmalletsComponent },
+  { path: "handriveters", component: HandrivetersComponent },
+  { path: "pliersandcutters", component: PliersandcuttersComponent },
+  { path: "screwdrivers", component: ScrewdriversComponent },
+  { path: "socketsandracthets", component: SocketsandratchetsComponent },
+  { path: 'chiselsandpunches', component: ChiselsandpunchesComponent },
+  { path: "spannersandwrenches", component: SpannersandwrenchesComponent },
+  { path: "tilescutters", component: TilescutterComponent },
+  { path: "handsaws", component: SawsComponent },
+  { path: "bearingpullers", component: BearingpullersComponent },
+  { path: "handtoolsmeasuringtapes", component: HandtoolsMeasuringtapesComponent },
+  { path: "toolsbags", component: ToolsbagsComponent },
+  { path: "toolsboxes", component: ToolboxesComponent },
+  { path: "utilityknivesandblades", component: UtilityknivesandbladesComponent },
+  { path: "puttyknife", component: PuttyknifeComponent },
+  { path: "handtoolsaccesories", component: HandtoolsaccessoriesComponent },
+  { path: "cuttingandgrindingdisc", component: CuttingandgrindingdiscComponent },
+  { path: "drillbits", component: DrillbitsComponent },
+  { path: "polishingpadsandbuffers", component: PolishingpadsandbuffersComponent },
+  { path: "sandingpads", component: SandingpadsComponent },
+  { path: "sawblades", component: SawbladesComponent },
+  { path: "screwdriverbits", component: ScrewdriverbitsComponent },
+  { path: "toolssets", component: ToolssetComponent },
+  { path: "allenkeys", component: AllenkeysComponent },
+
+
+  //  Bybrands
+  { path: "bybrands", component: BybrandsComponent },
+  { path: "bosch", component: BoschComponent },
+  { path: "ingco", component: IngcoComponent },
+  { path: "makita", component: MakitaComponent },
+  { path: "maxmech", component: MaxmechComponent },
+  { path: "stanley", component: StanleyComponent },
+  { path: "total", component: TotalComponent },
 
 
   // Constructionequipment
-  {path:"constructionequipment",component:ConstructionequipmentComponent},
-  {path:"compactors", component:CompactorsComponent},
-  {path:"concretevibrators", component:ConcretevibratorsComponent}, 
-  {path:"constructionsafetygear", component:ConstructionsafetygearComponent}, 
-   {path:"fallarrestors", component:FallarrestorsComponent},   
-  {path:"pokerhoses", component:PokerhosesComponent},  
-   {path:"powertrowels", component:PowertoolsComponent}, 
- {path:"jumpingrammers", component:JumpingrammersComponent},   
-    {path:"rodbenders", component:RodbendersComponent},     
-    {path:"steelbarcuttingmachines", component:SteelbarcuttingmachinesComponent},
-     {path:"wheelbarrows", component:WheelbarrowsComponent},
-       {path:"ropes", component:RopesComponent},    
-      {path:"concretemixers", component:ConcretemixersComponent},
-     {path:"Drumtrucks", component:DrumtrucksComponent},       
-      
-      // Pumpingmachines
+  { path: "constructionequipment", component: ConstructionequipmentComponent },
+  { path: "platecompactors", component: CompactorsComponent },
+  { path: "concretevibrators", component: ConcretevibratorsComponent },
+  { path: "constructionsafetygear", component: ConstructionsafetygearComponent },
+  { path: "fallarresters", component: FallarrestersComponent },
+  { path: "pokerhoses", component: PokerhosesComponent },
+  { path: "powertrowels", component: PowertrowelsComponent },
+  { path: "jumpingrammers", component: JumpingrammersComponent },
+  { path: "rodbenders", component: RodbendersComponent },
+  { path: "steelbarcuttingmachines", component: SteelbarcuttingmachinesComponent },
+  { path: "wheelbarrows", component: WheelbarrowsComponent },
+  { path: "ropes", component: RopesComponent },
+  { path: "concretemixers", component: ConcretemixersComponent },
+  { path: "Drumtrucks", component: DrumtrucksComponent },
 
-         {path:"pumpingmachines", component:PumpingmachinesComponent}, 
-         {path:"fueltransferpumps", component:FueltransferpumpsComponent}, 
-         {path:"pressurepumps", component:PressurepumpsComponent}, 
-         {path:"rotarypumps", component:RotarypumpsComponent},    
-         {path:"submersiblepumps", component:SubmersiblepumpsComponent},  
-         {path:"waterpumps", component:WaterpumpsComponent},
-          {path:"vacuumpumps", component:VacuumpumpsComponent},   
-         
-             
-         
-        //  Cleaningandgardensupplies
+  // Pumpingmachines
 
-           {path:"cleaniningandgardensupplies", component:CleaningandgardensuppliesComponent}, 
-           {path:"blowers", component:BlowersComponent}, 
-            // Bycategory
-          {path:"cordlessblowers", component:CordlessblowersComponent},  
-          {path:"electricblowers", component:ElectricblowersComponent},  
-          {path:"gasolineblowers", component:GasolineblowersComponent},  
-              
-     //  Bybrands
-     {path:"bybrands", component:BybrandsComponent},
-    {path:"bosch", component:BoschComponent},
-    {path:"ingco", component:IngcoComponent},
-    {path:"maxmech", component:MaxmechComponent},
-   {path:"total", component:TotalComponent},
-              
-          //  Brushcutters
-            {path:"brushcutters", component:BrushcuttersComponent},
-            {path:"accessories", component:AccessoriesComponent},
-
-            //  Bycategory
-            {path:"cordlessbrushcutters", component:CordlessbruschcuttersComponent}, 
-              {path:"gasolinebrushcutters", component:GasolinebrushcuttersComponent}, 
-          
-                   //  Bybrands
-   {path:"bybrands", component:BybrandsComponent},
-  {path:"ingco", component:IngcoComponent},
-  {path:"maxmech", component:MaxmechComponent},
-  {path:"total", component:TotalComponent},
-  
-
-    //  hose
-    {path:"hose", component:HoseComponent},
-  {path:"hoseaccessories", component:HoseaccessoriesComponent},  
-  {path:"pressurehose", component:PressurehoseComponent},
-  {path:"pumphose", component:PumphoseComponent},
-  {path:"waterhose", component:WaterhoseComponent},
-
-          //  Lawnmowers
-       {path:"lawnmowers", component:LawnmowersComponent},
-       {path:"electric", component:ElectricComponent},
-        {path:"handpush", component:HandpushComponent},
-        {path:"selfpropelled", component:SelfpropelledComponent}, 
-        // Bybrands
-      {path:"ingco", component:IngcoComponent},
-      {path:"princegarden", component:PrincegardenComponent},
-      {path:"total", component:TotalComponent},
+  { path: "pumpingmachines", component: PumpingmachinesComponent },
+  { path: "fueltransferpumps", component: FueltransferpumpsComponent },
+  { path: "pressurepumps", component: PressurepumpsComponent },
+  { path: "rotarypumps", component: RotarypumpsComponent },
+  { path: "submersiblepumps", component: SubmersiblepumpsComponent },
+  { path: "waterpumps", component: WaterpumpsComponent },
+  { path: "vacuumpumps", component: VacuumpumpsComponent },
 
 
-      // Scrubbersandsweepers
-   {path:"scrubbersandsweepers", component:ScrubbersandsweepersComponent},
- {path:"cleaningaccessories", component:CleaningaccessoriesComponent},  
 
-      // Pressurewashers
-    {path:"pressurewashers", component:PressurewashersComponent},
-  {path:"accessories", component:AccessoriesComponent},
-  
-          // Bycategory
-  {path:"cordlesspressurewahers", component:CordlesspressurewashersComponent},
-  {path:"electricpressurewashers", component:ElectricpressurewashersComponent},
- {path:"industrialpressurewashers", component:IndustrialpressurewashersComponent},
-  {path:"petrolpressurewashers", component:PetrolpressureswashersComponent},
+  //  Cleaningandgardensupplies
 
-   
-                   //  Bybrands
-   {path:"bybrands", component:BybrandsComponent},
-  {path:"ingco", component:IngcoComponent},
-  {path:"maxmech", component:MaxmechComponent},
-  {path:"total", component:TotalComponent},
-   {path:"karcher", component:KarcherComponent},
+  { path: "cleaniningandgardensupplies", component: CleaningandgardensuppliesComponent },
+  { path: "blowers", component: BlowersComponent },
+  // Bycategory
+  { path: "cordlessblowers", component: CordlessblowersComponent },
+  { path: "electricblowers", component: ElectricblowersComponent },
+  { path: "gasolineblowers", component: GasolineblowersComponent },
 
-          //  Vacuumcleaners
-            {path:"vacuumecleaners", component:VacuumcleanersComponent},
-              // Bycategory
-              {path:"commercialvacuumcleaners", component:CommercialvacummcleanersComponent},
-                {path:"cyclonevacuumcleaners", component:CyclonevacuumcleanersComponent},
-                  {path:"wetanddryvacuumcleaners", component:WetanddryvacuumcleanersComponent},
-                  
-                     
-                   //  Bybrands
-   {path:"bybrands", component:BybrandsComponent},
-  {path:"ingco", component:IngcoComponent},
-  {path:"total", component:TotalComponent},
+  //  Bybrands
+  { path: "bybrands", component: BybrandsComponent },
+  { path: "bosch", component: BoschComponent },
+  { path: "ingco", component: IngcoComponent },
+  { path: "maxmech", component: MaxmechComponent },
+  { path: "total", component: TotalComponent },
 
-        //  Farmequipments
-   {path:"farmequipments", component:FarmequipmentsComponent},
-  {path:"farmtools", component:FarmtoolsComponent},
-   {path:"farmmachines", component:FarmmachinesComponent},
-  
-  
-  
-  
-  
-  
-  
-  
-  
-              
-        
-        
+  //  Brushcutters
+  { path: "brushcutters", component: BrushcuttersComponent },
+  { path: "buschcuttersaccessories", component: BrushcuttersaccessoriesComponent },
+
+  //  Bycategory
+  { path: "cordlessbrushcutters", component: CordlessbruschcuttersComponent },
+  { path: "gasolinebrushcutters", component: GasolinebrushcuttersComponent },
+  { path: "brushcuters", component: BrushcuttersaccessoriesComponent },
+
+  //  Bybrands
+  { path: "bybrands", component: BybrandsComponent },
+  { path: "ingco", component: IngcoComponent },
+  { path: "maxmech", component: MaxmechComponent },
+  { path: "total", component: TotalComponent },
+
+
+  //  hose
+  { path: "hose", component: HoseComponent },
+  { path: "hoseaccessories", component: HoseaccessoriesComponent },
+  { path: "pressurehose", component: PressurehoseComponent },
+  { path: "pumphose", component: PumphoseComponent },
+  { path: "waterhose", component: WaterhoseComponent },
+
+  //  Lawnmowers
+  { path: "lawnmowers", component: LawnmowersComponent },
+  { path: "electriclawnmowers", component: ElectriclawnmowerComponent },
+  { path: "handpushlawnmowers", component: HandpushlawnmowersComponent},
+  { path: "selfpropelledlawnmowers", component: SelfpropelledlawnmowerComponent },
+  // Bybrands
+  { path: "ingco", component: IngcoComponent },
+  { path: "princegarden", component: PrincegardenComponent },
+  { path: "total", component: TotalComponent },
+
+
+  // Scrubbersandsweepers
+  { path: "scrubbersandsweepers", component: ScrubbersandsweepersComponent },
+  { path: "cleaningaccessories", component: CleaningaccessoriesComponent },
+
+  // Pressurewashers
+  { path: "pressurewashers", component: PressurewashersComponent },
+  { path: "PressurewashersaccessoriesComponent", component: PressurewashersaccessoriesComponent },
+
+  // Bycategory
+  { path: "cordlesspressurewahers", component: CordlesspressurewashersComponent },
+  { path: "electricpressurewashers", component: ElectricpressurewashersComponent },
+  { path: "industrialpressurewashers", component: IndustrialpressurewashersComponent },
+  { path: "petrolpressurewashers", component: PetrolpressureswashersComponent },
+
+
+  //  Bybrands
+  { path: "bybrands", component: BybrandsComponent },
+  { path: "ingco", component: IngcoComponent },
+  { path: "maxmech", component: MaxmechComponent },
+  { path: "total", component: TotalComponent },
+  { path: "karcher", component: KarcherComponent },
+
+  //  Vacuumcleaners
+  { path: "vacuumecleaners", component: VacuumcleanersComponent },
+  // Bycategory
+  { path: "commercialvacuumcleaners", component: CommercialvacummcleanersComponent },
+  { path: "cyclonevacuumcleaners", component: CyclonevacuumcleanersComponent },
+  { path: "wetanddryvacuumcleaners", component: WetanddryvacuumcleanersComponent },
+
+
+  //  Bybrands
+  { path: "bybrands", component: BybrandsComponent },
+  { path: "ingco", component: IngcoComponent },
+  { path: "total", component: TotalComponent },
+
+  //  Farmequipments
+  { path: "farmequipments", component: FarmequipmentsComponent },
+  { path: "farmtools", component: FarmtoolsComponent },
+  { path: "farmmachines", component: FarmmachinesComponent },
 
 
 
 
-  
-  
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 @NgModule({
