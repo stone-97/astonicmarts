@@ -1,3 +1,4 @@
+
 import { FallarrestorsComponent } from './pages/ppe/bycategory/fallarrestors/fallarrestors.component';
 import { SafetyshoesComponent } from './pages/ppe/bycategory/safetyshoes/safetyshoes.component';
 import { NgModule } from '@angular/core';
@@ -281,6 +282,27 @@ import { SafetyhelmetsComponent } from './pages/ppe/bycategory/headprotections/s
 import { WeldinghelmetsComponent } from './pages/ppe/bycategory/headprotections/weldinghelmets/weldinghelmets.component';
 import { FallarrestersComponent } from './pages/constructionequipment/fallarrestors/fallarresters.component';
 import { HydraulicshoppressComponent } from './pages/workshopgarage/hydraulicshoppress/hydraulicshoppress.component';
+import { CordlessimpactwrenchesComponent } from './pages/powertools/bycategories/impactwrenches/cordlessimpactwrenches/cordlessimpactwrenches.component';
+import { ElectricimpactwrenchesComponent } from './pages/powertools/bycategories/impactwrenches/electricimpactwrenches/electricimpactwrenches.component';
+import { PnuematicComponent } from './pages/powertools/bycategories/impactwrenches/pnuematic/pnuematic.component';
+import { BandsawsComponent } from './pages/powertools/bycategories/saws/bandsaws/bandsaws.component';
+import { ChainsawsComponent } from './pages/powertools/bycategories/saws/chainsaws/chainsaws.component';
+import { CircularsawsComponent } from './pages/powertools/bycategories/saws/circularsaws/circularsaws.component';
+import { JigsawsComponent } from './pages/powertools/bycategories/saws/jigsaws/jigsaws.component';
+import { MitresawsComponent } from './pages/powertools/bycategories/saws/mitresaws/mitresaws.component';
+import { ReciprocatingsawsComponent } from './pages/powertools/bycategories/saws/reciprocatingsaws/reciprocatingsaws.component';
+import { TmplAstSwitchBlock } from '@angular/compiler';
+import { TablesawsComponent } from './pages/powertools/bycategories/saws/tablesaws/tablesaws.component';
+import { PneumaticjackhammersComponent } from './pages/powertools/bycategories/jackhammers/pneumaticjackhammers/pneumaticjackhammers.component';
+import { DemolitionbreakersComponent } from './pages/powertools/bycategories/jackhammers/demolitionbreakers/demolitionbreakers.component';
+import { GrindersComponent } from './pages/powertools/bycategories/grinders/grinders.component';
+import { BenchgrindersComponent } from './pages/powertools/bycategories/grinders/benchgrinders/benchgrinders.component';
+import { DiegrindersComponent } from './pages/powertools/bycategories/grinders/diegrinders/diegrinders.component';
+import { MinigrindersComponent } from './pages/powertools/bycategories/grinders/minigrinders/minigrinders.component';
+import { AnglegrindersComponent } from './pages/powertools/bycategories/grinders/anglegrinders/anglegrinders.component';
+import { CordlessblowersComponent } from './pages/powertools/bycategories/blowers/cordlessblowers/cordlessblowers.component';
+import { ElectricblowersComponent } from './pages/cleaningandgardensupplies/blowers/bycategory/electricblowers/electricblowers.component';
+import { GasolineblowersComponent } from './pages/powertools/bycategories/blowers/gasolineblowers/gasolineblowers.component';
 
 
 
@@ -578,10 +600,27 @@ import { HydraulicshoppressComponent } from './pages/workshopgarage/hydraulicsho
     FallarrestorsComponent,
     LifevestsComponent,
     FallarrestersComponent,
-    HydraulicshoppressComponent
-    
-
-
+    HydraulicshoppressComponent,
+    CordlessimpactwrenchesComponent,
+    ElectricimpactwrenchesComponent,
+    PnuematicComponent,
+    PneumaticjackhammersComponent,
+    DemolitionbreakersComponent,
+    BandsawsComponent,
+    ChainsawsComponent,
+    CircularsawsComponent,
+    JigsawsComponent,
+    MitresawsComponent,
+    ReciprocatingsawsComponent,
+    TablesawsComponent,
+    GrindersComponent,
+    BenchgrindersComponent,
+    DiegrindersComponent,
+    MinigrindersComponent,
+    AnglegrindersComponent,
+    CordlessblowersComponent,
+    ElectricblowersComponent,
+    GasolineblowersComponent
 
 
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from '../../../../../core/models/Product';
 import { SearchService } from '../../../../../core/services/search.service';
+import { Category } from '../../../../../core/models/category.model';
 
 @Component({
   selector: 'app-cordeddrills',

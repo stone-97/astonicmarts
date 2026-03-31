@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Product } from '../../../../../core/models/Product';
+import { SearchService } from '../../../../../core/services/search.service';
+import { Category } from '../../../../../core/models/category.model';
 
 @Component({
   selector: 'app-tablesaws',
@@ -12,7 +15,7 @@ export class TablesawsComponent {
   
       products: Product[] = [];
         
-          constructor(private SearchService: SearchService) {}
+          constructor(private SearchService:SearchService) {}
         
           ngOnInit() {
             this.products = this.SearchService.getProductsByCategory('bag-closers');

@@ -1,118 +1,60 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { SearchService } from '../../core/services/search.service';
+import { Subscription } from 'rxjs';
+import { Product } from '../../core/models/Product';
 
 @Component({
   selector: 'app-pagnation',
   templateUrl: './pagnation.component.html',
   styleUrls: ['./pagnation.component.css']
 })
-export class PagnationComponent {
+export class PagnationComponent implements OnInit, OnDestroy {
 
-  constructor(private router: Router) {}
-
-  products = [
-    {
-      id: 1,
-      image: 'assets/img/product/p1.jpg',
-      name: 'Industrial Drill',
-      price: '$120',
-      color: 'Red',
-      description: 'High performance industrial drill designed for heavy duty work.',
-      specification: '1200W motor, Steel body, Long durability'
-    },
-    {
-      id: 2,
-      image: 'assets/img/product/p2.jpg',
-      name: 'Safety Helmet',
-      price: '$35',
-      color: 'Yellow',
-      description: 'Durable safety helmet for construction environments.',
-      specification: 'ABS shell, Adjustable strap'
-    },
-    {
-      id: 3,
-      image: 'assets/img/product/p3.jpg',
-      name: 'Angle Grinder',
-      price: '$80',
-      color: 'Blue',
-      description: 'Powerful angle grinder for cutting and grinding.',
-      specification: '900W motor, 11000RPM'
-    },
-    {
-      id: 4,
-      image: 'assets/img/product/p4.jpg',
-      name: 'Safety Gloves',
-      price: '$12',
-      color: 'Black',
-      description: 'Protective gloves for industrial use.',
-      specification: 'Heat resistant, Anti-slip grip'
-    },
-    {
-      id: 5,
-      image: 'assets/img/product/p5.jpg',
-      name: 'Cordless Drill',
-      price: '$150',
-      color: 'Green',
-      description: 'Rechargeable cordless drill with high torque.',
-      specification: '18V battery, Fast charging'
-    },
-        {
-      id: 6,
-      image: 'assets/img/product/p5.jpg',
-      name: 'Cordless Drill',
-      price: '$150',
-      color: 'Green',
-      description: 'Rechargeable cordless drill with high torque.',
-      specification: '18V battery, Fast charging'
-    },
-        {
-      id: 7,
-      image: 'assets/img/product/p5.jpg',
-      name: 'Cordless Drill',
-      price: '$150',
-      color: 'Green',
-      description: 'Rechargeable cordless drill with high torque.',
-      specification: '18V battery, Fast charging'
-    },
-        {
-      id: 8,
-      image: 'assets/img/product/p5.jpg',
-      name: 'Cordless Drill',
-      price: '$150',
-      color: 'Green',
-      description: 'Rechargeable cordless drill with high torque.',
-      specification: '18V battery, Fast charging'
-    },
-        {
-      id: 9,
-      image: 'assets/img/product/p5.jpg',
-      name: 'Cordless Drill',
-      price: '$150',
-      color: 'Green',
-      description: 'Rechargeable cordless drill with high torque.',
-      specification: '18V battery, Fast charging'
-    },
-    {
-      id: 10,
-      image: 'assets/img/product/p5.jpg',
-      name: 'Cordless Drill',
-      price: '$150',
-      color: 'Green',
-      description: 'Rechargeable cordless drill with high torque.',
-      specification: '18V battery, Fast charging'
-    }
-  ];
+  products: Product[] = [];           // Current displayed products
+  private searchSubscription!: Subscription;
 
   currentPage = 1;
   itemsPerPage = 9;
 
+  constructor(
+    private router: Router,
+    private searchService: SearchService
+  ) { }
+
+  ngOnInit(): void {
+    // Subscribe to search query changes
+    this.searchSubscription = this.searchService.currentSearchQuery$.subscribe(query => {
+      this.filterProducts(query);
+    });
+
+    // Initial load (in case there's already a search term)
+    this.filterProducts(this.searchService.currentSearchQuery$.value || '');
+  }
+
+  private filterProducts(query: string): void {
+    if (!query || query.trim() === '') {
+      this.products = this.searchService.getProducts();
+    } else {
+      this.products = this.searchService.searchProducts(query);
+    }
+
+    // Reset to first page whenever search changes
+    this.currentPage = 1;
+  }
+
+  // Pagination logic
   get paginatedProducts() {
     const start = (this.currentPage - 1) * this.itemsPerPage;
     return this.products.slice(start, start + this.itemsPerPage);
   }
 
+  get totalPages(): number {
+    return Math.ceil(this.products.length / this.itemsPerPage);
+  }
+
   nextPage() {
-    if (this.currentPage * this.itemsPerPage < this.products.length) {
+    if (this.currentPage < this.totalPages) {
       this.currentPage++;
     }
   }
@@ -123,8 +65,19 @@ export class PagnationComponent {
     }
   }
 
-  openProduct(prod:any){
+  goToPage(page: number) {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+    }
+  }
+
+  openProduct(prod: any) {
     this.router.navigate(['/product', prod.id]);
   }
 
+  ngOnDestroy(): void {
+    if (this.searchSubscription) {
+      this.searchSubscription.unsubscribe();
+    }
+  }
 }
