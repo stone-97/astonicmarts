@@ -14,7 +14,7 @@ export class CoredrillsComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('core drills');
+            this.products = this.SearchService.getProductsByCategory('core-drills');
           }
 
   

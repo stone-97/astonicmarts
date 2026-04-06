@@ -18,7 +18,7 @@ export class TablesawsComponent {
           constructor(private SearchService:SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('table-saws');
           }
     
         

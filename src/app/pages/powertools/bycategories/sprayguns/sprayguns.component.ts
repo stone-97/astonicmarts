@@ -16,7 +16,7 @@ export class SpraygunsComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('spray guns');
+            this.products = this.SearchService.getProductsByCategory('spray-guns');
           }
   
 

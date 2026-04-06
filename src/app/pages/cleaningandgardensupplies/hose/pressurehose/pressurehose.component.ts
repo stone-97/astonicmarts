@@ -11,18 +11,13 @@ import { Category } from '../../../../core/models/category.model';
 })
 export class PressurehoseComponent {
 
-
-
-
-
-  
   
     products: Product[] = [];
   
     constructor(private SearchService: SearchService) { }
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('allen-keys');
+      this.products = this.SearchService.getProductsByCategory('pressure-hose');
     }
   
   

@@ -9,12 +9,14 @@ import { Category } from '../../../../../core/models/category.model';
   styleUrl: './fireresistantwears.component.css'
 })
 export class FireresistantwearsComponent {
+
+  
 products: Product[] = [];
     
       constructor(private SearchService: SearchService) {}
     
       ngOnInit() {
-        this.products = this.SearchService.getProductsByCategory('fire retardent coverall');
+        this.products = this.SearchService.getProductsByCategory('fire-resistance-wears');
       }
 
 

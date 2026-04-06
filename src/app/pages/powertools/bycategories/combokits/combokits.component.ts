@@ -15,7 +15,7 @@ export class CombokitsComponent {
     constructor(private SearchService: SearchService) {}
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('Combo Kits');
+      this.products = this.SearchService.getProductsByCategory('Combo-Kits');
     }
 
 

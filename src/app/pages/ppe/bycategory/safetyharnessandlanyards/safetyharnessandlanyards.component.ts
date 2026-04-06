@@ -16,7 +16,7 @@ export class SafetyharnessandlanyardsComponent {
     constructor(private SearchService: SearchService) {}
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('Safety Harness & Lanyards');
+      this.products = this.SearchService.getProductsByCategory('Safety-Harness-Lanyards');
     }
   
 

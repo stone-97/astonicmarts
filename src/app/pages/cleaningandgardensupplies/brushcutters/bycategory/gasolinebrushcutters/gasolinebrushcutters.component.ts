@@ -18,7 +18,7 @@ export class GasolinebrushcuttersComponent {
     constructor(private SearchService: SearchService) { }
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('allen-keys');
+      this.products = this.SearchService.getProductsByCategory('gasoline-brushcutters');
     }
   
   

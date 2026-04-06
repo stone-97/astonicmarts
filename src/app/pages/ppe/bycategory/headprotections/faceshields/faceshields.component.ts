@@ -16,7 +16,7 @@ export class FaceshieldsComponent {
     constructor(private SearchService: SearchService) {}
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('face shields');
+      this.products = this.SearchService.getProductsByCategory('face-shields');
     }
   
 

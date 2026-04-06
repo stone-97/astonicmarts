@@ -15,7 +15,7 @@ export class SafetyvestsComponent {
         constructor(private SearchService: SearchService) {}
       
         ngOnInit() {
-          this.products = this.SearchService.getProductsByCategory('safety-vest');
+          this.products = this.SearchService.getProductsByCategory('safety-vests');
         }
 
 

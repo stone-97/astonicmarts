@@ -17,7 +17,7 @@ export class GluegunsComponent {
         constructor(private SearchService: SearchService) {}
       
         ngOnInit() {
-          this.products = this.SearchService.getProductsByCategory('mixers');
+          this.products = this.SearchService.getProductsByCategory('glue-guns');
         }
 
 

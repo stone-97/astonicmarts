@@ -16,7 +16,7 @@ export class HeatgunsComponent {
         constructor(private SearchService: SearchService) {}
       
         ngOnInit() {
-          this.products = this.SearchService.getProductsByCategory('heat guns');
+          this.products = this.SearchService.getProductsByCategory('heat-guns');
         }
     
 

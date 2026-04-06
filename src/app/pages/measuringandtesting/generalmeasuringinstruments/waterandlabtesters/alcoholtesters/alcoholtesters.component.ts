@@ -17,7 +17,7 @@ export class AlcoholtestersComponent {
   constructor(private SearchService: SearchService) { }
 
   ngOnInit() {
-    this.products = this.SearchService.getProductsByCategory('alcohol-twesters');
+    this.products = this.SearchService.getProductsByCategory('alcohol-testers');
   }
 
 

@@ -18,11 +18,12 @@ export class SearchService {
   
 // powertools 
 // combokits
-// 1 to 250
+// starts at 1 to 1000 
+// ends at 2000
  {
   id: 1,
   name: 'Total 3-in-1 Combo Kit TOSLI241198',
-  category: 'combo kits',
+  category: 'combo-kits',
   brand: 'Total',
   price: 370000,
 
@@ -86,7 +87,7 @@ export class SearchService {
   {
   id: 2,
   name: 'INGCO Cordless Impact Wrench Combo Kit COSLI23011',
-  category: 'Combo Kits',
+  category: 'Combo-Kits',
   brand: 'INGCO Tools',
   price: 62000,
 
@@ -147,7 +148,7 @@ export class SearchService {
 {
   id: 3,
   name: 'TOTAL Combo Kit TOSLI241189',
-  category: 'Combo Kits',
+  category: 'Combo-Kits',
   brand: 'TOTAL Tools',
   price: 58000,
 
@@ -313,7 +314,7 @@ Items Included in the Package:
 {
   id: 6,
   name: 'Total PPR Welding Machine TT328151',
-  category: 'power tools',
+  category: 'ppr',
   brand: 'Total',
   price: 38000,
 
@@ -469,7 +470,7 @@ Items Included in the Package:
 {
   id: 9,
   name: 'Workflex Edge Binding Machine',
-  category: 'edge binding machanines',
+  category: 'edge-binding-machines',
   brand: 'Workflex',
   price: 450000,
 
@@ -515,7 +516,7 @@ Items Included in the Package:
 {
   id: 10,
   name: 'Ingco Wall Chaser Power Tool-3000W-WLC30001',
-  category: 'wall chasers',
+  category: 'wall-chasers',
   brand: 'Ingco',
   price: 210000,
 
@@ -606,7 +607,7 @@ Items Included in the Package:
 {
   id: 12,
   name: 'Ingco Grease Gun-GRG015001',
-  category: 'grease guns',
+  category: 'grease-guns',
   brand: 'Ingco',
   price: 18000,
 
@@ -654,7 +655,7 @@ Items Included in the Package:
 {
   id: 13,
   name: 'Ingco 1100W Impact Drill 13mm (ID11008)',
-  category: 'corded drills',
+  category: 'corded-drills',
   brand: 'Ingco',
   price: 42000,
 inStock:true,
@@ -702,7 +703,7 @@ Items Included in the Package:
 {
   id: 14,
   name: 'Bosch GSR 180-LI Cordless Drill Driver 3/8" (10mm) 18V',
-  category: 'cordless drills',
+  category: 'cordless-drills',
   brand: 'Bosch',
   price: 135000,
 
@@ -749,7 +750,7 @@ Items Included in the Package:
 {
   id: 15,
   name: 'Ingco Industrial Core Diamond Drilling Machine 3800W 230mm (DDM38001)',
-  category: 'core drills',
+  category: 'core-drills',
   brand: 'Ingco',
   price: 520000,
 
@@ -796,7 +797,7 @@ Items Included in the Package:
 {
   id: 16,
   name: 'Eurotek 35mm Magnetic Drill',
-  category: 'magnetic drills',
+  category: 'magnetic-drills',
   brand: 'Eurotek',
   price: 280000,
   images: [
@@ -844,7 +845,7 @@ Items Included in the Package:
 {
   id: 17,
   name: 'Maxmech Multi Functional Rotary Hammer Machine 1000W',
-  category: 'rotary hammers',
+  category: 'rotary-hammers',
   brand: 'Maxmech',
   price: 65000,
 
@@ -892,7 +893,7 @@ Items Included in the Package:
 {
   id: 18,
   name: 'TOTAL Drill Press 350W',
-  category: 'drill press',
+  category: 'drill-press',
   brand: 'Total',
   price: 180000,
 
@@ -941,7 +942,7 @@ Items Included in the Package:
 {
   id: 19,
   name: 'Hydraulic Shop Press 30 Ton',
-  category: 'hydraulic shop press',
+  category: 'hydraulic-shop-press',
   brand: 'Generic',
   price: 850000,
 
@@ -983,7 +984,7 @@ Items Included in the Package:
 {
   id: 20,
   name: 'Ingco 2000W Cut Off Saw',
-  category: 'cutting machines',
+  category: 'cutting-machines',
   brand: 'Ingco',
   price: 95000,
 
@@ -1178,7 +1179,7 @@ Items Included in the Package:
 {
   id: 25,
   name: 'Ingco 450W Electric Spray Gun',
-  category: 'spray guns',
+  category: 'spray-guns',
   brand: 'Ingco',
   price: 42000,
 
@@ -1216,7 +1217,7 @@ Items Included in the Package:
 {
   id: 26,
   name: 'Total 550W Electric Spray Gun',
-  category: 'spray guns',
+  category: 'spray-guns',
   brand: 'Total',
   price: 47000,
 
@@ -1334,12 +1335,12 @@ Items Included in the Package:
   kongaLink: 'https://www.konga.com/'
 },
 
-// guns and trimmers
+
 
 {
   id: 29,
   name: 'Total 100W Hot Glue Gun',
-  category: 'trimmers',
+  category: 'glue-guns',
   brand: 'Total',
   price: 12000,
 
@@ -1376,11 +1377,10 @@ Items Included in the Package:
 },
 
 
-// impulse sealers
 {
   id: 30,
   name: 'Impulse Sealer FS-300',
-  category: 'impulse sealers',
+  category: 'impulse-sealers',
   brand: 'Generic',
   price: 35000,
 
@@ -1463,7 +1463,7 @@ Items Included in the Package:
   name: "Total High Pressure Washer 2000W-TGT11376",
   brand: "Total",
   model: "TGT11376",
-  category: "electric pressure washers",
+  category: "electric-pressure-washers",
 
   power: "2000W",
   pressure: "160 Bar",
@@ -1503,7 +1503,7 @@ Items Included in the Package:
   name: "Total High Pressure Washer",
   brand: "Total",
   model: "TGT11236",
-  category: "electric pressure washers",
+  category: "electric-pressure-washers",
 
   power: "1400W",
   pressure: "110 Bar",
@@ -1545,7 +1545,7 @@ Items Included in the Package:
   name: "Ingco High Pressure Washer",
   brand: "Ingco",
   model: "HPWR20008",
-  category: "electric pressure washers",
+  category: "electric-pressurewashers",
 
   power: "2000W",
   pressure: "150 Bar",
@@ -1586,7 +1586,7 @@ Items Included in the Package:
 
 {
   id: 35,
-  name: "Ingco High Pressure Washer",
+  name: "Ingco 2000w High Pressure Washer-HPWR20018",
   brand: "Ingco",
   model: "HPWR20018",
   category: "pressure washers",
@@ -1631,8 +1631,8 @@ Items Included in the Package:
 
     {
   id: 36,
-  name: 'Ingco Heat Gun 2000w-HG200028',
-  category: 'heat guns',
+  name: 'Ingco 2000w Heat Gun 2000w-HG200028',
+  category: 'heat-guns',
   brand: 'Ingco',
   price: 18500,
 
@@ -1664,35 +1664,259 @@ Items Included in the Package:
   kongaLink: 'https://www.konga.com/'
 },
 
+
+
    {
-  id: 37,
-  name: 'Ingco Heat Gun HG200028',
-  category: 'face shields',
-  brand: 'Ingco',
-  price: 18500,
+     id: 37,
+     name: 'Bosch GWS 24-230 H Professional Angle Grinder-2400w',
+     category: 'angle-grinders',
+     brand: 'Bosch',
+     price: 285000,
 
-  images: [
-    'assets/img/ingco-hg200028-heatgun.jpg'
-  ],
+     images: [
+       'assets/img/grinders/Bosch GWS 24-230 H Professional Angle grinder.jpg'
+     ],
 
-    inStock: true,
-  description: 'The Ingco HG200028 Heat Gun is a high-performance electric heating tool designed for professional and DIY applications. It is ideal for paint removal, plastic bending, shrink wrapping, thawing frozen pipes, loosening rusted bolts, and drying surfaces. With its powerful motor and adjustable heat settings, it delivers reliable and consistent hot air for workshop and industrial use.',
+     inStock: true,
+     description: 'The Bosch GWS 24-230 H Professional is a high-performance 230mm (9-inch) angle grinder built for heavy-duty industrial and construction applications. Powered by a robust 2400W Champion motor, it delivers exceptional material removal rates for cutting, grinding, and polishing metal, concrete, stone, and other tough materials. Its lightweight design combined with advanced safety features like restart protection and vibration control makes it ideal for professional users who demand power, durability, and comfort during prolonged use.',
 
-  specification: `
-  Model: HG200028
+     specification: `
+  Model: GWS 24-230 H
+  Rated Input Power: 2400W
+  Voltage: 220V – 240V
+  Frequency: 50/60 Hz
+  No-load Speed: 6500 rpm
+  Disc Diameter: 230 mm (9")
+  Grinding Spindle Thread: M14
+  Main Handle: Barrel / Straight
+  Switch: Tri-Control / Lockable Switch
+  Weight: 5.1 kg
+  Protection Class: II
+  `,
+
+     features: `
+  Powerful 2400W Champion motor with high overload capacity for fast and efficient material removal
+  Lightweight design (only 5.1 kg) for improved handling and reduced user fatigue
+  Restart protection prevents accidental start-up after power interruption
+  Soft start for smooth and controlled operation
+  Vibration control on main and auxiliary handle for increased comfort during extended use
+  Robust metal gear housing for long service life and durability in tough conditions
+  Armoured coils protect the motor against abrasive dust
+  Suitable for heavy-duty cutting, grinding, roughing, and surface preparation on metal, masonry, and concrete
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+
+   {
+     id: 38,
+     name: 'Bosch Professional Double-Wheeled Bench Grinder GBG 60-20-600w',
+     category: 'bench-grinders',
+     brand: 'Bosch',
+     price: 245000,
+
+     images: [
+       'assets/img/grinders/bosch-bench grinders.webp'
+     ],
+
+     inStock: true,
+     description: 'The Bosch GBG 60-20 Professional is a powerful and robust double-wheeled bench grinder designed for continuous heavy-duty use in workshops and industrial environments. With its strong 600W motor and two large 200mm grinding wheels, it delivers excellent performance for sharpening tools, deburring, rust removal, polishing, and general metalworking tasks. The grinder features adjustable eye protection shields, spark deflectors, and a solid cast-iron base for maximum stability and safety during prolonged operation.',
+
+     specification: `
+  Model: GBG 60-20
+  Rated Input Power: 600 W
+  Voltage: 220V – 240V
+  Frequency: 50/60 Hz
+  No-load Speed: 3000 rpm
+  Grinding Wheel Diameter: 200 mm
+  Grinding Wheel Width: 25 mm
+  Grinding Wheel Bore: 32 mm
+  Weight: 14.8 kg
+  Protection Class: II
+  `,
+
+     features: `
+  Powerful 600W induction motor for continuous heavy-duty operation
+  Two large 200mm grinding wheels (coarse and fine) for versatile sharpening and finishing tasks
+  Robust cast-iron base provides excellent stability and reduces vibration
+  Adjustable spark deflectors and transparent eye protection shields for increased safety
+  Large adjustable tool rests for precise and comfortable grinding
+  Dust-protected motor windings for longer service life
+  Maintenance-free motor with long lifetime bearings
+  Ideal for sharpening drills, chisels, knives, axes, garden tools, and removing rust or burrs from metal parts
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+
+   {
+     id: 39,
+     name: 'Total Mini Grinder With 149pcs Accessories - 200W',
+     category: 'die-mini-grinders',
+     brand: 'Total',
+     price: 125000,
+
+     images: [
+       'assets/img/grinders/Total Mini Grinder With 149pcs - 200watts.webp'
+     ],
+
+     inStock: true,
+     description: 'The Total TG2006 Mini Grinder is a versatile 200W rotary tool kit designed for precision work and DIY projects. With variable speed control from 10,000 to 40,000 RPM and a large set of 149 accessories, it is perfect for grinding, cutting, sanding, polishing, engraving, drilling, and cleaning on materials such as metal, wood, plastic, glass, and ceramics. The kit includes a flexible shaft for hard-to-reach areas, making it ideal for detailed craftsmanship, hobby work, jewelry making, electronics repair, and general workshop tasks.',
+
+     specification: `
+  Model: TG2006
   Voltage: 220V – 240V
   Frequency: 50/60Hz
-  Input Power: 2000W
-  Temperature: 350°C / 550°C
-  Air Flow: 300L/min – 500L/min
+  Input Power: 200W
+  No-load Speed: 10,000 – 40,000 rpm
+  Collet Size: 3.2mm / 2.3mm
+  Features: LCD display, Variable speed control
+  Accessories: 149pcs + 1 flexible shaft + 1 safe guard + 1 cutting guide + 1 set extra carbon brushes
+  `,
+
+     features: `
+  Powerful 200W motor with variable speed control (10,000 - 40,000 RPM) for different materials and applications
+  Digital LCD display for easy speed monitoring
+  Compact and ergonomic design for comfortable prolonged use
+  Includes 149pcs high-quality accessories for grinding, sanding, cutting, polishing, engraving, and more
+  Comes with a flexible shaft for accessing tight and difficult areas
+  Safety guard and cutting guide for improved control and protection
+  Extra set of carbon brushes for extended tool life
+  Ideal for DIY enthusiasts, craftsmen, jewelers, and light professional work on metal, wood, plastic, and other materials
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+   {
+     id: 40,
+     name: 'Ingco Cordless Brushless Impact Wrench 600Nm - 42V',
+     category: 'cordless-impact-wrenches',
+     brand: 'Ingco',
+     price: 185000,
+
+     images: [
+       'assets/img/impact-wrench/ngco Cordless brushless Impact Wrench 600nm - 42v.webp'
+     ],
+
+     inStock: true,
+     description: 'The Ingco CIWLI42602 is a powerful 42V cordless brushless impact wrench designed for heavy-duty fastening and loosening applications. Delivering up to 600Nm of fastening torque and even higher nut-busting power, this tool is ideal for professional mechanics, automotive workshops, construction sites, and industrial maintenance. The brushless motor ensures longer runtime, higher efficiency, and reduced maintenance. It features three-speed settings for better control and comes with a 1/2" square drive compatible with standard impact sockets.',
+
+     specification: `
+  Model: CIWLI42602
+  Voltage: 42V
+  Motor Type: Brushless
+  Square Drive: 1/2"
+  No-load Speed: 0-1700 / 0-2100 / 0-2300 rpm
+  Impact Rate: 0-2400 / 0-2800 / 0-3300 bpm
+  Fastening Torque: 600 Nm
+  Nut-busting Torque: Up to 750 Nm (approx.)
+  Protection Class: II
+  `,
+
+     features: `
+  High-performance brushless motor for superior efficiency, longer lifespan, and more power
+  Massive 600Nm fastening torque with up to 750Nm nut-busting power for tough seized bolts and nuts
+  Three-speed settings for precise control across different applications
+  1/2" square drive for compatibility with standard impact sockets
+  Compact and ergonomic design with soft grip for comfortable handling during prolonged use
+  LED work light for better visibility in dark or confined spaces
+  Ideal for automotive repair, tire changing, heavy equipment maintenance, construction, and industrial fastening tasks
+  Part of Ingco's powerful 42V cordless platform for extended runtime
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+
+   {
+     id: 41,
+     name: 'TOTAL 1/2" Electric Impact Wrench With Case 1050W',
+     category: 'electric-impact-wrenches',
+     brand: 'Total',
+     price: 135000,
+
+     images: [
+       'assets/img/impact-wrench/TOTAL half innch Electric Impact Wrench With Case 1050W-2.jpg'
+     ],
+
+     inStock: true,
+     description: 'The TOTAL 1/2" Electric Impact Wrench is a powerful 1050W corded impact tool designed for fast and efficient tightening and loosening of bolts and nuts. With its high torque output and robust build quality, it is ideal for automotive repair shops, tire service centers, construction sites, and general heavy-duty maintenance work. The tool comes complete with a sturdy carrying case for easy storage and transportation, making it a practical choice for both professional technicians and serious DIY users.',
+
+     specification: `
+  Model: TIW10501
+  Voltage: 220V – 240V
+  Frequency: 50/60Hz
+  Input Power: 1050W
+  Square Drive: 1/2"
+  No-load Speed: 0 - 2200 rpm
+  Impact Rate: 0 - 3000 bpm
+  Max Torque: 450 Nm
+  Protection Class: II
+  `,
+
+     features: `
+  Powerful 1050W motor delivers high performance for demanding applications
+  High torque output of 450 Nm for fast bolt tightening and loosening
+  1/2" square drive compatible with standard impact sockets
+  Variable speed trigger for better control during operation
+  Robust and durable metal gear housing for long service life
+  Forward and reverse rotation with hammer action for maximum efficiency
+  Includes heavy-duty carrying case for convenient storage and portability
+  Ideal for automotive workshops, tire changing, truck maintenance, construction, and industrial fastening tasks
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+
+   {
+  id: 42,
+  name: 'TOTAL AIR IMPACT WRENCH 3/4" - 1,600Nm (TAT40342)',
+  category: 'pnuematic-wrenches',
+  brand: 'Total',
+  price: 95000,
+
+  images: [
+    'assets/img/impact-wrench/TOTAL AIR IMPACT WRENCH 3 quarter - 1.600Nm (TAT40342).jpg'
+  ],
+
+  inStock: true,
+  description: 'The TOTAL TAT40342 is a heavy-duty 3/4" pneumatic (air) impact wrench designed for professional use in automotive workshops, tire service centers, truck and bus maintenance, and industrial applications. Delivering up to 1,600Nm of maximum torque, this powerful air tool excels at quickly tightening and loosening large bolts and nuts. Its twin hammer mechanism ensures high performance and durability, while the ergonomic handle with trigger provides excellent control and reduced operator fatigue during prolonged use.',
+
+  specification: `
+  Model: TAT40342
+  Drive Size: 3/4"
+  Max Torque: 1600 Nm
+  Air Pressure: 90 PSI (6.2 bar)
+  Air Consumption: 7.5 CFM (212 L/min)
+  No-load Speed: 4500 rpm
+  Impact Rate: 1000 bpm
+  Air Inlet: 1/4"
+  Weight: 7.2 kg
   `,
 
   features: `
-  Two heat settings for different applications
-  Powerful 2000W motor for fast heating
-  Durable industrial design
-  Comfortable ergonomic grip
-  Suitable for paint stripping, plastic welding, and shrink wrapping
+  Extremely high torque output of 1600 Nm for heavy-duty applications
+  3/4" square drive ideal for large bolts and truck wheels
+  Twin hammer impact mechanism for maximum power and durability
+  Lightweight yet robust aluminum alloy housing
+  Ergonomic soft grip handle for comfortable operation
+  Forward and reverse rotation with power regulator
+  High impact rate for fast bolt removal
+  Ideal for truck, bus, heavy equipment maintenance, and industrial fastening tasks
   `,
 
   jumiaLink: 'https://www.jumia.com.ng/',
@@ -1700,29 +1924,699 @@ Items Included in the Package:
 },
 
 
+
+   {
+     id: 43,
+     name: 'Demolition Hammer and Breaker INGCO PDB17008',
+     category: 'demolition-breakers',
+     brand: 'Ingco',
+     price: 195000,
+
+     images: [
+       'assets/img/demolition breakers/ingco demo breaker-pdb17008.jpg'
+     ],
+
+     inStock: true,
+     description: 'The Ingco PDB17008 is a powerful 1700W heavy-duty demolition hammer and breaker designed for tough breaking and demolition tasks. With a high impact energy of 45J and a robust HEX chuck system, it efficiently breaks concrete, asphalt, bricks, and other tough materials. This 16kg demolition breaker is ideal for professional construction sites, renovation projects, roadworks, and industrial demolition. It comes with two chisels and delivers reliable performance with its strong motor and durable build.',
+
+     specification: `
+  Model: PDB17008
+  Voltage: 220V – 240V
+  Frequency: 50/60Hz
+  Input Power: 1700W
+  Impact Rate: 1400 bpm
+  Impact Force: 45J
+  Chuck System: HEX
+  Weight: 16 kg
+  Included: 2 pcs chisels + 1 set extra carbon brushes
+  `,
+
+     features: `
+  Powerful 1700W motor for heavy-duty demolition work
+  High impact energy of 45J for fast and efficient breaking of concrete, masonry, and stone
+  HEX chuck system for quick and secure accessory changes
+  1400 blows per minute (bpm) for maximum productivity
+  Robust and durable design with 16kg weight for stability and powerful hammering
+  Ergonomic handles with vibration damping for reduced operator fatigue
+  Suitable for breaking concrete slabs, foundations, walls, asphalt, and tiles
+  Ideal for professional construction, renovation, road maintenance, and demolition tasks
+  Comes complete with 2 chisels for immediate use
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+   {
+  id: 45,
+  name: 'Air Jackhammer - 32mm',
+  category: 'pneumatic-jack-hammers',
+  brand: 'Total',
+  price: 225000,
+
+  images: [
+    'assets/img/demolition breakers/air-jackhammers.avif'
+  ],
+
+  inStock: true,
+  description: 'The Air Jackhammer 32mm is a powerful pneumatic demolition breaker designed for heavy-duty breaking and demolition work. Featuring a standard 32mm hex shank, it is compatible with a wide range of moil points, chisels, and spade bits. This air-powered tool delivers high impact energy for efficiently breaking concrete, asphalt, reinforced masonry, rock, and frozen ground. It is ideal for professional construction sites, road maintenance, foundation excavation, bridge work, and industrial demolition projects. Requires a high-capacity air compressor (minimum 90 PSI and sufficient CFM) for optimal performance.',
+
+  specification: `
+  Model: Generic / TAT Air Jackhammer 32mm
+  Shank Size: 32mm Hex (1-1/4" x 6")
+  Working Pressure: 90 PSI (6.2 bar)
+  Air Consumption: 35 - 40 CFM (990 - 1130 L/min)
+  Impact Rate: 1200 - 1400 bpm
+  Impact Energy: High (approx. 60 - 80 J class)
+  Weight: Approx. 30 - 37 kg
+  Length: Approx. 650 - 720 mm
+  Air Inlet: 1/2" or 3/4"
+  `,
+
+  features: `
+  32mm hex shank for secure and quick attachment of standard demolition accessories
+  Powerful pneumatic impact mechanism for fast material breaking
+  Heavy-duty alloy body construction built for rugged job site conditions
+  High impact rate for maximum productivity on concrete, asphalt, and stone
+  Ergonomic handle design for better control and reduced operator fatigue
+  Forward operation with robust retainer for safe chisel holding
+  Requires industrial air compressor with adequate air flow and pressure
+  Ideal for breaking concrete slabs, foundations, roads, trenches, and rock excavation
+  Suitable for professional contractors, road crews, demolition teams, and heavy construction work
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+},
+
+
+
+{
+  id: 46,
+  name: 'INGCO 20V BRUSHLESS CIRCULAR SAW 185MM 1X5.0AH + CHARGER-CSLI18513',
+  category: 'circular-saws',
+  brand: 'Ingco',
+  price: 185000,
+
+  images: [
+    'assets/img/circular and mitre saws/Ingco 185mm Cordless Circular Saw - CSLI18513.jpeg'
+  ],
+
+  inStock: true,
+  description: 'The Ingco CSLI18513 is a powerful 20V brushless cordless circular saw designed for both wood cutting and marble/tile applications. With a large 185mm (7-1/4") blade, high no-load speed of 4800 rpm, and maximum cutting depth of 65mm at 90°, it delivers clean, precise, and efficient cuts. The brushless motor provides longer runtime, higher efficiency, and reduced maintenance. It features adjustable cutting depth and bevel angle (up to 45°), making it ideal for professional carpenters, tilers, fabricators, and DIY enthusiasts working on wood, plywood, marble, granite, ceramic tiles, and other sheet materials.',
+
+  specification: `
+  Model: CSLI18513
+  Voltage: 20V
+  Motor Type: Brushless
+  No-load Speed: 4800 rpm
+  Blade Diameter: 185mm (7-1/4")
+  Arbor Size: 20mm
+  Cutting Capacity: 90° - 65mm / 45° - 45mm
+  Adjustable Cutting Depth: Yes
+  Adjustable Bevel Cutting: Yes (0° - 45°)
+  Weight: Approx. 3.5 - 4.0 kg (with battery)
+  `,
+
+  features: `
+  High-performance brushless motor for longer runtime, more power, and less maintenance
+  Fast 4800 rpm no-load speed for smooth and clean cuts on wood and marble
+  Large 185mm blade diameter with 65mm max cutting depth at 90°
+  Adjustable cutting depth and bevel angle (up to 45°) for versatile applications
+  Ergonomic soft grip handle for comfortable and controlled operation
+  Compact and lightweight cordless design for excellent portability and maneuverability
+  Suitable for cutting wood, plywood, marble, granite, ceramic tiles, and other materials
+  Includes 185mm saw blade, hex key, 5.0Ah battery pack, and fast charger
+  Ideal for carpentry, tiling, renovation, furniture making, and general construction work
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+},
+
+
+{
+  id: 47,
+  name: 'Bosch GST 650 Professional Jigsaw',
+  category: 'jig-saws',
+  brand: 'Bosch',
+  price: 125000,
+
+  images: [
+    'assets/img/jig saws and recip saws/Bosch Jigsaw GST 650 Professional.jpg'
+  ],
+
+  inStock: true,
+  description: 'The Bosch GST 650 Professional is a reliable and powerful 450W jigsaw designed for precise and efficient cutting in wood, aluminum, and steel. With variable speed control (800 – 3,100 strokes per minute) and an 18mm stroke length, it delivers clean, accurate cuts for both straight and curved lines. Its lightweight design (only 1.9 kg) combined with ergonomic handling makes it ideal for professional carpenters, installers, and DIY enthusiasts working on furniture making, renovation, cabinetry, and general construction tasks. The tool offers excellent control with adjustable cutting depth and bevel capabilities.',
+
+  specification: `
+  Model: GST 650 Professional
+  Voltage: 220V – 240V
+  Frequency: 50/60Hz
+  Rated Input Power: 450 W
+  Stroke Rate at No Load: 800 – 3,100 spm
+  Stroke Length: 18 mm
+  Cutting Depth in Wood: 65 mm
+  Cutting Depth in Aluminium: 10 mm
+  Cutting Depth in Non-Alloyed Steel: 3 mm
+  Weight: 1.9 kg
+  Protection Class: II
+  `,
+
+  features: `
+  Powerful 450W motor for fast and clean cutting performance
+  Variable speed control (800 – 3,100 strokes per minute) for optimal speed selection according to material
+  18 mm stroke length for efficient material removal
+  Lightweight and compact design (1.9 kg) for excellent maneuverability and reduced fatigue
+  Tool-free blade change system for quick and easy blade replacement
+  Adjustable cutting depth and bevel cutting angle (0° - 45°)
+  Ergonomic soft-grip handle for comfortable handling during prolonged use
+  Dust extraction port for cleaner working environment (when connected to a vacuum)
+  Ideal for straight cuts, curve cuts, and bevel cuts in wood, plywood, aluminum, and thin steel sheets
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+   },
+
+
+   {
+     id: 48,
+     name: 'TOTAL Reciprocating Saw 750W (TS100806)',
+     category: 'reciprocating-saws',
+     brand: 'Total',
+     price: 95000,
+
+     images: [
+       'assets/img/jig saws and recip saws/TOTAL RECIPROCATING SAW 750W (TS100806).jpg'
+     ],
+
+     inStock: true,
+     description: 'The TOTAL TS100806 Reciprocating Saw is a powerful 750W corded tool designed for fast and efficient cutting in wood, metal, plastic, and construction materials. With its variable speed control and 28mm stroke length, it excels at demolition work, pruning, cutting pipes, drywall, and making straight or plunge cuts. The tool-less blade change system allows quick swapping between wood and metal blades, making it a versatile choice for professional contractors, renovation teams, and serious DIY users who need a reliable all-purpose saw for tough cutting tasks.',
+
+     specification: `
+  Model: TS100806
+  Voltage: 220V – 240V
+  Frequency: 50/60Hz
+  Input Power: 750W
+  No-load Speed: 0 – 2800 spm
+  Stroke Length: 28 mm
+  Cutting Capacity Wood: 115 mm
+  Cutting Capacity Pipe (Steel): 20 mm
+  Weight: 3.2 kg
+  `,
+
+     features: `
+  Powerful 750W motor for demanding cutting applications
+  Variable speed trigger for precise speed control according to material
+  Long 28mm stroke length for faster and more efficient cutting
+  Tool-less blade change system for quick and easy blade replacement
+  Ergonomic soft grip handle with anti-vibration design for comfortable operation
+  Robust metal gear housing for durability and long service life
+  Suitable for cutting wood, metal pipes, plastic, drywall, branches, and demolition work
+  Ideal for construction, renovation, plumbing, electrical installation, and general maintenance tasks
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+   {
+  id: 49,
+  name: 'INGCO TS150078 Table Saw 10 Inch 430X640mm 1500W',
+  category: 'table-saws',
+  brand: 'Ingco',
+  price: 245000,
+
+  images: [
+    'assets/img/table and band saws/INGCO TS150078 Table saw 10 Inch 430X640mm 1500W.webp'
+  ],
+
+  inStock: true,
+  description: 'The Ingco TS150078 is a powerful 1500W 10-inch table saw designed for professional and serious DIY woodworking. With a large 430x640mm table surface (including extension), it provides excellent stability and support for ripping and cross-cutting sheet materials. The 254mm (10") blade spins at 4500 rpm, delivering clean and precise cuts in wood, plywood, MDF, and other materials. It features adjustable blade height and bevel angle up to 45°, making it ideal for furniture making, cabinetry, carpentry, and general construction projects.',
+
+  specification: `
+  Model: TS150078
+  Voltage: 220V – 240V
+  Frequency: 50/60Hz
+  Input Power: 1500W
+  No-load Speed: 4500 rpm
+  Blade Diameter: 254mm (10")
+  Arbor Size: 16mm
+  Table Size: 430 x 640 mm
+  Max Cutting Capacity: 85mm at 90° / 60mm at 45°
+  Blade Tilting Range: 0° - 45°
+  Weight: Approx. 20 - 25 kg (with stand)
+  `,
+
+  features: `
+  Powerful 1500W motor for smooth and efficient cutting performance
+  10-inch (254mm) blade with high 4500 rpm no-load speed
+  Spacious 430 x 640 mm table with extension for better material support
+  Adjustable cutting depth and bevel angle (0° - 45°) for versatile angled cuts
+  Robust rip fence for accurate and parallel ripping
+  Stable metal base with foldable stand (on most versions) for portability
+  Safety features including blade guard and push stick
+  Ideal for ripping, cross-cutting, bevel cutting, and mitering in wood, plywood, MDF, and similar materials
+  Suitable for professional carpenters, furniture workshops, and serious DIY users
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+},
+
+
+   {
+     id: 50,
+     name: 'TOTAL 8" 20V Mitre Saw + 2 x 4Ah Batteries + Charger (TMSLI20212)',
+     category: 'mitre-saws',
+     brand: 'Total',
+     price: 285000,
+
+     images: [
+       'assets/img/circular and mitre saws/TOTAL 8 inch 20V Mitre Saw + 2 x 4Ah Batteries + Charger Total TMSLI20212.jpg'
+     ],
+
+     inStock: true,
+     description: 'The TOTAL TMSLI20212 is a powerful 20V cordless 8-inch mitre saw complete with 2 x 4Ah batteries and a fast charger. It delivers smooth, precise crosscuts, mitre cuts, and bevel cuts in wood, plywood, MDF, and moldings. With a no-load speed of 4500 rpm and a 210mm blade, it offers excellent cutting capacity for both straight and angled cuts. The compact and portable design, combined with the included high-capacity batteries, makes it ideal for professional carpenters, installers, and DIY users working on-site or in the workshop without the need for a power outlet.',
+
+     specification: `
+  Model: TMSLI20212
+  Voltage: 20V
+  No-load Speed: 4500 rpm
+  Blade Diameter: 210mm (8-1/4") x 25.4mm bore
+  Cutting Capacity:
+    • 0° x 0°: 120 x 60 mm
+    • 45° x 0°: 83 x 60 mm
+    • 0° x 45°: 120 x 34 mm
+    • 45° x 45°: 83 x 34 mm
+  Battery: 2 x 4.0Ah Li-ion
+  Charger: Included (fast charger)
+  Weight: Approx. 8 - 9 kg (with battery)
+  `,
+
+     features: `
+  Powerful 20V brushless or high-efficiency motor with 4500 rpm no-load speed for fast and clean cuts
+  Large 210mm (8-1/4") blade for excellent cutting capacity
+  Precise mitre and bevel adjustments for compound cutting
+  Compact and lightweight cordless design for excellent portability and job-site mobility
+  Comes complete with 2 x 4.0Ah batteries and fast charger for extended runtime
+  Ergonomic handle with safety trigger for comfortable and controlled operation
+  Dust extraction port for cleaner working environment
+  Ideal for cutting baseboards, crown molding, door frames, skirting, furniture parts, and general woodworking
+  Perfect for professional carpenters, renovation teams, and serious DIY enthusiasts
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+
+{
+  id: 51,
+  name: 'TOTAL Combo Set 20V Mini Chainsaw + Branch Cutter (TOSLI23012)',
+  category: 'chain-saws',
+  brand: 'Total',
+  price: 180000,
+
+  images: [
+    'assets/img/chain and  band saws/Total Combo kit- Cutters and Mini chain saws with 20V TOSLI23012.avif'
+  ],
+
+  inStock: true,
+  description: 'The TOTAL TOSLI23012 Combo Set includes a powerful 20V mini chainsaw and a cordless branch cutter, designed for efficient pruning, trimming, and light cutting tasks. This versatile kit is ideal for gardeners, landscapers, and DIY users who need portable and precise cutting tools. The mini chainsaw handles small logs and branches with ease, while the branch cutter delivers clean and effortless pruning. Powered by a 20V lithium-ion battery, this combo ensures mobility, convenience, and reliable performance without the need for cords.',
+
+  specification: `
+  Model: TOSLI23012
+  Voltage: 20V
+  Tool Type: Mini Chainsaw + Branch Cutter
+  Battery: 20V Li-ion (included)
+  Chain Length (Mini Chainsaw): Approx. 4" – 6"
+  Charging: Included charger
+  Application: Wood cutting, pruning, trimming
+  `,
+
+  features: `
+  2-in-1 combo set: mini chainsaw and branch cutter for versatile use
+  Powerful 20V battery system for cordless convenience
+  Lightweight and compact design for easy handling
+  Sharp and durable cutting system for efficient performance
+  Ideal for pruning trees, cutting branches, and garden maintenance
+  Ergonomic grip for comfort during extended use
+  Portable and perfect for outdoor and on-site work
+  Suitable for gardeners, homeowners, and professionals
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+},
+
+
+{
+  id: 52,
+  name: 'BOSCH 18V Cordless Band Saw (GCB 18V-127) - 06012B7000',
+  category: 'band-saws',
+  brand: 'Bosch',
+  price: 650000,
+
+  images: [
+    'assets/img/chain and  band saws/BOSCH 06012B7000 - GCB 18V-127 - 18V cordless band saw.webp'
+  ],
+
+  inStock: true,
+  description: 'The BOSCH GCB 18V-127 cordless band saw is a high-performance cutting tool designed for precise and spark-free cutting of metal, pipes, and profiles. Powered by an 18V lithium-ion battery, it delivers strong cutting performance with excellent control and minimal vibration. Its compact and ergonomic design makes it ideal for overhead and tight-space applications, while the durable build ensures reliability for professional use on construction sites and workshops.',
+
+  specification: `
+  Model: GCB 18V-127 (06012B7000)
+  Voltage: 18V
+  No-load Speed: Variable speed control
+  Cutting Capacity: Up to 127mm
+  Blade Length: Approx. 733mm
+  Blade Width: 12.7mm
+  Weight: Approx. 6.5 - 7.0 kg (with battery)
+  Application: Metal cutting, pipes, profiles
+  `,
+
+  features: `
+  Powerful 18V motor for efficient and consistent cutting performance
+  Large 127mm cutting capacity for pipes and structural materials
+  Spark-free cutting ideal for safe metal work environments
+  Variable speed control for precision on different materials
+  Low vibration design for improved user comfort
+  Compact and ergonomic build for tight spaces and overhead work
+  Durable construction for professional and industrial use
+  Compatible with Bosch Professional 18V battery system
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+},
+
+   {
+     id: 53,
+     name: 'TOTAL 20V Cordless Blower (TABLI20323) Lithium-Ion Portable Air Blower',
+     category: 'cordless-blowers',
+     brand: 'Total',
+     price: 95000,
+
+     images: [
+       'assets/img/blowers/TOTAL 20V Cordless Blower – TABLI20323 Lithium-Ion Portable Air Blower.jpg3.jpg'
+     ],
+
+     inStock: true,
+     description: 'The TOTAL TABLI20323 20V Cordless Blower is a lightweight and portable air blower designed for efficient cleaning and dust removal. Powered by a 20V lithium-ion battery, it delivers strong airflow suitable for clearing debris, dust, leaves, and workshop waste. Its compact cordless design ensures easy handling and mobility, making it perfect for both indoor and outdoor use including workshops, construction sites, and home maintenance.',
+
+     specification: `
+  Model: TABLI20323
+  Voltage: 20V
+  Power Source: Lithium-ion battery
+  No-load Speed: High-speed airflow system
+  Function: Blowing / dust cleaning
+  Application: Dust removal, leaf blowing, workshop cleaning
+  `,
+
+     features: `
+  Powerful 20V cordless blower for efficient cleaning performance
+  Lightweight and compact design for easy handling
+  Strong airflow for dust, debris, and leaf removal
+  Cordless convenience for mobility and flexibility
+  Ergonomic handle for comfortable use
+  Ideal for workshops, garages, outdoor spaces, and home cleaning
+  Durable construction for long-lasting performance
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+
+   {
+  id: 54,
+  name: 'Powervent 200mm (8 Inch) Portable Air Blower 180W - 2900 RPM',
+  category: 'electric-blowers',
+  brand: 'Powervent',
+  price: 55000,
+
+  images: [
+    'assets/img/blowers/Powervent 200 mm (8 Inch) 2900 rpm Portable Air Blower 180 W.webp'
+  ],
+
+  inStock: true,
+  description: 'The Powervent 200mm (8-inch) Portable Air Blower is a reliable and efficient solution for ventilation, cooling, and dust extraction. Powered by a 180W motor, it delivers strong airflow at 2900 RPM, making it suitable for workshops, warehouses, and industrial environments. Its compact and portable design allows easy movement and installation, while the durable construction ensures long-lasting performance for continuous use.',
+
+  specification: `
+  Brand: Powervent
+  Power: 180W
+  Fan Size: 200mm (8 Inch)
+  Speed: 2900 RPM
+  Type: Portable Air Blower / Ventilation Fan
+  Application: Ventilation, cooling, dust extraction
+  `,
+
+  features: `
+  Powerful 180W motor for consistent airflow performance
+  200mm (8-inch) fan for wide air coverage
+  High-speed operation at 2900 RPM
+  Portable and compact design for easy use and installation
+  Ideal for workshops, factories, warehouses, and garages
+  Suitable for ventilation, cooling, and dust removal
+  Durable build for long-term industrial use
+  Energy-efficient operation
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+},
+
+
+
+{
+  id: 55,
+  name: '2-Cycle Gas Powered Handheld Leaf Blower 25.4CC (Petrol)',
+  category: 'gasoline-blowers',
+  brand: 'Generic',
+  price: 120000,
+
+  images: [
+    'assets/img/blowers/Gasoline Blower for Lawn Care (25.4CC Handheld).jpg'
+  ],
+
+  inStock: true,
+  description: 'The 2-Cycle Gas Powered Handheld Leaf Blower (25.4CC) is a high-performance outdoor tool designed for efficient lawn care and debris clearing. Powered by a 25.4CC petrol engine, it delivers strong airflow for blowing leaves, dust, and dirt from gardens, driveways, and work areas. Its lightweight handheld design ensures ease of use, while the fuel-powered system provides greater mobility and power compared to electric alternatives, making it ideal for professional landscapers and homeowners.',
+
+  specification: `
+  Engine Type: 2-Stroke (2-Cycle)
+  Engine Capacity: 25.4CC
+  Fuel Type: Petrol (Gasoline)
+  Starting System: Recoil start
+  Function: Leaf blowing / debris clearing
+  Application: Lawn care, garden cleaning, outdoor maintenance
+  `,
+
+  features: `
+  Powerful 25.4CC petrol engine for strong airflow performance
+  Cordless operation with no dependency on electricity
+  Lightweight and portable handheld design
+  Easy recoil start system
+  Ideal for clearing leaves, dust, and debris quickly
+  Suitable for gardens, lawns, driveways, and construction areas
+  Durable build for outdoor and professional use
+  Greater power output compared to electric blowers
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+},
+
+
+   {
+     id: 56,
+     name: 'TOTAL 20V Cordless Blower – TABLI20323 Lithium-Ion Portable Air Blower',
+     category: 'cordless-blowers',
+     brand: 'TOTAL',
+     price: 135000, // Current price on Jumia Nigeria as of recent listing (bare tool)
+     images: [
+       'assets/img/cordless-blowers/TOTAL-20V-Cordless-Blower-TABLI20323.jpg',
+       'assets/img/tools/total-blower-tabli20323-2.jpg',
+       'assets/img/tools/total-blower-tabli20323-3.jpg'
+     ],
+     inStock: true,
+     jumiaLink: 'https://www.jumia.com.ng/total-20v-cordless-blower-tabli20323-lithium-ion-portable-air-blower-419300651.html',
+     kongaLink: '',
+     description: `The TOTAL 20V Cordless Blower (TABLI20323) is a lightweight, portable Lithium-Ion air blower designed for easy cleanup of leaves, dust, grass clippings, and light debris on construction sites, gardens, driveways, patios, and workshops. It delivers strong airflow without the hassle of cords, making it ideal for both homeowners and professionals. This is a bare tool – battery and charger are sold separately and compatible with the TOTAL 20V Li-ion battery platform.`,
+     specification: `
+  - Product Name: TOTAL 20V Cordless Blower
+  - Model: TABLI20323
+  - Voltage: 20V DC
+  - No-load speed: 15,000 rpm
+  - Average air volume: 8.5 m³/min
+  - Maximum air speed: 115 km/h (approx. 32 m/s)
+  - Battery: Not included (compatible with TOTAL 20V 2.0Ah / 4.0Ah Lithium-Ion batteries)
+  - Charger: Not included
+  - Operation: Cordless / One-handed use
+  - Packaging: Color box
+  - Usage: Garden cleanup, construction site cleaning, workshop dust removal, blowing leaves and debris
+  `,
+     features: `
+  - Powerful 20V motor with 15,000 rpm no-load speed
+  - High air volume (8.5 m³/min) and max speed of 115 km/h for effective blowing
+  - Lightweight and portable design for comfortable one-handed operation
+  - Cordless freedom – no tangled cables or need for power outlets
+  - Compatible with TOTAL 20V Li-ion battery system (share batteries with other TOTAL tools)
+  - Ideal for dry leaves, dust, grass clippings, and light debris
+  - No electricity required – perfect for remote sites and outdoor use
+  - Cost-effective bare tool option if you already own TOTAL 20V batteries
+  - Suitable for homeowners, steel fixers, and small construction/maintenance teams
+  `
+   },
+
+
+   {
+  id: 57,
+  name: 'TOTAL Lithium-Ion Hedge Trimmer 20V Green (THTLI20461)',
+  category: 'trimmers',
+  brand: 'TOTAL',
+  price: 120000,
+
+  images: [
+    'assets/img/guns and trimmers/total cordless edge trimmers-thli20461.jpeg 2.webp',
+    'assets/img/guns and trimmers/total cordless edge trimmers-thli20461.jpeg 3.webp',
+    'assets/img/guns and trimmers/total cordless edge trimmers-thli20461.jpeg 7.jpg',
+    'assets/img/guns and trimmers/total cordless edge trimmers-thli20461.jpeg 4.jpeg',
+    'assets/img/guns and trimmers/total cordless edge trimmers-thli20461.jpeg 4.webp',
+    'assets/img/guns and trimmers/total cordless edge trimmers-thli20461.jpeg 6.jpg'
+  ],
+
+  inStock: true,
+  description: 'The TOTAL THTLI20461 Lithium-Ion Hedge Trimmer is a powerful cordless garden tool designed for trimming, shaping, and maintaining hedges, shrubs, and bushes with precision. Powered by a 20V lithium-ion battery, it delivers consistent performance without the limitations of cables, making it ideal for both residential and light professional landscaping work.\n\nEquipped with a long 460mm laser-cut blade, this trimmer ensures clean and accurate cuts across wide hedge surfaces, reducing working time and improving efficiency. Its high-speed operation (up to 2800 strokes per minute) allows smooth trimming even on dense vegetation. :contentReference[oaicite:0]{index=0}\n\nThe tool is designed for comfort and ease of use, featuring an ergonomic handle and lightweight structure that minimizes fatigue during extended use. The dual-action blade system reduces vibration while improving cutting performance, making it safer and more comfortable to operate. :contentReference[oaicite:1]{index=1}\n\nWith a maximum cutting diameter of 18mm, the trimmer can handle moderately thick branches, making it suitable for regular garden maintenance. The package typically includes a battery, charger, safety goggles, and gloves, providing everything needed to get started immediately. :contentReference[oaicite:2]{index=2}\n\nThis hedge trimmer is an excellent choice for homeowners, gardeners, and maintenance professionals looking for a reliable, efficient, and easy-to-use cordless trimming solution.',
+
+  specification: `
+  Model: THTLI20461
+  Power Source: Lithium-Ion Battery
+  Voltage: 20V
+  Battery Capacity: 2.0Ah (included)
+  Blade Length: 460mm (18 inches)
+  Max Cutting Diameter: 18mm
+  Speed: Up to 2800 strokes per minute
+  Blade Type: Laser-cut, dual-action
+  Weight: Approx. 2.3 – 2.5 kg
+  Charging Voltage: 220–240V ~ 50/60Hz
+  Application: Hedge trimming, shrub shaping, garden maintenance
+  `,
+
+  features: `
+  Cordless 20V lithium-ion power for mobility and convenience
+  Long 460mm blade for faster and wider cutting coverage
+  High-speed cutting performance (up to 2800spm)
+  Dual-action blades reduce vibration and improve efficiency
+  Laser-cut blades for precise and clean trimming
+  Ergonomic and lightweight design for user comfort
+  Capable of cutting branches up to 18mm thick
+  Includes battery, charger, gloves, and safety goggles
+  Low maintenance and eco-friendly compared to petrol tools
+  Ideal for residential and light commercial landscaping
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/catalog/?q=total+hedge+trimmer',
+  kongaLink: 'https://www.konga.com/search?search=total+hedge+trimmer'
+},
+
+   {
+     id: 58,
+     name: 'Professional Silicone Sealant Gun 400ml',
+     category: 'general-gun-tools',
+     brand: 'Generic',
+     price: 8500,
+
+     images: [
+       'assets/img/guns and trimmers/Professional Silicone Sealant Gun 400ml.jpg',
+      
+     ],
+
+     inStock: true,
+
+     description: 'The Professional Silicone Sealant Gun 400ml is a durable and easy-to-use hand tool designed for applying sealants, adhesives, and caulking materials with precision. Built with a strong metal frame and smooth trigger mechanism, it ensures consistent flow control for clean and professional results.\n\nThis sealant gun is compatible with standard 400ml cartridges, making it suitable for a wide range of applications including construction, plumbing, glazing, and general maintenance. Its ergonomic handle design reduces hand fatigue, allowing for extended use without discomfort.\n\nThe anti-drip mechanism helps prevent material wastage and mess, while the sturdy push rod ensures efficient dispensing of thick sealants. It is ideal for both professionals and DIY users who require accuracy and reliability in sealant application.',
+
+     specification: `
+  Capacity: 400ml
+  Material: Heavy-duty metal frame
+  Handle Type: Ergonomic grip
+  Operation: Manual trigger mechanism
+  Rod Type: Smooth push rod
+  Compatibility: Standard sealant and silicone cartridges
+  Application: Sealing, bonding, filling gaps and joints
+  `,
+
+     features: `
+  Compatible with standard 400ml sealant cartridges
+  Strong and durable metal construction
+  Smooth trigger action for controlled application
+  Anti-drip design to reduce mess and waste
+  Ergonomic handle for comfortable use
+  Ideal for silicone, adhesives, and caulking jobs
+  Suitable for construction, plumbing, and DIY tasks
+  Lightweight and easy to handle
+  `
+   },
+
+
 // power tools end
-// 250 stop
+//  stop at 2000w
 
 // ppe start
 // hand gloves
-// 251 to 450
-  {
-    id: 251,
-    name: 'kong hand gloves',
-    category: 'Hand-glove',
-    brand: 'Total',
-    price: 42000,
-    images: ['assets/img/dakar.jpg3.jpg'],
-    
-    inStock: true,
-       jumiaLink: '',
-  kongaLink: '',
-    description: 'The Total Angle Grinder is a powerful and durable cutting and grinding tool suitable for metalwork, construction, and fabrication jobs. It features a high-speed motor, ergonomic grip, and strong protective guard for safe operation. Ideal for professionals and DIY users who require precision, strength, and long-lasting performance.',
-      specification: '',
-      features:''
-  },
+// 2000 to 4000
+
+
+   {
+     id: 2000,
+     name: 'Large Black Sturdy Elegant Umbrella – 24 Ribs Windproof',
+     category: 'Hand-glove',
+     brand: 'Generic',
+     price: 18000,
+
+     images: [
+       'assets/img/hand gloves/welders_hand_glove__red.jpg',
+     ],
+
+     inStock: true,
+     description: 'This Large Black Sturdy Elegant Umbrella is a premium-quality rain protection accessory designed for durability, style, and maximum coverage. Built with a strong 24-rib (spoke) structure, it offers superior resistance against strong winds, making it highly reliable during heavy rain and stormy conditions.\n\nThe umbrella features a wide canopy that provides excellent coverage for one or two users, keeping you dry even in intense rainfall. Its classic black design gives it a professional and elegant look, making it suitable for business use, daily commuting, and outdoor activities.\n\nConstructed with high-quality waterproof fabric and reinforced metal ribs, the umbrella is both durable and long-lasting. The sturdy central shaft ensures stability, while the ergonomic handle provides a comfortable grip for extended use.\n\nDesigned for convenience, the umbrella opens smoothly and is easy to carry, making it an essential accessory for both personal and professional use during rainy seasons.',
+
+     specification: `
+  Product Type: Umbrella
+  Design: Large canopy, classic black
+  Frame: 24 ribs (wind-resistant structure)
+  Material: Waterproof polyester fabric
+  Shaft: Reinforced metal
+  Opening Mechanism: Manual / automatic (varies by model)
+  Coverage: Suitable for 1 – 2 persons
+  Handle: Ergonomic grip
+  Application: Rain protection, outdoor use, commuting
+  `,
+
+     features: `
+  Strong 24-rib construction for wind resistance
+  Large canopy for maximum coverage
+  Elegant black design for professional appearance
+  Durable waterproof fabric for effective rain protection
+  Sturdy shaft for enhanced stability
+  Comfortable handle for easy grip
+  Suitable for heavy rain and windy conditions
+  Long-lasting and reliable build quality
+  Easy to open and close
+  Ideal for daily and business use
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/catalog/?q=large+umbrella+24+ribs',
+     kongaLink: 'https://www.konga.com/search?search=large+umbrella+24+ribs'
+   },
+
  {
-  id: 252,
+  id: 2001,
   name: 'Mechanix Wear Original Work Gloves',
   category: 'Hand-glove',
     group: 'ppe',
@@ -1757,7 +2651,7 @@ Items Included in the Package:
   `
 },
   {
-    id: 253,
+    id: 2002,
     name: 'rough coated gloves',
     category: 'Hand-glove',
     brand: 'Ansell',
@@ -1789,7 +2683,7 @@ Items Included in the Package:
   },
 
  {
-  id: 255,
+  id: 2003,
   name: 'ROKK Smooth Coated Industrial Hand Gloves',
   category: 'Hand-glove',
   brand: 'ROKK',
@@ -1825,7 +2719,7 @@ Items Included in the Package:
   `
 },
   {
-    id: 256,
+    id: 2004,
     name: 'Cut Resistant Glove Level 9 Stainless Steel Metal Mesh Butcher Safety , 1-Pack',
     category: 'Hand-glove',
     brand: 'Ansell',
@@ -1841,12 +2735,12 @@ Items Included in the Package:
   },
 // lanyards
 {
-  id: 257,
+  id: 2005,
   name: 'Workman Full Body Safety Harness Belt with Lanyard',
-  category: 'Safety Harness & Lanyards',
+  category: 'Safety-Harness-Lanyards',
   brand: 'Workman',
   price: 58000,
-  images: [''],
+  images: ['assets/img/belt/workman harness belt.jpg'],
 
     inStock: true,
 
@@ -1875,9 +2769,9 @@ Items Included in the Package:
 
   // safety boots
 {
-  id: 260,
+  id: 2006,
   name: 'American Steel Safety Boot (Ankle) – Steel Toe Industrial Work Boot',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'American Steel',
   price: 85000,
   images: ['assets/img/-American-Safety-Boot.jpg'],
@@ -1905,9 +2799,9 @@ Items Included in the Package:
   `
 },
 {
-  id: 261,
+  id: 2007,
   name: 'Premium Safety Boot (Ankle) Composite Toe Waterproof - Brown',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'TimberPro',
   price: 92000,
   images: ['assets/img/FLOWS3 SJ.webp'],
@@ -1934,9 +2828,9 @@ Items Included in the Package:
 },
 
 {
-  id: 262,
+  id: 2008,
   name: 'Safety Jogger BESTBOY Steel Toe Safety Boot',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'Safety Jogger',
   price: 95000,
   images: ['assets/img/safety joggers/bestboy safety joggers.webp',
@@ -1965,9 +2859,9 @@ Items Included in the Package:
 },
 
 {
-  id: 263,
+  id: 2009,
   name: ' MODULO S1PS Low Safety jogger',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'Safety Jogger',
   price: 120000,
   images: ['assets/img/safety joggers/MODULO S1PS Low Safety jogger2.jpg',
@@ -2005,9 +2899,9 @@ Items Included in the Package:
 },
 
 {
-  id: 264,
+  id: 2010,
   name: 'Safety Jogger BALTOR Safety Boot',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot(Ankle)',
   brand: 'Safety Jogger',
   price: 105000,
   images: [
@@ -2056,9 +2950,9 @@ Items Included in the Package:
   `
 },
 {
-  id: 265,
+  id: 2011,
   name: 'X1110 S3S Safety Shoe',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'Safety Jogger',
   price: 85000,
 
@@ -2101,9 +2995,9 @@ Items Included in the Package:
 },
 
 {
-  id: 266,
+  id: 2012,
   name: 'Safety Jogger MODULO LE S3S LOW TG Safety Boot',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'Safety Jogger',
   price: 85000,
 
@@ -2150,9 +3044,9 @@ Items Included in the Package:
   `
 },
 {
-  id: 267,
+  id: 2013,
   name: 'Safety Jogger MODULO LE S3S LOW TG Safety Boot',
-  category: 'Safety shoes',
+  category: 'Safety-shoes',
   brand: 'Safety Jogger',
   price: 85000,
 
@@ -2196,9 +3090,9 @@ showSimilar: true,
 },
 
 {
-  id: 299,
+  id: 2014,
   name: 'Safety Jogger LIGHTSTAR S1P Safety Boot',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'Safety Jogger', 
   price: 72000,
    showSimilar: true,
@@ -2240,9 +3134,9 @@ showSimilar: true,
 },
 
 {
-  id: 302,
+  id: 2015,
   name: 'Safety Jogger LIGHTSTAR S1P Safety Boot',
-  category: 'Safety shoes',
+  category: 'Safety-shoes',
   brand: 'Safety Jogger',
   price: 72000,
 showSimilar: true,
@@ -2285,9 +3179,9 @@ showSimilar: true,
 
 
 {
-  id: 300,
+  id: 2016,
   name: 'Safety Jogger ECO FITZ Lightweight Safety Shoe',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'Safety Jogger',
   price: 110000,
   images: ['assets/img/safety joggers/Safety-Jogger-ECOFITZ-S1P-ESD-Safety-Shoes-Black-1.webp'],
@@ -2322,9 +3216,9 @@ showSimilar: true,
 },
 
 {
-  id: 317,
+  id: 2017,
   name: 'Safety Jogger AAK Industrial Safety Boot',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'Safety Jogger',
   price: 102000,
   images: ['assets/img/safety joggers/aak safety jogger ash.webp',
@@ -2364,9 +3258,9 @@ showSimilar: true,
 },
 
 {
-  id: 312,
+  id: 2018,
   name: 'Safety Jogger YUKON Waterproof Safety Boot',
-  category: 'Safety Boot (Ankle)',
+  category: 'Safety-Boot-(Ankle)',
   brand: 'Safety Jogger',
   price: 125000,
 
@@ -2406,9 +3300,9 @@ showSimilar: true,
 },
 // eye google
 {
-  id: 313,
+  id: 2019,
   name: 'Anti-Fog Industrial Safety Goggle Clear Lens - Adjustable Strap',
-  category: 'Safety Goggle',
+  category: 'Safety-Goggle',
   brand: 'SafePro',
   price: 25000,
   images: ['assets/img/bump cap.jpg'],
@@ -2435,9 +3329,9 @@ showSimilar: true,
   `
 },
 {
-  id: 315,
+  id: 2020,
   name: 'Safety Jogger SAREK Anti-Fog Safety Goggles',
-  category: 'Safety Goggle',
+  category: 'Safety-Goggle',
   brand: 'Safety Jogger',
   price: 32000,
   images: ['assets/img/safety-jogger-sarek.jpg'],
@@ -2465,9 +3359,9 @@ showSimilar: true,
 },
 
 {
-  id: 284,
+  id: 2021,
   name: 'X1110 S3S Safety Shoe',
-  category: 'safety shoes',
+  category: 'safety-shoes',
   brand: 'Safety Jogger',
   price: 85000,
 
@@ -2510,42 +3404,42 @@ showSimilar: true,
 },
 
 // fall arrestors
-// {
-//   id: 304,
-//   name: '15m Fall Arrester Wire Rope Safety Equipment Falling Protector',
-//   category: 'Fall Arrestor',
-//   brand: 'Generic',
-//   price: 120000,
-//   images: ['assets/img/belt/fall-arrestor-15m.jpg'],
+{
+  id: 2022,
+  name: '15m Fall Arrester Wire Rope Safety Equipment Falling Protector',
+  category: 'fall-arresters',
+  brand: 'Generic',
+  price: 120000,
+  images: ['assets/img/belt/fall-arrestor-15m.jpg'],
 
-    // inStock: true,
-//   description: '15 meter retractable fall arrester designed to protect workers operating at height. This safety device uses a high-strength galvanized steel wire rope with an automatic locking mechanism that instantly stops a fall. It is widely used in construction, scaffolding, tower climbing, roofing, and industrial maintenance where reliable fall protection is required.',
-//   specification: `
-//     - Cable Length: 15 Meters
-//     - Cable Material: Galvanized Steel Wire Rope
-//     - Cable Diameter: 4-5 mm
-//     - Housing Material: High Strength Polymer / Alloy
-//     - Hook Type: Heavy Duty Steel Snap Hook
-//     - Locking System: Automatic Fall Arrest Lock
-//     - Weight Capacity: Up to 140kg
-//     - Application: Construction, Tower Climbing, Industrial Work
-//   `,
-//   features: `
-//     - Automatic fall arrest locking system
-//     - Durable galvanized steel wire rope
-//     - Heavy duty snap hook connector
-//     - High impact resistant casing
-//     - Smooth retractable cable mechanism
-//     - Reliable protection for working at heights
-//   `
-// }
+    inStock: true,
+  description: '15 meter retractable fall arrester designed to protect workers operating at height. This safety device uses a high-strength galvanized steel wire rope with an automatic locking mechanism that instantly stops a fall. It is widely used in construction, scaffolding, tower climbing, roofing, and industrial maintenance where reliable fall protection is required.',
+  specification: `
+    - Cable Length: 15 Meters
+    - Cable Material: Galvanized Steel Wire Rope
+    - Cable Diameter: 4-5 mm
+    - Housing Material: High Strength Polymer / Alloy
+    - Hook Type: Heavy Duty Steel Snap Hook
+    - Locking System: Automatic Fall Arrest Lock
+    - Weight Capacity: Up to 140kg
+    - Application: Construction, Tower Climbing, Industrial Work
+  `,
+  features: `
+    - Automatic fall arrest locking system
+    - Durable galvanized steel wire rope
+    - Heavy duty snap hook connector
+    - High impact resistant casing
+    - Smooth retractable cable mechanism
+    - Reliable protection for working at heights
+  `
+},
 
 // eye google
 
 {
-  id: 282,
+  id: 2023,
   name: 'Safety Jogger TSAVO Protective Safety Goggle',
-  category: 'Safety Goggle',
+  category: 'Safety-Goggle',
   brand: 'Safety Jogger',
   price: 32000,
   images: ['assets/img/safety eye google/TSAVO safety jogger google.webp'],
@@ -2574,9 +3468,9 @@ showSimilar: true,
 },
 
 {
-  id: 283,
+  id: 2024,
   name: 'Safety Jogger VIRUNGA Cover Protective Safety Goggle',
-  category: 'Safety Goggle',
+  category: 'Safety-Goggle',
   brand: 'Safety Jogger',
   price: 34000,
   images: ['assets/img/safety eye google/VIRUNGA SJ.webp3.webp'],
@@ -2608,9 +3502,9 @@ showSimilar: true,
 // bumbcaps
 
 {
-  id: 285,
+  id: 2025,
   name: 'Industrial Net Bump Cap with Reflective Strip',
-  category: 'bump caps',
+  category: 'bump-caps',
   brand: 'Generic',
   price: 22000,
   images: ['assets/img/bump caps/net bump cap(blue).webp'],
@@ -2645,9 +3539,9 @@ showSimilar: true,
 
 // flashlights
 {
-  id: 286,
+  id: 2026,
   name: 'Type 1101 LED Light Flashlight - Black',
-  category: 'flashlights',
+  category: 'flash-lights',
   brand: 'Generic',
   price: 12000,
 
@@ -2687,9 +3581,9 @@ showSimilar: true,
 // rainwears
 
 {
-  id: 287,
+  id: 2027,
   name: 'PVC Gown Raincoat - Waterproof Protective Coat',
-  category: 'safety rainwears',
+  category: 'safety-rainwears',
   brand: 'Generic',
   price: 15000,
 
@@ -2734,9 +3628,9 @@ showSimilar: true,
 },
 
 {
-  id: 288,
+  id: 2028,
   name: 'Polyester Raincoat Jacket and Trouser Set - Navy Blue',
-  category: 'safety rainwears',
+  category: 'safet rainwears',
   brand: 'Beta',
   price: 25000,
 
@@ -2777,9 +3671,9 @@ showSimilar: true,
 },
 
 {
-  id: 289,
+  id: 2029,
   name: 'Trucker Safety-Waterproof PVC Rain Boot',
-  category: 'Safety Rainwears',
+  category: 'Safety-Rainwears',
   brand: 'Trucker',
   price: 18000,
 
@@ -2820,9 +3714,9 @@ showSimilar: true,
 },
 
 {
-  id: 290,
+  id: 2030,
   name: 'Safety Jogger HERCULES S5 Safety Rain Boot',
-  category: 'Safety Rainwears',
+  category: 'Safety-Rainwears',
   brand: 'Safety Jogger',
   price: 42000,
 
@@ -2866,9 +3760,9 @@ showSimilar: true,
 
 // gas detectors
 {
-  id: 291,
+  id: 2031,
   name: 'MSA ALTAIR® 5X Multigas Detector',
-  category: 'Gas Detector',
+  category: 'Gas-Detector',
   brand: 'MSA Safety',
   price: 950000,
 
@@ -2912,9 +3806,9 @@ showSimilar: true,
 },
 
 {
-  id: 292,
+  id: 2032,
   name: 'MSA ALTAIR® 4X Multigas Detector',
-  category: 'Gas Detector',
+  category: 'Gas-Detector',
   brand: 'MSA Safety',
   price: 650000,
 
@@ -2961,9 +3855,9 @@ showSimilar: true,
 // eyewashs station
 
 {
-  id: 293,
+  id: 2033,
   name: 'Stainless Steel Emergency Safety Shower and Eyewash Station',
-  category: 'emergency eye wash staion',
+  category: 'emergency-eye-wash-staion',
   brand: 'Generic',
   price: 420000,
 
@@ -3012,9 +3906,9 @@ showSimilar: true,
 },
 
 {
-  id: 294,
+  id: 2034,
   name: 'Emergency Eyewash and Safety Combination Shower',
-  category: 'emergency eye wash staion',
+  category: 'emergency-eye-wash-staion',
   brand: 'Generic',
   price: 350000,
 
@@ -3055,9 +3949,9 @@ showSimilar: true,
 },
 
 {
-  id: 295,
+  id: 2035,
   name: 'Gravity Fed Supply 8 Gallon Portable Eyewash Station',
-  category: 'emergency eye wash staion',
+  category: 'emergency-eye-wash-staion',
   brand: 'Generic',
   price: 220000,
 
@@ -3099,9 +3993,9 @@ showSimilar: true,
 
 // security gears
 {
-  id: 296,
+  id: 2036,
   name: 'Garrett Super Scanner V Handheld Metal Detector',
-  category: 'Security gears',
+  category: 'Security-gears',
   brand: 'Garrett',
   price: 75000,
 
@@ -3145,7 +4039,7 @@ showSimilar: true,
 },
 
 {
-  id: 297,
+  id: 2037,
   name: 'Rope Type Stanchion Crowd Queue Control Barrier Post - 4 Poles + 2 Ropes',
   category: 'Stanchions',
   brand: 'Generic',
@@ -3194,7 +4088,7 @@ showSimilar: true,
 // dispocables
 
 {
-  id: 298,
+  id: 2038,
   name: 'Tyvek Disposable Coveralls',
   category: 'disposables',
   brand: 'Tyvek',
@@ -3243,7 +4137,7 @@ showSimilar: true,
 
 // safety coveralls
 {
-  id: 258,
+  id: 2039,
   name: 'Supersteel Industrial Safety Coveralls',
   category: 'coveralls',
   brand: 'Supersteel',
@@ -3297,7 +4191,7 @@ showSimilar: true,
 },
 
 {
-  id: 339,
+  id: 2040,
   name: 'Dickies Fire Retardant Industrial Coverall',
   category: 'coveralls',
   brand: 'Dickies',
@@ -3351,9 +4245,9 @@ showSimilar: true,
 },
 //  reflectivejackts
 {
-  id: 340,
+  id: 2041,
   name: 'High Visibility Safety Reflective Jacket',
-  category: 'reflective vests',
+  category: 'reflective-vests',
   brand: 'Generic',
   price: 15000,
 
@@ -3403,9 +4297,9 @@ showSimilar: true,
 
 // lab coats
 {
-  id: 321,
+  id: 2042,
   name: 'White Cotton Laboratory Coat',
-  category: 'lab coats',
+  category: 'lab-coats',
   brand: 'Generic',
   price: 12000,
 
@@ -3451,11 +4345,10 @@ showSimilar: true,
   `
 },
 
-// fire retardent coverall
 {
-  id: 327,
+  id: 2043,
   name: 'Dickies Fire Retardant Industrial Coverall',
-  category: 'fire retardent coverall',
+  category: 'coveralls',
   brand: 'Dickies',
   price: 85000,
 
@@ -3509,9 +4402,9 @@ showSimilar: true,
 
 // spillkits
 {
-  id: 304,
+  id: 2044,
   name: '120L Spill Kit',
-  category: 'spill kits',
+  category: 'spill-kits',
   brand: 'Generic',
   price: 95000,
 
@@ -3546,9 +4439,9 @@ showSimilar: true,
 
 // first aid kits
 {
-  id: 305,
+  id: 2045,
   name: '50 Persons First Aid Kit',
-  category: 'first aid kits',
+  category: 'first-aid-kits',
   brand: 'Generic',
   price: 28000,
 
@@ -3582,9 +4475,9 @@ showSimilar: true,
 
 // nose mask
 {
-  id: 306,
+  id: 2046,
   name: '3M 6200 Half Face Respirator Mask',
-  category: 'nose masks',
+  category: 'nose-masks',
   brand: '3M',
   price: 32000,
 
@@ -3621,9 +4514,9 @@ showSimilar: true,
 
 
 {
-  id: 307,
+  id: 2047,
   name: '3M PELTOR Optime 105 Earmuff',
-  category: 'ear muffs',
+  category: 'ear-muffs',
   brand: '3M',
   price: 28000,
 
@@ -3659,9 +4552,9 @@ showSimilar: true,
 
 // Earplugs
 {
-  id: 308,
+  id: 2048,
   name: '3M UltraFit Earplug - (100 Pairs/Pack)',
-  category: 'ear plugs',
+  category: 'ear-plugs',
   brand: '3M',
   price: 25000,
 
@@ -3698,10 +4591,8 @@ showSimilar: true,
 },
 
 
-// fall arrestor
-
 {
-  id: 309,
+  id: 2049,
   name: 'Toyo 3M Fall Arrester',
   category: 'fall-arresters',
   brand: 'Toyo',
@@ -3740,9 +4631,9 @@ showSimilar: true,
 
 // life saving equiment 
 {
-  id: 310,
+  id: 2050,
   name: 'Safety Life Buoy Offshore Ring 2.5kg',
-  category: 'life buoy',
+  category: 'life-buoy',
   brand: 'Generic',
   price: 22000,
 
@@ -3778,9 +4669,9 @@ showSimilar: true,
 
 
 {
-  id: 311,
+  id: 2051,
   name: 'Automatic Inflatable Life Jacket',
-  category: 'life jackets',
+  category: 'life-jackets',
   brand: 'Generic',
   price: 65000,
 
@@ -3813,14 +4704,333 @@ showSimilar: true,
   kongaLink: 'https://www.konga.com/'
 },
 
+
+
+{
+  id: 2052,
+  name: 'TOTAL Auto Darkening Welding Helmet (TSP9103)',
+  category: 'welding-helmets',
+  brand: 'TOTAL',
+  price: 105000,
+
+  images: [
+    'assets/img/helmets/1TOTAL TSP9103 Auto Darkening Welding Helmet.jpg',
+  ],
+
+  inStock: true,
+  description: 'The TOTAL TSP9103 Auto Darkening Welding Helmet is a high-performance safety solution designed to protect welders during demanding welding operations. Built with advanced auto-darkening technology, the helmet automatically adjusts its lens shade in milliseconds when an arc is struck, allowing for continuous work without the need to lift or adjust the helmet manually.\n\nFeaturing a large 100 × 67 mm viewing area, this helmet provides a clear and wide field of vision, improving accuracy and efficiency during welding tasks. Its premium optical clarity rating of 1/1/1/1 ensures minimal distortion, giving users a sharp and consistent view of their workpiece.\n\nThe helmet supports multiple welding processes including MIG, TIG (≥2A), arc welding, and plasma cutting, making it suitable for both professional welders and workshop use. With adjustable sensitivity, delay control, and shade levels (DIN 5–9 / 9–13), users can customize settings based on the job requirements.\n\nConstructed from durable nylon material, the helmet is lightweight and comfortable for extended use. It also includes a grinding mode, allowing it to double as protective gear during grinding operations.\n\nPowered by a combination of solar energy and replaceable lithium batteries, the helmet ensures long-lasting performance and reliability in various working environments. :contentReference[oaicite:0]{index=0}',
+
+  specification: `
+  Model: TSP9103
+  Optical Class: 1/1/1/1
+  Viewing Area: 100 × 67 mm
+  Light State: DIN 3
+  Dark State: DIN 5–9 / 9–13
+  UV/IR Protection: Up to DIN 16
+  Sensors: 4
+  Switching Time: < 0.04 ms
+  Delay Time: 0.15 – 0.80 s (adjustable)
+  Sensitivity Control: Adjustable (stepless)
+  Shade Control: Adjustable (internal)
+  TIG Rating: ≥ 2A
+  Grind Mode: Yes
+  Material: Nylon
+  Weight: Approx. 560 g
+  Operating Temperature: -5°C to +55°C
+  Power Supply: Solar panel + replaceable lithium batteries (CR2032)
+  `,
+
+  features: `
+  Auto-darkening lens for instant eye protection
+  Large viewing window for improved visibility
+  High optical clarity (1/1/1/1 rating)
+  Adjustable shade, sensitivity, and delay settings
+  Fast switching response (<0.04 ms)
+  Suitable for MIG, TIG, arc welding, and plasma cutting
+  Built-in grinding mode for multi-purpose use
+  Lightweight and comfortable for long working hours
+  Durable nylon construction for industrial use
+  Solar-powered with backup battery for reliability
+  `,
+  
+  jumiaLink: 'https://www.jumia.com.ng/catalog/?q=total+welding+helmet',
+  kongaLink: 'https://www.konga.com/search?search=total+welding+helmet'
+},
+
+
+{
+  id: 2053,
+  name: 'Safety Jogger AJUSCO Chinstrap Safety Helmet (AJUSCOWS)',
+  category: 'safety-helmets',
+  brand: 'Safety Jogger',
+  price: 26000,
+
+  images: [
+    'assets/img/helmets/AJUSCO CHINSTRAP safety jogger helmets.webp',
+  ],
+
+  inStock: true,
+  description: 'The Safety Jogger AJUSCO Chinstrap Safety Helmet is a high-quality personal protective equipment (PPE) designed to provide reliable head protection in construction sites, industrial environments, and maintenance operations. Built with a durable ABS shell, the helmet offers strong impact resistance while remaining lightweight for all-day comfort.\n\nOne of its standout features is the detachable 4-point chinstrap with a soft rubber chin protector, which ensures the helmet stays securely in place even during active movement or working at heights. This makes it especially suitable for construction workers, engineers, and technicians who require stable head protection in dynamic work conditions.\n\nThe helmet is equipped with a comfortable 6-point textile suspension harness that distributes weight evenly across the head, reducing pressure and enhancing comfort during extended use. Its ventilation design allows proper airflow, helping to reduce heat buildup in hot environments.\n\nAdditionally, the adjustable wheel ratchet system allows users to easily customize the fit for maximum stability and comfort. The helmet is also compatible with accessories such as earmuffs, making it a versatile safety solution for various industrial applications.\n\nDesigned to meet international safety standards, the AJUSCO helmet combines durability, comfort, and advanced safety features, making it an excellent choice for professionals who prioritize protection and performance on the job.',
+
+  specification: `
+  Model: AJUSCOWS
+  Product Type: Safety Helmet / Hard Hat
+  Material: ABS (Acrylonitrile Butadiene Styrene)
+  Suspension: 6-point textile harness
+  Chinstrap: Detachable 4-point with soft rubber protector
+  Adjustment: Wheel ratchet system
+  Ventilation: Yes (vented shell)
+  Weight: Approx. 350 - 360g
+  Temperature Resistance: Suitable down to -30°C
+  Slot Size: 30mm (for accessories like earmuffs)
+  Standards: EN 397 / ANSI compliant
+  `,
+
+  features: `
+  Strong and lightweight ABS shell for impact protection
+  Detachable 4-point chinstrap for secure fit
+  Soft rubber chin protector for added comfort
+  6-point suspension system for even weight distribution
+  Adjustable wheel ratchet for easy size fitting
+  Ventilated design for improved airflow and comfort
+  Compatible with earmuffs and other accessories
+  Reflective stickers for increased visibility
+  Suitable for construction, industrial, and engineering use
+  Durable and reliable for daily professional use
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/catalog/?q=ajusco+helmet',
+  kongaLink: 'https://www.konga.com/search?search=ajusco+helmet'
+},
+
+
+
+   {
+     id: 2054,
+     name: 'Aluminized Fireman Proximity Suit (Complete Set)',
+     category: 'fire-resistance-wears',
+     brand: 'Generic',
+     price: 950000,
+
+     images: [
+       'assets/img/fire/aluminized fire suit.avif',
+     ],
+
+     inStock: true,
+     description: 'The Fireman Proximity Suit is a high-performance thermal protective ensemble designed for firefighters and industrial workers operating in extreme heat environments. Engineered with advanced aluminized materials, the suit reflects up to 90–95% of radiant heat, allowing users to safely approach intense heat sources such as fires, furnaces, molten metal, and petrochemical hazards.\n\nThis suit is specifically built for proximity firefighting, meaning it is intended for close-range operations near high-temperature zones rather than direct entry into flames. It provides critical protection against radiant heat, convection heat, sparks, molten metal splashes, and hot gases, making it essential for rescue missions and industrial safety operations. :contentReference[oaicite:0]{index=0}\n\nConstructed using aluminized fiberglass or aramid-based fabric with multi-layer insulation, the suit combines heat reflection, thermal resistance, and wearer comfort. The outer reflective layer minimizes heat absorption, while inner layers provide insulation and moisture resistance.\n\nThe complete set includes a hood with visor, jacket, trousers, gloves, and boots, ensuring full-body protection. It is widely used in fire services, airports (ARFF), steel plants, foundries, refineries, and emergency rescue operations where exposure to extreme heat is unavoidable. :contentReference[oaicite:1]{index=1}\n\nDesigned for durability and safety, the suit meets international standards for high-temperature protective clothing and is suitable for short-duration exposure to intense heat conditions.',
+
+     specification: `
+  Product Type: Fire Proximity Suit (Aluminized)
+  Material: Aluminized Fiberglass / Aramid Fabric
+  Layers: 2 – 4 Layer Thermal Protection System
+  Heat Reflection: Up to 90–95% radiant heat reflection
+  Radiant Heat Resistance: Up to 1000°C – 1650°C (short duration)
+  Components: Hood with visor, jacket, trousers, gloves, boots
+  Stitching: Kevlar thread for high heat resistance
+  Inner Lining: Flame-retardant wool / cotton insulation
+  Weight: Approx. 7 – 10 kg (depending on layers)
+  Application: Firefighting, industrial heat protection, rescue operations
+  `,
+
+     features: `
+  Reflects up to 90–95% of radiant heat for maximum protection
+  Multi-layer construction for insulation and durability
+  Full-body protection including head, hands, and feet
+  مقاوم to flames, molten metal splash, and high-temperature gases
+  High-strength aluminized outer layer for heat reflection
+  Comfortable inner lining for extended wear
+  Designed for proximity firefighting and industrial heat environments
+  Includes visor for eye and face protection
+  Durable Kevlar stitching for long-lasting performance
+  Suitable for fire services, refineries, foundries, and emergency rescue
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/catalog/?q=fire+proximity+suit',
+     kongaLink: 'https://www.konga.com/search?search=fire+proximity+suit'
+   },
+
+
+   {
+     id: 2055,
+     name: 'Firefighter Turnout Gear (Non-Aluminized Full Set)',
+     category: 'fire-resistance-wears',
+     brand: 'Generic',
+     price: 750000,
+
+     images: [
+       'assets/img/fire/fireman suit.jpg',
+     ],
+
+     inStock: true,
+     description: 'This Firefighter Turnout Gear (also known as bunker gear) is a complete non-aluminized protective clothing set designed for structural firefighting and emergency response operations. It provides reliable protection against flames, heat, water, smoke, and physical hazards commonly encountered during fire incidents.\n\nThe suit is constructed using advanced flame-resistant materials such as Nomex and Kevlar, which do not melt or drip when exposed to high temperatures. Instead, they char and form a protective barrier, enhancing firefighter safety during operations. :contentReference[oaicite:0]{index=0}\n\nThis gear features a multi-layer protection system, including an outer shell for flame resistance, a moisture barrier to prevent water and chemicals from penetrating, and a thermal liner that insulates the body from extreme heat. :contentReference[oaicite:1]{index=1}\n\nDesigned for comfort and mobility, the suit allows firefighters to move freely while maintaining high levels of protection. Reflective stripes improve visibility in low-light and smoky conditions, making it suitable for both day and night operations.\n\nIt is ideal for use by fire service personnel, industrial emergency teams, oil & gas workers, and rescue units requiring dependable fire-resistant clothing.',
+
+     specification: `
+  Product Type: Firefighter Turnout Gear (Bunker Suit)
+  Material: Nomex / Kevlar / Flame-resistant fabric
+  Layers: 3-layer system (Outer shell, moisture barrier, thermal liner)
+  Heat Resistance: Up to 300°C – 400°C (continuous exposure)
+  Flame Resistance: Yes (non-melting, self-extinguishing)
+  Visibility: Reflective stripes
+  Closure Type: Zipper with storm flap / Velcro
+  Application: Structural firefighting, rescue, industrial safety
+  `,
+
+     features: `
+  Complete full-body firefighter protection set
+  Non-aluminized design for insulation-based heat protection
+  Made from flame-resistant Nomex and Kevlar materials
+  Multi-layer construction for heat, moisture, and flame protection
+  Reflective stripes for high visibility in dark environments
+  Comfortable and breathable for extended use
+  Durable and tear-resistant outer shell
+  Water-resistant and chemical-resistant barrier layer
+  Designed for mobility and flexibility during operations
+  Suitable for firefighters, rescue teams, and industrial workers
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/catalog/?q=firefighter+turnout+gear',
+     kongaLink: 'https://www.konga.com/search?search=firefighter+turnout+gear'
+   },
+
+   {
+  id: 2056,
+  name: 'Multi-Use Chemical Protective Suit (Full Set) – Ship Repair & Pesticide Spraying',
+  category: 'chemical-wears',
+  brand: 'Generic',
+  price: 45000,
+
+  images: [
+    'assets/img/chemical wears/chemical suit.avif',
+  ],
+
+  inStock: true,
+  description: 'The Multi-Use Chemical Protective Suit is a full-body personal protective equipment (PPE) designed to safeguard workers from hazardous chemical exposure during industrial, marine, and agricultural operations. It is widely used for ship repair, pesticide spraying, chemical handling, and general maintenance tasks involving liquids, splashes, and harmful substances.\n\nConstructed from high-quality PVC or coated chemical-resistant fabric, the suit provides a reliable barrier against chemical splashes, acids, alkalis, and pesticide sprays. The material prevents penetration of hazardous liquids, reducing the risk of skin contact and chemical burns during operations. :contentReference[oaicite:0]{index=0}\n\nThis suit comes as a complete set, typically including a jacket (or coverall), trousers, and a hood, ensuring full-body protection from head to toe. Its loose-fitting design allows for easy movement and can be worn over regular clothing, making it suitable for long working hours in demanding environments.\n\nThe suit is lightweight, flexible, and easy to wear, allowing users to perform tasks efficiently while maintaining safety. It is also easy to clean and reusable, making it a cost-effective solution for professionals in agriculture, marine engineering, chemical industries, and sanitation services.',
+
+  specification: `
+  Product Type: Chemical Protective Suit (Full Set)
+  Material: PVC / Coated Chemical-Resistant Fabric
+  Design: Two-piece (Jacket & Trouser) or Coverall with Hood
+  Protection Type: Splash, spray, and light chemical resistance
+  Coverage: Full body (excluding hands, feet, and face)
+  Thickness: Approx. 0.4 – 0.8 mm
+  Fit: Free size / adjustable
+  Reusability: Yes (washable and reusable)
+  Application: Ship repair, pesticide spraying, chemical handling, sanitation
+  `,
+
+  features: `
+  Full-body protection against chemical splashes and sprays
+  Made from durable and chemical-resistant PVC material
+  Includes jacket, trousers, and hood for complete coverage
+  Lightweight and flexible for ease of movement
+  Resistant to acids, alkalis, and pesticide chemicals
+  Easy to wear, remove, and clean after use
+  Suitable for marine, agricultural, and industrial environments
+  Cost-effective and reusable PPE solution
+  Designed for long working hours with minimal discomfort
+  Provides reliable barrier against hazardous liquid exposure
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/catalog/?q=chemical+protective+suit',
+  kongaLink: 'https://www.konga.com/search?search=chemical+protective+suit'
+},
+
+
+
+{
+  id: 2057,
+  name: 'Safety Face Shield – Clear Anti-Fog Industrial Protective Visor (Adjustable)',
+  category: 'face-shields',
+  brand: 'Generic',
+  price: 18000,
+
+  images: [
+    'assets/img/helmets and faceshield/face sheilds.jpg',
+  ],
+
+  inStock: true,
+  description: 'The Safety Face Shield is a high-quality personal protective equipment (PPE) designed to provide full-face protection in industrial, medical, and general work environments. It features a clear, impact-resistant visor that covers the entire face from forehead to below the chin, protecting against flying debris, chemical splashes, dust, and hazardous particles.\n\nMade from durable polycarbonate or PETG material, the shield offers excellent optical clarity and high impact resistance, ensuring safety without compromising visibility. Many models meet ANSI Z87.1 safety standards, which certify protection against high-impact hazards in industrial environments. :contentReference[oaicite:0]{index=0}\n\nThe anti-fog and scratch-resistant coating ensures clear vision even during long working hours, reducing the need for constant adjustment. Its adjustable headband or helmet-mounted design allows for a secure and comfortable fit for different users.\n\nThis face shield is widely used in construction, welding support tasks, grinding, laboratory work, healthcare, and cleaning operations. It can also be worn together with safety goggles or respirators for enhanced protection in high-risk environments.',
+
+  specification: `
+  Product Type: Safety Face Shield / Protective Visor
+  Material: Polycarbonate / PETG
+  Coverage: Full face (forehead to chin)
+  Coating: Anti-fog & scratch-resistant
+  Thickness: Approx. 0.04" – 0.08"
+  Protection Standard: ANSI Z87.1 compliant (varies by model)
+  Mount Type: Headband or helmet-mounted
+  UV Protection: Up to 99% UVA/B/C (polycarbonate models)
+  Application: Industrial, medical, construction, laboratory
+  `,
+
+  features: `
+  Full-face protection against debris, splashes, and particles
+  High-impact resistant polycarbonate construction
+  Anti-fog coating for clear visibility
+  Lightweight and comfortable for extended use
+  Adjustable headband for secure fit
+  Compatible with helmets, goggles, and respirators
+  Scratch-resistant surface for durability
+  Reusable and easy to clean
+  Suitable for industrial, medical, and general safety use
+  Provides better coverage than standard safety goggles
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/catalog/?q=safety+face+shield',
+  kongaLink: 'https://www.konga.com/search?search=safety+face+shield'
+},
+
+
+{
+  id: 2058,
+  name: 'Large Black Sturdy Elegant Umbrella – 24 Ribs Windproof',
+  category: 'umbrellas',
+  brand: 'Generic',
+  price: 18000,
+
+  images: [
+    'assets/img/umbrella/Large umbrella black-24 stroke.jpg',
+  ],
+
+  inStock: true,
+  description: 'This Large Black Sturdy Elegant Umbrella is a premium-quality rain protection accessory designed for durability, style, and maximum coverage. Built with a strong 24-rib (spoke) structure, it offers superior resistance against strong winds, making it highly reliable during heavy rain and stormy conditions.\n\nThe umbrella features a wide canopy that provides excellent coverage for one or two users, keeping you dry even in intense rainfall. Its classic black design gives it a professional and elegant look, making it suitable for business use, daily commuting, and outdoor activities.\n\nConstructed with high-quality waterproof fabric and reinforced metal ribs, the umbrella is both durable and long-lasting. The sturdy central shaft ensures stability, while the ergonomic handle provides a comfortable grip for extended use.\n\nDesigned for convenience, the umbrella opens smoothly and is easy to carry, making it an essential accessory for both personal and professional use during rainy seasons.',
+
+  specification: `
+  Product Type: Umbrella
+  Design: Large canopy, classic black
+  Frame: 24 ribs (wind-resistant structure)
+  Material: Waterproof polyester fabric
+  Shaft: Reinforced metal
+  Opening Mechanism: Manual / automatic (varies by model)
+  Coverage: Suitable for 1 – 2 persons
+  Handle: Ergonomic grip
+  Application: Rain protection, outdoor use, commuting
+  `,
+
+  features: `
+  Strong 24-rib construction for wind resistance
+  Large canopy for maximum coverage
+  Elegant black design for professional appearance
+  Durable waterproof fabric for effective rain protection
+  Sturdy shaft for enhanced stability
+  Comfortable handle for easy grip
+  Suitable for heavy rain and windy conditions
+  Long-lasting and reliable build quality
+  Easy to open and close
+  Ideal for daily and business use
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/catalog/?q=large+umbrella+24+ribs',
+  kongaLink: 'https://www.konga.com/search?search=large+umbrella+24+ribs'
+},
 // ppe ends
-// 450 stop
+//  stop at 4000
 
 
 // Pumping machines
-// 450 to 500
+// 4001 to 5000
 {
-  id: 450,
+  id: 4001,
   name: 'Electric Oil Fuel Diesel Transfer Pump 16GPM with Meter & Manual Nozzle',
   category: 'fuel-transfer-pump',
   brand: 'Generic',
@@ -3864,7 +5074,7 @@ showSimilar: true,
 
 
 {
-  id: 451,
+  id: 4002,
   name: 'Quantitative Fuel Dispenser Diesel Transfer Pump Kit (12V DC / 220V)',
   category: 'fuel-transfer-pump',
   brand: 'Generic',
@@ -3910,7 +5120,7 @@ showSimilar: true,
 },
 
 {
-  id: 452,
+  id: 4003,
   name: '2 Inch LC Flow Meter for Diesel Fuel (Positive Displacement)',
   category: 'fuel-transfer-pump',
   brand: 'Generic',
@@ -3953,17 +5163,17 @@ showSimilar: true,
   kongaLink: 'https://www.konga.com/'
 },
 // pumping machine ends
-// stop at 500
+// stop at 5000
 
 
 
 // Silicone and adhesives starts
-// 500 to 600
+// 5001 to 7000
 
 
 // silicone sealant
 {
-  id: 600,
+  id: 6001,
   name: 'Abro 2000 RTV Silicone Sealant (310g)',
   category: 'silicone-sealants',
   brand: 'ABRO',
@@ -4006,7 +5216,7 @@ showSimilar: true,
 
 // pu foam sealants
 {
-  id: 601,
+  id: 6002,
   name: 'Asmaco PU Foam Sealant (Polyurethane Expanding Foam)',
   category: 'pu-foam-sealant',
   brand: 'Asmaco',
@@ -4051,7 +5261,7 @@ showSimilar: true,
 
 // epoxy adhesives
 {
-  id: 602,
+  id: 6003,
   name: 'Araldite Epoxy Adhesive (Strong Multi-Purpose Bonding Glue)',
   category: 'epoxy-adhesives',
   brand: 'Araldite',
@@ -4096,7 +5306,7 @@ showSimilar: true,
 
 // construction adhesives
 {
-  id: 603,
+  id: 6004,
   name: 'Soudal PRO 40P Polyurethane Wood Adhesive 750g',
   category: 'construction-adhesives',
   brand: 'Soudal',
@@ -4140,7 +5350,7 @@ showSimilar: true,
 
 // glues
 {
-  id: 604,
+  id: 6005,
   name: 'Loctite 406 Instant Adhesive (Fast Bonding Cyanoacrylate)',
   category: 'glues',
   brand: 'Loctite',
@@ -4183,7 +5393,7 @@ showSimilar: true,
 },
 
 {
-  id: 605,
+  id: 6006,
   name: 'Abro 99 Multi-Purpose Contact Adhesive (Strong Bond Glue)',
   category: 'contact-adhesives',
   brand: 'Abro',
@@ -4230,7 +5440,7 @@ showSimilar: true,
 
 // Waterproofsealants
 {
-  id: 606,
+  id: 6007,
   name: 'Waterproof Leak Filler Spray 450ml (Black Roof & Crack Sealant)',
   category: 'waterproof-sealants',
   brand: 'Generic',
@@ -4277,7 +5487,7 @@ showSimilar: true,
 
 // spray paints and leak fillers
 {
-  id: 607,
+  id: 6008,
   name: 'Waterproof Leak Filler Spray 450ml (Black Roof & Crack Sealant)',
   category: 'leak-fillers and spray-paint',
   brand: 'Generic',
@@ -4323,19 +5533,18 @@ showSimilar: true,
 },
 
 // sealants and adhesives ends
-//  stop at 700
+//  stop at 7000
 
 
 
 
-// fire and traffic safety starts
-// start at 701
-
+// fire and traffic safety starts at 70001
+//  ends at 9000
 
 // fire safety
 // fire blankets
 {
-  id: 701,
+  id: 7001,
   name: '1.2m x 1.8m Fire Blanket',
   category: 'fire-blankets',
   brand: 'Generic',
@@ -4377,7 +5586,7 @@ showSimilar: true,
 
 // fire extinguishers
 {
-  id: 702,
+  id: 7002,
   name: 'AFO Automatic Fire Ball Extinguisher',
   category: 'fire-extinguisher',
   brand: 'AFO',
@@ -4423,10 +5632,9 @@ Overall, the AFO Automatic Fire Ball Extinguisher is a reliable, easy-to-use and
   `
 },
 
-// smoke and fire alarms
 
 {
-  id: 703,
+  id: 7003,
   name: 'Fire Alarm Smoke Detector',
   category: 'somke and fire alarm',
   brand: 'Generic',
@@ -4473,9 +5681,9 @@ This fire alarm is an essential part of any fire safety system, providing peace 
   `
 },
 
-// fire cabinet
+
 {
-  id: 704,
+  id: 7004,
   name: 'Fire Hose Reel Cabinet',
   category: 'fire-hose-cabinet',
   brand: 'Generic',
@@ -4521,7 +5729,7 @@ The fire hose reel cabinet is designed to accommodate standard hose reels, valve
 },
 
 {
-  id: 705,
+  id: 7005,
   name: 'Fire Hose Reel',
   category: 'fire-hose',
   brand: 'Generic',
@@ -4569,12 +5777,8 @@ Constructed from high-quality materials, the fire hose reel is durable, corrosio
 },
 
 
-// traffic safety
-
-
-// traffic cones
 {
-  id: 706,
+  id: 7006,
   name: 'PVC Safety Cone 100cm with Black Base',
   category: 'traffic-cone',
   brand: 'Generic',
@@ -4619,9 +5823,9 @@ With its bright color and optional reflective bands, the safety cone ensures max
   `
 },
 
-// Warningsigna
+
 {
-  id: 707,
+  id: 7007,
   name: 'Wet Floor Caution Sign',
   category: 'warning-signs',
   brand: 'Generic',
@@ -4665,9 +5869,9 @@ The foldable A-frame design allows for easy storage and portability, making it c
   `
 },
 
-// caution tapes
+
 {
-  id: 708,
+  id: 7008,
   name: 'Yellow & Black Caution Tape 500m',
   category: 'caution-tape',
   brand: 'Generic',
@@ -4713,9 +5917,9 @@ With a long length of 500 meters, this caution tape provides extended coverage, 
   `
 },
 
-  //  barriers
+  
 {
-  id: 709,
+  id: 7009,
   name: 'PVC Expandable Barrier Mobile Barricade (Water-Filled, Yellow/Black)',
   category: 'road-barriers',
   brand: 'Generic',
@@ -4762,7 +5966,7 @@ Equipped with smooth-rolling wheels, this mobile barricade is easy to transport 
 
 // convex mirrors
 {
-  id: 710,
+  id: 7010,
   name: 'Convex Safety Mirror 100cm',
   category: 'convex-mirrors',
   brand: 'Generic',
@@ -4808,9 +6012,8 @@ This safety mirror is an essential tool for enhancing visibility, improving traf
   `
 },
 
-// reflective
 {
-  id: 711,
+  id: 7011,
   name: 'Lemon Reflective Stripe Tape 2" x 50m',
   category: 'reflectors',
   brand: 'Generic',
@@ -4854,9 +6057,9 @@ Made from durable, weather-resistant material, the reflective tape is designed f
   `
 },
 
-// speed bumps
+
 {
-  id: 712,
+  id: 7012,
   name: 'Rubber Speed Bump 50m',
   category: 'speed-bumps',
   brand: 'Generic',
@@ -4902,9 +6105,8 @@ This speed bump is an effective and reliable solution for enforcing speed limits
   `
 },
 
-// wheel chokes
 {
-  id: 713,
+  id: 7013,
   name: 'Heavy Duty Rubber Wheel Chocks (Non-Slip Tire Stopper)',
   category: 'wheel-chocks',
   brand: 'Generic',
@@ -4948,9 +6150,9 @@ The chocks feature a compact and portable design, making them easy to carry, pos
   `
 },
 
-// metal detector/inspection mirror
+
 {
-  id: 714,
+  id: 7014,
   name: 'Garrett Handheld Metal Detector',
   category: 'metal-detectors',
   brand: 'Garrett',
@@ -4998,7 +6200,7 @@ This handheld metal detector is an essential tool for modern security operations
 
 
 {
-  id: 715,
+  id: 7015,
   name: 'Convex Undercarriage Inspection Mirror 30cm with Wheels',
   category: 'inspection-mirrors',
   brand: 'Generic',
@@ -5048,15 +6250,56 @@ This undercarriage inspection mirror is an essential tool for improving security
 },
 
 
+{
+  id: 7016,
+  name: 'Reflective Safety Vest FN 500',
+  category: 'safety-vests',
+  brand: 'Generic',
+  price: 4500,
+
+  images: [
+    'assets/img/reflective jackets/REFLECTIVE SAFETY VEST FN 500.jpg',
+    'assets/img/safety wear/reflective vest fn 500 2.jpg',
+    'assets/img/safety wear/reflective vest fn 500 3.jpg'
+  ],
+
+  inStock: true,
+
+  description: 'The Reflective Safety Vest FN 500 is a high-visibility personal protective equipment designed to enhance worker safety in low-light and high-risk environments. Made from durable fluorescent fabric with 360° reflective strips, it ensures maximum visibility both during the day and at night.\n\nThis vest is ideal for construction workers, road safety personnel, traffic controllers, and industrial workers. It features multiple functional pockets for tools and accessories, along with a secure front zipper closure for convenience and durability.\n\nLightweight and breathable, the FN 500 vest is comfortable for long hours of use and can be easily worn over regular work clothing. It complies with standard safety visibility requirements, making it suitable for professional use.',
+
+  specification: `
+  Model: FN 500
+  Material: Polyester / Fluorescent fabric
+  Visibility: 360° reflective strips (2-inch width)
+  Closure Type: Front zipper
+  Pockets: Multiple utility pockets + ID holder
+  Sizes: M, L, XL, XXL, XXXL
+  Color: Fluorescent yellow / orange
+  Application: Construction, road safety, industrial work
+  `,
+
+  features: `
+  High-visibility fluorescent material for safety
+  360° reflective tape for day and night visibility
+  Durable and lightweight design for comfort
+  Multiple pockets for tools and accessories
+  Secure zipper closure for easy wear
+  Breathable fabric for extended use
+  Suitable for construction, traffic control, and industrial environments
+  Meets standard safety visibility requirements
+  `
+},
+
 
 // fire and traffic safety
-// ends at 800
+// ends at 9000
+
 
 // workshop and garage
-// start at 801 and ends at 1000
+// start at 9001 and ends at 11000
 
 {
-  id: 801,
+  id: 9001,
   name: 'Ingco Tool Set 328pcs Professional Hand Tool Kit',
   category: 'tools-cabinets',
   brand: 'Ingco',
@@ -5107,7 +6350,7 @@ Whether for workshop use, automotive repairs, industrial applications, or househ
 
 
 {
-  id: 802,
+  id: 9002,
   name: 'Record 8" Bench Vice Heavy Duty Cast Iron',
   category: 'work-bench-vices',
   brand: 'Record',
@@ -5156,7 +6399,7 @@ This Record bench vice is ideal for professionals, technicians, and DIY users wh
 },
 
 {
-  id: 803,
+  id: 9003,
   name: 'TOTAL TC202416 Air Compressor 24L Oil Lubricated',
   category: 'air-compressors',
   brand: 'TOTAL',
@@ -5208,7 +6451,7 @@ Built with durable materials and safety features such as pressure control and th
 
 
 {
-  id: 804,
+  id: 9004,
   name: 'Extension Cable Wire 2.5mm x 50m Heavy Duty (Generic)',
   category: 'extenstion-and-reels',
   brand: 'Generic',
@@ -5257,7 +6500,7 @@ This cable is an essential solution for electricians, technicians, and DIY users
 
 
 {
-  id: 805,
+  id: 9005,
   name: '499 PCS Professional Tool Set Complete Mechanic Kit',
   category: 'tools-sets',
   brand: 'Generic',
@@ -5304,7 +6547,7 @@ Whether for workshop use, garage repairs, industrial work, or home improvement, 
 },
 
 {
-  id: 806,
+  id: 9006,
   name: '40" Plastic Car Creeper Automotive Repair Board',
   category: 'car-creepers',
   brand: 'Generic',
@@ -5351,12 +6594,9 @@ This 40-inch car creeper is an essential addition to any workshop or garage, imp
   `
 },
 
-//     'assets/img/grease buckets/ingco grease buckets.webp',
-//     'assets/img/grease buckets/ingco grease buckets.webp2.webp',
-//     'assets/img/grease buckets/ingco grease buckets.webp3.webp'
 
 {
-  id: 807,
+  id: 9007,
   name: 'Ingco Air Grease Lubricator 30L AGL02301',
   category: 'grease-buckets',
   brand: 'Ingco',
@@ -5412,7 +6652,7 @@ This grease lubricator improves efficiency, reduces manual effort, and ensures p
 
 
 {
-  id: 808,
+  id: 9008,
   name: 'Hydraulic Pressure Testing Pump 50 Bar Bucket Type',
   category: 'testing-buckets',
   brand: 'Generic',
@@ -5461,7 +6701,7 @@ This hydraulic testing pump is essential for engineers, plumbers, and technician
 
 
 {
-  id: 809,
+  id: 9009,
   name: 'Hand Rotary Pump Manual Oil & Fuel Transfer Pump',
   category: 'rotary-pumps',
   brand: 'Generic',
@@ -5508,7 +6748,7 @@ This hand rotary pump is a reliable and cost-effective solution for safe and con
 },
 
 {
-  id: 810,
+  id: 9010,
   name: '5 Ton Wide Hand Hydraulic Pallet Truck 685x1150mm',
   category: 'pallet-trucks',
   brand: 'Generic',
@@ -5556,7 +6796,7 @@ Equipped with strong wheels for smooth movement, this pallet truck enhances prod
 },
 
 {
-  id: 811,
+  id: 9011,
   name: '3 Ton Hydraulic Floor Jack Heavy Duty Steel Car Lifting Jack',
   category: 'jack-and-lifts',
   brand: 'Generic',
@@ -5604,7 +6844,7 @@ This 3-ton floor jack is an essential tool for safe and efficient vehicle liftin
 
 
 {
-  id: 812,
+  id: 9012,
   name: 'Vital Chain Hoist 3 Ton Manual Chain Block',
   category: 'Chain-blocks-and-hoists',
   brand: 'Vital',
@@ -5652,7 +6892,7 @@ This 3-ton Vital chain hoist is an essential lifting tool for professionals hand
 
 
 {
-  id: 813,
+  id: 9013,
   name: 'Forklift Drum Grab 500kg Heavy Duty Drum Lifter',
   category: 'drum-handling-equipments',
   brand: 'Generic',
@@ -5700,7 +6940,7 @@ This forklift drum grab is an essential tool for improving workplace safety, pro
 
 
 {
-  id: 814,
+  id: 9014,
   name: '2 Ton Hydraulic Workshop Crane Engine Hoist',
   category: 'engine-cranes',
   brand: 'Generic',
@@ -5750,7 +6990,7 @@ Equipped with swivel caster wheels, the crane provides excellent mobility, enabl
 },
 
 {
-  id: 815,
+  id: 9015,
   name: 'A&S Manual Forklift Stacker 2 Ton Hydraulic Hand Stacker',
   category: 'pallete-stackers',
   brand: 'A&S',
@@ -5798,7 +7038,7 @@ Equipped with durable wheels for smooth movement, this manual stacker is perfect
 },
 
 {
-  id: 816,
+  id: 9016,
   name: '3 Ton 6m Polyester Webbing Lifting Sling',
   category: 'lifting-belts',
   brand: 'Generic',
@@ -5847,7 +7087,7 @@ This lifting sling is an essential accessory for safe and efficient load handlin
 
 
 {
-  id: 817,
+  id: 9017,
   name: '24" Tire Changer Machine Wheel Changer & Tyre Stripping Machine',
   category: 'tire-changers',
   brand: 'Generic',
@@ -5896,7 +7136,7 @@ Designed for professional use, this machine improves speed, accuracy, and safety
 },
 
 {
-  id: 818,
+  id: 9018,
   name: 'Heavy Duty Folding Platform Trolley 300kg Load Capacity',
   category: 'trolleys',
   brand: 'Generic',
@@ -5944,7 +7184,7 @@ Equipped with smooth-rolling wheels, this platform trolley provides excellent mo
 
 
 {
-  id: 819,
+  id: 9019,
   name: 'Manual Wheel Balancer Portable Tyre Balancing Stand',
   category: 'wheel-balancers',
   brand: 'Generic',
@@ -5991,7 +7231,7 @@ The manual wheel balancer is an essential tool for improving vehicle performance
 },
 
 {
-  id: 820,
+  id: 9020,
   name: 'Tyre Service Equipment Package – Tire Changer + Manual Wheel Balancer + Accessories',
   category: 'tire-changers',
   brand: 'Generic',
@@ -6041,7 +7281,7 @@ This bundle offers excellent value, helping users save costs compared to purchas
 },
 
 {
-  id: 821,
+  id: 9021,
   name: 'Heavy-Duty Car Wheel Lock Clamp Anti-Theft Tire Clamp',
   category: 'wheel-lockers',
   brand: 'Generic',
@@ -6087,7 +7327,7 @@ Easy to install and remove, this wheel lock clamp provides an effective and conv
 },
 
 {
-  id: 822,
+  id: 9022,
   name: '4x4 – 4x7 Fibreglass Multipurpose Ladder Non-Conductive',
   category: 'folding-ladders',
   brand: 'Generic',
@@ -6148,7 +7388,7 @@ These fibreglass multipurpose ladders are reliable, durable, and essential tools
 },
 
 {
-  id: 823,
+  id: 9023,
   name: '4x4 – 4x7 Multipurpose Aluminium Ladder',
   category: 'folding-ladders',
   brand: 'Generic',
@@ -6209,7 +7449,7 @@ The foldable design allows for easy storage and transport, making it convenient 
 
 
 {
-  id: 824,
+  id: 9024,
   name: '12ft – 40t Aluminium Extension Ladder',
   category: 'extension-ladders',
   brand: 'Generic',
@@ -6270,7 +7510,7 @@ These extension ladders are essential tools for professionals and homeowners who
 
 
 {
-  id: 825,
+  id: 9025,
   name: '3 Step – 8 Step Aluminium Step Ladder',
   category: 'step-ladders',
   brand: 'Generic',
@@ -6334,7 +7574,7 @@ The foldable design allows for easy storage in tight spaces, making it a conveni
 
 
 {
-  id: 826,
+  id: 9026,
   name: '4 Step – 8 Step Fibreglass Step Ladder (Non-Conductive)',
   category: 'step-ladders',
   brand: 'Generic',
@@ -6397,7 +7637,7 @@ These fibreglass step ladders are reliable, durable, and essential for safe work
 
 
    {
-     id: 827,
+     id: 9027,
      name: 'Hydraulic Workshop Press 20ton',
      category: 'hydraulic-presses',
      brand: 'Generic',
@@ -6439,14 +7679,15 @@ These fibreglass step ladders are reliable, durable, and essential for safe work
   `
    },
 
-// work shop ends at 1000
+// work shop ends at 11000
 
 
 // Electricalequipments
-// starts at 1001
+// starts at 11001 
+// ends at 13000
 
 {
-  id: 1001,
+  id: 11001,
   name: 'Ingco Lithium Battery FBLI2002 – 4Ah 20V (P20S)',
   category: 'batteries',
   brand: 'Ingco',
@@ -6499,7 +7740,7 @@ An LED battery level indicator allows users to easily monitor remaining power, i
 
 
    {
-     id: 1002,
+     id: 11002,
      name: 'Maxmech Battery Charger BC650 – 12V/24V Heavy Duty Booster',
      category: 'battery-chargers',
      brand: 'Maxmech',
@@ -6553,49 +7794,49 @@ This charger is reliable, efficient, and essential for automotive and industrial
    },
 
 
+  //  {
+  //    id: 11003,
+  //    name: 'Guru Special Bag Closer Machine With Oil Pump',
+  //    category: 'bag-closers',
+  //    brand: 'Guru',
+  //    price: 180000,
+
+  //    images: [
+  //      'assets/img/bag closers/guru bag closer machine.jpg'
+  //    ],
+
+  //    inStock: true,
+  //    description: 'The Guru Special Bag Closer Machine with Oil Pump is a portable industrial sewing machine designed for efficiently sealing filled bags in commercial and industrial environments. It is widely used in agriculture, food processing, manufacturing, and packaging industries to close bags containing products such as rice, flour, fertilizer, seeds, animal feed, and cement. The machine operates using a single-thread chain stitch system that creates strong and secure closures on various types of bags including paper bags, woven polypropylene (PP) sacks, HDPE bags, and textile packaging materials. Its built-in oil pump lubrication system ensures smooth operation by automatically supplying oil to internal moving parts, reducing wear and improving durability. The lightweight portable design allows operators to easily carry and use the machine in warehouses, production lines, and packaging stations. Built with durable industrial components, the Guru bag closer machine delivers reliable performance and high efficiency for businesses handling large volumes of bag packaging.',
+
+  //    specification: `
+  // Brand: Guru
+  // Machine Type: Portable Bag Closing Sewing Machine
+  // Stitch Type: Single Thread Chain Stitch
+  // Stitch Length: 7.2 mm (Fixed)
+  // Sewing Speed: 4 – 8 seconds per bag
+  // Motor Power: 1/10 HP (8000 RPM)
+  // Voltage: 220V – 240V
+  // Needle Type: DBx257 #25
+  // Weight: Approx. 5 – 6 kg
+  // Lubrication System: Built-in Oil Pump
+  // `,
+
+  //    features: `
+  // Portable industrial sewing machine for closing filled bags
+  // Built-in oil pump lubrication system for smooth operation
+  // High-speed sewing performance for efficient packaging
+  // Durable construction for heavy-duty industrial use
+  // Suitable for paper, woven, polypropylene and textile bags
+  // Easy to operate and requires minimal training
+  // Ideal for agricultural, food processing and manufacturing industries
+  // `,
+
+  //    jumiaLink: 'https://www.jumia.com.ng/',
+  //    kongaLink: 'https://www.konga.com/'
+  //  },
+
    {
-     id: 1003,
-     name: 'Guru Special Bag Closer Machine With Oil Pump',
-     category: 'bag-closers',
-     brand: 'Guru',
-     price: 180000,
-
-     images: [
-       'assets/img/bag closers/guru bag closer machine.jpg'
-     ],
-
-     inStock: true,
-     description: 'The Guru Special Bag Closer Machine with Oil Pump is a portable industrial sewing machine designed for efficiently sealing filled bags in commercial and industrial environments. It is widely used in agriculture, food processing, manufacturing, and packaging industries to close bags containing products such as rice, flour, fertilizer, seeds, animal feed, and cement. The machine operates using a single-thread chain stitch system that creates strong and secure closures on various types of bags including paper bags, woven polypropylene (PP) sacks, HDPE bags, and textile packaging materials. Its built-in oil pump lubrication system ensures smooth operation by automatically supplying oil to internal moving parts, reducing wear and improving durability. The lightweight portable design allows operators to easily carry and use the machine in warehouses, production lines, and packaging stations. Built with durable industrial components, the Guru bag closer machine delivers reliable performance and high efficiency for businesses handling large volumes of bag packaging.',
-
-     specification: `
-  Brand: Guru
-  Machine Type: Portable Bag Closing Sewing Machine
-  Stitch Type: Single Thread Chain Stitch
-  Stitch Length: 7.2 mm (Fixed)
-  Sewing Speed: 4 – 8 seconds per bag
-  Motor Power: 1/10 HP (8000 RPM)
-  Voltage: 220V – 240V
-  Needle Type: DBx257 #25
-  Weight: Approx. 5 – 6 kg
-  Lubrication System: Built-in Oil Pump
-  `,
-
-     features: `
-  Portable industrial sewing machine for closing filled bags
-  Built-in oil pump lubrication system for smooth operation
-  High-speed sewing performance for efficient packaging
-  Durable construction for heavy-duty industrial use
-  Suitable for paper, woven, polypropylene and textile bags
-  Easy to operate and requires minimal training
-  Ideal for agricultural, food processing and manufacturing industries
-  `,
-
-     jumiaLink: 'https://www.jumia.com.ng/',
-     kongaLink: 'https://www.konga.com/'
-   },
-
-   {
-     id: 1004,
+     id: 11004,
      name: 'Maxmech Air Compressor BA 1500-80 – 80L 1500W',
      category: 'air-compressors',
      brand: 'Maxmech',
@@ -6647,7 +7888,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
    },
 
    {
-     id: 1005,
+     id: 11005,
      name: 'Ingco Car Air Compressor AAC2508 – 12V Twin Cylinder',
      category: 'auto-compressors',
      brand: 'Ingco',
@@ -6695,9 +7936,9 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1006,
+     id: 11006,
      name: 'KW600 Car Battery Tester – 12V 100–2000CCA Diagnostic Tool',
-     category: 'battery-tester',
+     category: 'battery-testers',
      brand: 'Generic',
      price: 35000,
 
@@ -6742,7 +7983,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1007,
+     id: 11007,
      name: 'Ingco Booster Cable HBTCP2001 – Heavy Duty Jump Starter Cable',
      category: 'cable-wires',
      brand: 'Ingco',
@@ -6790,7 +8031,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1008,
+     id: 11008,
      name: 'Maxmech Plasma Cutter CUT-100 – 100A Industrial Cutting Machine',
      category: 'plasma-cutters',
      brand: 'Maxmech',
@@ -6836,7 +8077,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1009,
+     id: 11009,
      name: 'Maxmech 7.5KVA Welding Generator WG350 – 350A Dual Function',
      category: 'petrol-generators',
      brand: 'Maxmech',
@@ -6885,7 +8126,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
    },
 
    {
-     id: 1010,
+     id: 11010,
      name: 'TOTAL Silent Diesel Generator 8.0KW TP280001 – 8KVA',
      category: 'desiel-generators',
      brand: 'Total',
@@ -6941,7 +8182,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1011,
+     id: 11011,
      name: 'TOTAL Inverter Generator 2.2KW TP530001 – Portable Silent Petrol',
      category: 'inverter-generators',
      brand: 'Total',
@@ -6995,7 +8236,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1012,
+     id: 11012,
      name: 'Maxmech TIG/MMA-250 Welding Machine – 250A Inverter Dual Function',
      category: 'tig-welding-machines',
      brand: 'Maxmech',
@@ -7044,7 +8285,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
    },
 
    {
-     id: 1013,
+     id: 11013,
      name: 'Maxmech MMA-500T Welding Machine – 500A Heavy Duty Inverter',
      category: 'mma-welding-machines',
      brand: 'Maxmech',
@@ -7091,7 +8332,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
    },
 
    {
-     id: 1014,
+     id: 11014,
      name: 'Maxmech MIG/MMA-250 Welding Machine – 250A Dual Function Inverter',
      category: 'mig-welding-machines',
      brand: 'Maxmech',
@@ -7139,7 +8380,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1015,
+     id: 11015,
      name: 'Maxmech Arc Welding Machine 500A – Heavy Duty MMA Inverter',
      category: 'arc-welding-machines',
      brand: 'Maxmech',
@@ -7183,14 +8424,15 @@ This air compressor is a reliable and essential machine for mechanics, technicia
   `
    },
 
-  //  electrical equipments end at 1800
+  //  electrical equipments end at 13000
 
 
 // testing and measuring
-// starts at 1801
+// starts at 13001
+// ends at 16000                
 
    {
-     id: 1801,
+     id: 13001,
      name: '2 Inch LC Flow Meter for Diesel Fuel (Positive Displacement)',
      category: 'flow-meters',
      brand: 'Generic',
@@ -7235,7 +8477,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1802,
+     id: 13002,
      name: 'Petrol Engine Compression Tester – 8pcs Kit',
      category: 'fuel-testing-kits',
      brand: 'Generic',
@@ -7280,7 +8522,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
    },
 
    {
-  id: 1803,
+     id: 13003,
   name: 'AGO Hydrometer with 250ml Cylinder Tube – Battery Acid Tester',
   category: 'hydrometers',
   brand: 'AGO',
@@ -7327,7 +8569,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1804,
+     id: 13004,
      name: 'Steel 20L Diesel Gasoline Gauge Measuring Can – Fuel Measuring Container',
      category: 'measuring-cans',
      brand: 'Generic',
@@ -7372,7 +8614,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1805,
+     id: 13005,
      name: 'Mitutoyo Digital Caliper 12" – 300mm Precision Measuring Tool',
      category: 'digital-calipers',
      brand: 'Mitutoyo',
@@ -7420,7 +8662,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1806,
+     id: 13006,
      name: 'KOLOR KUT Gasoline Gauging Paste – Fuel Level Indicator (2.25oz)',
      category: 'testing-paste',
      brand: 'Kolor Kut',
@@ -7464,7 +8706,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1808,
+     id: 13007,
      name: 'Mitutoyo Analogue Caliper 12" – 300mm Vernier Precision Tool',
      category: 'vernier-calipers',
      brand: 'Mitutoyo',
@@ -7513,7 +8755,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1809,
+     id: 13008,
      name: 'Bosch Professional Measuring Wheel Bosch GWM 32',
      category: 'measuring-wheels',
      brand: 'Bosch',
@@ -7557,7 +8799,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1810,
+     id: 13009,
      name: 'DUOYI Digital Earth Ground Resistance Tester DY4100 – Soil Resistivity Meter',
      category: 'general-testers',
      brand: 'Duoyi',
@@ -7604,7 +8846,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1811,
+     id: 13010,
      name: 'Mastech MS2101 AC/DC Digital Clamp Meter – 4000 Counts',
      category: 'clamp-meters',
      brand: 'Mastech',
@@ -7654,7 +8896,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1812,
+     id: 13011,
      name: 'Food Thermometer Probe Digital Cooking Kitchen BBQ',
      category: 'digital-thermometers',
      brand: 'Generic',
@@ -7697,7 +8939,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
    },
 
    {
-     id: 1813,
+     id: 13012,
      name: 'Fluke 62 MAX Infrared Thermometer (Non-Contact Temperature Gun)',
      category: 'infrared-thermometers',
      brand: 'Fluke',
@@ -7747,7 +8989,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1814,
+     id: 13013,
      name: 'Glass Petrol/Diesel Thermometer',
      category: 'liquid-glass-thermometers',
      brand: 'Generic',
@@ -7789,7 +9031,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
    },
 
    {
-     id: 1815,
+     id: 13014,
      name: 'Ingco 50m Laser Distance Meter',
      category: 'laser-distance-meters',
      brand: 'Ingco',
@@ -7834,7 +9076,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1816,
+     id: 13015,
      name: 'Fiberglass Measuring Tape - INGCO HFMT8250',
      category: 'measuring-tapes',
      brand: 'Ingco',
@@ -7877,7 +9119,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
    },
 
    {
-     id: 1817,
+     id: 13016,
      name: 'INGCO Tape Measure Steel 5Mx19mm-HSMT08519',
      category: 'measuring-tapes',
      brand: 'Ingco',
@@ -7922,7 +9164,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1818,
+     id: 13017,
      name: 'Mitutoyo Dial Indicator 2046S with Magnetic Base 7011S',
      category: 'dial-indicators',
      brand: 'Mitutoyo',
@@ -7967,7 +9209,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1819,
+     id: 13018,
      name: 'Total TMT47503 Digital Multimeter',
      category: 'multimeters',
      brand: 'Total',
@@ -8018,7 +9260,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
 
 
    {
-     id: 1820,
+     id: 13019,
      name: 'Maxmech Battery Charger BC650 – 12V/24V Heavy Duty Booster',
      category: 'battery-chargers',
      brand: 'Maxmech',
@@ -8077,7 +9319,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1821,
+     id: 13020,
      name: 'Digital Outside Micrometer Screw Gauge 0-25mm',
      category: 'digital-micrometers',
      brand: 'Generic',
@@ -8125,7 +9367,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1822,
+     id: 13021,
      name: 'Micrometer Screw Gauge 0-25mm Accuracy 0.01mm (Analogue)',
      category: 'analogue-micrometers',
      brand: 'Generic',
@@ -8172,7 +9414,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
    },
 
    {
-     id: 1823,
+     id: 13022,
      name: 'Single Phase Non-Contact AC Voltage Tester Pen AC-8 (12–1000V)',
      category: 'general-testers',
      brand: 'Generic',
@@ -8216,7 +9458,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
    },
 
    {
-     id: 1824,
+     id: 13023,
      name: 'HVAC Manifold Gauge Set (Refrigeration Pressure Gauge Kit)',
      category: 'general-guage',
      brand: 'Generic',
@@ -8263,8 +9505,8 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1825,
-     name: '5-in-1 Water Quality Tester (pH/TDS/EC/Salinity/Temperature)',
+     id: 13024,
+     name: 'Water Quality Tester(pH/TDS/EC/Salinity/Temperature)',
      category: 'water-testers',
      brand: 'Generic',
      price: 65000,
@@ -8311,7 +9553,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1826,
+     id: 13025,
      name: 'Digital Alcohol Breath Tester (Breathalyzer)',
      category: 'alcohol-testers',
      brand: 'Generic',
@@ -8358,7 +9600,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1827,
+     id: 13026,
      name: 'ATC Pocket Electric Digital pH Meter',
      category: 'water-testers',
      brand: 'Generic',
@@ -8405,7 +9647,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1828,
+     id: 13027,
      name: 'Digital Concrete Test Hammer (Rebound Hammer)',
      category: 'concrete-testers',
      brand: 'Generic',
@@ -8449,7 +9691,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
    },
 
    {
-     id: 1829,
+     id: 13028,
      name: 'Digital Grain Moisture Meter',
      category: 'moisture-testers',
      brand: 'Generic',
@@ -8496,7 +9738,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1830,
+     id: 13029,
      name: 'INGCO Spirit Level 30cm HSL08030',
      category: 'spirit-levels',
      brand: 'INGCO',
@@ -8541,7 +9783,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1831,
+     id: 13030,
      name: 'PRO GOL 32 D Optical Level',
      category: 'dumpy-levels',
      brand: 'Bosch',
@@ -8593,7 +9835,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1832,
+     id: 13031,
      name: 'Bosch BT160 Lightweight Tripod',
      category: 'survey-tripod',
      brand: 'Bosch',
@@ -8641,7 +9883,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1833,
+     id: 13032,
      name: 'PRO GLL 3-80 Line Laser',
      category: 'laser-levels',
      brand: 'Bosch',
@@ -8695,7 +9937,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1834,
+     id: 13033,
      name: '50KG Pocket Spring Balance Hook Weighing Scale (Kg & Lbs)',
      category: 'spring-balances',
      brand: 'Generic',
@@ -8742,7 +9984,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1835,
+     id: 13034,
      name: 'Triple Beam Balance Mechanical Weighing Scale',
      category: 'beam-balances',
      brand: 'Generic',
@@ -8789,7 +10031,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1836,
+     id: 13035,
      name: 'Analog Platform Mechanical Scale – 300kg Capacity',
      category: 'mechanical-platform-scale',
      brand: 'Generic',
@@ -8837,7 +10079,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1837,
+     id: 13036,
      name: 'Electronic Analytical Laboratory Balance – 220g x 0.0001g (0.1mg)',
      category: 'analytical-balances',
      brand: 'Generic',
@@ -8887,7 +10129,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1838,
+     id: 13037,
      name: 'A-12 Digital Platform Scale – 500KG Capacity',
      category: 'platform-scales',
      brand: 'Generic',
@@ -8935,7 +10177,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
    },
 
    {
-     id: 1839,
+     id: 13038,
      name: '20KG Mechanical Weighing Scale with Stainless Steel Bowl – Heavy-Duty',
      category: 'analague-kitchen-scales',
      brand: 'Generic',
@@ -8983,7 +10225,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1840,
+     id: 13039,
      name: 'High Precision Electronic Digital Kitchen Scale – 10KG Capacity',
      category: 'kitchen-scales',
      brand: 'Generic',
@@ -9031,7 +10273,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1842,
+     id: 13040,
      name: 'Digital Crane Scale – 1 Ton (1000KG Heavy-Duty)',
      category: 'crane-scales',
      brand: 'Generic',
@@ -9082,7 +10324,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1843,
+     id: 13041,
      name: '300KG Digital Hanging Scale (Heavy-Duty Hook Weighing Scale)',
      category: 'hanging-scales',
      brand: 'Generic',
@@ -9132,7 +10374,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1844,
+     id: 13042,
      name: 'Digital Hanging Crane Scale – 200KG (Portable Hook Weighing Scale)',
      category: 'hanging-scales',
      brand: 'Generic',
@@ -9180,7 +10422,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1845,
+     id: 13043,
      name: 'CAMRY Digital Electronic Pricing Scale – 30KG Capacity',
      category: 'pricing-scales',
      brand: 'CAMRY',
@@ -9228,7 +10470,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1846,
+     id: 13044,
      name: 'Glass Digital Bathroom Weighing Scale – 150KG Capacity',
      category: 'bathroom-scales',
      brand: 'Generic',
@@ -9274,7 +10516,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 1847,
+     id: 13045,
      name: 'Digital Pocket Scale – 500g x 0.01g High Precision',
      category: 'pocket-scales',
      brand: 'Generic',
@@ -9321,7 +10563,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
    },
 
    {
-     id: 1848,
+     id: 13046,
      name: 'FRC-1/2-MIDI G1/2" Air Filter Oil Water Separator Trap with Regulator & Gauge',
      category: 'water-separators',
      brand: 'Generic',
@@ -9368,16 +10610,182 @@ This charger is reliable, efficient, and essential for automotive and industrial
   `
    },
 
-// ends at 2000
+
+   {
+     id: 13047,
+     name: 'Lab 1000ml Plastic Measuring Cylinder',
+     category: 'measuring-cylinders',
+     brand: 'Generic',
+     price: 6500,
+
+     images: [
+       'assets/img/fuel testing and measuring/measuring cylinder-1000ml.jpg',
+       'assets/img/measuring tools/plastic measuring cylinder 1000ml 2.jpg',
+       'assets/img/measuring tools/plastic measuring cylinder 1000ml 3.jpg'
+     ],
+
+     inStock: true,
+
+     description: 'The Lab 1000ml Plastic Measuring Cylinder is a precision tool designed for accurate measurement of liquids in laboratories, workshops, and industrial environments. Made from high-quality transparent plastic, it allows easy visibility of contents and measurement markings.\n\nIt features clearly graduated markings for precise readings, making it suitable for educational, scientific, and general-purpose liquid measurement. The wide base provides excellent stability, reducing the risk of tipping during use.\n\nLightweight and durable, this measuring cylinder is resistant to breakage compared to glass alternatives, making it ideal for both professional and everyday applications.',
+
+     specification: `
+  Capacity: 1000ml (1 litre)
+  Material: High-quality plastic (Polypropylene)
+  Graduations: Clear, easy-to-read markings
+  Base Type: Wide stable base
+  Transparency: Semi-clear / transparent body
+  Measurement Type: Liquid volume
+  Application: Laboratory, industrial, educational use
+  `,
+
+     features: `
+  Accurate 1000ml liquid measurement capacity
+  Clear graduated markings for easy reading
+  Durable and break-resistant plastic construction
+  Lightweight and easy to handle
+  Stable wide base to prevent tipping
+  Suitable for laboratory, school, and industrial use
+  Easy to clean and maintain
+  `
+   },
+
+
+   {
+     id: 13048,
+     name: 'ATC Pocket Electric Digital pH Meter',
+     category: 'ph-meters',
+     brand: 'Generic',
+     price: 12000,
+
+     images: [
+       'assets/img/testers/ph-meter-1.jpg',
+       'assets/img/testers/ph-meter-2.jpg',
+       'assets/img/testers/ph-meter-3.jpg'
+     ],
+
+     inStock: true,
+     jumiaLink: '',
+     kongaLink: '',
+
+     description: `The ATC Pocket Electric Digital pH Meter is a compact and portable device designed for accurate measurement of pH levels in liquids.It is widely used for water quality testing in applications such as drinking water,aquariums,hydroponics,swimming pools,and laboratories.The device features Automatic Temperature Compensation (ATC),which ensures accurate readings even when the temperature of the liquid changes.With a clear digital display and simple operation,it provides fast and reliable results for both professionals and home users.`,
+
+     specification: `
+  - Product Name: Digital pH Meter
+  - Type: Pocket pH Tester
+  - Measurement Range: 0.00 – 14.00 pH
+  - Resolution: 0.01 pH
+  - Accuracy: ±0.01 pH
+  - Temperature Compensation: Automatic (ATC)
+  - Operating Temperature: 0°C – 60°C
+  - Display: Digital LCD
+  - Calibration: Manual (using buffer solutions)
+  - Power Supply: Battery operated (button cells)
+  - Usage: Water testing, aquariums, hydroponics, pools, laboratories
+  `,
+
+     features: `
+  - High accuracy pH measurement
+  - Automatic Temperature Compensation (ATC)
+  - Compact and portable design
+  - Easy-to-read digital display
+  - Fast and reliable results
+  - Simple calibration process
+  - Suitable for various water testing applications
+  - Ideal for home and professional use
+  `
+   },
+
+   {
+  id: 13049,
+  name: 'RJ11 & RJ45 Network Cable Tester',
+  category: 'general-testers',
+  brand: 'Generic',
+  price: 15000,
+
+  images: [
+    'assets/img/measuring tools/network cable tester rj11 rj45 1.jpg',
+    'assets/img/measuring tools/network cable tester rj11 rj45 2.jpg',
+    'assets/img/measuring tools/network cable tester rj11 rj45 3.jpg'
+  ],
+
+  inStock: true,
+
+  description: 'The RJ11 & RJ45 Network Cable Tester is a reliable diagnostic tool used to test and troubleshoot telephone and network cables. It is designed to quickly identify wiring faults such as open circuits, short circuits, miswiring, and reversed connections in RJ11 (telephone) and RJ45 (Ethernet) cables.\n\nThis tester consists of a main unit and a remote unit, allowing users to test cables installed across long distances with ease. LED indicator lights provide clear and accurate status readings for each wire pair, ensuring quick fault detection and efficient maintenance.\n\nCompact and lightweight, the device is ideal for network engineers, technicians, and DIY users working on LAN installations, telecommunications, and cable maintenance.',
+
+  specification: `
+  Supported Ports: RJ11 (telephone), RJ45 (LAN/Ethernet)
+  Power Supply: 9V battery (not always included)
+  Test Functions: Open, short, miswire, reverse detection
+  Display: LED indicator lights
+  Design: Main tester + remote unit
+  Material: Durable plastic casing
+  Application: Network installation, cable testing, maintenance
+  `,
+
+  features: `
+  Tests both RJ11 and RJ45 cables
+  Detects wiring faults (open, short, miswire, reverse)
+  LED indicators for easy and quick diagnosis
+  Includes remote unit for long-distance cable testing
+  Compact and portable design
+  Durable build for professional and DIY use
+  Easy to operate with simple interface
+  Ideal for network technicians and installers
+  `
+},
+
+
+{
+  id: 13050,
+  name: 'Quality Gas Cylinder Regulator Meter',
+  category: 'general-meters',
+  brand: 'Generic',
+  price: 18000,
+
+  images: [
+    'assets/img/general meters/Quality Meter Regulator For Gas Cylinder.webp',
+    'assets/img/tools/gas regulator meter 2.jpg',
+    'assets/img/tools/gas regulator meter 3.jpg'
+  ],
+
+  inStock: true,
+
+  description: 'The Quality Gas Cylinder Regulator Meter is a reliable device designed to control and monitor the flow of gas from cylinders for safe and efficient usage. It is commonly used with LPG cylinders for cooking, industrial heating, and other gas-powered applications.\n\nEquipped with a built-in pressure gauge, this regulator allows users to easily monitor gas levels and detect leaks or pressure irregularities. The durable construction ensures long-lasting performance, while the secure fitting mechanism provides a tight and leak-resistant connection to the gas cylinder.\n\nThis regulator is easy to install and operate, making it suitable for both household and commercial use. It enhances safety by maintaining consistent gas pressure and reducing the risk of accidents.',
+
+  specification: `
+  Type: Gas regulator with meter (gauge)
+  Application: LPG gas cylinders
+  Material: Metal and high-quality plastic components
+  Pressure Gauge: Yes (built-in meter)
+  Connection Type: Standard cylinder fitting
+  Usage: Domestic and commercial gas control
+  Safety Feature: Leak-resistant design
+  `,
+
+  features: `
+  Controls and regulates gas flow efficiently
+  Built-in pressure gauge for monitoring gas levels
+  Strong and durable construction
+  Easy installation and secure cylinder connection
+  Leak-resistant design for enhanced safety
+  Suitable for LPG cylinders (home and commercial use)
+  Provides stable and consistent gas pressure
+  User-friendly and reliable performance
+  `
+},
+
+
+// ends at 16000
 
    
    
   //  Handtoolsandaccessories
 
-  // starts at 2001
+  // starts at 16001
+  // ends at 19000
 
    {
-     id: 2001,
+     id: 16001,
      name: 'INGCO Combination Spanner Set 12pcs 6–32mm HKSPA1143',
      category: 'spanners-wrenches',
      brand: 'INGCO',
@@ -9424,7 +10832,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2002,
+     id: 16002,
      name: '1/2 Inch Drive Socket Wrench Set – 24 Pcs Professional Tool Kit',
      category: 'sockets-ratchets',
      brand: 'Generic',
@@ -9470,7 +10878,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2003,
+     id: 16003,
      name: 'INGCO Claw Hammer 8oz (220g) HCH80808',
      category: 'hammers-mallets',
      brand: 'INGCO',
@@ -9515,7 +10923,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2004,
+     id: 16004,
      name: 'INGCO 6pcs Screwdriver Set HKSDO628',
      category: 'screw-rivers',
      brand: 'INGCO',
@@ -9560,7 +10968,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2005,
+     id: 16005,
      name: 'INGCO Combination Pliers 8" (200mm) HCP28208',
      category: 'pliers-cutters',
      brand: 'INGCO',
@@ -9605,7 +11013,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2006,
+     id: 16006,
      name: 'INGCO Bolt Cutter 48" (1200mm) Heavy-Duty HBC0848',
      category: 'pliers-cutters',
      brand: 'INGCO',
@@ -9651,7 +11059,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2007,
+     id: 16007,
      name: 'INGCO Industrial Pipe Wrench 8" (200mm)',
      category: 'spanners-wrenches',
      brand: 'INGCO',
@@ -9696,7 +11104,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2008,
+     id: 16008,
      name: 'Fiberglass Measuring Tape - INGCO HFMT8250',
      category: 'handtools-measuring-tapes',
      brand: 'Ingco',
@@ -9741,7 +11149,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2009,
+     id: 16009,
      name: 'TOTAL Ratchet Handle 1/4" (THT106146) Wrench',
      category: 'sockets-ratchets',
      brand: 'TOTAL',
@@ -9790,7 +11198,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2010,
+     id: 16010,
      name: 'INGCO 6 Pcs Screwdriver Set (HKSD0628)',
      category: 'screw-drivers',
      brand: 'INGCO',
@@ -9841,7 +11249,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2011,
+     id: 16011,
      name: '8PCS Magnetic Nut Driver Set, 6 Inches Long Nut Drivers, Nut Drivers for Impact Drill, Long Shank Nut Driver Bits, Nut Setter | 1/4"Hex Shank | SAE | Cr-V Steel',
      category: 'drivers',
      brand: 'Generic',
@@ -9889,7 +11297,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2012,
+     id: 16012,
      name: '4-120mm Hydraulic Cable Lug Crimping Tool',
      category: 'crimping-tools',
      brand: 'Generic',
@@ -9938,7 +11346,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2013,
+     id: 16013,
      name: 'INGCO 4 Pcs Wood Chisel Set (HKTWC0401)',
      category: 'chisels-punches',
      brand: 'INGCO',
@@ -9985,7 +11393,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2014,
+     id: 16014,
      name: 'Bosch Allen Key Hex 9pcs Professional (1 600 A01 TH5)',
      category: 'allen-keys',
      brand: 'Bosch Professional',
@@ -10031,7 +11439,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2015,
+     id: 16015,
      name: 'INGCO Hand Riveter 10.5" (265mm) HRS108',
      category: 'hand-riveters',
      brand: 'INGCO',
@@ -10077,7 +11485,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2016,
+     id: 16016,
      name: 'INGCO Utility Knife 61x19mm (HUK615)',
      category: 'utility-knives',
      brand: 'INGCO',
@@ -10127,7 +11535,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2017,
+     id: 16017,
      name: 'Putty Knife Set 3-Pack, Putty Knife 2 Inch 3 Inch 5 Inch Drywall Taping Knife Knives Set Sheetrock Puttyknife Flexible Scraper',
      category: 'putty-knives',
      brand: 'Generic',
@@ -10174,7 +11582,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2018,
+     id: 16018,
      name: '5 Piece Flat Wood Bit Set',
      category: 'drill-bits',
      brand: 'Generic',
@@ -10218,7 +11626,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2019,
+     id: 16019,
      name: 'TOTAL Rubber Hammer Mallet 16oz (THT761616)',
      category: 'hammers-mallets',
      brand: 'TOTAL',
@@ -10266,7 +11674,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2020,
+     id: 16020,
      name: 'Bosch CYL-3 Concrete Drill Bit 8 x 80 x 120 mm',
      category: 'drill-bits',
      brand: 'Bosch',
@@ -10316,7 +11724,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2021,
+     id: 16021,
      name: 'Buffing Polishing Pads - 3 Inch 31 Pieces Premium Material Car Foam Drill Polishing Pad Kit Sponge Pads Buffer Polisher Kit Headlight Restoration Kit with Wool',
      category: 'polishing-pads',
      brand: 'Generic',
@@ -10363,12 +11771,8 @@ This charger is reliable, efficient, and essential for automotive and industrial
    },
 
 
-
-
-
-
    {
-     id: 2022,
+     id: 16022,
      name: 'Stanley 16 Inch Tool Box',
      category: 'tool-boxes',
      brand: 'Stanley',
@@ -10417,7 +11821,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2023,
+     id: 16023,
      name: 'INGCO Tool Bag Backpack Industrial 8kg Load (HBP01028)',
      category: 'tool-bags',
      brand: 'INGCO',
@@ -10465,7 +11869,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2024,
+     id: 16024,
      name: 'TOTAL Tile Cutter 1200mm (THT571201)',
      category: 'tile-cutters',
      brand: 'TOTAL',
@@ -10517,7 +11921,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2025,
+     id: 16025,
      name: 'VEVOR Bearing Puller Kit 14-Piece, 5 Ton',
      category: 'bearing-pullers',
      brand: 'VEVOR',
@@ -10576,7 +11980,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2026,
+     id: 16026,
      name: 'Bosch 10 Inch Circular Saw Blade (254mm)',
      category: 'saw-blades',
      brand: 'Bosch',
@@ -10629,7 +12033,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2027,
+     id: 16027,
      name: 'INGCO Hand Saw 22" (550mm) (HHAS08550)',
      category: 'hand-saws',
      brand: 'INGCO',
@@ -10680,7 +12084,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2028,
+     id: 16028,
      name: 'HVAC Copper Tube Flaring & Swaging Tool Kit with Pipe Cutter (Professional Refrigeration Tool Set)',
      category: 'flaring-tools',
      brand: 'Generic / Professional',
@@ -10732,7 +12136,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2029,
+     id: 16029,
      name: 'INGCO 30-Piece Cutting & Grinding Disc Set (MCD07630)',
      category: 'cutting-grinding-discs',
      brand: 'INGCO',
@@ -10784,7 +12188,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 2030,
+     id: 16030,
      name: 'Dewalt Screwdriver Bit and Holder Set 32 Piece (DT7969)',
      category: 'screwdriver-bits',
      brand: 'Dewalt',
@@ -10836,14 +12240,15 @@ This charger is reliable, efficient, and essential for automotive and industrial
    },
 
 
-  //  ends at 3000
+  //  ends at 19000
 
 
 
   // construction tools
-  // start from 3001
+   // start from 19001
+  // ends at 21000
    {
-     id: 3001,
+     id: 19001,
      name: 'Poker Vibrator Machine Robin Engine Gasoline 5HP',
      category: 'concrete-vibrators',
      brand: 'Robin',
@@ -10896,7 +12301,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 3002,
+     id: 19002,
      name: '4 Wheels 500L Portable Concrete Cement Mixer',
      category: 'concrete-mixers',
      brand: 'Generic',
@@ -10947,10 +12352,8 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
 
-
-
    {
-     id: 3003,
+     id: 19003,
      name: 'Robin Engine EY20 Vibratory Plate Compactor C90 (90kg)',
      category: 'plate-compactors',
      brand: 'Robin',
@@ -11003,7 +12406,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 3004,
+     id: 19004,
      name: 'TOTAL Gasoline Tamping Rammer 196cc / 6.5HP (TP880-2)',
      category: 'jumping-rammers',
      brand: 'TOTAL',
@@ -11056,7 +12459,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 3006,
+     id: 19006,
      name: 'INGCO Industrial Soft Grip Handle Wheelbarrow 90L (HHWB64018G)',
      category: 'wheel-barrows',
      brand: 'INGCO',
@@ -11107,7 +12510,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 3007,
+     id: 19007,
      name: 'TOTAL Vibrator Poker 45mm / 6m (TPVP1451)',
      category: 'concrete-vibrators',
      brand: 'TOTAL',
@@ -11156,7 +12559,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 3008,
+     id: 19008,
      name: 'Rod Bender - 50mm',
      category: 'rod-benders',
      brand: 'Generic',
@@ -11205,7 +12608,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 3009,
+     id: 19009,
      name: 'Steel Rod Cutter - 40mm',
      category: 'rod-cutters',
      brand: 'Generic',
@@ -11252,7 +12655,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
 {
-     id: 3010,
+  id: 19010,
      name: 'SGT KNOTS Twisted ProManila Rope – 1.25" x 10ft (Tan)',
      category: 'ropes',
      brand: 'SGT KNOTS',
@@ -11300,7 +12703,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
 {
-     id: 3011,
+     id: 19011,
      name: 'Total Power Trowel – 6.5HP Concrete Finishing Machine',
      category: 'power-trowels',
      brand: 'Total',
@@ -11350,7 +12753,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 3012,
+     id: 19012,
      name: '15m Fall Arrester Wire Rope Safety Equipment Falling Protector',
      category: 'Fall-Arresters',
      brand: 'Generic',
@@ -11382,7 +12785,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 3013,
+     id: 19013,
      name: 'Portable Drum Carrier – Strong Steel & Iron Wheel Roll',
      category: 'drum-trucks',
      brand: 'Generic',
@@ -11429,7 +12832,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 3014,
+     id: 19014,
      name: 'Toyo 6m Retractable Fall Arrestor',
      category: 'fall-arresters',
      brand: 'Toyo',
@@ -11471,16 +12874,16 @@ This charger is reliable, efficient, and essential for automotive and industrial
   `
    },
 
-// ends at 3900
+// ends at 21000
 
 
    //  pumping machines
    
 
-  //  start at 4000
-
+  //  start at 21001
+  // ends at 22000
 {
-     id: 4000,
+    id: 21001,
      name: 'INGCO Centrifugal Water Pump 0.75HP (CPM5508)',
      category: 'pressure-pumps',
      brand: 'INGCO',
@@ -11534,7 +12937,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 4001,
+     id: 21002,
      name: 'INGCO Submersible Clean Water Pump 0.5HP (SPC3702)',
      category: 'submersible-pumps',
      brand: 'INGCO',
@@ -11585,7 +12988,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-     id: 4002,
+     id: 21003,
      name: 'Value Single Stage Vacuum Pump 1C – 1/4" SAE Port (3 CFM)',
      category: 'vacuum-pumps',
      brand: 'Value',
@@ -11653,7 +13056,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
    {
-  id: 4003,
+  id: 21004,
   name: 'INGCO Gasoline Water Pump 2" (GWP202) – 6.5HP Petrol Engine',
   category: 'water-pumps',
   brand: 'INGCO',
@@ -11717,53 +13120,887 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
 
 
-// ends at 4700
+// ends at 22000
 
 
 // cleaning and garden supplies
 
-// starts at 4800
+// starts at 22001
+
+
+
+   {
+     id: 22001,
+  name: 'Maxmech Gasoline Brush Cutter BC430 (2-Stroke)',
+  category: 'gasoline-brushcutters',
+  brand: 'Maxmech',
+  price: 160000,
+
+  images: [
+    'assets/img/brushcutters/Maxmech GASOLINE BRUSH CUTTER bc430.jpg'
+  ],
+
+  inStock: true,
+  description: 'The Maxmech BC430 Gasoline Brush Cutter is a powerful and reliable 2-stroke machine designed for cutting grass, weeds, and clearing overgrown vegetation. Equipped with a 43cc engine, it delivers strong cutting performance for farms, gardens, and landscaping work. Its ergonomic design with shoulder strap ensures comfort during extended use, while its compatibility with both nylon trimmer heads and metal blades makes it versatile for different cutting tasks.',
+
+  specification: `
+  Model: BC430
+  Engine Type: Air-cooled 2-Stroke
+  Displacement: 43cc
+  Rated Power: 1.25kW (1.7HP)
+  No-load Speed: Up to 8200 RPM
+  Fuel Tank Capacity: 1.0L
+  Power Source: Petrol + Oil mix
+  Weight: Approx. 6 - 7 kg
+  `,
+
+  features: `
+  Powerful 43cc 2-stroke engine for heavy-duty cutting
+  High speed up to 8200 RPM for efficient grass and weed clearing
+  Dual cutting options: metal blade and nylon trimmer head
+  Ergonomic handle and shoulder strap for comfort and balance
+  Durable construction for farm and industrial use
+  Large 1.0L fuel tank for longer working time
+  Ideal for agriculture, landscaping, roadside clearing, and large compounds
+  Easy maintenance with available spare parts
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+},
+
+   {
+     id: 22002,
+     name: 'TOTAL 20V Cordless Grass Trimmer (TGTLI20301)',
+     category: 'cordless-brushcutters',
+     brand: 'Total',
+     price: 95000,
+
+     images: [
+       'assets/img/brushcutters/TOTALLithium-IongrassTrimmerTGTLI20301SD-2.jpg',
+       'assets/img/brushcutters/TOTALLithium-IongrassTrimmerTGTLI20301SD.mp4'
+     ],
+
+   
+
+     inStock: true,
+     description: 'The TOTAL TGTLI20301 20V Cordless Grass Trimmer is a lightweight and efficient tool designed for trimming grass, edging lawns, and maintaining outdoor spaces. Powered by a 20V lithium-ion battery, it delivers strong performance with a no-load speed of 8200 rpm and a wide 300mm cutting diameter. Its cordless design ensures easy mobility, making it ideal for home gardens, landscaping, and quick maintenance tasks without the need for fuel or power cables.',
+
+     specification: `
+  Model: TGTLI20301
+  Voltage: 20V
+  No-load Speed: 8200 rpm
+  Cutting Diameter: 300mm 
+  Line Diameter: 1.6mm twisted
+  Line Length: 5m
+  Battery: 20V 2.0Ah Li-ion (included)
+  Charger: Included
+  `,
+
+     features: `
+  Powerful 20V cordless grass trimmer for efficient lawn maintenance
+  High-speed motor delivering up to 8200 rpm for clean cuts
+  Wide 300mm cutting path for faster coverage
+  Lightweight and ergonomic design for easy handling
+  Edging function for neat lawn borders
+  Cordless operation for maximum mobility and convenience
+  Includes battery, charger, safety goggles, and gloves
+  Ideal for trimming grass, weeds, and garden edges
+  `,
+    jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+   {
+     id: 22003,
+     name: 'Brush Cutter Carbide Blade 40 Teeth (255mm / 10")',
+     category: 'brush-cutter-accessories',
+     brand: 'Generic',
+     price: 25000,
+
+     images: [
+       'assets/img/brushcutters/brusch cutter blade-40T.webp',
+       'assets/img/brushcutters/brusch cutter blade-40T.webp2.webp'
+     ],
+
+     inStock: true,
+     description: 'The 40 Teeth Carbide Blade for brush cutters is a heavy-duty cutting accessory designed for tackling tough vegetation, thick grass, shrubs, and small trees. Built with tungsten carbide-tipped teeth, it offers superior durability, sharpness, and long-lasting performance compared to standard steel blades. With a 255mm (10-inch) diameter and universal arbor compatibility, it fits most petrol brush cutters and delivers clean, efficient cuts in demanding environments.',
+
+     specification: `
+  Blade Type: Carbide Tip (TCT)
+  Teeth: 40 Teeth
+  Diameter: 255mm (10 Inch)
+  Bore Size: 20mm / 25.4mm (1 inch)
+  Thickness: Approx. 1.25 – 2.0mm
+  Max Speed: Up to 10,000 RPM
+  Application: Grass, brush, shrubs, small trees
+  `,
+
+     features: `
+  40 sharp carbide-tipped teeth for aggressive cutting performance
+  Tungsten carbide tips for long-lasting durability and wear resistance
+  Universal fit compatible with most brush cutters and trimmers
+  Ideal for cutting thick grass, weeds, bushes, and small saplings
+  Strong and heat-resistant design for high-speed operation
+  Provides cleaner and faster cuts compared to nylon line heads
+  Suitable for farming, landscaping, and heavy-duty clearing work
+  `,
+  
+  jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+
+   {
+     id: 22004,
+     name: '20-Piece Car Cleaning Kit – Detailing Brush Set (Interior & Exterior)',
+     category: 'cleaning-accessories',
+     brand: 'Generic',
+     price: 26000,
+
+     images: [
+       'assets/img/brushcutters/Hot-selling car cleaning kit 20-piece set, detail brush, interior car wash cleaning brush.jpg'
+     ],
+
+     inStock: true,
+     description: 'This 20-piece car cleaning kit is a complete detailing solution designed for both interior and exterior vehicle care. It includes a variety of brushes, drill attachments, microfiber towels, cleaning gels, and accessories to effectively remove dust, dirt, and grime from hard-to-reach areas. Ideal for car owners, detailers, and professionals, this all-in-one set ensures a thorough and scratch-free cleaning experience for dashboards, air vents, wheels, seats, and more.',
+
+     specification: `
+  Product Type: Car Cleaning & Detailing Kit
+  Total Pieces: 20
+  Material: Plastic, nylon bristles, microfiber
+  Brush Types: Soft detailing brushes, drill brushes, wire brushes
+  Application: Interior & exterior car cleaning
+  `,
+
+     features: `
+  Complete 20-piece set for full car detailing
+  Includes soft brushes for dashboards, vents, and delicate surfaces
+  Drill brush attachments for deep cleaning wheels and carpets
+  Microfiber towels for scratch-free wiping and polishing
+  Cleaning gel for tight spaces like air vents and buttons
+  Multi-purpose use for cars, motorcycles, and home cleaning
+  Durable and reusable materials for long-term use
+  Easy to carry and organize
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+
+
+   {
+     id: 22005,
+  name: 'TOTAL High Pressure Hose Pipe 5m (TGTHPH526) for Pressure Washer',
+  category: 'pressure-hose',
+  brand: 'Total',
+  price: 18000,
+
+  images: [
+    'assets/img/hose/High-Pressure-Hose-Pipe-5m-Total-Pressure-Washer-Hose-Pipe.jpg'
+  ],
+
+  inStock: true,
+  description: 'The TOTAL 5-meter High Pressure Hose Pipe (TGTHPH526) is a durable and flexible replacement hose designed for TOTAL pressure washers. Built with reinforced PVC or rubber material, it can withstand high pressure up to 160 bar, ensuring efficient water flow for cleaning vehicles, driveways, walls, and outdoor surfaces. Its 5m length provides extended reach while maintaining strong pressure performance, making it ideal for both home and professional cleaning tasks.',
+
+  specification: `
+  Model: TGTHPH526
+  Length: 5 meters
+  Pressure Rating: Up to 160 bar (16 MPa)
+  Material: Reinforced PVC / Rubber
+  Temperature Range: -20°C to +60°C
+  Compatibility: TOTAL pressure washer models (TGT11316, TGT11226, etc.)
+  Connection Type: Quick-connect / threaded fittings
+  `,
+
+  features: `
+  Strong high-pressure hose designed for pressure washers
+  5-meter length for extended cleaning reach
+  Withstands up to 160 bar pressure for powerful performance
+  Durable reinforced material for long lifespan
+  Flexible and kink-resistant design for easy handling
+  Easy to install and replace
+  Compatible with multiple TOTAL pressure washer models
+  Ideal for car washing, driveway cleaning, and outdoor use
+  `,
+  
+  jumiaLink: 'https://www.jumia.com.ng/',
+  kongaLink: 'https://www.konga.com/'
+},
+
+   {
+     id: 22006,
+     name: 'Samstorm Industrial Floor Scrubber And Buffing Machine',
+     category: 'floor-scrubber-sweepers',
+     brand: 'Samstorm',
+     price: 765000,
+
+     images: [
+       'assets/img/scrubbersandlawnmowers/scrubbers.webp'
+     ],
+
+     inStock: true,
+     description: 'Heavy-duty single disc floor scrubber and buffing machine with powerful 2.5 HP motor and sealed oil-filled gearbox. Designed for professional scrubbing, stripping, buffing and polishing of hard floors.',
+
+     specification: `
+  Model: Samstorm Single Disc Machine
+  Power: 2.5 HP
+  Pad/Brush Size: 17 inches
+  Speed: 175 RPM
+  Gearbox: Sealed oil-filled
+  Voltage: 220-240V
+  `,
+
+     features: `
+  Powerful 2.5 HP motor
+  Sealed oil-filled gearbox for durability
+  Heavy-duty construction
+  Multi-purpose: scrub, strip, buff, polish
+  Suitable for tile, concrete, marble, vinyl
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/mlp-floor-scrubber-machine/',
+     kongaLink: 'https://www.konga.com/product/samstorm-industrial-floor-scrubber-and-buffing-machine-6665146'
+   },
+
+
+   {
+     id: 22007,
+     name: 'Karcher K5 High Pressure Washer',
+     category: 'electric-pressure-washer',
+     brand: 'Karcher',
+     price: 680000,
+
+     images: [
+       'assets/img/pressure and water pumps/Karcher K5 High Pressure Washer.jpg'
+     ],
+
+     inStock: true,
+     description: 'Powerful electric high pressure washer ideal for moderate dirt on large vehicles, stone walls, bicycles, patios and outdoor surfaces. Features water-cooled motor and Quick Connect system.',
+
+     specification: `
+  Model: K5 (Classic / Power Control)
+  Power: 2.1 kW
+  Max Pressure: 145 bar
+  Flow Rate: max. 500 l/h
+  Area Performance: 40 m²/h
+  High-Pressure Hose: 8 m
+  Voltage: 220-240V
+  Weight: approx. 13 kg
+  `,
+
+     features: `
+  Water-cooled motor for longer life
+  Quick Connect trigger gun
+  Vario Power spray lance
+  Dirt blaster for stubborn dirt
+  Plug 'n' Clean detergent system
+  Integrated water filter
+  Suitable for cars, walls, driveways and garden furniture
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/mlp-karcher-pressure-washer/',
+     kongaLink: 'https://www.konga.com/product/karcher-k5-high-pressure-washer-5478778'
+   },
+
+
+
+   {
+     id: 22008,
+     name: 'Total TPWLI20084 Cordless Pressure Washer',
+     category: 'cordless-pressure-washer',
+     brand: 'Total',
+     price: 185000,
+
+     images: [
+       'assets/img/pressure and water pumps/total cordless pw TPWLI20084.jpg'
+     ],
+
+     inStock: true,
+     description: 'Compact 20V cordless pressure washer ideal for quick cleaning of cars, bikes, patios, windows and outdoor surfaces. Portable and battery-powered for use anywhere without electricity.',
+
+     specification: `
+  Model: TPWLI20084
+  Voltage: 20V
+  Max Pressure: 24.8 bar
+  Flow Rate: 2.2 L/min
+  Battery: 4.0Ah Lithium-Ion (included)
+  Charger: Fast charger (included)
+  Inlet Hose: 6m with quick connector
+  Nozzle: 6-pattern spray gun
+  Foam Tank: 400ml
+  Weight: Approx. 2.6 - 3.5 kg
+  `,
+
+     features: `
+  Fully cordless with 20V battery system
+  24.8 bar pressure for effective cleaning
+  Auto stop system for battery saving
+  6-in-1 adjustable nozzle
+  Includes foam producer for better cleaning
+  Lightweight and portable design
+  Compatible with Total 20V battery platform
+  Ideal for car washing, garden cleaning and outdoor use
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/total-20v-cordless-pressure-washer-419186100.html',
+     kongaLink: 'https://www.konga.com/product/total-tpwli20084-cordless-pressure-washer'
+   },
+   
+
+
+   {
+     id: 22009,
+     name: 'INGCO Industrial High Pressure Washer 130Bar 3000W HPWR30008P',
+     category: 'industrial-pressure-washer',
+     brand: 'INGCO',
+     price: 1250000,
+
+     images: [
+       'assets/img/pressure-washer/INGCO-HPWR30008P-Industrial-High-Pressure-Washer.jpg'
+     ],
+
+     inStock: true,
+     description: 'Heavy-duty 3000W industrial electric pressure washer with copper pump and copper wire motor. Delivers up to 130 bar pressure for tough commercial cleaning tasks like driveways, vehicles, buildings and heavy equipment.',
+
+     specification: `
+  Model: HPWR30008P
+  Power: 3000W
+  Max Pressure: 130 Bar (1850 PSI)
+  Flow Rate: 14 L/min
+  Motor: Copper wire induction motor
+  Pump: Copper pump
+  Voltage: 220-240V ~ 50/60Hz
+  Hose: 10m steel-wired high pressure hose
+  Weight: 51 kg
+  Lifetime: Up to 800 hours
+  `,
+
+     features: `
+  Powerful 3000W copper wire motor
+  Durable copper pump for long life
+  High 130 bar pressure and 14 L/min flow
+  Designed for commercial and industrial use
+  10m reinforced steel-wired hose
+  Metal spray gun with soap bottle
+  Heavy-duty build with excellent performance
+  Ideal for deep cleaning of vehicles, walls, floors and machinery
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/mlp-ingco-pressure-washer/',
+     kongaLink: 'https://www.konga.com/product/ingco-hpwr30008p-industrial-pressure-washer'
+   },
+
+
+
+   {
+  id: 22010,
+  name: 'Ingco Industrial Gasoline High Pressure Washer 7HP GHPW2103',
+  category: 'petrol-pressure-washer',
+  brand: 'Ingco',
+  price: 1250000,
+
+  images: [
+    'assets/img/pressure and water pumps/Ingco Industrial Gasoline High Pressure Washer 7HP GHPW2103-1.jpg'
+  ],
+
+  inStock: true,
+  description: 'Powerful 7HP gasoline pressure washer with axial pump and brass head. Delivers up to 235 bar pressure for heavy-duty commercial and industrial cleaning of vehicles, machinery, driveways, buildings and stubborn dirt.',
+
+  specification: `
+  Model: GHPW2103
+  Engine Power: 7.0 HP
+  Max Pressure: 235 Bar (3450 PSI)
+  Flow Rate: 9.5 L/min (2.5 GPM)
+  Engine: OHV 4-stroke, 212cc
+  Pump: Axial pump with brass head
+  Starting System: Recoil
+  Fuel Tank: 6 L
+  Hose: 9-10m high pressure hose
+  Lifetime: Up to 300 hours
+  `,
+
+  features: `
+  Strong 7.0 HP gasoline engine
+  High 235 bar pressure for tough cleaning jobs
+  Brass pump head with oil change function
+  Axial pump for reliable performance
+  Portable design suitable for sites without electricity
+  Metal spray gun and multiple nozzles
+  Ideal for cars, heavy equipment, walls and industrial cleaning
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/ingco-ghpw2103-7.0hp-gasoline-pressure-washer/',
+  kongaLink: 'https://www.konga.com/product/ingco-ghpw2103-gasoline-pressure-washer'
+},
+
+   
+
 
 {
-     id: 4801,
-     name: 'TOTAL 20V Cordless Blower – TABLI20323 Lithium-Ion Portable Air Blower',
-     category: 'cordless-blowers',
-     brand: 'TOTAL',
-     price: 135000, // Current price on Jumia Nigeria as of recent listing (bare tool)
-     images: [
-       'assets/img/cordless-blowers/TOTAL-20V-Cordless-Blower-TABLI20323.jpg',
-       'assets/img/tools/total-blower-tabli20323-2.jpg',
-       'assets/img/tools/total-blower-tabli20323-3.jpg'
-     ],
-     inStock: true,
-     jumiaLink: 'https://www.jumia.com.ng/total-20v-cordless-blower-tabli20323-lithium-ion-portable-air-blower-419300651.html',
-     kongaLink: '',
-     description: `The TOTAL 20V Cordless Blower (TABLI20323) is a lightweight, portable Lithium-Ion air blower designed for easy cleanup of leaves, dust, grass clippings, and light debris on construction sites, gardens, driveways, patios, and workshops. It delivers strong airflow without the hassle of cords, making it ideal for both homeowners and professionals. This is a bare tool – battery and charger are sold separately and compatible with the TOTAL 20V Li-ion battery platform.`,
-     specification: `
-  - Product Name: TOTAL 20V Cordless Blower
-  - Model: TABLI20323
-  - Voltage: 20V DC
-  - No-load speed: 15,000 rpm
-  - Average air volume: 8.5 m³/min
-  - Maximum air speed: 115 km/h (approx. 32 m/s)
-  - Battery: Not included (compatible with TOTAL 20V 2.0Ah / 4.0Ah Lithium-Ion batteries)
-  - Charger: Not included
-  - Operation: Cordless / One-handed use
-  - Packaging: Color box
-  - Usage: Garden cleanup, construction site cleaning, workshop dust removal, blowing leaves and debris
+  id: 22011,
+  name: 'TOTAL TVLI2006-20V Battery Cyclone Vacuum Cleaner',
+  category: 'cyclone-vacuum-cleaners',
+  brand: 'Total',
+  price: 85000,
+
+  images: [
+    'assets/img/vacuum cleaners and hoses/TOTAL 40084 TVLI2006-20V Battery Cyclone Vacuum Cleaner.webp'
+  ],
+
+  inStock: true,
+  description: 'Compact 20V cordless cyclone vacuum cleaner with multi-cyclone technology and HEPA filter. Lightweight and portable for quick cleaning of floors, cars, sofas and hard-to-reach areas.',
+
+  specification: `
+  Model: TVLI2006
+  Voltage: 20V
+  Power: 120W
+  Suction: ≥9 kPa
+  Dust Capacity: 0.8L
+  Battery: 2.0Ah Lithium-Ion (included)
+  Runtime: ≥35 min (low) / ≥18 min (high)
+  Charge Time: Approx. 1.2 hours
+  Filter: HEPA + Multi Cyclone
+  Motor: Pure copper wire
   `,
+
+  features: `
+  Cordless 20V battery operation
+  Multi-cyclone suction system
+  HEPA filter for fine dust
+  Two power levels (low/high)
+  Lightweight and portable design
+  Includes metal tube, crevice nozzle & sofa brush
+  Compatible with TOTAL 20V battery platform
+  Ideal for home, car and quick clean-ups
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/total-20-v-li-ion-vacuum-cleaner-tvli2006/',
+  kongaLink: 'https://www.konga.com/product/total-tvli2006-20v-cordless-vacuum-cleaner'
+},
+
+
+
+   {
+     id: 22012,
+     name: 'Karcher WD 5 Wet & Dry Vacuum 1100W 240V',
+     category: 'wet and dry-vacuum-cleaners',
+     brand: 'Karcher',
+     price: 185000,
+
+     images: [
+       'assets/img/vacuum cleaners and hoses/Karcher - WD 5 Wet & Dry Vacuum 1100W 240V.webp'
+     ],
+
+     inStock: true,
+     description: 'Powerful 1100W wet and dry vacuum cleaner with 25L capacity. Handles both wet and dry dirt efficiently, ideal for home, workshop, car and outdoor cleaning.',
+
+     specification: `
+  Model: WD 5
+  Power: 1100W
+  Container Capacity: 25 L
+  Voltage: 220-240V
+  Suction Power: Approx. 260-280W
+  Air Flow: Max. 70 L/s
+  Vacuum: Max. 260 mbar
+  Hose Length: 2.2 m
+  Power Cable: 5 m
+  Weight: Approx. 8.5 kg
+  `,
+
      features: `
-  - Powerful 20V motor with 15,000 rpm no-load speed
-  - High air volume (8.5 m³/min) and max speed of 115 km/h for effective blowing
-  - Lightweight and portable design for comfortable one-handed operation
-  - Cordless freedom – no tangled cables or need for power outlets
-  - Compatible with TOTAL 20V Li-ion battery system (share batteries with other TOTAL tools)
-  - Ideal for dry leaves, dust, grass clippings, and light debris
-  - No electricity required – perfect for remote sites and outdoor use
-  - Cost-effective bare tool option if you already own TOTAL 20V batteries
-  - Suitable for homeowners, steel fixers, and small construction/maintenance teams
-  `
+  Wet and dry vacuuming capability
+  Large 25L container
+  Powerful 1100W motor
+  Blower function
+  Filter cleaning system
+  Power tool connection socket
+  Switchable wet/dry floor nozzle
+  Includes crevice nozzle and fleece filter bag
+  Sturdy and durable design
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/mlp-karcher-vacuum-cleaner/',
+     kongaLink: 'https://www.konga.com/product/karcher-wd-5-wet-dry-vacuum-1100w'
+   },
+
+
+
+   {
+     id: 22013,
+     name: 'TOTAL 75L Wet & Dry Vacuum Cleaner-TVC24751',
+     category: 'industrial-vacuum-cleaners',
+     brand: 'Total',
+     price: 285000,
+
+     images: [
+       'assets/img/vacuum-cleaner/TOTAL-TVC24751-Wet-Dry-Vacuum-Cleaner.jpg'
+     ],
+
+     inStock: true,
+     description: 'Heavy-duty industrial wet and dry vacuum cleaner with dual motors delivering 2400W total power. Features a massive 75L capacity tank suitable for large-scale cleaning of wet spills, dry dust, debris, and liquids in workshops, construction sites, warehouses, factories, and commercial spaces.',
+
+     specification: `
+  Model: TVC24751
+  Power: 2 x 1200W (Total 2400W)
+  Voltage: 220-240V ~ 50/60Hz
+  Air Flow: 3 m³/min
+  Vacuum Pressure: 16-17 KPa
+  Dust Capacity: 75 Liters
+  Power Cable: 5.5 meters
+  Weight: 22 kg
+  Noise Level: 72-82 dB
+  Function: Wet & Dry vacuuming
+  `,
+
+     features: `
+  Dual powerful motors for strong suction performance
+  Large 75L stainless steel tank for extended cleaning without frequent emptying
+  Handles both wet spills and dry dust/debris efficiently
+  Ideal for industrial, commercial and heavy-duty applications
+  Long 5.5m power cable for wide working range
+  Durable and robust construction for daily professional use
+  Includes flexible hose and standard accessories
+  High air flow and strong vacuum pressure
+  Suitable for workshops, garages, construction sites and large facilities
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/mlp-total-vacuum-cleaner/',
+     kongaLink: 'https://www.konga.com/product/total-tvc24751-wet-dry-vacuum-cleaner'
+   },
+
+
+
+   {
+     id: 22014,
+     name: 'TOTAL TGT616151 1600W Electric Lawn Mower',
+     category: 'electric-cordless-lawn-mower',
+     brand: 'Total',
+     price: 185000,
+
+     images: [
+       'assets/img/lawn-mower/TOTAL-TGT616151-1600W-Electric-Lawn-Mower.jpg'
+     ],
+
+     inStock: true,
+     description: 'Powerful 1600W corded electric lawn mower with 380mm cutting width and 50L grass collection box. Ideal for small to medium-sized gardens and lawns. Features 5 cutting height adjustments and induction motor for reliable performance.',
+
+     specification: `
+  Model: TGT616151
+  Power: 1600W
+  Voltage: 220-240V ~ 50/60Hz
+  Motor: Induction motor
+  No-load Speed: 2800 rpm
+  Cutting Width: 380 mm
+  Cutting Height: 28 / 38 / 48 / 58 / 68 mm (5 positions)
+  Grass Box Capacity: 50 Liters
+  Power Cord: 0.35 m (with extension cable support)
+  `,
+
+     features: `
+  Powerful 1600W induction motor
+  380mm cutting width for efficient mowing
+  5-stage cutting height adjustment
+  Large 50L grass collection box
+  Lightweight and easy to maneuver
+  Ideal for small to medium gardens and lawns
+  Corded electric - consistent power
+  Suitable for home and light commercial use
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/total-electric-lawn-mower-tgt616151/',
+     kongaLink: 'https://www.konga.com/product/total-tgt616151-1600w-electric-lawn-mower'
+   },
+
+{
+  id: 22015,
+  name: 'Water Discharge Hose - 100M X 2"',
+  category: 'water-pump-hose',
+  brand: 'Generic',
+  price: 145000,
+
+  images: [
+    'assets/img/hose/Water Discharge Hose - 100M X 2.jpg',
+  ],
+
+  inStock: true,
+  description: 'Heavy-duty 100 meter long 2-inch water discharge hose ideal for pumping, drainage, irrigation, and dewatering. Suitable for use with water pumps, flood control, construction sites, and agricultural applications.',
+
+  specification: `
+  Length: 100 Meters
+  Diameter: 2 inches (50mm)
+  Material: Reinforced PVC with high tensile polyester yarn
+  Working Pressure: 4 - 6 Bar
+  Burst Pressure: 12 - 18 Bar
+  Temperature Range: -10°C to +60°C
+  Weight: Approx. 25 - 30 kg per roll
+  `,
+
+  features: `
+  Extra long 100 meter length
+  2-inch (50mm) diameter for high flow rate
+  Reinforced with polyester yarn for durability
+  Flexible and kink-resistant
+  Suitable for water pumps and discharge applications
+  Ideal for irrigation, drainage, flooding, and construction
+  Lightweight compared to rubber hoses
+  Cost-effective and reliable for long-distance water transfer
+  `,
+
+  jumiaLink: 'https://www.jumia.com.ng/mlp-water-discharge-hose/',
+  kongaLink: 'https://www.konga.com/product/water-discharge-hose-100m-x-2-inch'
+},
+
+
+   {
+     id: 22016,
+     name: 'TOTAL High Pressure Hose for Pressure Washers (TGTHPH526)',
+     category: 'pressure-hose',
+     brand: 'TOTAL',
+     price: 85000,
+
+     images: [
+       'assets/img/hose/TOTAL HIGH PRESSURE HOSE FOR HIGH PRESSURE WASHERS (TGTHPH526).webp',
+     ],
+
+     inStock: true,
+     description: 'The TOTAL TGTHPH526 high pressure hose is a premium-quality, heavy-duty hose specifically engineered for use with pressure washers. It is designed to handle high-pressure water flow efficiently, making it ideal for both residential and industrial cleaning applications. Whether you are washing vehicles, cleaning driveways, removing dirt from construction equipment, or maintaining outdoor surfaces, this hose delivers consistent and reliable performance.\n\nConstructed with reinforced PVC and internal steel wire braiding, the hose offers excellent durability, flexibility, and resistance to wear, abrasion, and harsh environmental conditions. It is built to withstand high working pressures without bursting or leaking, ensuring safety and long-lasting usage.\n\nThe hose is also designed for ease of use, featuring flexible material that prevents kinks and allows smooth water flow even during extended operations. Its secure and leak-proof connectors ensure a tight fit with compatible TOTAL pressure washers and similar machines.\n\nThis hose is a perfect choice for professionals and homeowners who require a dependable, long-lasting, and high-performance solution for demanding cleaning tasks.',
+
+     specification: `
+  Model: TGTHPH526
+  Hose Type: High Pressure Reinforced Hose
+  Material: Heavy-duty PVC with steel wire reinforcement
+  Length: 5 - 10 Meters (depending on variant)
+  Inner Diameter: Standard pressure washer fitting
+  Working Pressure: 150 - 180 Bar
+  Burst Pressure: Up to 450 Bar
+  Temperature Range: 0°C to +60°C
+  Connector Type: Quick-connect / threaded (model dependent)
+  Compatibility: TOTAL Pressure Washers and other compatible brands
+  `,
+
+     features: `
+  High-pressure performance suitable for tough cleaning tasks
+  Reinforced with steel wire for extra strength and durability
+  Resistant to abrasion, wear, and harsh working conditions
+  Flexible design prevents kinks and ensures smooth operation
+  Leak-proof connectors for secure and stable connection
+  Easy to install and compatible with most TOTAL pressure washers
+  Ideal for car washing, driveway cleaning, industrial and commercial use
+  Long service life with minimal maintenance required
+  Reliable and efficient water flow for maximum cleaning power
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/catalog/?q=total+high+pressure+hose',
+     kongaLink: 'https://www.konga.com/search?search=total+high+pressure+hose'
+   },
+
+
+   {
+     id: 22017,
+     name: 'High Pressure Hose Connector for Pressure Washers',
+     category: 'pressure-washer-accessories',
+     brand: 'Generic',
+     price: 12000,
+
+     images: [
+       'src/assets/img/hose/hose-connector-pressure-washer.jpg',
+     ],
+
+     inStock: true,
+     description: 'This high-pressure hose connector is a durable and essential accessory designed to securely join pressure washer hoses or connect hoses to pressure washer machines and spray guns. Built for reliability, it ensures a tight, leak-free connection even under high water pressure conditions.\n\nMade from high-quality brass or stainless steel (depending on variant), the connector offers excellent resistance to corrosion, rust, and wear, making it suitable for both indoor and outdoor use. It is engineered to withstand demanding cleaning tasks such as car washing, industrial cleaning, driveway maintenance, and agricultural use.\n\nThe connector features a user-friendly design that allows for quick installation and removal without the need for specialized tools. Its precision threading or quick-connect mechanism ensures compatibility with most standard pressure washer hoses and fittings.\n\nWhether you are replacing a worn-out connector or extending your hose system, this connector provides a dependable and long-lasting solution for maintaining strong water flow and pressure performance.',
+
+     specification: `
+  Product Type: Hose Connector / Coupling
+  Material: Brass / Stainless Steel (varies by model)
+  Connection Type: Quick-connect or threaded
+  Size: 1/4", 3/8", or M22 (depending on variant)
+  Working Pressure: Up to 200 - 300 Bar
+  Compatibility: Most pressure washers and high-pressure hoses
+  Corrosion Resistance: Yes
+  Usage: Indoor and outdoor
+  `,
+
+     features: `
+  Strong and durable construction for long-term use
+  Leak-proof design ensures secure connection
+  Easy to install and remove without tools
+  Compatible with most pressure washer hoses and fittings
+  Resistant to rust, corrosion, and high pressure
+  Ideal for extending hoses or replacing damaged connectors
+  Suitable for car wash, industrial cleaning, and home use
+  Compact and lightweight design
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/catalog/?q=pressure+washer+hose+connector',
+     kongaLink: 'https://www.konga.com/search?search=pressure+washer+hose+connector'
+   },
+
+
+   {
+     id: 22018,
+     name: '18pcs Line Hose Connector Assembly Set – Pneumatic Iron Parts for Hoses',
+     category: 'hose-accessories',
+     brand: 'Generic',
+     price: 25000,
+
+     images: [
+       'assets/img/hose/18pcs Line Hose Connector Assembly Set Pneumatic Iron Parts for Hoses.webp',
+     ],
+
+     inStock: true,
+     description: 'This 18-piece pneumatic hose connector assembly set is a versatile and essential kit designed for connecting, extending, and repairing air hoses in pneumatic systems. It is ideal for use in workshops, garages, industrial environments, and DIY applications where compressed air tools are commonly used.\n\nThe set includes a variety of connectors such as straight couplers, T-connectors, Y-connectors, and reducers, allowing users to create multiple connection configurations with ease. Each component is manufactured from high-quality iron, ensuring durability, strength, and resistance to wear even under continuous use.\n\nDesigned to handle compressed air efficiently, these fittings provide secure, leak-proof connections that help maintain consistent air pressure and improve the performance of pneumatic tools such as air compressors, spray guns, nail guns, and impact wrenches.\n\nWith its easy-to-install design, this connector set allows quick assembly and disassembly without requiring specialized tools, making it suitable for both professionals and DIY users. Whether you are setting up a new pneumatic line or repairing an existing one, this kit provides a reliable and cost-effective solution.',
+
+     specification: `
+  Product Type: Pneumatic Hose Connector Set
+  Number of Pieces: 18pcs
+  Material: High-strength iron
+  Connection Type: Push-fit / threaded (varies by piece)
+  Compatible Hose Size: Standard pneumatic hose sizes
+  Working Pressure: Suitable for standard air compressor systems
+  Application: Air tools, compressors, pneumatic systems
+  Corrosion Resistance: Moderate (recommended for dry environments)
+  `,
+
+     features: `
+  Complete 18-piece connector set for versatile use
+  Durable iron construction for long-lasting performance
+  Provides secure and leak-proof air connections
+  Includes multiple connector types (straight, T, Y, reducers)
+  Easy to install and remove without specialized tools
+  Suitable for air compressors and pneumatic tools
+  Ideal for workshops, garages, and industrial use
+  Helps maintain consistent air pressure and system efficiency
+  Compact kit for easy storage and transport
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/catalog/?q=pneumatic+hose+connector+set',
+     kongaLink: 'https://www.konga.com/search?search=pneumatic+hose+connector+set'
+   },
+
+
+   {
+     id: 22019,
+     name: 'TOTAL Gasoline Lawn Mower 3.5KW (4.8HP) (TGT196201)',
+     category: 'gasoline-lawn-mowers',
+     brand: 'TOTAL',
+     price: 650000,
+
+     images: [
+       'assets/img/lawn mowers/TOTAL TGT196201 Gasoline Lawn Mower 3.5KW (4.8HP).jpg',
+       'assets/img/lawn mowers/TOTAL TGT196201 Gasoline Lawn Mower 3.5KW (4.8HP)-2.jpg',
+       'assets/img/lawn mowers/TOTAL TGT196201 Gasoline Lawn Mower 3.5KW (4.8HP)-3.jpg',
+       'assets/img/lawn mowers/TOTAL TGT196201 Gasoline Lawn Mower 3.5KW (4.8HP)-3.jpg'
+     ],
+
+     inStock: true,
+     description: 'The TOTAL TGT196201 gasoline lawn mower is a powerful and reliable machine designed for efficient lawn maintenance in residential, commercial, and industrial environments. Equipped with a robust 3.5KW (4.8HP) petrol engine, this mower delivers strong cutting performance, making it suitable for medium to large lawns, gardens, estates, and outdoor facilities.\n\nBuilt with durability and ease of use in mind, the mower features a sturdy steel deck that can withstand tough working conditions while ensuring consistent cutting results. Its high-performance engine provides smooth operation and the ability to handle thick grass with ease.\n\nThe mower is designed for user comfort and convenience, with an ergonomic handle, easy start system, and adjustable cutting height to suit different grass levels. It also includes a spacious grass collection bag, reducing the need for frequent emptying and improving work efficiency.\n\nWhether you are a professional landscaper or a homeowner looking for a dependable mowing solution, the TOTAL TGT196201 offers excellent performance, durability, and value for money.',
+
+     specification: `
+  Model: TGT196201
+  Engine Type: Gasoline (Petrol)
+  Engine Power: 3.5KW (4.8HP)
+  Displacement: Approx. 196cc
+  Cutting Width: Approx. 460mm
+  Cutting Height: Adjustable (multiple levels)
+  Deck Material: Steel
+  Grass Collection: Yes (rear bag)
+  Start System: Recoil start
+  Fuel Tank Capacity: Approx. 1.0 Liter
+  Application: Lawn mowing, garden maintenance, landscaping
+  `,
+
+     features: `
+  Powerful 3.5KW (4.8HP) gasoline engine for high performance
+  Wide cutting deck for faster lawn coverage
+  Adjustable cutting height for different grass levels
+  Durable steel deck for long-lasting use
+  Large grass collection bag for efficient operation
+  Easy recoil start system
+  Ergonomic handle for comfortable use
+  Suitable for residential and commercial lawn care
+  Handles thick grass and uneven surfaces effectively
+  Low maintenance and reliable operation
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/catalog/?q=total+lawn+mower',
+     kongaLink: 'https://www.konga.com/search?search=total+lawn+mower'
+   },
+
+
+   {
+     id: 22020,
+     name: 'INGCO Cordless Lawn Mower 2x20V Li-Ion (Solo) (LMLI20182)',
+     category: 'electric-cordless-lawn-mower',
+     brand: 'INGCO',
+     price: 480000,
+
+     images: [
+       'assets/img/lawn mowers/ingco cordless lawnmower - Lmli20182.webp',
+     ],
+
+     inStock: true,
+     description: 'The INGCO LMLI20182 cordless lawn mower is a modern, battery-powered solution designed for efficient and convenient lawn maintenance. Powered by two 20V lithium-ion batteries (40V combined), this mower delivers strong cutting performance without the noise, fumes, or maintenance associated with gasoline-powered machines.\n\nThis "solo" version is supplied without batteries and charger, making it ideal for users who already own compatible INGCO 20V batteries. It provides excellent flexibility and cost savings while maintaining high performance.\n\nThe mower features a durable and lightweight design, allowing for easy maneuverability around lawns, gardens, and tight spaces. Its adjustable cutting height enables users to achieve the desired grass length, while the wide cutting deck ensures faster coverage of medium-sized lawns.\n\nWith a built-in grass collection system, the mower efficiently gathers cut grass, reducing cleanup time and improving overall productivity. It is perfect for residential users seeking a quiet, eco-friendly, and easy-to-use lawn care solution.',
+
+     specification: `
+  Model: LMLI20182
+  Power Source: Battery (Cordless)
+  Voltage: 2 x 20V (40V combined)
+  Battery Type: Lithium-Ion (Not Included - Solo version)
+  Cutting Width: Approx. 330 - 380mm
+  Cutting Height: Adjustable (multiple levels)
+  Grass Collection: Yes (collection bag included)
+  Deck Material: Durable plastic/steel combination
+  Noise Level: Low compared to gasoline mowers
+  Application: Residential lawn maintenance
+  `,
+
+     features: `
+  Cordless design for maximum mobility and convenience
+  Powered by dual 20V batteries for strong performance
+  Eco-friendly with no emissions or fuel required
+  Low noise operation suitable for residential areas
+  Adjustable cutting height for precise lawn finishing
+  Lightweight and easy to maneuver
+  Grass collection bag for efficient cleanup
+  Compatible with INGCO 20V battery platform
+  Ideal for small to medium-sized lawns
+  Low maintenance compared to petrol mowers
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/catalog/?q=ingco+cordless+lawn+mower',
+     kongaLink: 'https://www.konga.com/search?search=ingco+cordless+lawn+mower'
    }
+
+//  ends at 24000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11840,5 +14077,12 @@ getCategoriesByGroup(groupName: string): string[] {
                                    .map((p: Product) => p.category) ?? [];
   return categories;
 }
+
+
+
+
+  public get currentSearchQueryValue(): string {
+    return this.searchQuerySubject.value;
+  }
 }
 

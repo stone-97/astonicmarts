@@ -109,12 +109,11 @@ import { MagneticdrillsComponent } from './pages/powertools/bycategories/drills/
 import { DrillpressesComponent } from './pages/powertools/bycategories/drills/drillpresses/drillpresses.component';
 import { EdgebandingmachinesComponent } from './pages/powertools/bycategories/edgebandingmachines/edgebandingmachines.component';
 import { GreasegunsComponent } from './pages/powertools/bycategories/greaseguns/greaseguns.component';
-import { GunsandtrimmersComponent } from './pages/powertools/bycategories/gunsandtrimmers/gunsandtrimmers.component';
+import { GeneralguntoolsComponent } from './pages/powertools/bycategories/generalguntools/generalguntools.component';
 import { ImpulsesealersComponent } from './pages/powertools/bycategories/impulsesealers/impulsesealers.component';
 import { AnglegrindersComponent } from './pages/powertools/bycategories/grinders/anglegrinders/anglegrinders.component';
 import { BenchgrindersComponent } from './pages/powertools/bycategories/grinders/benchgrinders/benchgrinders.component';
-import { DiegrindersComponent } from './pages/powertools/bycategories/grinders/diegrinders/diegrinders.component';
-import { MinigrindersComponent } from './pages/powertools/bycategories/grinders/minigrinders/minigrinders.component';
+import { DieandminigrindersComponent } from './pages/powertools/bycategories/grinders/dieandminigrinders/dieandminigrinders.component';
 import { NailersComponent } from './pages/powertools/bycategories/nailers/nailers.component';
 import { PprComponent } from './pages/powertools/bycategories/ppr/ppr.component';
 import { RoutersComponent } from './pages/powertools/bycategories/routers/routers.component';
@@ -147,7 +146,7 @@ import { WheelalignmentguagesComponent } from './pages/workshopgarage/wheelservi
 import { WheelbalancersComponent } from './pages/workshopgarage/wheelserviceequipment/wheelbalancers/wheelbalancers.component';
 import { BatterytestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/batterytesters/batterytesters.component';
 import { DialindicatorsComponent } from './pages/measuringandtesting/generalmeasuringinstruments/dialindicators/dialindicators.component';
-import { GuagesComponent } from './pages/measuringandtesting/generalmeasuringinstruments/guages/guages.component';
+import { GeneralguagesComponent } from './pages/measuringandtesting/generalmeasuringinstruments/generalguages/generalguages.component';
 import { LaserdistancemetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/laserdistancemeters/laserdistancemeters.component';
 import { WaterandlabtestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterandlabtesters/waterandlabtesters.component';
 import { ConcretetestersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/waterandlabtesters/concretetesters/concretetesters.component';
@@ -178,16 +177,14 @@ import { CleaningandgardensuppliesComponent } from './pages/cleaningandgardensup
 import { BrushcuttersComponent } from './pages/cleaningandgardensupplies/brushcutters/brushcutters.component';
 import { CordlessbruschcuttersComponent } from './pages/cleaningandgardensupplies/brushcutters/bycategory/cordlessbruschcutters/cordlessbruschcutters.component';
 import { GasolinebrushcuttersComponent } from './pages/cleaningandgardensupplies/brushcutters/bycategory/gasolinebrushcutters/gasolinebrushcutters.component';
-import {PressurewashersaccessoriesComponent } from './pages/cleaningandgardensupplies/pressurewashers/pressurewashersaccessories/pressurewashersaccessories.component';
+import { PressurewashersaccessoriesComponent } from './pages/cleaningandgardensupplies/pressurewashers/pressurewashersaccessories/pressurewashersaccessories.component';
 import { HoseComponent } from './pages/cleaningandgardensupplies/hose/hose.component';
 import { HoseaccessoriesComponent } from './pages/cleaningandgardensupplies/hose/hoseaccessories/hoseaccessories.component';
 import { PressurehoseComponent } from './pages/cleaningandgardensupplies/hose/pressurehose/pressurehose.component';
-import { PumphoseComponent } from './pages/cleaningandgardensupplies/hose/pumphose/pumphose.component';
-import { WaterhoseComponent } from './pages/cleaningandgardensupplies/hose/waterhose/waterhose.component';
+import { WaterandpumphoseComponent } from './pages/cleaningandgardensupplies/hose/waterandpumphose/waterandpumphose.component';
 import { LawnmowersComponent } from './pages/cleaningandgardensupplies/lawnmowers/lawnmowers.component';
-import { ElectriclawnmowerComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/electriclawnmower/electriclawnmowers.component';
-import { HandpushlawnmowersComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/handpushlawnmowers/handpushlawnmowers.component';
-import {  SelfpropelledlawnmowerComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/selfpropelledlawnmower/selfpropelledlawnmower.component';
+import { ElectricandcordlesslawnmowerComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/electriclandcordlessawnmower/electriclandcordlessawnmower.component';
+import { GasolinelawnmowerComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/gasolinelawnmower/gasolinelawnmower.component';
 import { PrincegardenComponent } from './pages/cleaningandgardensupplies/lawnmowers/bybrands/princegarden/princegarden.component';
 import { PressurewashersComponent } from './pages/cleaningandgardensupplies/pressurewashers/pressurewashers.component';
 import { CordlesspressurewashersComponent } from './pages/cleaningandgardensupplies/pressurewashers/bycategory/cordlesspressurewashers/cordlesspressurewashers.component';
@@ -204,7 +201,7 @@ import { FarmtoolsComponent } from './pages/farmequipments/farmtools/farmtools.c
 import { FarmmachinesComponent } from './pages/farmequipments/farmmachines/farmmachines.component';
 import { MsaComponent } from './pages/ppe/bybrands/msa/msa.component';
 import { CordlessimpactwrenchesComponent } from './pages/powertools/bycategories/impactwrenches/cordlessimpactwrenches/cordlessimpactwrenches.component';
-import { PnuematicComponent } from './pages/powertools/bycategories/impactwrenches/pnuematic/pnuematic.component';
+import { PnuematicimpactwrenchesComponent } from './pages/powertools/bycategories/impactwrenches/pnuematicimpactwrenches/pnuematicimpactwrenches.component';
 import { ElectricalequipmentsComponent } from './pages/electricalequipments/electricalequipments.component';
 import { AutocompressorsComponent } from './pages/electricalequipments/autocompressors/autocompressors.component';
 import { BatteriesComponent } from './pages/electricalequipments/batteries/batteries.component';
@@ -336,8 +333,11 @@ import { WaterseperatorsComponent } from './pages/measuringandtesting/generalmea
 import { AllenkeysComponent } from './pages/handtoolsandaccessories/category/allenkeys/allenkeys.component';
 import { PowertrowelsComponent } from './pages/constructionequipment/powertrowels/powertrowels.component';
 import { BrushcuttersaccessoriesComponent } from './pages/cleaningandgardensupplies/brushcutters/brushcuttersaccessories/brushcuttersaccessoriescomponent';
-import { FallarrestersComponent } from './pages/constructionequipment/fallarrestors/fallarresters.component';
+import { FallarrestersComponent } from './pages/constructionequipment/fallarresters/fallarresters.component';
 import { HydraulicshoppressComponent } from './pages/workshopgarage/hydraulicshoppress/hydraulicshoppress.component';
+import { MitresawsComponent } from './pages/powertools/bycategories/saws/mitresaws/mitresaws.component';
+import { UmbrellasComponent } from './pages/ppe/bycategory/clothing/umbrellas/umbrellas.component';
+import { ElectricimpactwrenchesComponent } from './pages/powertools/bycategories/impactwrenches/electricimpactwrenches/electricimpactwrenches.component';
 
 
 
@@ -386,11 +386,11 @@ const routes: Routes = [
   { path: "clothing", component: SupersteelComponent },
   { path: "disposables", component: DisposablesComponent },
   { path: "coveralls", component: CoverallsComponent },
-  { path: "fireresistantsuits", component: FireresistantwearsComponent },
+  { path: "firersistantwears", component: FireresistantwearsComponent },
   { path: "labcoats", component: LabcoatsComponent },
   { path: "chemicalwears", component: ChemicalwearsComponent },
   { path: "reflectivevests", component: ReflectivevestsComponent },
-  { path: "umbrellas", component: SupersteelComponent },
+  { path: "umbrellas", component: UmbrellasComponent },
   { path: "emergencyeyewash", component: EmergencyeyewashComponent },
   { path: "fallarrestors", component: FallarrestorsComponent },
   { path: "flashlights", component: FlashlightsComponent },
@@ -451,14 +451,13 @@ const routes: Routes = [
   { path: "anglegrinders", component: AnglegrindersComponent },
   { path: "benchgrinders", component: BenchgrindersComponent },
   { path: "combokits", component: CombokitsComponent },
-  { path: "diegrinders", component: DiegrindersComponent },
-  { path: "minigrinders", component: MinigrindersComponent },
+  { path: "dieandminigrinders", component: DieandminigrindersComponent },
   { path: "heatguns", component: HeatgunsComponent },
   { path: "mixers", component: MixersComponent },
   { path: "impactwrenches", component: ImpactwrenchesComponent },
   { path: "cordlessimpactwrenches", component: CordlessimpactwrenchesComponent },
-  { path: "electricimpactwrenches", component: LifejacketsComponent },
-  { path: "pneumatic", component: PnuematicComponent },
+  { path: "electricimpactwrenches", component: ElectricimpactwrenchesComponent },
+  { path: "pneumaticimpactwrenches", component: PnuematicimpactwrenchesComponent },
   { path: "mixers", component: MixersComponent },
   { path: "sanders", component: SandersComponent },
   { path: "polishers", component: PolishersComponent },
@@ -467,10 +466,10 @@ const routes: Routes = [
   { path: "planers", component: PlanersComponent },
   { path: "edgebandingmachines", component: EdgebandingmachinesComponent },
   { path: "greaseguns", component: GreasegunsComponent },
-  { path: "gunsandtrimmers", component: GunsandtrimmersComponent },
+  { path: "generalguntools", component: GeneralguntoolsComponent },
   { path: "impulsesealers", component: ImpulsesealersComponent },
   { path: "nailers", component: NailersComponent },
-  { path: "ppr", component: PprComponent },
+  { path: "pprmachines", component: PprComponent },
   { path: "wallchasers", component: WallchasersComponent },
   { path: "routers", component: RoutersComponent },
   { path: "sprayguns", component: SpraygunsComponent },
@@ -478,14 +477,14 @@ const routes: Routes = [
   { path: "bandsaws", component: BandsawsComponent },
   { path: "chainsaws", component: ChainsawsComponent },
   { path: "trimmers", component: TrimmersComponent },
-  { path: "gunsandtrimmers", component: GunsandtrimmersComponent },
+  { path: "generalguntools", component: GeneralguntoolsComponent },
   { path: "planers", component: PlanersComponent },
   { path: "jackhammers", component: JackhammersComponent },
   { path: "demolitionbreakers", component: DemolitionbreakersComponent },
   { path: "pneumaticjackhammers", component: PneumaticjackhammersComponent },
   { path: "circularsaws", component: CircularsawsComponent },
   { path: "jigsaws", component: JigsawsComponent },
-  { path: "mitresaws", component: TablesawsComponent },
+  { path: "mitresaws", component: MitresawsComponent },
   { path: "tablesaws", component: TablesawsComponent },
   { path: "heatguns", component: HeatgunsComponent },
   { path: "reciprocatingsaws", component: ReciprocatingsawsComponent },
@@ -543,7 +542,7 @@ const routes: Routes = [
   { path: "carcreepers", component: CarcreepersComponent },
   { path: "rotarypumps", component: RotarypumpsComponent },
   { path: "testingbuckets", component: TestingbucketsComponent },
-  { path: "hydrualicshoppress", component: HydraulicshoppressComponent},
+  { path: "hydraulicshoppress", component: HydraulicshoppressComponent },
 
 
   { path: "lifting", component: LiftingComponent },
@@ -560,7 +559,7 @@ const routes: Routes = [
   { path: "tirechangers", component: TirechangesComponent },
   { path: "wheelsalignmentguages", component: WheelalignmentguagesComponent },
   { path: "wheelchock", component: WheelchocksComponent },
-  { path: "wheellocks", component: WheellocksComponent },
+  { path: "wheelocks", component: WheellocksComponent },
   { path: "wheelbalancers", component: WheelbalancersComponent },
 
 
@@ -619,10 +618,10 @@ const routes: Routes = [
   { path: "measuringwheels", component: MeasuringwheelsComponent },
   { path: "multimeters", component: MultimetersComponent },
   { path: "micrometers", component: MicrometersComponent },
-  { path: "analoguemicromters", component: AnaloguemicrometersComponent },
+  { path: "analoguemicrometers", component: AnaloguemicrometersComponent },
   { path: "digitalmicrometers", component: DigitalmicrometersComponent },
   { path: "dialindicators", component: DialindicatorsComponent },
-  { path: "guages", component: GuagesComponent },
+  { path: "generalgauges", component: GeneralguagesComponent},
   { path: "laserdistancemeters", component: LaserdistancemetersComponent },
   { path: "generalmeters", component: GeneralMetersComponent },
   { path: "generaltesters", component: GeneralTestersComponent },
@@ -630,7 +629,7 @@ const routes: Routes = [
   { path: "waterseperators", component: WaterseperatorsComponent },
   { path: "alcoholtesters", component: AlcoholtestersComponent },
   { path: "concretemeters", component: ConcretetestersComponent },
-  { path: "moisturetester", component: MoisturetestersComponent },
+  { path: "moisturetesters", component: MoisturetestersComponent },
   { path: "phmeters", component: PhmetersComponent },
   { path: "testingbuckets", component: TestingbucketsComponent },
   { path: "watertesters", component: WatertestersComponent },
@@ -740,11 +739,6 @@ const routes: Routes = [
   //  Cleaningandgardensupplies
 
   { path: "cleaniningandgardensupplies", component: CleaningandgardensuppliesComponent },
-  { path: "blowers", component: BlowersComponent },
-  // Bycategory
-  { path: "cordlessblowers", component: CordlessblowersComponent },
-  { path: "electricblowers", component: ElectricblowersComponent },
-  { path: "gasolineblowers", component: GasolineblowersComponent },
 
   //  Bybrands
   { path: "bybrands", component: BybrandsComponent },
@@ -773,14 +767,13 @@ const routes: Routes = [
   { path: "hose", component: HoseComponent },
   { path: "hoseaccessories", component: HoseaccessoriesComponent },
   { path: "pressurehose", component: PressurehoseComponent },
-  { path: "pumphose", component: PumphoseComponent },
-  { path: "waterhose", component: WaterhoseComponent },
+  { path: "waterandpumphose", component: WaterandpumphoseComponent },
+
 
   //  Lawnmowers
   { path: "lawnmowers", component: LawnmowersComponent },
-  { path: "electriclawnmowers", component: ElectriclawnmowerComponent },
-  { path: "handpushlawnmowers", component: HandpushlawnmowersComponent},
-  { path: "selfpropelledlawnmowers", component: SelfpropelledlawnmowerComponent },
+  { path: "electricandcordlesslawnmowers", component: ElectricandcordlesslawnmowerComponent },
+  { path: "gasolinelawnmowers", component: GasolinelawnmowerComponent },
   // Bybrands
   { path: "ingco", component: IngcoComponent },
   { path: "princegarden", component: PrincegardenComponent },
@@ -793,7 +786,7 @@ const routes: Routes = [
 
   // Pressurewashers
   { path: "pressurewashers", component: PressurewashersComponent },
-  { path: "PressurewashersaccessoriesComponent", component: PressurewashersaccessoriesComponent },
+  { path: "pressurewashersaccessories", component: PressurewashersaccessoriesComponent },
 
   // Bycategory
   { path: "cordlesspressurewahers", component: CordlesspressurewashersComponent },
@@ -814,7 +807,7 @@ const routes: Routes = [
   // Bycategory
   { path: "commercialvacuumcleaners", component: CommercialvacummcleanersComponent },
   { path: "cyclonevacuumcleaners", component: CyclonevacuumcleanersComponent },
-  { path: "wetanddryvacuumcleaners", component: WetanddryvacuumcleanersComponent },
+  { path: "wetanddryvacuumecleaners", component: WetanddryvacuumcleanersComponent },
 
 
   //  Bybrands

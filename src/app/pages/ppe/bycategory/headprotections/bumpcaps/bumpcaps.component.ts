@@ -14,7 +14,7 @@ export class BumpcapsComponent {
       constructor(private SearchService: SearchService) {}
     
       ngOnInit() {
-        this.products = this.SearchService.getProductsByCategory('bump caps');
+        this.products = this.SearchService.getProductsByCategory('bump-caps');
       }
 
 

@@ -20,7 +20,7 @@ export class AnglegrindersComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('angle-grinders');
           }
     
         

@@ -14,7 +14,7 @@ export class MagneticdrillsComponent {
             constructor(private SearchService: SearchService) {}
           
             ngOnInit() {
-              this.products = this.SearchService.getProductsByCategory('magnetic drills');
+              this.products = this.SearchService.getProductsByCategory('magnetic-drills');
             }
 
     

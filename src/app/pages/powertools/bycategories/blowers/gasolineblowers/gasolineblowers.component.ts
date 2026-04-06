@@ -19,7 +19,7 @@ export class GasolineblowersComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('gasoline-blowers');
           }
     
         

@@ -15,7 +15,7 @@ export class SpillkitsComponent {
       constructor(private SearchService: SearchService) {}
     
       ngOnInit() {
-        this.products = this.SearchService.getProductsByCategory('spill kits');
+        this.products = this.SearchService.getProductsByCategory('spill-kits');
       }
 
 

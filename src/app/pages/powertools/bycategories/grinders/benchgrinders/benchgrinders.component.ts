@@ -17,7 +17,7 @@ export class BenchgrindersComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('bench-grinders');
           }
     
         

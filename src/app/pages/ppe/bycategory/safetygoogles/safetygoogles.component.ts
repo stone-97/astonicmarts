@@ -14,7 +14,7 @@ export class SafetygooglesComponent {
     constructor(private SearchService: SearchService) {}
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('Safety Goggle');
+      this.products = this.SearchService.getProductsByCategory('Safety-Goggle');
     }
 
 

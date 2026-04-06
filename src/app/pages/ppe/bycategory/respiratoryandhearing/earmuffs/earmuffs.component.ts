@@ -15,7 +15,7 @@ products: Product[] = [];
         constructor(private SearchService: SearchService) {}
       
         ngOnInit() {
-          this.products = this.SearchService.getProductsByCategory('ear plugs');
+          this.products = this.SearchService.getProductsByCategory('ear-muffs');
         }
 
 

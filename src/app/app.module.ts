@@ -3,6 +3,7 @@ import { FallarrestorsComponent } from './pages/ppe/bycategory/fallarrestors/fal
 import { SafetyshoesComponent } from './pages/ppe/bycategory/safetyshoes/safetyshoes.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 // import { FormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app-routing.module';
@@ -69,7 +70,7 @@ import { MixersComponent } from './pages/powertools/bycategories/mixers/mixers.c
 import { PolishersComponent } from './pages/powertools/bycategories/polishers/polishers.component';
 import { SpraygunsComponent } from './pages/powertools/bycategories/sprayguns/sprayguns.component';
 import { NailersComponent } from './pages/powertools/bycategories/nailers/nailers.component';
-import { GunsandtrimmersComponent } from './pages/powertools/bycategories/gunsandtrimmers/gunsandtrimmers.component';
+import { GeneralguntoolsComponent } from './pages/powertools/bycategories/generalguntools/generalguntools.component';
 import { ImpulsesealersComponent } from './pages/powertools/bycategories/impulsesealers/impulsesealers.component';
 import { TrimmersComponent } from './pages/powertools/bycategories/trimmers/trimmers.component';
 import { PlanersComponent } from './pages/powertools/bycategories/planers/planers.component';
@@ -171,7 +172,7 @@ import { DigitalcalipersComponent } from './pages/measuringandtesting/generalmea
 import { VerniercalipersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/calipers/verniercalipers/verniercalipers.component';
 import { ClampmetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/clampmeters/clampmeters.component';
 import { DialindicatorsComponent } from './pages/measuringandtesting/generalmeasuringinstruments/dialindicators/dialindicators.component';
-import { GuagesComponent } from './pages/measuringandtesting/generalmeasuringinstruments/guages/guages.component';
+import { GeneralguagesComponent } from './pages/measuringandtesting/generalmeasuringinstruments/generalguages/generalguages.component';
 import { LaserdistancemetersComponent } from './pages/measuringandtesting/generalmeasuringinstruments/laserdistancemeters/laserdistancemeters.component';
 import { MeasuringtapesComponent } from './pages/measuringandtesting/generalmeasuringinstruments/measuringtapes/measuringtapes.component';
 import { MeasuringwheelsComponent } from './pages/measuringandtesting/generalmeasuringinstruments/measuringwheels/measuringwheels.component';
@@ -262,17 +263,15 @@ import { BrushcuttersaccessoriesComponent } from './pages/cleaningandgardensuppl
 import { CleaningaccessoriesComponent } from './pages/cleaningandgardensupplies/cleaningaccessories/cleaningaccessories.component';
 import { HoseComponent } from './pages/cleaningandgardensupplies/hose/hose.component';
 import { HoseaccessoriesComponent } from './pages/cleaningandgardensupplies/hose/hoseaccessories/hoseaccessories.component';
-import { PumphoseComponent } from './pages/cleaningandgardensupplies/hose/pumphose/pumphose.component';
-import { WaterhoseComponent } from './pages/cleaningandgardensupplies/hose/waterhose/waterhose.component';
-import { HandpushlawnmowersComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/handpushlawnmowers/handpushlawnmowers.component';
-import { SelfpropelledlawnmowerComponent,} from './pages/cleaningandgardensupplies/lawnmowers/bycategory/selfpropelledlawnmower/selfpropelledlawnmower.component';
+import { WaterandpumphoseComponent } from './pages/cleaningandgardensupplies/hose/waterandpumphose/waterandpumphose.component';
+import { GasolinelawnmowerComponent, } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/gasolinelawnmower/gasolinelawnmower.component';
 import { ScrubbersandsweepersComponent } from './pages/cleaningandgardensupplies/scrubbersandsweepers/scrubbersandsweepers.component';
 import { VacuumcleanersComponent } from './pages/cleaningandgardensupplies/vacuumcleaners/vacuumcleaners.component';
 import { CommercialvacummcleanersComponent } from './pages/cleaningandgardensupplies/vacuumcleaners/bycategory/commercialvacummcleaners/commercialvacummcleaners.component';
 import { CyclonevacuumcleanersComponent } from './pages/cleaningandgardensupplies/vacuumcleaners/bycategory/cyclonevacuumcleaners/cyclonevacuumcleaners.component';
 import { WetanddryvacuumcleanersComponent } from './pages/cleaningandgardensupplies/vacuumcleaners/bycategory/wetanddryvacuumcleaners/wetanddryvacuumcleaners.component';
 import { LawnmowersComponent } from './pages/cleaningandgardensupplies/lawnmowers/lawnmowers.component';
-import { ElectriclawnmowerComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/electriclawnmower/electriclawnmowers.component';
+import { ElectricandcordlesslawnmowerComponent } from './pages/cleaningandgardensupplies/lawnmowers/bycategory/electriclandcordlessawnmower/electriclandcordlessawnmower.component';
 import { PressurehoseComponent } from './pages/cleaningandgardensupplies/hose/pressurehose/pressurehose.component';
 import { PetrolpressureswashersComponent } from './pages/cleaningandgardensupplies/pressurewashers/bycategory/petrolpressureswashers/petrolpressureswashers.component';
 import { IndustrialpressurewashersComponent } from './pages/cleaningandgardensupplies/pressurewashers/bycategory/industrialpressurewashers/industrialpressurewashers.component';
@@ -280,29 +279,29 @@ import { CordlesspressurewashersComponent } from './pages/cleaningandgardensuppl
 import { LifevestsComponent } from './pages/ppe/bycategory/lifesavingequipments/lifevests/lifevests.component';
 import { SafetyhelmetsComponent } from './pages/ppe/bycategory/headprotections/safetyhelmets/safetyhelmets.component';
 import { WeldinghelmetsComponent } from './pages/ppe/bycategory/headprotections/weldinghelmets/weldinghelmets.component';
-import { FallarrestersComponent } from './pages/constructionequipment/fallarrestors/fallarresters.component';
+import { FallarrestersComponent } from './pages/constructionequipment/fallarresters/fallarresters.component';
 import { HydraulicshoppressComponent } from './pages/workshopgarage/hydraulicshoppress/hydraulicshoppress.component';
 import { CordlessimpactwrenchesComponent } from './pages/powertools/bycategories/impactwrenches/cordlessimpactwrenches/cordlessimpactwrenches.component';
 import { ElectricimpactwrenchesComponent } from './pages/powertools/bycategories/impactwrenches/electricimpactwrenches/electricimpactwrenches.component';
-import { PnuematicComponent } from './pages/powertools/bycategories/impactwrenches/pnuematic/pnuematic.component';
+import { PnuematicimpactwrenchesComponent } from './pages/powertools/bycategories/impactwrenches/pnuematicimpactwrenches/pnuematicimpactwrenches.component';
 import { BandsawsComponent } from './pages/powertools/bycategories/saws/bandsaws/bandsaws.component';
 import { ChainsawsComponent } from './pages/powertools/bycategories/saws/chainsaws/chainsaws.component';
 import { CircularsawsComponent } from './pages/powertools/bycategories/saws/circularsaws/circularsaws.component';
 import { JigsawsComponent } from './pages/powertools/bycategories/saws/jigsaws/jigsaws.component';
 import { MitresawsComponent } from './pages/powertools/bycategories/saws/mitresaws/mitresaws.component';
 import { ReciprocatingsawsComponent } from './pages/powertools/bycategories/saws/reciprocatingsaws/reciprocatingsaws.component';
-import { TmplAstSwitchBlock } from '@angular/compiler';
 import { TablesawsComponent } from './pages/powertools/bycategories/saws/tablesaws/tablesaws.component';
 import { PneumaticjackhammersComponent } from './pages/powertools/bycategories/jackhammers/pneumaticjackhammers/pneumaticjackhammers.component';
 import { DemolitionbreakersComponent } from './pages/powertools/bycategories/jackhammers/demolitionbreakers/demolitionbreakers.component';
 import { GrindersComponent } from './pages/powertools/bycategories/grinders/grinders.component';
 import { BenchgrindersComponent } from './pages/powertools/bycategories/grinders/benchgrinders/benchgrinders.component';
-import { DiegrindersComponent } from './pages/powertools/bycategories/grinders/diegrinders/diegrinders.component';
-import { MinigrindersComponent } from './pages/powertools/bycategories/grinders/minigrinders/minigrinders.component';
+import { DieandminigrindersComponent } from './pages/powertools/bycategories/grinders/dieandminigrinders/dieandminigrinders.component';
 import { AnglegrindersComponent } from './pages/powertools/bycategories/grinders/anglegrinders/anglegrinders.component';
 import { CordlessblowersComponent } from './pages/powertools/bycategories/blowers/cordlessblowers/cordlessblowers.component';
-import { ElectricblowersComponent } from './pages/cleaningandgardensupplies/blowers/bycategory/electricblowers/electricblowers.component';
 import { GasolineblowersComponent } from './pages/powertools/bycategories/blowers/gasolineblowers/gasolineblowers.component';
+import { ElectricblowersComponent } from './pages/powertools/bycategories/blowers/electricblowers/electricblowers.component';
+import { PressurewashersaccessoriesComponent } from './pages/cleaningandgardensupplies/pressurewashers/pressurewashersaccessories/pressurewashersaccessories.component';
+import { UmbrellasComponent } from './pages/ppe/bycategory/clothing/umbrellas/umbrellas.component';
 
 
 
@@ -363,6 +362,7 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
     FaceshieldsComponent,
     SpillkitsComponent,
     FirstaidsComponent,
+    UmbrellasComponent,
     NosemasksComponent,
     EarmuffsComponent,
     EarplugsComponent,
@@ -375,7 +375,7 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
     SpraygunsComponent,
     BagclosermachinesComponent,
     NailersComponent,
-    GunsandtrimmersComponent,
+    GeneralguntoolsComponent,
     TrimmersComponent,
     ImpulsesealersComponent,
     PlanersComponent,
@@ -454,7 +454,6 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
     BatterytestersComponent,
     CablewiresandboostersComponent,
     ExtensioncablewiresComponent,
-    FallarrestorsComponent,
     GeneratorsComponent,
     DesielgeneratorsComponent,
     FallarrestorsComponent,
@@ -480,7 +479,7 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
     VerniercalipersComponent,
     ClampmetersComponent,
     DialindicatorsComponent,
-    GuagesComponent,
+    GeneralguagesComponent,
     LaserdistancemetersComponent,
     MeasuringtapesComponent,
     MeasuringwheelsComponent,
@@ -521,7 +520,6 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
     SurveytripodsComponent,
     MoisturetestersComponent,
     FlowmetersComponent,
-
     WaterseperatorsComponent,
     DigitalthermometersComponent,
     InfraredthermometersComponent,
@@ -586,11 +584,10 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
     PetrolpressureswashersComponent,
     IndustrialpressurewashersComponent,
     CordlesspressurewashersComponent,
-    PumphoseComponent,
-    WaterhoseComponent,
-    ElectriclawnmowerComponent,
-    HandpushlawnmowersComponent,
-    SelfpropelledlawnmowerComponent,
+    PressurewashersaccessoriesComponent,
+    WaterandpumphoseComponent,
+    ElectricandcordlesslawnmowerComponent,
+    GasolinelawnmowerComponent,
     ScrubbersandsweepersComponent,
     VacuumcleanersComponent,
     CommercialvacummcleanersComponent,
@@ -603,7 +600,7 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
     HydraulicshoppressComponent,
     CordlessimpactwrenchesComponent,
     ElectricimpactwrenchesComponent,
-    PnuematicComponent,
+    PnuematicimpactwrenchesComponent,
     PneumaticjackhammersComponent,
     DemolitionbreakersComponent,
     BandsawsComponent,
@@ -615,12 +612,11 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
     TablesawsComponent,
     GrindersComponent,
     BenchgrindersComponent,
-    DiegrindersComponent,
-    MinigrindersComponent,
+    DieandminigrindersComponent,
     AnglegrindersComponent,
     CordlessblowersComponent,
-    ElectricblowersComponent,
-    GasolineblowersComponent
+    GasolineblowersComponent,
+    ElectricblowersComponent
 
 
 
@@ -652,6 +648,7 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     FormsModule,
     HttpClientModule
   ],

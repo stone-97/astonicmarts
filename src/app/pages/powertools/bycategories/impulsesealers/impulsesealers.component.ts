@@ -16,7 +16,7 @@ export class ImpulsesealersComponent {
         constructor(private SearchService: SearchService) {}
       
         ngOnInit() {
-          this.products = this.SearchService.getProductsByCategory('impulse sealers');
+          this.products = this.SearchService.getProductsByCategory('impulse-sealers');
         }
 
         

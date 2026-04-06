@@ -19,7 +19,7 @@ export class ReciprocatingsawsComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('reciprocating-saws');
           }
     
         

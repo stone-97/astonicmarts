@@ -19,7 +19,7 @@ export class CommercialvacummcleanersComponent {
     constructor(private SearchService: SearchService) { }
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('allen-keys');
+      this.products = this.SearchService.getProductsByCategory('industrial-vacuum-cleaners');
     }
   
   

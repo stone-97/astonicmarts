@@ -16,7 +16,7 @@ export class NosemasksComponent {
         constructor(private SearchService: SearchService) {}
       
         ngOnInit() {
-          this.products = this.SearchService.getProductsByCategory('nose masks');
+          this.products = this.SearchService.getProductsByCategory('nose-masks');
         }
 
 

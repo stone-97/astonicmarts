@@ -20,7 +20,7 @@ export class CyclonevacuumcleanersComponent {
     constructor(private SearchService: SearchService) { }
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('allen-keys');
+      this.products = this.SearchService.getProductsByCategory('cyclone-vacuum-cleaners');
     }
   
   

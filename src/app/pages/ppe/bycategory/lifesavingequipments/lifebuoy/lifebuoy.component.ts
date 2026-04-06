@@ -16,7 +16,7 @@ export class LifebuoyComponent {
     constructor(private SearchService: SearchService) {}
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('life buoy');
+      this.products = this.SearchService.getProductsByCategory('life-buoy');
     }
   
 

@@ -22,7 +22,7 @@ export class DemolitionbreakersComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('demolition-breakers');
           }
     
         

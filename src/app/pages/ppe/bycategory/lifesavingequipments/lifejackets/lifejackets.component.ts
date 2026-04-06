@@ -15,7 +15,7 @@ export class LifejacketsComponent {
       constructor(private SearchService: SearchService) {}
     
       ngOnInit() {
-        this.products = this.SearchService.getProductsByCategory('life jackets');
+        this.products = this.SearchService.getProductsByCategory('life-jackets');
       }
 
 

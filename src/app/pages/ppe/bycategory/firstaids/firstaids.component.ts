@@ -14,7 +14,7 @@ export class FirstaidsComponent {
         constructor(private SearchService: SearchService) {}
       
         ngOnInit() {
-          this.products = this.SearchService.getProductsByCategory('first aid kits');
+          this.products = this.SearchService.getProductsByCategory('first-aid-kits');
         }
   
 

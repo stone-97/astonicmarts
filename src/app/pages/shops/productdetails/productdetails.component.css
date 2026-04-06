@@ -366,3 +366,45 @@ background-color:black;
 color:white;
 border:2px solid black;
 }
+
+
+
+
+
+
+/* banner area */
+
+.breadcrumb-bar {
+  background: #0b1c3d;
+  /* Navy Blue */
+  padding: 8px 0;
+  font-size: 18px;
+}
+
+.breadcrumb-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb-nav a {
+  color: ffba00;
+  /* Sky Blue */
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.breadcrumb-nav a:hover {
+  color: #ffffff;
+}
+
+.breadcrumb-nav span {
+  color: #ccc;
+}
+
+.breadcrumb-nav .active {
+  color: #ffffff;
+  font-weight: 600;
+}

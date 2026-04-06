@@ -15,7 +15,7 @@ export class RotaryhammerdrillsComponent {
               constructor(private SearchService: SearchService) {}
             
               ngOnInit() {
-                this.products = this.SearchService.getProductsByCategory('rotary hammers');
+                this.products = this.SearchService.getProductsByCategory('rotary-hammers');
               }
 
     

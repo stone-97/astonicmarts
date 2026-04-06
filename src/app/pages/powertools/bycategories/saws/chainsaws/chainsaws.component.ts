@@ -18,7 +18,7 @@ export class ChainsawsComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('chain-saws');
           }
     
         

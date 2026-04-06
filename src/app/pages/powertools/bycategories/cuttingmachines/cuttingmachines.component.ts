@@ -15,7 +15,7 @@ export class CuttingmachinesComponent {
       constructor(private SearchService: SearchService) {}
     
       ngOnInit() {
-        this.products = this.SearchService.getProductsByCategory('mixers');
+        this.products = this.SearchService.getProductsByCategory('cutting-machines');
       }
 
 

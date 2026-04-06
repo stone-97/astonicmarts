@@ -19,7 +19,7 @@ export class ElectricimpactwrenchesComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('electric-impact-wrenches');
           }
     
         

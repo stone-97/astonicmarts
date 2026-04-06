@@ -17,7 +17,7 @@ export class ChemicalwearsComponent {
   constructor(private SearchService: SearchService) { }
 
   ngOnInit() {
-    this.products = this.SearchService.getProductsByCategory('coveralls');
+    this.products = this.SearchService.getProductsByCategory('chemical-wears');
   }
   
   // safety ppes

@@ -148,7 +148,7 @@ export class ShopcategoriesComponent implements OnInit {
 { name: "Emergency Eye Wash Station", link: "/emergencyeyewash" },
 { name: "Spill Kits", link: "/spillkits" },
 { name: "First Aids", link: "/firstaids" },
-{ name: "First cat", link: "/firstcat" }
+// { name: "First cat", link: "/firstcat" }
 ];
 
 
@@ -169,8 +169,8 @@ ppeClothing = [
 { name: "Coveralls / Overalls", link: "/coveralls" },
 { name: "Reflective Jackets", link: "/reflectivevests" },
 { name: "Lab Coats", link: "/labcoats" },
-{ name: "Fire-Resistant Suits", link: "/firesuits" },
-{ name: "Chemical-Resistant Wears", link: "/chemicalresistant" },
+  { name: "Fire-Resistant Suits", link: "/firersistantwears" },
+  { name: "Chemical-Resistant Wears", link: "/chemicalwears" },
 { name: "Rainwears", link: "/rainwear" },
 { name: "Umbrellas", link: "/umbrellas" }
 ];
@@ -210,13 +210,14 @@ lifeSavingEquipment = [
 
 powerToolCategories = [
   { name: 'Heat Guns', link: '/heatguns' },
-  { name: 'Cutting Machines', link: '/cuttingmachine' },
+  { name: 'Cutting Machines', link: '/cuttingmachines' },
   { name: 'Mixers', link: '/mixers' },
   { name: 'Polishers', link: '/polishers' },
   { name: 'Spray Guns', link: '/sprayguns' },
   { name: 'Bag Closer Machines', link: '/bagclosermachines' },
   { name: 'Nailers', link: '/nailers' },
-  { name: 'Guns & Trimmers', link: '/trimmers' },
+  { name: 'Trimmers', link: '/trimmers' },
+  { name: 'General Gun Tools', link: '/generalguntools' },
   { name: 'Impulse Sealers', link: '/impulsesealers' },
   { name: 'Planers', link: '/planers' },
   { name: 'PPR Machines', link: '/pprmachines' },
@@ -237,13 +238,11 @@ drillCategories = [
   { name: 'Core Drills', link: '/coredrills' }
 ];
 
-grinderCategories = [
-  { name: 'Angle Grinders', link: '/anglegrinders' },
-  { name: 'Bench Grinders', link: '/benchgrinders' },
-  { name: 'Die Grinders', link: '/diegrinders' },
-  { name: 'Mini Grinders', link: '/minigrinders' }
-];
-
+  grinderCategories = [
+    { name: 'Angle Grinders', link: '/anglegrinders' },
+    { name: 'Bench Grinders', link: '/benchgrinders' },
+    { name: 'Die & Mini Grinders', link: '/dieandminigrinders' }
+  ];
 sawCategories = [
   { name: 'Circular Saws', link: '/circularsaws' },
   { name: 'Jig Saws', link: '/jigsaws' },
@@ -257,12 +256,13 @@ sawCategories = [
 impactWrenchCategories = [
   { name: 'Cordless Impact Wrenches', link: '/cordlessimpactwrenches' },
   { name: 'Electric Impact Wrenches', link: '/electricimpactwrenches' },
-  { name: 'Pneumatic Impact Wrenches', link: '/pneumatic' }
+  { name: 'Pneumatic Impact Wrenches', link: '/pneumaticimpactwrenches' }
 ];
 
 jackHammerCategories = [
   { name: 'Demolition Breakers', link: '/demolitionbreakers' },
-  { name: 'Pneumatic Jack Hammers', link: '/jackhammers/pneumatic' }
+  { name: 'Pneumatic Jack Hammers', link: '/pneumaticjackhammers' },
+  { name: 'Rotary Hammer Drills', link: '/rotaryhammerdrills' },
 ];
 
 blowerCategories = [
@@ -338,7 +338,7 @@ workshopGarageCategories = [
   { name: 'Grease Buckets', link: '/greasebuckets' },
   { name: 'Testing Buckets', link: '/testingbuckets' },
   { name: 'Rotary Hand Pumps', link: '/rotarypumps' },
-  { name: 'hydraulicshoppress', link: '/hydraulicshoppress' },
+  { name: 'hydraulic shop press', link: '/hydraulicshoppress' },
 
   
    
@@ -360,7 +360,7 @@ wheelServiceCategories = [
   { name: 'Wheel Balancers', link: '/wheelbalancers' },
   { name: 'Wheel Alignment Gauges', link: '/wheelsalignmentguages' },
   { name: 'Wheel Chocks', link: '/wheelchocks' },
-  { name: 'Wheel Lockers', link: '/wheellockers' },
+  { name: 'Wheel Lockers', link: '/wheelocks' },
   { name: 'Tire Changers', link: '/tirechangers' }
 ];
 
@@ -381,7 +381,7 @@ electricalCategories = [
   { name: 'Plasma Cutters', link: '/plasmacutters' },
   { name: 'Air Compressors', link: '/aircompressors' },
   { name: 'Battery Testers', link: '/batterychargers' },
-  { name: 'Battery Chargers', link: '/batterychargers' }
+  { name: 'Battery Chargers', link: '/batterytesters' }
 ];
 
 generatorCategories = [
@@ -431,7 +431,7 @@ measuringTestingCategories: Category[] = [
     { name: 'Measuring Tapes', link: '/measuringtapes' },
     { name: 'Laser Distance Meters', link: '/laserdistancemeters' },
     { name: 'Dial Indicators', link: '/dialindicators' },
-    { name: 'General Gauges', link: '/gauges'},
+    { name: 'General Gauges', link: '/generalgauges'},
     { name: 'Measuring Wheels', link: '/measuringwheels' },
     { name: 'General Testers', link: '/generaltesters' },
     { name: 'Infrared Thermometers', link: '/infraredthermometers' },
@@ -503,7 +503,7 @@ measuringTestingCategories: Category[] = [
         { name: 'Spring Balances', link: '/springbalances' },
         { name: 'Beam Balances', link: '/beambalances' },
         { name: 'Mechanical Platform Scales', link: '/mechanicalplatformscales' },
-        { name: 'Analogue Scales(Analogue)', link: '/analoguekitchenscales' }
+        { name: 'Analogue Kitchen Scales', link: '/analoguekitchenscales' }
 
       ]
     },
@@ -619,7 +619,7 @@ cleaningGardenSupplies = {
       { name: 'Maxmech', link: '/maxmech' },
       { name: 'Karcher', link: '/karcher' }
     ],
-    accessories: { name: 'Accessories', link: '/accessories' }
+    accessories: { name: 'pressure Washer Accessories', link: '/pressurewashersaccessories' }
   },
 
  blowers: {
@@ -628,16 +628,15 @@ cleaningGardenSupplies = {
 },
 
   hose: [
-    { name: 'Water Hose', link: '/waterhose' },
+    { name: 'Water And Pump Hose', link: '/waterandpumphose' },
     { name: 'Pressure Hose', link: '/pressurehose' },
-    { name: 'Pump Hose', link: '/pumphose' },
     { name: 'Hose Accessories', link: '/hoseaccessories' }
   ],
 
   vacuumCleaners: {
     categories: [
-      { name: 'Cyclone Vacuum Cleaners', link: '/cyclonevacummecleaners' },
-      { name: 'Wet & Dry Vacuum Cleaners', link: '/wetanddryvacuumecleaners' },
+      { name: 'Cyclone Vacuum Cleaners', link: '/cyclonevacuumcleaners' },
+      { name: 'Wet & Dry Vacuum Cleaners', link: '/wetanddryvacuumcleaners' },
       { name: 'Commercial Vacuum Cleaners', link: '/commercialvacuumcleaners' }
     ],
     brands: [
@@ -649,9 +648,8 @@ cleaningGardenSupplies = {
 
   lawnMowers: {
     categories: [
-      { name: 'Hand Push Lawn Mowers', link: '/handpushlawnmowers' },
-      { name: 'Self Propelled Lawn Mowers', link: '/selfpropropelledlawnmowers' },
-      { name: 'Electric Lawn Mowers', link: '/electriclawnmowers' }
+      { name: 'Gasoline Lawn Mowers ', link: '/gasolinelawnmowers' },
+      { name: 'Electric And Cordless Lawn Mowers', link: '/electricandcordlesslawnmowers' }
     ],
     brands: [
       { name: 'Ingco', link: '/ingco' },
@@ -670,7 +668,7 @@ cleaningGardenSupplies = {
       { name: 'Total', link: '/total' },
       { name: 'Maxmech', link: '/maxmech' }
     ],
-    accessories: { name: 'Accessories', link: '/accessories' }
+    accessories: { name: 'Brush Cutter Accessories', link: '/buschcuttersaccessories' }
   }
 };
 

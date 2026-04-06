@@ -19,7 +19,7 @@ export class BrushcuttersaccessoriesComponent {
     constructor(private SearchService: SearchService) { }
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('allen-keys');
+      this.products = this.SearchService.getProductsByCategory('brush-cutter-accessories');
     }
   
   

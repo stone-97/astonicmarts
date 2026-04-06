@@ -14,6 +14,7 @@ export interface Product {
 
   images: string[];
   group?: string;
+  // videos: string[]; 
 
   // 👇 For simple products (clothes, shoes)
   sizes?: (number | string)[];

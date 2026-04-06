@@ -12,14 +12,12 @@ export class PneumaticjackhammersComponent {
 
 
 
-
-  
       products: Product[] = [];
         
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('pneumatic-jack-hammers');
           }
     
         

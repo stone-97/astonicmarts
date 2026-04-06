@@ -15,11 +15,11 @@ export class ThermometersComponent {
 
 
   products: Product[] = [];
-
+ 
   constructor(private SearchService: SearchService) { }
 
   ngOnInit() {
-    this.products = this.SearchService.getProductsByCategory('thermometers');
+    this.products = this.SearchService.getProductsByCategory('digital-thermometers');
   }
 
 

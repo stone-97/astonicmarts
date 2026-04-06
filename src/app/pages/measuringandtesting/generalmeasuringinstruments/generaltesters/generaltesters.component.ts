@@ -19,7 +19,7 @@ export class GeneralTestersComponent {
   constructor(private SearchService: SearchService) { }
 
   ngOnInit() {
-    this.products = this.SearchService.getProductsByCategory('testers');
+    this.products = this.SearchService.getProductsByCategory('general-testers');
   }
 
 

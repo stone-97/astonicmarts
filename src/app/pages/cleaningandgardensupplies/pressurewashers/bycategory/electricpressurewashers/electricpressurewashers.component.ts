@@ -19,7 +19,7 @@ export class ElectricpressurewashersComponent {
          constructor(private SearchService: SearchService) { }
        
          ngOnInit() {
-           this.products = this.SearchService.getProductsByCategory('allen-keys');
+           this.products = this.SearchService.getProductsByCategory('electric-pressure-washer');
          }
        
        

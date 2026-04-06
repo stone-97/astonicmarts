@@ -15,7 +15,7 @@ export class FlashlightsComponent {
     constructor(private SearchService: SearchService) {}
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('flashlights');
+      this.products = this.SearchService.getProductsByCategory('flash-lights');
     }
 
  

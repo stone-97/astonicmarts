@@ -13,15 +13,12 @@ export class CordlesspressurewashersComponent {
 
 
 
-
-  
-  
     products: Product[] = [];
   
     constructor(private SearchService: SearchService) { }
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('allen-keys');
+      this.products = this.SearchService.getProductsByCategory('cordless-pressure-washer');
     }
   
   

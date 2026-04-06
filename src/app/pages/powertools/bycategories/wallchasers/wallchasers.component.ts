@@ -16,7 +16,7 @@ export class WallchasersComponent {
               constructor(private SearchService: SearchService) {}
     
               ngOnInit() {
-                this.products = this.SearchService.getProductsByCategory('wall chasers');
+                this.products = this.SearchService.getProductsByCategory('wall-chasers');
               }
   
 

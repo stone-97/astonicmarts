@@ -29,7 +29,7 @@ export class PagnationComponent implements OnInit, OnDestroy {
     });
 
     // Initial load (in case there's already a search term)
-    this.filterProducts(this.searchService.currentSearchQuery$.value || '');
+    // this.filterProducts(this.searchService.currentSearchQuery$.value ?? '');
   }
 
   private filterProducts(query: string): void {
@@ -80,4 +80,12 @@ export class PagnationComponent implements OnInit, OnDestroy {
       this.searchSubscription.unsubscribe();
     }
   }
+
+
+
+  
+
+
+
+  
 }

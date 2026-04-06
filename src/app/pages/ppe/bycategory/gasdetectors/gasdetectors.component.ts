@@ -15,7 +15,7 @@ export class GasdetectorsComponent {
       constructor(private SearchService: SearchService) {}
     
       ngOnInit() {
-        this.products = this.SearchService.getProductsByCategory('Gas Detector');
+        this.products = this.SearchService.getProductsByCategory('Gas-Detector');
       }
   
 

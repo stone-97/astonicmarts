@@ -19,7 +19,7 @@ export class CordlessbruschcuttersComponent {
     constructor(private SearchService: SearchService) { }
   
     ngOnInit() {
-      this.products = this.SearchService.getProductsByCategory('allen-keys');
+      this.products = this.SearchService.getProductsByCategory('cordless-brushcutters');
     }
   
   

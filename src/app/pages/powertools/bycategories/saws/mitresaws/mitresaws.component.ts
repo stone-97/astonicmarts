@@ -18,7 +18,7 @@ export class MitresawsComponent {
           constructor(private SearchService: SearchService) {}
         
           ngOnInit() {
-            this.products = this.SearchService.getProductsByCategory('bag-closers');
+            this.products = this.SearchService.getProductsByCategory('mitre-saws');
           }
     
         

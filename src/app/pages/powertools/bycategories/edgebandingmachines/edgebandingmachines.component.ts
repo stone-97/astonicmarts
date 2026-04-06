@@ -15,7 +15,7 @@ export class EdgebandingmachinesComponent {
         constructor(private SearchService: SearchService) {}
       
         ngOnInit() {
-          this.products = this.SearchService.getProductsByCategory('edge binding machines');
+          this.products = this.SearchService.getProductsByCategory('edge-binding-machines');
         }
 
         
