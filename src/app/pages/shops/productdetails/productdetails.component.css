@@ -373,35 +373,20 @@ border:2px solid black;
 
 
 /* banner area */
-
 .breadcrumb-bar {
-  background: #0b1c3d;
-  /* Navy Blue */
-  padding: 8px 0;
-  font-size: 18px;
-}
-
-.breadcrumb-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
+  background: #0b2c4a;
+  padding: 12px 0;
 }
 
 .breadcrumb-nav a {
-  color: ffba00;
-  /* Sky Blue */
+  color: #4da3ff;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
-}
-
-.breadcrumb-nav a:hover {
-  color: #ffffff;
 }
 
 .breadcrumb-nav span {
-  color: #ccc;
+  color: #fff;
+  margin: 0 5px;
 }
 
 .breadcrumb-nav .active {

@@ -1,25 +1,24 @@
-
-
-
-<section class="breadcrumb-bar"  style="margin-top: 30px;">
+<section class="breadcrumb-bar" style="margin-top: 30px;">
   <div class="container">
     <nav class="breadcrumb-nav">
-      <a routerLink="/">Home</a>
-      <span>/</span>
 
-      <a routerLink="/shop">Shop</a>
-      <span>/</span>
+      <ng-container *ngFor="let item of breadcrumb; let last = last">
 
-      <a routerLink="/categories">Categories</a>
-      <span>/</span>
+        <!-- ✅ CLICKABLE LINKS -->
+        <a *ngIf="item.link && !last" [routerLink]="item.link">
+          {{ item.name }}
+        </a>
 
-      <a routerLink="/powertools">Power Tools</a>
-      <span>/</span>
+        <!-- separator -->
+        <span *ngIf="!last"> / </span>
 
-      <a routerLink="/category/hand-tools">Hand Tools</a>
-      <span>/</span>
+        <!-- ✅ LAST ITEM (NOT CLICKABLE) -->
+        <span *ngIf="last" class="active">
+          {{ item.name }}
+        </span>
 
-      <span class="active">Hand Gloves</span>
+      </ng-container>
+
     </nav>
   </div>
 </section>

@@ -1,11 +1,11 @@
-
-import { FallarrestorsComponent } from './pages/ppe/bycategory/fallarrestors/fallarrestors.component';
-import { SafetyshoesComponent } from './pages/ppe/bycategory/safetyshoes/safetyshoes.component';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
-// import { FormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesComponent } from './pages/pages.component';
@@ -44,11 +44,13 @@ import { CombokitsComponent } from './pages/powertools/bycategories/combokits/co
 import { SafetyharnessandlanyardsComponent } from './pages/ppe/bycategory/safetyharnessandlanyards/safetyharnessandlanyards.component';
 import { BumpcapsComponent } from './pages/ppe/bycategory/headprotections/bumpcaps/bumpcaps.component';
 import { FlashlightsComponent } from './pages/ppe/bycategory/flashlights/flashlights.component';
+import { FallarrestorsComponent } from './pages/ppe/bycategory/fallarrestors/fallarrestors.component';
 import { SafetyrainwearsComponent } from './pages/ppe/bycategory/safetyrainwears/safetyrainwears.component';
 import { GasdetectorsComponent } from './pages/ppe/bycategory/gasdetectors/gasdetectors.component';
 import { EmergencyeyewashComponent } from './pages/ppe/bycategory/emergencyeyewash/emergencyeyewash.component';
 import { SecuritygearsComponent } from './pages/ppe/bycategory/securityandsurveillance/securitygears/securitygears.component';
 import { StanchionsComponent } from './pages/ppe/bycategory/securityandsurveillance/stanchions/stanchions.component';
+import { SafetyshoesComponent } from './pages/ppe/bycategory/safetyshoes/safetyshoes.component';
 import { DisposablesComponent } from './pages/ppe/bycategory/clothing/disposables/disposables.component';
 import { CoverallsComponent } from './pages/ppe/bycategory/clothing/coveralls/coveralls.component';
 import { ReflectivevestsComponent } from './pages/ppe/bycategory/clothing/reflectivevests/reflectivevests.component';
@@ -86,7 +88,7 @@ import { CoredrillsComponent } from './pages/powertools/bycategories/drills/core
 import { RotaryhammerdrillsComponent } from './pages/powertools/bycategories/drills/rotaryhammerdrills/rotaryhammerdrills.component';
 import { MagneticdrillsComponent } from './pages/powertools/bycategories/drills/magneticdrills/magneticdrills.component';
 import { DrillpressesComponent } from './pages/powertools/bycategories/drills/drillpresses/drillpresses.component';
-import { PagnationComponent } from './pages/pagnation/pagnation.component';
+import { PaginationComponent } from './pages/pagination/pagination.component';
 import { ShoppressComponent } from './pages/powertools/bycategories/shoppress/shoppress.component';
 import { FueltransferpumpsComponent } from './pages/pumpingmachines/fueltransferpumps/fueltransferpumps.component';
 import { SiliconesealantsComponent } from './pages/sealantadhesive/siliconesealants/siliconesealants.component';
@@ -302,6 +304,12 @@ import { GasolineblowersComponent } from './pages/powertools/bycategories/blower
 import { ElectricblowersComponent } from './pages/powertools/bycategories/blowers/electricblowers/electricblowers.component';
 import { PressurewashersaccessoriesComponent } from './pages/cleaningandgardensupplies/pressurewashers/pressurewashersaccessories/pressurewashersaccessories.component';
 import { UmbrellasComponent } from './pages/ppe/bycategory/clothing/umbrellas/umbrellas.component';
+import { HandsawsComponent } from './pages/handtoolsandaccessories/category/handsaws/handsaws.component';
+import { FarmequipmentsComponent } from './pages/farmequipments/farmequipments.component';
+import { FarmmachinesComponent } from './pages/farmequipments/farmmachines/farmmachines.component';
+import { FarmtoolsComponent } from './pages/farmequipments/farmtools/farmtools.component';
+import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
+
 
 
 
@@ -326,6 +334,7 @@ import { UmbrellasComponent } from './pages/ppe/bycategory/clothing/umbrellas/um
     PrivacypolicyComponent,
     FaqComponent,
     SearchBarComponent,
+    PaginationComponent,
     SearchResultsComponent,
     ChemicalwearsComponent,
     BagclosermachinesComponent,
@@ -391,7 +400,6 @@ import { UmbrellasComponent } from './pages/ppe/bycategory/clothing/umbrellas/um
     RotaryhammerdrillsComponent,
     MagneticdrillsComponent,
     DrillpressesComponent,
-    PagnationComponent,
     ShoppressComponent,
     FueltransferpumpsComponent,
     SiliconesealantsComponent,
@@ -545,7 +553,7 @@ import { UmbrellasComponent } from './pages/ppe/bycategory/clothing/umbrellas/um
     HandtoolsMeasuringtapesComponent,
     PliersandcuttersComponent,
     PuttyknifeComponent,
-    SawsComponent,
+    HandsawsComponent,
     ScrewdriversComponent,
     SocketsandratchetsComponent,
     SpannersandwrenchesComponent,
@@ -616,8 +624,12 @@ import { UmbrellasComponent } from './pages/ppe/bycategory/clothing/umbrellas/um
     AnglegrindersComponent,
     CordlessblowersComponent,
     GasolineblowersComponent,
-    ElectricblowersComponent
-
+    ElectricblowersComponent,
+    FarmequipmentsComponent,
+    FarmmachinesComponent,
+    FarmtoolsComponent,
+    GetAQuoteComponent,
+    
 
 
 
@@ -650,7 +662,10 @@ import { UmbrellasComponent } from './pages/ppe/bycategory/clothing/umbrellas/um
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule, 
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

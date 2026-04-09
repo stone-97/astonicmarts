@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Product } from '../models/Product';
-import { HandtoolsandaccessoriesComponent } from '../../pages/handtoolsandaccessories/handtoolsandaccessories.component';
 
 @Injectable({
   providedIn: 'root'
@@ -23,13 +22,14 @@ export class SearchService {
  {
   id: 1,
   name: 'Total 3-in-1 Combo Kit TOSLI241198',
-  category: 'combo-kits',
+  group: 'power-tools',
+  category: 'combo-kits',  
   brand: 'Total',
   price: 370000,
 
   images: [
-    'assets/img/total 3 in 1.jpg',
-    'assets/img/pumping machines/electric fuel desiel transfer oil pump.webp2.webp'
+    'assets/img/total combo kits/total-3-in-1.jpg',
+  
   ],
    jumiaLink: 'https://www.jumia.com.ng/total-3-in-1-cordless-combo-kit-tosli241198-419288503.html',
   kongaLink: '',
@@ -87,7 +87,8 @@ export class SearchService {
   {
   id: 2,
   name: 'INGCO Cordless Impact Wrench Combo Kit COSLI23011',
-  category: 'Combo-Kits',
+    group: 'power-tools',
+    category: 'combo-kits',
   brand: 'INGCO Tools',
   price: 62000,
 
@@ -148,7 +149,8 @@ export class SearchService {
 {
   id: 3,
   name: 'TOTAL Combo Kit TOSLI241189',
-  category: 'Combo-Kits',
+  group: 'power-tools',
+  category: 'combo-kits',
   brand: 'TOTAL Tools',
   price: 58000,
 
@@ -215,6 +217,7 @@ export class SearchService {
   id: 4,
   name: 'INGCO Glue Gun 100W',
   category: 'glue-guns',
+   group: 'power-tools',
   brand: 'INGCO',
   price: 7500,
 
@@ -259,14 +262,13 @@ export class SearchService {
   id: 5,
   name: 'Ingco 1500W Thickness Planer (5–153mm)',
   category: 'planers',
+   group: 'power-tools',
   brand: 'Ingco',
   price: 320000,
 
   images: [
-    'assets/img/planers/ingco 1500w thickness planer.webp',
-    'assets/img/planers/ingco 1500w thickness planer.webp2.webp',
-    'assets/img/planers/ingco 1500w thickness planer.webp3.webp'
-
+    'assets/img/planers/ingco-1500w-thickness-planer.webp',
+    
   ],
 
     inStock: true,
@@ -314,6 +316,7 @@ Items Included in the Package:
 {
   id: 6,
   name: 'Total PPR Welding Machine TT328151',
+  group: 'power-tools',
   category: 'ppr',
   brand: 'Total',
   price: 38000,
@@ -375,10 +378,8 @@ Items Included in the Package:
   price: 95000,
 
   images: [
-    'assets/img/routers/total 1600w router.webp',
-     'assets/img/driils/Bosch Gsr 180-li Cordless Drill Driver  10mm.webp3.webp',
-      'assets/img/driils/ingco core drills 3800w.jpg',
-       'assets/img/routers/total 1600w router.webp'
+    'assets/img/routers/total-1600w-router.webp',
+   
   ],
 
     inStock: true,
@@ -472,6 +473,7 @@ Items Included in the Package:
   name: 'Workflex Edge Binding Machine',
   category: 'edge-binding-machines',
   brand: 'Workflex',
+  group: 'power-tools',
   price: 450000,
 
   images: [
@@ -656,6 +658,7 @@ Items Included in the Package:
   id: 13,
   name: 'Ingco 1100W Impact Drill 13mm (ID11008)',
   category: 'corded-drills',
+  group: 'power-tools',
   brand: 'Ingco',
   price: 42000,
 inStock:true,
@@ -801,7 +804,7 @@ Items Included in the Package:
   brand: 'Eurotek',
   price: 280000,
   images: [
-    'assets/img/drilling-machines/eurotek-35mm-magnetic-drill.jpg'
+    'assets/img/driils/Eurotek-35mm-Magnetic-Drill.jpg'
   ],
 inStock:true,
   description: `The Eurotek 35mm Magnetic Drill is a powerful portable drilling machine designed for precise hole cutting in steel and other ferrous metals. It features a strong electromagnetic base that firmly attaches the machine to metal surfaces, allowing stable drilling even on vertical or overhead positions. With a drilling capacity of up to 35mm, the machine is ideal for fabrication workshops, construction sites, steel structure installation, and industrial maintenance. The drill supports annular cutters and twist drill bits, making it suitable for drilling, countersinking, and reaming operations. Its compact design improves portability while maintaining high drilling accuracy and performance for professional metalworking tasks.
@@ -947,7 +950,7 @@ Items Included in the Package:
   price: 850000,
 
   images: [
-    'assets/img/hydraulic-press/30t-hydraulic-shop-press.png'
+    'assets/img/shop press/Hydraulic-Workshop-ress-20ton.webp'
   ],
 
   inStock: true,
@@ -989,7 +992,7 @@ Items Included in the Package:
   price: 95000,
 
   images: [
-    'assets/img/cutting machines/ingco cut off saw-2000w.webp'
+    'assets/img/cutting machines/ingco-cut-off-saw-2000w.webp'
   ],
 
     inStock: true,
@@ -1137,42 +1140,59 @@ Items Included in the Package:
   kongaLink: 'https://www.konga.com/'
 },
 
+   {
+     id: 24,
+     name: 'INGCO Cordless Polishing Machine-20V-APLI20181',
+     category: 'polishers',
+     brand: 'INGCO',
+     price: 185000,
 
-{
-  id: 24,
-  name: 'Ingco Cordless Angle Polisher',
-  category: 'polishers',
-  brand: 'Ingco',
-  price: 78000,
+     images: [
+       'assets/img/polishers/INGCO Cordless-Polishing-Machine-APLI20181.png'
+     ],
 
-  images: [
-    'assets/img/ingco-cordless-angle-polisher.jpg'
-  ],
+     inStock: true,
 
-    inStock: true,
-  description: 'The Ingco Cordless Angle Polisher is a portable and efficient polishing tool designed for professionals who require flexibility and mobility during polishing tasks. Powered by a rechargeable lithium-ion battery, this cordless polisher allows users to work freely without the restriction of power cables. It is suitable for polishing automotive surfaces, metal parts, furniture, and painted surfaces. The lightweight design and ergonomic grip provide comfortable handling while maintaining precise control during operation. With its powerful motor and durable construction, the Ingco Cordless Angle Polisher delivers reliable performance for both professional workshops and maintenance work.',
+     description: `The INGCO Cordless Polishing Machine APLI20181 is a high-performance power tool designed for polishing, buffing, and surface finishing on a wide range of materials including metal, wood, and plastic. Powered by a reliable lithium-ion battery system, this cordless polisher delivers consistent speed and smooth operation without the limitations of power cords. Its 180mm polishing pad ensures wide surface coverage, making it ideal for automotive detailing, furniture finishing, and industrial surface maintenance.
 
-  specification: `
-  Brand: Ingco
-  Power Source: Cordless Lithium-ion Battery
+Built with durability and user comfort in mind, the machine features an ergonomic handle design for better control and reduced fatigue during extended use. The variable speed control allows users to adjust the polishing intensity based on the material and application, ensuring professional results every time. This tool is suitable for technicians, auto-detailers, carpenters, and DIY users looking for efficiency and convenience in polishing tasks.
+
+Items Included in the Package:
+• 1 × INGCO Cordless Polishing Machine
+• 1 × 180mm Polishing Pad
+• 1 × 4.0Ah Lithium-ion Battery
+• 1 × Charger
+• 1 × Auxiliary Handle
+• 1 × User Manual`,
+
+     specification: `
+  Brand: INGCO
+  Model Number: APLI20181
+  Tool Type: Cordless Polishing Machine
+  Pad Diameter: 180 mm
+  Battery Type: Lithium-ion
+  Battery Capacity: 4.0Ah
   Voltage: 20V
-  No-load Speed: 2000 – 4500 rpm
-  Disc Diameter: 125 mm
-  Application: Surface polishing and finishing
+  No-load Speed: 0 – 3000 RPM (Variable Speed)
+  Speed Control: Yes
+  Application: Polishing, buffing, surface finishing
+  Suitable Materials: Metal, wood, plastic, painted surfaces
   `,
 
-  features: `
-  Cordless design for maximum mobility
-  Powerful motor for efficient polishing
-  Lightweight and ergonomic design
-  Rechargeable lithium-ion battery system
-  Suitable for automotive detailing and surface finishing
-  Durable construction for professional use
+     features: `
+  Cordless design for flexibility and mobility
+  Powerful motor for efficient polishing performance
+  Large 180mm pad for wider surface coverage
+  Variable speed control for different applications
+  Ergonomic handle for comfort and control
+  Durable construction for long-term use
+  Ideal for car detailing, furniture polishing, and workshop use
+  Suitable for professional and DIY applications
   `,
 
-  jumiaLink: 'https://www.jumia.com.ng/',
-  kongaLink: 'https://www.konga.com/'
-},
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
 
 // spray guns
 
@@ -1216,13 +1236,14 @@ Items Included in the Package:
 
 {
   id: 26,
-  name: 'Total 550W Electric Spray Gun',
+  name: 'Total Electric HVLP Floor Based Paint Spray Gun 550W-TT5006',
   category: 'spray-guns',
   brand: 'Total',
   price: 47000,
 
   images: [
-    'assets/img/total-550w-spray-gun.jpg'
+    'assets/img/spray guns/total-spray-gun-550w.jpg2.webp',
+    'assets/img/spray guns/total-spray-gun-550w.jpg'
   ],
 
     inStock: true,
@@ -1497,135 +1518,115 @@ Items Included in the Package:
   Motor Type: Copper motor
   `
 },
+   {
+     id: 33,
+     name: 'INGCO High Pressure Washer HPWR16008',
+     category: 'electric-pressure-washers',
+     brand: 'INGCO',
+     price: 120000,
 
-{
-  id: 33,
-  name: "Total High Pressure Washer",
-  brand: "Total",
-  model: "TGT11236",
-  category: "electric-pressure-washers",
+     images: [
+       'assets/img/pressure and water pumps/High-pressure-washer-1600w-HPWR16008.jpg'
+     ],
 
-  power: "1400W",
-  pressure: "110 Bar",
-  flowRate: "5.5 L/min",
+     inStock: true,
 
-  price: 95000,
+     description: `The INGCO High Pressure Washer HPWR16008 is a powerful and efficient cleaning machine designed for removing stubborn dirt, grease, mud, and grime from various surfaces. Equipped with a high-performance 1600W motor, this pressure washer delivers strong water pressure of up to 140 bar, making it ideal for cleaning cars, driveways, patios, machinery, and outdoor surfaces.
+Built with a durable carbon brush motor and pure copper wire system, the machine ensures reliable performance and long service life. Its compact and ergonomic design makes it easy to handle, store, and transport. The auto stop system enhances safety and energy efficiency by automatically shutting off the motor when the trigger is released.
+This pressure washer is suitable for both domestic and light industrial use, offering convenience, efficiency, and professional cleaning results.
 
-  images: [
-    ""
-  ],
+Items Included in the Package:
+• 1 × INGCO High Pressure Washer
+• 1 × Water Spray Gun
+• 1 × 5m High Pressure Hose
+• 1 × Water Inlet Connector
+• 1 × User Manual`,
 
-    inStock: true,
-  description:
-  "The Total TGT11236 high pressure washer is a compact and efficient 1400W cleaning machine designed for everyday outdoor cleaning tasks. It delivers strong water pressure that effectively removes dirt, mud and grime from vehicles, patios, walls and garden surfaces. The machine features a durable motor and a reliable pump system that ensures steady water flow for consistent cleaning performance. Its lightweight and portable design makes it easy to move around the home, making it ideal for car washing, motorcycle cleaning, outdoor furniture cleaning and general household maintenance.",
-
-  features: `
-  Powerful 1400W motor for efficient cleaning
-  Compact and lightweight design
-  High pressure spray gun for better control
-  Durable pump system for long life
-  Suitable for cars, patios, walls and outdoor surfaces
-  Easy to move and store
-  `,
-
-  specification: `
-  Model: TGT11236
-  Power: 1400W
-  Voltage: 220-240V
-  Frequency: 50Hz
-  Max Pressure: 110 Bar
+     specification: `
+  Brand: INGCO
+  Model Number: HPWR16008
+  Voltage: 220–240V ~ 50/60Hz
+  Input Power: 1600W
+  Motor Type: Carbon Brush Motor
+  Max Pressure: 140 Bar (2030 PSI)
   Flow Rate: 5.5 L/min
-  Motor Type: Copper motor
-  Application: Car washing, patios, walls and outdoor cleaning
-  `
-},
-
-{
-  id: 34,
-  name: "Ingco High Pressure Washer",
-  brand: "Ingco",
-  model: "HPWR20008",
-  category: "electric-pressurewashers",
-
-  power: "2000W",
-  pressure: "150 Bar",
-  flowRate: "6.0 L/min",
-
-  price: 150000,
-
-  images: [
-    "assets/img/products/ingco-hpwr20008.jpg"
-  ],
-
-    inStock: true,
-  description:
-  "The Ingco HPWR20008 high pressure washer is a powerful 2000W cleaning machine designed for heavy-duty cleaning tasks in homes, workshops and commercial environments. It produces a maximum pressure of 150 bar, making it highly effective for removing stubborn dirt, grease and mud from vehicles, driveways, patios and outdoor surfaces. The washer is equipped with a durable copper wire induction motor that ensures long service life and reliable performance.",
-
-  features: `
-  Powerful 2000W copper induction motor
-  High pressure output for deep cleaning
-  Auto-stop system for energy efficiency
-  Durable high pressure hose for extended reach
-  Includes spray gun and detergent bottle
-  Suitable for cars, floors, patios and outdoor equipment
+  Auto Stop System: Yes
+  Application: High-pressure cleaning
+  Suitable Use: Cars, floors, walls, machinery, outdoor surfaces
   `,
 
-  specification: `
-  Model: HPWR20008
-  Power: 2000W
-  Voltage: 220-240V
-  Frequency: 50Hz
-  Max Pressure: 150 Bar (2200 PSI)
-  Flow Rate: 6.0 L/min
-  Motor Type: Copper wire induction motor
-  Hose Length: 5m
-  Accessories: Spray gun, soap bottle
-  `
-},
-
-
-{
-  id: 35,
-  name: "Ingco 2000w High Pressure Washer-HPWR20018",
-  brand: "Ingco",
-  model: "HPWR20018",
-  category: "pressure washers",
-
-  power: "2000W",
-  pressure: "160 Bar",
-  flowRate: "6.5 L/min",
-
-  price: 165000,
-
-  images: [
-    "assets/img/products/ingco-hpwr20018.jpg"
-  ],
-
-    inStock: true,
-  description:
-  "The Ingco HPWR20018 high pressure washer is a robust 2000W cleaning machine built for demanding cleaning applications. With strong water pressure and efficient water flow, it quickly removes stubborn dirt, grease and grime from vehicles, floors, patios and outdoor surfaces. Its durable motor and pump system provide consistent performance while the portable design allows for easy movement during cleaning operations.",
-
-  features: `
-  Powerful 2000W motor for strong cleaning performance
-  High pressure spray system
-  Auto stop function for safety and energy saving
-  Durable high pressure hose
-  Ergonomic spray gun for better control
-  Suitable for vehicles, patios, walls and industrial surfaces
+     features: `
+  Powerful 1600W motor for strong cleaning performance
+  High pressure output of up to 140 bar
+  Efficient water flow for faster cleaning
+  Auto stop system for safety and energy saving
+  Durable copper wire motor for long-lasting use
+  Compact and portable design
+  Easy to operate and maintain
+  Ideal for car wash, home cleaning, and workshop use
   `,
 
-  specification: `
-  Model: HPWR20018
-  Power: 2000W
-  Voltage: 220-240V
-  Frequency: 50Hz
-  Max Pressure: 160 Bar
-  Flow Rate: 6.5 L/min
-  Motor Type: Copper motor
-  Hose Length: 5m
-  Application: Vehicle washing and outdoor cleaning
-  `
-},
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
+
+   {
+     id: 34,
+     name: 'INGCO High Pressure Washer HPWR15028',
+     category: 'electric-pressure-washers',
+     brand: 'INGCO',
+     price: 105000,
+
+     images: [
+       'assets/img/pressure and water pumps/High-pressure-washer-HPWR15028.jpg'
+     ],
+
+     inStock: true,
+
+     description: `The INGCO High Pressure Washer HPWR15028 is a reliable and efficient cleaning machine designed for domestic and light industrial cleaning applications. Powered by a durable 1500W copper wire induction motor, this pressure washer delivers consistent performance and long-lasting durability.
+
+With a maximum pressure of 100 bar, it is suitable for washing cars, motorcycles, driveways, walls, outdoor floors, and equipment. The machine provides a strong and steady water flow that effectively removes dirt, grease, and stubborn stains.
+
+Its compact design and ergonomic structure make it easy to operate and store, while the extended 8-meter high-pressure hose allows greater flexibility and reach during cleaning tasks. This pressure washer is ideal for homeowners, car wash operators, and workshop use.
+
+Items Included in the Package:
+• 1 × INGCO High Pressure Washer
+• 1 × Water Spray Gun
+• 1 × 8m High Pressure Metal Hose
+• 1 × 1.5m Water Inlet Hose
+• 1 × Quick Connector
+• 1 × Water Inlet Screw
+• 1 × Self-absorbing Water Filter
+• 1 × User Manual`,
+
+     specification: `
+  Brand: INGCO
+  Model Number: HPWR15028
+  Voltage: 220–240V ~ 50Hz
+  Input Power: 1500W
+  Motor Type: Copper Wire Induction Motor
+  Max Pressure: 100 Bar (1450 PSI)
+  Flow Rate: 6.7 L/min
+  Hose Length: 8 meters
+  Inlet Hose Length: 1.5 meters
+  Application: High-pressure cleaning
+  Suitable Use: Cars, walls, floors, driveways, machinery
+  `,
+
+     features: `
+  Powerful 1500W motor for efficient cleaning
+  High pressure output of 100 bar for tough dirt removal
+  Durable copper induction motor for long lifespan
+  Strong and stable water flow for better performance
+  Long 8m high-pressure hose for extended reach
+  Compact and portable design for easy handling
+  Easy to assemble and operate
+  Ideal for home, car wash, and workshop cleaning
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
+   },
 
     //  heatguns
 
@@ -1633,6 +1634,7 @@ Items Included in the Package:
   id: 36,
   name: 'Ingco 2000w Heat Gun 2000w-HG200028',
   category: 'heat-guns',
+  group: 'power-tools',
   brand: 'Ingco',
   price: 18500,
 
@@ -2435,43 +2437,56 @@ Items Included in the Package:
 
    {
      id: 56,
-     name: 'TOTAL 20V Cordless Blower – TABLI20323 Lithium-Ion Portable Air Blower',
+     name: 'DeWALT 68V XR FLEXVOLT Axial Blower',
      category: 'cordless-blowers',
-     brand: 'TOTAL',
-     price: 135000, // Current price on Jumia Nigeria as of recent listing (bare tool)
+     brand: 'DeWALT',
+     price: 180000,
+
      images: [
-       'assets/img/cordless-blowers/TOTAL-20V-Cordless-Blower-TABLI20323.jpg',
-       'assets/img/tools/total-blower-tabli20323-2.jpg',
-       'assets/img/tools/total-blower-tabli20323-3.jpg'
+       'assets/img/blowers/Dewalt-Cordless-Blower-Dewalt-Leaf-Blower-20v-Max-Cordless-Leaf-3.jpg'
      ],
+
      inStock: true,
-     jumiaLink: 'https://www.jumia.com.ng/total-20v-cordless-blower-tabli20323-lithium-ion-portable-air-blower-419300651.html',
-     kongaLink: '',
-     description: `The TOTAL 20V Cordless Blower (TABLI20323) is a lightweight, portable Lithium-Ion air blower designed for easy cleanup of leaves, dust, grass clippings, and light debris on construction sites, gardens, driveways, patios, and workshops. It delivers strong airflow without the hassle of cords, making it ideal for both homeowners and professionals. This is a bare tool – battery and charger are sold separately and compatible with the TOTAL 20V Li-ion battery platform.`,
+
+     description: `The DeWALT 68V XR FLEXVOLT Axial Blower is a high-performance cordless blower designed for powerful and efficient cleaning of outdoor spaces. Built with advanced brushless motor technology, this blower delivers superior airflow and extended runtime, making it ideal for professional and heavy-duty applications.
+De Astonic Technical Tools + This blower features a low-noise design, making it suitable for use in residential areas, offices, and noise-sensitive environments without causing disturbance. It provides strong air velocity and volume, allowing users to clear leaves, dust, debris, and light waste quickly and efficiently.
+With its ergonomic and lightweight construction, the blower ensures maximum comfort during prolonged use. The axial fan design enhances airflow efficiency, delivering consistent and powerful performance across various cleaning tasks.
+De Astonic Technical Tools + Whether you are maintaining gardens, workshops, construction sites, or warehouses, this blower offers unmatched convenience with cordless mobility and reliable battery-powered operation.
+
+Items Included in the Package:
+• 1 × DeWALT Axial Blower
+• 1 × FLEXVOLT Battery
+• 1 × Battery Charger
+• 1 × Blower Tube
+• 1 × User Manual`,
+
      specification: `
-  - Product Name: TOTAL 20V Cordless Blower
-  - Model: TABLI20323
-  - Voltage: 20V DC
-  - No-load speed: 15,000 rpm
-  - Average air volume: 8.5 m³/min
-  - Maximum air speed: 115 km/h (approx. 32 m/s)
-  - Battery: Not included (compatible with TOTAL 20V 2.0Ah / 4.0Ah Lithium-Ion batteries)
-  - Charger: Not included
-  - Operation: Cordless / One-handed use
-  - Packaging: Color box
-  - Usage: Garden cleanup, construction site cleaning, workshop dust removal, blowing leaves and debris
+  Brand: DeWALT
+  Model: XR FLEXVOLT Axial Blower
+  Voltage: 54V / 68V MAX
+  Motor Type: Brushless Motor
+  Air Speed: Up to 200 km/h
+  Air Volume: High airflow axial fan system
+  Noise Level: Low-noise operation
+  Power Source: Cordless (Battery Powered)
+  Battery Type: FLEXVOLT Lithium-ion
+  Application: Outdoor cleaning and debris removal
+  Suitable Use: Gardens, workshops, warehouses, construction sites
   `,
+
      features: `
-  - Powerful 20V motor with 15,000 rpm no-load speed
-  - High air volume (8.5 m³/min) and max speed of 115 km/h for effective blowing
-  - Lightweight and portable design for comfortable one-handed operation
-  - Cordless freedom – no tangled cables or need for power outlets
-  - Compatible with TOTAL 20V Li-ion battery system (share batteries with other TOTAL tools)
-  - Ideal for dry leaves, dust, grass clippings, and light debris
-  - No electricity required – perfect for remote sites and outdoor use
-  - Cost-effective bare tool option if you already own TOTAL 20V batteries
-  - Suitable for homeowners, steel fixers, and small construction/maintenance teams
-  `
+  High-efficiency brushless motor for longer runtime and durability
+  Powerful airflow for fast and effective debris clearing
+  Advanced axial fan technology for maximum air output
+  Low-noise design suitable for residential and commercial use
+  Cordless operation for mobility and convenience
+  Lightweight and ergonomic design for user comfort
+  Compatible with FLEXVOLT battery system
+  Ideal for professional and domestic outdoor cleaning
+  `,
+
+     jumiaLink: 'https://www.jumia.com.ng/',
+     kongaLink: 'https://www.konga.com/'
    },
 
 
@@ -3334,7 +3349,12 @@ showSimilar: true,
   category: 'Safety-Goggle',
   brand: 'Safety Jogger',
   price: 32000,
-  images: ['assets/img/safety-jogger-sarek.jpg'],
+  images: ['/assets/img/safety eye google/Safety-Jogger-SAREK-Anti-Fog-Safety-Goggles-2.webp',
+    'sassets/img/safety eye google/Safety-Jogger-SAREK-Anti-Fog-Safety-Goggles.webp',
+      'assets/img/safety eye google/Safety-Jogger-SAREK-Anti-Fog-Safety-Goggles.webp-3.png'
+
+  ],
+          
 
     inStock: true,
      jumiaLink: '',
@@ -3410,7 +3430,9 @@ showSimilar: true,
   category: 'fall-arresters',
   brand: 'Generic',
   price: 120000,
-  images: ['assets/img/belt/fall-arrestor-15m.jpg'],
+  images: ['assets/img/fall arresters/fall-arrester-15mm.jpg'
+
+  ],
 
     inStock: true,
   description: '15 meter retractable fall arrester designed to protect workers operating at height. This safety device uses a high-strength galvanized steel wire rope with an automatic locking mechanism that instantly stops a fall. It is widely used in construction, scaffolding, tower climbing, roofing, and industrial maintenance where reliable fall protection is required.',
@@ -4599,7 +4621,7 @@ showSimilar: true,
   price: 45000,
 
   images: [
-    'assets/img/fall arresters/fall arrester.jpg'
+    'assets/img/fall arresters/Toyo-3m-retractable-all-arrestor.jpg'
   ],
 
     inStock: true,
@@ -4714,7 +4736,7 @@ showSimilar: true,
   price: 105000,
 
   images: [
-    'assets/img/helmets/1TOTAL TSP9103 Auto Darkening Welding Helmet.jpg',
+    'assets/img/helmets and faceshield/1TOTAL TSP9103-Auto-Darkening-Welding-Helmet.jpg',
   ],
 
   inStock: true,
@@ -4766,7 +4788,7 @@ showSimilar: true,
   price: 26000,
 
   images: [
-    'assets/img/helmets/AJUSCO CHINSTRAP safety jogger helmets.webp',
+    'assets/img/helmets and faceshield/AJUSCO CHINSTRAP safety jogger helmets.webp',
   ],
 
   inStock: true,
@@ -6155,6 +6177,8 @@ The chocks feature a compact and portable design, making them easy to carry, pos
   id: 7014,
   name: 'Garrett Handheld Metal Detector',
   category: 'metal-detectors',
+  group: 'safety-traffic',
+  
   brand: 'Garrett',
   price: 45000,
 
@@ -7402,10 +7426,11 @@ These fibreglass multipurpose ladders are reliable, durable, and essential tools
   ],
 
   images: [
-    'assets/img/ladders/aluminium-4x4.jpg',
-    'assets/img/ladders/aluminium-4x5.jpg',
-    'assets/img/ladders/aluminium-4x6.jpg',
-    'assets/img/ladders/aluminium-4x7.jpg'
+    'assets/img/ladders/4x4 – 4x7 Multipurpose-Aluminium-Ladder.avif-5.webp',
+    'assets/img/ladders/4x4 – 4x7 Multipurpose-Aluminium-Ladder.avif',
+    'assets/img/ladders/4x4 – 4x7 Multipurpose-Aluminium-Ladder-4.avif',
+    'assets/img/ladders/4x4 – 4x7 Multipurpose-Aluminium-Ladder.avif-2.jpg',
+    'assets/img/ladders/4x4 – 4x7 Multipurpose-Aluminium-Ladder.avif-3.jpg'
   ],
 
   inStock: true,
@@ -7463,7 +7488,7 @@ The foldable design allows for easy storage and transport, making it convenient 
   ],
 
   images: [
-    'src/assets/img/ladders/24ft extension Ladder.webp',
+    'assets/img/ladders/24ft-extension-Ladder.webp',
     'assets/img/ladders/40 Feet Extension Ladder - 20 By 2.jpg',
     'assets/img/ladders/extension-16ft.jpg',
     'assets/img/ladders/extension-20ft.jpg',
@@ -7526,9 +7551,9 @@ These extension ladders are essential tools for professionals and homeowners who
   ],
 
   images: [
-    'assets/img/ladders/step-3.jpg',
-    'assets/img/ladders/step-4.jpg',
-    'assets/img/ladders/step-5.jpg',
+    'assets/img/ladders/aluminium-step-ladders-1.jpg',
+    'assets/img/ladders/aluminium step ladders-1.jpg2.jp',
+    'assets/img/ladders/aluminium-step-ladders-1.jpg3.jpg',
     'assets/img/ladders/step-6.jpg',
     'assets/img/ladders/step-7.jpg',
     'assets/img/ladders/step-8.jpg'
@@ -7589,7 +7614,7 @@ The foldable design allows for easy storage in tight spaces, making it a conveni
   ],
 
   images: [
-    'assets/img/ladders/fibreglass-step-4.jpg',
+    'assets/img/ladders/8-Steps-fiberglass-Double-A-Ladder.jpeg',
     'assets/img/ladders/fibreglass-step-5.jpg',
     'assets/img/ladders/fibreglass-step-6.jpg',
     'assets/img/ladders/fibreglass-step-7.jpg',
@@ -7643,7 +7668,7 @@ These fibreglass step ladders are reliable, durable, and essential for safe work
      brand: 'Generic',
      price: 450000, // Current market price in Nigeria (around ₦400,000 - ₦550,000 depending on manual or pneumatic model and seller)
      images: [
-       'assets/img/shop press/Hydraulic Workshop Press 20ton.webp',
+       'assets/img/shop press/Hydraulic-Workshop-press-30ton.webp',
        'assets/img/tools/hydraulic-press-20ton-2.jpg',
        'assets/img/tools/hydraulic-press-20ton-3.jpg'
      ],
@@ -8387,7 +8412,7 @@ This air compressor is a reliable and essential machine for mechanics, technicia
      price: 300000,
 
      images: [
-       'assets/img/welding/maxmech-arc500-1.jpg',
+       'assets/img/welding machines/arc welding 500.png',
        'assets/img/welding/maxmech-arc500-2.jpg',
        'assets/img/welding/maxmech-arc500-3.jpg'
      ],
@@ -9421,7 +9446,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 8000,
 
      images: [
-       'assets/img/testers/ac-voltage-tester-pen-1.jpg',
+       'assets/img/generaltesters/Single Phase Non-Contact AC Voltage Tester Pen AC-8 (12–1000V).jpg',
        'assets/img/testers/ac-voltage-tester-pen-2.jpg',
        'assets/img/testers/ac-voltage-tester-pen-3.jpg'
      ],
@@ -9607,7 +9632,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 12000,
 
      images: [
-       'assets/img/testers/ph-meter-1.jpg',
+       'assets/img/welding machines/arc welding 500.png',
        'assets/img/testers/ph-meter-2.jpg',
        'assets/img/testers/ph-meter-3.jpg'
      ],
@@ -10179,7 +10204,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
    {
      id: 13038,
      name: '20KG Mechanical Weighing Scale with Stainless Steel Bowl – Heavy-Duty',
-     category: 'analague-kitchen-scales',
+     category: 'analogue-kitchen-scales',
      brand: 'Generic',
      price: 35000, // adjust based on your market price
 
@@ -10658,7 +10683,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 12000,
 
      images: [
-       'assets/img/testers/ph-meter-1.jpg',
+       'assets/img/welding machines/arc welding 500.png',
        'assets/img/testers/ph-meter-2.jpg',
        'assets/img/testers/ph-meter-3.jpg'
      ],
@@ -10703,7 +10728,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
   price: 15000,
 
   images: [
-    'assets/img/measuring tools/network cable tester rj11 rj45 1.jpg',
+    'assets/img/generaltesters/Rj11 and Rj 45 Network Cable Tester-2.jpg',
     'assets/img/measuring tools/network cable tester rj11 rj45 2.jpg',
     'assets/img/measuring tools/network cable tester rj11 rj45 3.jpg'
   ],
@@ -10779,7 +10804,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
    
    
-  //  Handtoolsandaccessories
+  //  Hand tools and accessories
 
   // starts at 16001
   // ends at 19000
@@ -11256,7 +11281,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 18500, // adjust based on your market price (commonly ₦15,000 - ₦25,000 in Nigeria for similar 8-piece long sets)
 
      images: [
-       'assets/img/puttyknive/8PCS Magnetic Nut Driver Set, 6 Inches Long Nut Drivers.jpg',
+       'assets/img/drivers/8PCS-Magnetic-Nut-Driver.jpg',
        'assets/img/tools/magnetic-nut-driver-set-6-inch-2.jpg',
        'assets/img/tools/magnetic-nut-driver-set-6-inch-3.jpg'
      ],
@@ -11400,7 +11425,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 14500, // adjust based on your market price (commonly ₦12,000 - ₦18,000 in Nigeria)
 
      images: [
-       'assets/img/allen keys and hand riveters/bosch allen keys 9pcs.webp',
+       'assets/img/allen keys and hand riveters/bosc-allen-keys-9pcs.webp',
        'assets/img/tools/bosch-hex-key-set-9pcs-1600a01th5-2.jpg',
        'assets/img/tools/bosch-hex-key-set-9pcs-1600a01th5-3.jpg'
      ],
@@ -11446,7 +11471,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 14000, // adjust based on your market price
 
      images: [
-       'assets/img/allen keys/ingco Hand Riveter 10.5 Inch HRS108 ING-HT.webp2.webp',
+       '/assets/img/allen keys and hand riveters/ingco Hand Riveter 10.5 Inch HRS108 ING-HT.webp2.webp',
        'assets/img/tools/ingco-riveter-2.jpg',
        'assets/img/tools/ingco-riveter-3.jpg'
      ],
@@ -11589,7 +11614,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 8500, // adjust based on your market price (commonly ₦6,000 - ₦12,000 in Nigeria)
 
      images: [
-       'assets/img/bits and screws/5 Piece Flat Wood Bit Set.jpg',
+       'assets/img/driil bits and screws/5 PieceFlat-Wood-Bit-Set.jpg',
        'assets/img/tools/5-piece-flat-wood-bit-set-2.jpg',
        'assets/img/tools/5-piece-flat-wood-bit-set-3.jpg'
      ],
@@ -11681,7 +11706,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 4500, // adjust based on your market price (commonly ₦3,500 - ₦6,000 in Nigeria for single piece)
 
      images: [
-       'src/assets/img/driil bits and screws/Bosch CYL-3, Concrete drill bit 8 x 80 x 120 mm.jpg',
+       'assets/img/driil bits and screws/Bosch-CYL-3-Concrete-drill-bit-8 x 80 x 120 mm.jpg',
        'assets/img/tools/bosch-cyl-3-8x80x120-2.jpg',
        'assets/img/tools/bosch-cyl-3-8x80x120-3.jpg'
      ],
@@ -11731,7 +11756,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 18500, // adjust based on your market price (commonly ₦12,000 - ₦25,000 in Nigeria for 31-piece kits)
 
      images: [
-       'src/assets/img/sand papers and disc/Buffing Polishing Pads - 3 Inch 31 Pieces.jpg',
+       'assets/img/sand papers and disc/Buffing Polishing Pads - 3 Inch 31 Pieces.jpg',
        'assets/img/tools/3-inch-31pcs-polishing-pad-kit-2.jpg',
        'assets/img/tools/3-inch-31pcs-polishing-pad-kit-3.jpg'
      ],
@@ -11987,7 +12012,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 18500, // adjust based on your market price (commonly ₦12,000 - ₦28,000 in Nigeria depending on tooth count)
 
      images: [
-       'assets/img/circular saw blades/Bosch 10 Inch Circular Saw Blade 254mm.jpg',
+       'assets/img/saw blades/bosch-circular-saw-blade-0-inch.webp',
        'assets/img/tools/bosch-10-inch-circular-saw-blade-2.jpg',
        'assets/img/tools/bosch-10-inch-circular-saw-blade-3.jpg'
      ],
@@ -12240,6 +12265,44 @@ This charger is reliable, efficient, and essential for automotive and industrial
    },
 
 
+
+   {
+     id: 16031,
+     name: 'Round Sanding Paper 225mm 100 Grit',
+     category: 'sand-papers',
+     brand: 'Generic',
+     price: 5000,
+
+     images: [
+       'assets/img/sand papers and disc/982-ROUND SANDING PAPER 225 mm 100 GRIT.jpg',
+       'assets/img/tools/round sanding paper 225mm 100 grit 2.jpg',
+       'assets/img/tools/round sanding paper 225mm 100 grit 3.jpg'
+     ],
+
+     inStock: true,
+
+     description: 'The Round Sanding Paper 225mm 100 Grit is a high-quality abrasive disc designed for smooth sanding and surface preparation. It is ideal for removing rough surfaces, old paint, and imperfections from wood, metal, and drywall.\n\nWith a 100 grit rating, it provides a medium-coarse finish, making it suitable for both material removal and surface leveling. The 225mm diameter makes it compatible with large sanding machines such as drywall sanders, ensuring faster coverage and efficiency.\n\nBuilt with durable abrasive material, this sanding paper offers long-lasting performance and consistent results, making it suitable for both professional and DIY applications.',
+
+     specification: `
+  Type: Round sanding disc
+  Diameter: 225mm
+  Grit: 100 (medium-coarse)
+  Material: Aluminum oxide abrasive
+  Compatibility: Drywall sanders / sanding machines
+  Application: Wood, metal, paint removal, surface preparation
+  `,
+
+     features: `
+  225mm large diameter for wide surface coverage
+  100 grit for effective material removal and smoothing
+  Durable abrasive material for long-lasting use
+  Provides consistent and even sanding results
+  Suitable for wood, metal, and drywall surfaces
+  Ideal for professional and DIY use
+  Compatible with most drywall sanding machines
+  Easy to install and replace
+  `
+   },
   //  ends at 19000
 
 
@@ -12512,7 +12575,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
    {
      id: 19007,
      name: 'TOTAL Vibrator Poker 45mm / 6m (TPVP1451)',
-     category: 'concrete-vibrators',
+     category: 'poker-hose',
      brand: 'TOTAL',
      price: 95000, // adjust based on your market price (commonly ₦75,000 - ₦120,000 in Nigeria)
 
@@ -12758,7 +12821,9 @@ This charger is reliable, efficient, and essential for automotive and industrial
      category: 'Fall-Arresters',
      brand: 'Generic',
      price: 120000,
-     images: ['assets/img/belt/fall-arrestor-15m.jpg'],
+     images: ['assets/img/fall arresters/15m-Safety-Rope-Fall-Protection-Equipment-150kg-Capacity-Arrester.webp'
+       
+     ],
 
    inStock: true,
      description: '15 meter retractable fall arrester designed to protect workers operating at height. This safety device uses a high-strength galvanized steel wire rope with an automatic locking mechanism that instantly stops a fall. It is widely used in construction, scaffolding, tower climbing, roofing, and industrial maintenance where reliable fall protection is required.',
@@ -12838,7 +12903,8 @@ This charger is reliable, efficient, and essential for automotive and industrial
      brand: 'Toyo',
      price: 144000, // Current price range on Jumia Nigeria (around ₦144,000 - ₦150,000)
      images: [
-       'assets/img/fall-protection/Toyo-6m-Retractable-Fall-Arrestor.jpg',
+       'assets/img/fall arresters/Toyo-6m-retractable-fall-arrestor.jpg',
+       'assets/img/fall arresters/Toyo-3m-retractable-all-arrestor.jpg',
        'assets/img/tools/toyo-fall-arrestor-6m-2.jpg',
        'assets/img/tools/toyo-fall-arrestor-6m-3.jpg'
      ],
@@ -13454,13 +13520,13 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
    {
      id: 22009,
-     name: 'INGCO Industrial High Pressure Washer 130Bar 3000W HPWR30008P',
+     name: 'INGCO Industrial High Pressure Washer 130Bar 3000W-HPWR30008P',
      category: 'industrial-pressure-washer',
      brand: 'INGCO',
      price: 1250000,
 
      images: [
-       'assets/img/pressure-washer/INGCO-HPWR30008P-Industrial-High-Pressure-Washer.jpg'
+       'assets/img/pressure and water pumps/ingco-gasoline-industrial-pressure-washer-hpwr30008.jpg'
      ],
 
      inStock: true,
@@ -13637,7 +13703,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 285000,
 
      images: [
-       'assets/img/vacuum-cleaner/TOTAL-TVC24751-Wet-Dry-Vacuum-Cleaner.jpg'
+       'assets/img/vacuum cleaners and hoses/total-industrial-vacuume-cleaners-TVC24751.jpeg'
      ],
 
      inStock: true,
@@ -13676,13 +13742,13 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
    {
      id: 22014,
-     name: 'TOTAL TGT616151 1600W Electric Lawn Mower',
+     name: 'TOTAL 1600W Electric Lawn Mower-TGT616151 ',
      category: 'electric-cordless-lawn-mower',
      brand: 'Total',
      price: 185000,
 
      images: [
-       'assets/img/lawn-mower/TOTAL-TGT616151-1600W-Electric-Lawn-Mower.jpg'
+       'assets/img/lawn mowers/total-1600w-electric-lawn-mower-TGT616152.jpg'
      ],
 
      inStock: true,
@@ -13807,7 +13873,7 @@ This charger is reliable, efficient, and essential for automotive and industrial
      price: 12000,
 
      images: [
-       'src/assets/img/hose/hose-connector-pressure-washer.jpg',
+       'assets/img/hose/hose-connector-pressure-washer.jpg',
      ],
 
      inStock: true,
@@ -13973,11 +14039,94 @@ This charger is reliable, efficient, and essential for automotive and industrial
 
      jumiaLink: 'https://www.jumia.com.ng/catalog/?q=ingco+cordless+lawn+mower',
      kongaLink: 'https://www.konga.com/search?search=ingco+cordless+lawn+mower'
-   }
+   },
 
 //  ends at 24000
 
+// farm tools
 
+  //  start at 25000
+
+  {
+     id: 25000,
+     name: 'TOTAL Gasoline Tiller 196cc (TGC5001)',
+     category: 'farm-machines',
+     brand: 'TOTAL',
+     price: 450000,
+
+     images: [
+       'assets/img/farm equipment/TOTAL GASOLINE TILLER 196cc (TGC5001).jpg',
+       'assets/img/tools/total gasoline tiller tgc5001 2.jpg',
+       'assets/img/tools/total gasoline tiller tgc5001 3.jpg'
+     ],
+
+     inStock: true,
+
+     description: 'The TOTAL Gasoline Tiller 196cc (TGC5001) is a powerful agricultural machine designed for efficient soil cultivation, tilling, and land preparation. Equipped with a robust 196cc gasoline engine, it delivers high performance suitable for both small-scale farms and professional agricultural use.\n\nThis tiller is built to break up hard soil, mix nutrients, and prepare planting beds with ease. Its strong rotating tines penetrate the soil effectively, improving aeration and ensuring optimal conditions for crop growth.\n\nDesigned for durability and ease of use, it features sturdy construction, ergonomic handles, and smooth maneuverability. It is ideal for farmers, gardeners, and landscapers looking for a reliable and efficient tilling solution.',
+
+     specification: `
+  Model: TGC5001
+  Brand: TOTAL
+  Engine Type: Gasoline engine
+  Engine Capacity: 196cc
+  Power Output: High-performance engine
+  Tilling Width: Approx. 500mm
+  Tilling Depth: Adjustable
+  Fuel Type: Petrol (Gasoline)
+  Application: Soil cultivation, farming, gardening
+  `,
+
+     features: `
+  Powerful 196cc gasoline engine for heavy-duty performance
+  Efficient soil tilling and land preparation
+  Strong rotating tines for deep soil penetration
+  Adjustable tilling depth for different applications
+  Durable construction for long-term use
+  Ergonomic handle design for comfort and control
+  Suitable for farming, gardening, and landscaping
+  Easy to operate and maintain
+  `
+   },
+
+   {
+     id: 25001,
+     name: 'Carbon Steel Garden Spade Shovel with Handle',
+     category: 'farm-tools',
+     brand: 'Generic',
+     price: 18000,
+
+     images: [
+       'assets/img/farm equipment/Steel Garden Spade Shovel With Handle.avif',
+       'assets/img/tools/garden spade shovel 2.jpg',
+       'assets/img/tools/garden spade shovel 3.jpg'
+     ],
+
+     inStock: true,
+
+     description: 'The Carbon Steel Garden Spade Shovel with Handle is a durable and versatile agricultural tool designed for digging, lifting, and moving soil, sand, and other materials. Made from high-quality carbon steel, the blade offers excellent strength, sharpness, and resistance to wear, making it suitable for tough farming and gardening tasks.\n\nThe shovel features a sturdy handle that provides a comfortable grip and better control during use. Its ergonomic design reduces strain, allowing for extended use without discomfort. The strong blade edge easily penetrates soil, making digging and planting more efficient.\n\nIdeal for farmers, gardeners, and construction workers, this spade shovel is a reliable tool for land preparation, planting, and general outdoor work.',
+
+     specification: `
+  Material: Carbon steel blade
+  Handle Material: Wood / reinforced metal (varies)
+  Blade Type: Flat / slightly curved spade
+  Length: Standard full-length handle
+  Grip: Ergonomic handle design
+  Application: Digging, lifting, soil preparation, gardening
+  `,
+
+     features: `
+  Strong carbon steel blade for durability and long life
+  Sharp edge for easy soil penetration
+  Sturdy handle for better control and comfort
+  Suitable for farming, gardening, and construction tasks
+  Ergonomic design reduces user fatigue
+  Multi-purpose tool for digging and lifting materials
+  Weather-resistant and reliable performance
+  Easy to use and maintain
+  `
+   }
+
+  // ends at 27000
 
 
 

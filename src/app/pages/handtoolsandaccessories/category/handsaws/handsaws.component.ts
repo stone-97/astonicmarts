@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
-import { Product } from '../../../core/models/Product';
-import { SearchService } from '../../../core/services/search.service';
-import { Category } from '../../../core/models/category.model';
-
-
+import { Product } from '../../../../core/models/Product';
+import { SearchService } from '../../../../core/services/search.service';
+import { Category } from '../../../../core/models/category.model';
 
 @Component({
-  selector: 'app-farmmachines',
-  templateUrl: './farmmachines.component.html',
-  styleUrl: './farmmachines.component.css'
+  selector: 'app-handsaws',
+  templateUrl: './handsaws.component.html',
+  styleUrl: './handsaws.component.css'
 })
-export class FarmmachinesComponent {
-
+export class HandsawsComponent {
 
 
   products: Product[] = [];
@@ -19,8 +16,9 @@ export class FarmmachinesComponent {
   constructor(private SearchService: SearchService) { }
 
   ngOnInit() {
-    this.products = this.SearchService.getProductsByCategory('farm-machines');
+    this.products = this.SearchService.getProductsByCategory('hand-saws');
   }
+
 
 
 
@@ -571,8 +569,6 @@ export class FarmmachinesComponent {
     { name: 'shoppress', link: '/shoppress' }
   ]
 }
-
-
 
 
 

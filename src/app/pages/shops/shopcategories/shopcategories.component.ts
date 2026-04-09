@@ -208,35 +208,39 @@ lifeSavingEquipment = [
 
 // powertools
 
-powerToolCategories = [
-  { name: 'Heat Guns', link: '/heatguns' },
-  { name: 'Cutting Machines', link: '/cuttingmachines' },
-  { name: 'Mixers', link: '/mixers' },
-  { name: 'Polishers', link: '/polishers' },
-  { name: 'Spray Guns', link: '/sprayguns' },
-  { name: 'Bag Closer Machines', link: '/bagclosermachines' },
-  { name: 'Nailers', link: '/nailers' },
-  { name: 'Trimmers', link: '/trimmers' },
-  { name: 'General Gun Tools', link: '/generalguntools' },
-  { name: 'Impulse Sealers', link: '/impulsesealers' },
-  { name: 'Planers', link: '/planers' },
-  { name: 'PPR Machines', link: '/pprmachines' },
-  { name: 'Routers', link: '/routers' },
-  { name: 'Sanders', link: '/sanders' },
-  { name: 'Edge Binding Machines', link: '/edgebinders' },
-  { name: 'Wall Chasers', link: '/wallchasers' },
-  { name: 'Grease Guns', link: '/greaseguns' },
-  { name: 'Combo Kits', link: '/combokits' }
-];
+  powerToolCategories = [
+    { name: 'Heat Guns', slug: 'heatguns', link: '/heatguns' },
+    { name: 'Cutting Machines', slug: 'cuttingmachines', link: '/cuttingmachines' },
+    { name: 'Mixers', slug: 'mixers', link: '/mixers' },
+    { name: 'Polishers', slug: 'polishers', link: '/polishers' },
+    { name: 'Spray Guns', slug: 'sprayguns', link: '/sprayguns' },
+    { name: 'Bag Closer Machines', slug: 'bagclosermachines', link: '/bagclosermachines' },
+    { name: 'Nailers', slug: 'nailers', link: '/nailers' },
+    { name: 'Trimmers', slug: 'trimmers', link: '/trimmers' },
+    { name: 'General Gun Tools', slug: 'generalguntools', link: '/generalguntools' },
+    { name: 'Impulse Sealers', slug: 'impulsesealers', link: '/impulsesealers' },
+    { name: 'Planers', slug: 'planers', link: '/planers' },
+    { name: 'PPR Machines', slug: 'pprmachines', link: '/pprmachines' },
+    { name: 'Routers', slug: 'routers', link: '/routers' },
+    { name: 'Sanders', slug: 'sanders', link: '/sanders' },
+    { name: 'Edge Binding Machines', slug: 'edgebandingmachines', link: '/edgebandingmachines' },
+    { name: 'Wall Chasers', slug: 'wallchasers', link: '/wallchasers' },
+    { name: 'Grease Guns', slug: 'greaseguns', link: '/greaseguns' },
 
+    // ✅ IMPORTANT
+    { name: 'Combo Kits', slug: 'combokits', link: '/combokits' }
+  ];
+  
 drillCategories = [
-  { name: 'Corded Drills', link: '/cordeddrills' },
+  { name: 'Corded Drills', slug: 'cordeddrills', link: '/cordeddrills' },
   { name: 'Cordless Drills & Drivers', link: '/cordlessdrillsanddrivers' },
   { name: 'Rotary Hammer Drills', link: '/rotaryhammerdrills' },
   { name: 'Drill Presses', link: '/drillpresses' },
   { name: 'Magnetic Drills', link: '/magneticdrills' },
   { name: 'Core Drills', link: '/coredrills' }
 ];
+
+  
 
   grinderCategories = [
     { name: 'Angle Grinders', link: '/anglegrinders' },
@@ -546,9 +550,9 @@ handToolsCategories = [
   { name: 'Tiles Cutters', link: '/tilescutters' },
   { name: 'General Drivers', link: '/drivers' },
   { name: 'Flaring Tools', link: '/flaringtools' },
-  { name: 'Bearing Pullers', link: 'bearingpullers' },
+  { name: 'Bearing Pullers', link: '/bearingpullers' },
   { name: 'Toolssets', link: '/toolssets' },
-  { name: 'Hand Saw', link: '/saws' },
+  { name: 'Hand Saws', link: '/handsaws' },
   { name: 'Allen Keys', link: '/allenkeys' },
   { name: 'puttyknives', link: '/puttyknife' },
 ];
@@ -675,8 +679,8 @@ cleaningGardenSupplies = {
 // farm equipments
 
 farmCategories = [
-  { name: 'Farm Machines', link: '/farm-machines' },
-  { name: 'Farm Tools', link: '/farm-tools' }
+  { name: 'Farm Machines', link: '/farmmachines' },
+  { name: 'Farm Tools', link: '/farmtools' }
 ];
 
 

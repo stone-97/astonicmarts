@@ -1,0 +1,64 @@
+<div class="quote-container">
+  <div class="quote-card">
+
+    <h3>Request a Quote</h3>
+
+    <form [formGroup]="quoteForm" (ngSubmit)="submitQuote()">
+
+      <!-- ROW 1 -->
+      <div class="form-row">
+        <input type="text" placeholder="Full Name" formControlName="fullName">
+        <input type="text" placeholder="Address" formControlName="address">
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="form-row">
+        <input type="text" placeholder="Phone Number" formControlName="phone">
+        <input type="text" placeholder="Alternative Phone" formControlName="altPhone">
+      </div>
+
+      <!-- ROW 3 -->
+      <div class="form-row">
+        <input type="email" placeholder="Email Address" formControlName="email">
+        <input type="text" placeholder="Company Name" formControlName="company">
+      </div>
+
+      <!-- PRODUCT SEARCH -->
+      <input type="text"
+        placeholder="Search preferred products..."
+        formControlName="productSearch"
+        (input)="onSearchChange()">
+
+      <!-- DROPDOWN -->
+      <ul *ngIf="filteredProducts.length" class="dropdown">
+        <li *ngFor="let product of filteredProducts"
+            (click)="selectProduct(product)">
+          {{ product.name }}
+        </li>
+      </ul>
+
+      <!-- SELECTED PRODUCTS WITH QUANTITY -->
+      <div class="selected-products">
+        <div class="product-tag" *ngFor="let product of selectedProducts; let i = index">
+
+          <span>{{ product.name }}</span>
+
+          <div class="qty-controls">
+            <button type="button" (click)="decreaseQty(product)">-</button>
+            <span>{{ product.quantity }}</span>
+            <button type="button" (click)="increaseQty(product)">+</button>
+          </div>
+
+          <button type="button" class="remove-btn" (click)="removeProduct(i)">×</button>
+        </div>
+      </div>
+
+      <!-- MESSAGE -->
+      <textarea placeholder="Additional details..." formControlName="message"></textarea>
+
+      <!-- SUBMIT -->
+      <button type="submit">Get Quote</button>
+
+    </form>
+  </div>
+</div>

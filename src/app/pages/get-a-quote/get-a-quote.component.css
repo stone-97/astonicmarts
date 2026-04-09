@@ -1,0 +1,148 @@
+/* CENTER THE FORM */
+.quote-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px;
+  background: #f5f7fa;
+}
+
+/* CARD */
+.quote-card {
+  width: 100%;
+  max-width: 650px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.quote-card h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ROW (SIDE BY SIDE) */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* INPUTS */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* TEXTAREA */
+textarea {
+  min-height: 100px;
+  margin-top: 10px;
+}
+
+/* DROPDOWN */
+.dropdown {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.dropdown li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background: #f1f1f1;
+}
+
+/* SELECTED PRODUCTS */
+.selected-products {
+  margin: 10px 0;
+}
+
+.selected-products span {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px 5px 0 0;
+}
+
+.selected-products button {
+  margin-left: 8px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* BUTTON */
+button[type="submit"] {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.85;
+}
+
+
+
+.product-tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f5ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-controls button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.qty-controls span {
+    min-width: 20px;
+    text-align: center;
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

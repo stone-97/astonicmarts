@@ -9,6 +9,8 @@ import { Category } from '../../../../core/models/category.model';
   templateUrl: './handriveters.component.html',
   styleUrl: './handriveters.component.css'
 })
+  
+  
 export class HandrivetersComponent {
 
 
