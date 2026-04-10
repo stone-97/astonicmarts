@@ -318,7 +318,6 @@ import { CuttingandgrindingdiscComponent } from './pages/handtoolsandaccessories
 import { PuttyknifeComponent } from './pages/handtoolsandaccessories/category/puttyknife/puttyknife.component';
 import { DashboardComponent } from './pages/dashboard/dashboard/dashboard.component';
 import { SafetyharnessandlanyardsComponent } from './pages/ppe/bycategory/safetyharnessandlanyards/safetyharnessandlanyards.component';
-import { SafeKeyedRead } from '@angular/compiler';
 import { SafetyrainwearsComponent } from './pages/ppe/bycategory/safetyrainwears/safetyrainwears.component';
 import { RotaryhammerdrillsComponent } from './pages/powertools/bycategories/drills/rotaryhammerdrills/rotaryhammerdrills.component';
 import { ShoppressComponent } from './pages/powertools/bycategories/shoppress/shoppress.component';
@@ -364,7 +363,7 @@ const routes: Routes = [
   { path: "warrantyandreturns", component: WarrantyandreturnsComponent },
   { path: "confirmation", component: ConfirmationComponent },
   { path: "contact", component: ContactComponent },
-  {path: "getaquote", component: GetAQuoteComponent},
+  { path: "get-a-quote", component: GetAQuoteComponent},
   { path: "blog", component: BlogComponent },
   { path: "pagesinfo", component: PagesinfoComponent },
   { path: "blogdetails", component: BlogdetailsComponent },

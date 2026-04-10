@@ -1,64 +1,129 @@
-<div class="quote-container">
-  <div class="quote-card">
+<div class="container mt-4">
 
-    <h3>Request a Quote</h3>
+  <!-- HEADER -->
+  <div class="mb-4 text-center">
+    <h2>Get a Quote</h2>
+    <p>Please fill the form below to request a quote</p>
+  </div>
+<div class="container mt-4">
 
-    <form [formGroup]="quoteForm" (ngSubmit)="submitQuote()">
+  <form [formGroup]="quoteForm" (ngSubmit)="submitQuote()">
 
-      <!-- ROW 1 -->
-      <div class="form-row">
-        <input type="text" placeholder="Full Name" formControlName="fullName">
-        <input type="text" placeholder="Address" formControlName="address">
+    <div class="row">
+
+      <!-- NAME -->
+      <div class="col-md-6 mb-3">
+        <input type="text" formControlName="name" class="form-control" placeholder="Your Name">
+        <small class="text-danger" *ngIf="quoteForm.get('name')?.invalid && quoteForm.get('name')?.touched">
+          Name is required
+        </small>
       </div>
 
-      <!-- ROW 2 -->
-      <div class="form-row">
-        <input type="text" placeholder="Phone Number" formControlName="phone">
-        <input type="text" placeholder="Alternative Phone" formControlName="altPhone">
+      <!-- EMAIL -->
+      <div class="col-md-6 mb-3">
+        <input type="email" formControlName="email" class="form-control" placeholder="Email">
+        <small class="text-danger" *ngIf="quoteForm.get('email')?.invalid && quoteForm.get('email')?.touched">
+          Enter a valid email
+        </small>
       </div>
 
-      <!-- ROW 3 -->
-      <div class="form-row">
-        <input type="email" placeholder="Email Address" formControlName="email">
-        <input type="text" placeholder="Company Name" formControlName="company">
+      <!-- PHONE -->
+      <div class="col-md-6 mb-3">
+        <input type="text" formControlName="phone" class="form-control" placeholder="Phone">
+      </div>
+
+      <!-- ALTERNATE PHONE -->
+      <div class="col-md-6 mb-3">
+        <input type="text" formControlName="alternatePhone" class="form-control" placeholder="Alternate Phone (Optional)">
+      </div>
+
+      <!-- COMPANY NAME -->
+      <div class="col-md-12 mb-3">
+        <input type="text" formControlName="companyName" class="form-control" placeholder="Company Name (Only for businesses)">
+      </div>
+
+      <!-- ADDRESS -->
+      <div class="col-md-12 mb-3">
+        <input type="text" formControlName="address" class="form-control" placeholder="Address">
+        <small class="text-danger" *ngIf="quoteForm.get('address')?.invalid && quoteForm.get('address')?.touched">
+          Address is required
+        </small>
+      </div>
+
+      <!-- CITY -->
+      <div class="col-md-6 mb-3">
+        <input type="text" formControlName="city" class="form-control" placeholder="City">
+        <small class="text-danger" *ngIf="quoteForm.get('city')?.invalid && quoteForm.get('city')?.touched">
+          City is required
+        </small>
+      </div>
+
+      <!-- STATE -->
+      <div class="col-md-6 mb-3">
+        <input type="text" formControlName="state" class="form-control" placeholder="State">
+        <small class="text-danger" *ngIf="quoteForm.get('state')?.invalid && quoteForm.get('state')?.touched">
+          State is required
+        </small>
       </div>
 
       <!-- PRODUCT SEARCH -->
-      <input type="text"
-        placeholder="Search preferred products..."
-        formControlName="productSearch"
-        (input)="onSearchChange()">
+      <div class="col-md-6 mb-3">
 
-      <!-- DROPDOWN -->
-      <ul *ngIf="filteredProducts.length" class="dropdown">
-        <li *ngFor="let product of filteredProducts"
-            (click)="selectProduct(product)">
-          {{ product.name }}
-        </li>
-      </ul>
+        <div class="product-search-box">
 
-      <!-- SELECTED PRODUCTS WITH QUANTITY -->
-      <div class="selected-products">
-        <div class="product-tag" *ngFor="let product of selectedProducts; let i = index">
+          <input
+            type="text"
+            formControlName="product"
+            class="form-control"
+            placeholder="Search product..."
+            (input)="filterProducts($event)"
+          >
 
-          <span>{{ product.name }}</span>
+          <div class="product-dropdown" *ngIf="products.length > 0">
 
-          <div class="qty-controls">
-            <button type="button" (click)="decreaseQty(product)">-</button>
-            <span>{{ product.quantity }}</span>
-            <button type="button" (click)="increaseQty(product)">+</button>
+            <div
+              class="product-item"
+              *ngFor="let p of products"
+              (click)="selectProduct(p)"
+            >
+              {{ p.name }}
+            </div>
+
           </div>
 
-          <button type="button" class="remove-btn" (click)="removeProduct(i)">×</button>
         </div>
+
+        <small class="text-danger"
+          *ngIf="quoteForm.get('product')?.invalid && quoteForm.get('product')?.touched">
+          Select a product
+        </small>
+
       </div>
 
       <!-- MESSAGE -->
-      <textarea placeholder="Additional details..." formControlName="message"></textarea>
+      <div class="col-md-6 mb-3">
+        <textarea formControlName="message" class="form-control" rows="3" placeholder="Message"></textarea>
+      </div>
 
-      <!-- SUBMIT -->
-      <button type="submit">Get Quote</button>
+    </div>
 
-    </form>
+    <!-- BUTTON -->
+    <button class="btn btn-danger w-100"
+      [disabled]="quoteForm.invalid || isSubmitting">
+
+      {{ isSubmitting ? 'Sending...' : 'Get Quote' }}
+    </button>
+
+  </form>
+
+  <!-- SUCCESS -->
+  <div *ngIf="successMessage" class="alert alert-success mt-3">
+    {{ successMessage }}
   </div>
+
+  <!-- ERROR -->
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+    {{ errorMessage }}
+  </div>
+
 </div>

@@ -1,148 +1,87 @@
-/* CENTER THE FORM */
-.quote-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 10px;
-  background: #f5f7fa;
+/* Container spacing */
+.container {
+  max-width: 900px;
 }
 
-/* CARD */
-.quote-card {
-  width: 100%;
-  max-width: 650px;
-  background: #fff;
-  padding: 30px;
+/* Card styling */
+.card {
+  border: none;
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  background: #ffffff;
 }
 
-/* TITLE */
-.quote-card h3 {
-  margin-bottom: 20px;
-  text-align: center;
+/* Title */
+h2 {
+  font-weight: 600;
+  color: #333;
 }
 
-/* ROW (SIDE BY SIDE) */
-.form-row {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-/* INPUTS */
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
+/* Inputs & Select */
+.form-control {
+  height: 45px;
   border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: 0.3s ease;
   font-size: 14px;
 }
 
-/* TEXTAREA */
-textarea {
-  min-height: 100px;
-  margin-top: 10px;
+/* Focus effect */
+.form-control:focus {
+  border-color: #dc3545;
+  /* red */
+  box-shadow: none;
 }
 
-/* DROPDOWN */
-.dropdown {
-  border: 1px solid #ddd;
+/* Textarea */
+textarea.form-control {
+  height: auto;
+  resize: none;
+}
+
+/* Button */
+.btn-danger {
+  height: 45px;
   border-radius: 6px;
-  margin-top: -10px;
-  margin-bottom: 10px;
-  max-height: 150px;
-  overflow-y: auto;
-  background: #fff;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
-.dropdown li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.dropdown li:hover {
-  background: #f1f1f1;
-}
-
-/* SELECTED PRODUCTS */
-.selected-products {
-  margin: 10px 0;
-}
-
-.selected-products span {
-  display: inline-block;
-  background: #007bff;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin: 5px 5px 0 0;
-}
-
-.selected-products button {
-  margin-left: 8px;
-  border: none;
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* BUTTON */
-button[type="submit"] {
-  width: 100%;
-  margin-top: 15px;
-  padding: 12px;
-  background-color: orange;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
+/* Button hover */
+.btn-danger:hover {
   opacity: 0.85;
 }
 
-
-
-.product-tag {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #f1f5ff;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 8px;
+/* Small screens */
+@media (max-width: 768px) {
+  .form-control {
+    font-size: 13px;
+  }
+}
+/* product search */
+.product-search-box {
+  position: relative;
 }
 
-.qty-controls {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.product-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  background: #fff;
+  border: 1px solid #ddd;
+
+  max-height: 220px;
+  overflow-y: auto;
+
+  z-index: 1000;
 }
 
-.qty-controls button {
-    width: 28px;
-    height: 28px;
-    border: none;
-    background: #007bff;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
+.product-item {
+  padding: 12px;
+  cursor: pointer;
 }
 
-.qty-controls span {
-    min-width: 20px;
-    text-align: center;
-}
-
-.remove-btn {
-    background: red;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
+.product-item:hover {
+  background: #f2f2f2;
 }

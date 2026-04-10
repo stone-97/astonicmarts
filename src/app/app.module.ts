@@ -313,6 +313,7 @@ import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -630,13 +631,7 @@ import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
     FarmtoolsComponent,
     GetAQuoteComponent,
     
-
-
-
-
-
-
-
+    
 
 
 
@@ -664,8 +659,8 @@ import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule, 
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

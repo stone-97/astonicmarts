@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { QuoteService } from '../../core/services/quote.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Product } from '../../core/models/Product';
+import { SearchService } from '../../core/services/search.service';
+
 @Component({
   selector: 'app-get-a-quote',
   templateUrl: './get-a-quote.component.html',
@@ -8,121 +10,116 @@ import { QuoteService } from '../../core/services/quote.service';
 })
 export class GetAQuoteComponent implements OnInit {
 
+  quoteForm!: FormGroup;
+
+  allProducts: any[] = [];
+  products: any[] = [];
+
+  isSubmitting = false;
+  successMessage = '';
+  errorMessage = '';
 
   constructor(
     private fb: FormBuilder,
-    private quoteService: QuoteService
+    private searchService: SearchService
   ) { }
-
-  quoteForm!: FormGroup;
-
-  selectedProducts: any[] = [];
-
-  // ✅ ADD THESE
-  allProducts: any[] = [];
-  filteredProducts: any[] = [];
-
- 
 
   ngOnInit(): void {
 
-  this.quoteForm = this.fb.group({
-  fullName: [''],
-  address: [''],
-  phone: [''],
-  altPhone: [''],
-  email: [''],
-  company: [''],
-  message: [''],
-    productSearch: [''],
-     method: ['whatsapp'] 
-  
-});
+    this.quoteForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
+      alternatePhone: [''],
+      companyName: [''],
+      address: ['', Validators.required],
+      city: ['', Validators.required],
+      state: ['', Validators.required],
+      product: ['', Validators.required],
+      message: ['']
+    });
 
-    // ✅ TEMP DATA (just to make it work first)
-    this.allProducts = [
-      { id: 1, name: 'Pressure Washer' },
-      { id: 2, name: 'Drilling Machine' },
-      { id: 3, name: 'Safety Helmet' }
-    ];
+    this.allProducts = this.searchService.getProducts();
+    this.products = [];
   }
 
-  // 🔍 SEARCH FUNCTION (HTML is calling this)
-  onSearchChange() {
-    const value = this.quoteForm.get('productSearch')?.value?.toLowerCase() || '';
+  // 🔍 SEARCH PRODUCTS
+  filterProducts(event: any) {
+    const term = event.target.value.toLowerCase().trim();
 
-    this.filteredProducts = this.allProducts.filter(p =>
-      p.name.toLowerCase().includes(value)
+    if (!term) {
+      this.products = [];
+      return;
+    }
+
+    this.products = this.allProducts.filter(p =>
+      p.name.toLowerCase().includes(term)
     );
   }
 
-  // ➕ SELECT PRODUCT (THIS FIXES YOUR ERROR)
+  // 👇 SELECT PRODUCT
   selectProduct(product: any) {
+    this.quoteForm.patchValue({
+      product: product.name
+    });
 
-    const exists = this.selectedProducts.find(p => p.id === product.id);
+    this.products = [];
+  }
 
-    if (!exists) {
-      this.selectedProducts.push({
-        ...product,
-        quantity: 1 // 👈 add quantity
-      });
+  // 📩 SUBMIT FORM
+  submitQuote() {
+
+    this.successMessage = '';
+    this.errorMessage = '';
+
+    if (this.quoteForm.invalid) {
+      this.errorMessage = 'Please fill all required fields';
+      return;
     }
 
-    // clear search input + dropdown
-    this.quoteForm.get('productSearch')?.setValue('');
-    this.filteredProducts = [];
+    this.isSubmitting = true;
+
+    setTimeout(() => {
+
+      // 🔥 THIS IS THE MAIN ACTION
+      this.sendToWhatsApp();
+
+      this.isSubmitting = false;
+      this.successMessage = 'Opening WhatsApp...';
+
+      this.quoteForm.reset();
+      this.products = [];
+
+    }, 500);
   }
 
-  // ❌ REMOVE PRODUCT (you already have this)
-  removeProduct(index: number) {
-    this.selectedProducts.splice(index, 1);
-  }
-
-  submitQuote() {
+  sendToWhatsApp() {
 
     const form = this.quoteForm.value;
 
-    if (form.method === 'whatsapp') {
-      this.sendToWhatsApp(form);
-    }
+    const message = `
+📦 *New Quote Request*
 
-    else if (form.method === 'save') {
-      console.log('Saved to database:', form);
-    }
-  }
+👤 Name: ${form.name}
+📧 Email: ${form.email}
+📞 Phone: ${form.phone}
+📞 Alt Phone: ${form.alternatePhone || 'N/A'}
+🏢 Company: ${form.companyName || 'N/A'}
 
-  sendToWhatsApp(form: any) {
+📍 Address: ${form.address}
+🏙 City: ${form.city}
+🗺 State: ${form.state}
 
-    let message = `Hello, I want a quote:%0A%0A`;
+🛒 Product: ${form.product}
+📝 Message: ${form.message || 'N/A'}
+  `;
 
-    message += `Name: ${form.fullName}%0A`;
-    message += `Phone: ${form.phone}%0A`;
-    message += `Company: ${form.company || '-'}%0A%0A`;
+    const phone = '2349030736173'; // 🔥 PUT YOUR NUMBER HERE
 
-    message += `Products:%0A`;
-
-    this.selectedProducts.forEach((p: any) => {
-      message += `- ${p.name} (Qty: ${p.quantity || 1})%0A`;
-    });
-
-    message += `%0AMessage:%0A${form.message || '-'}`;
-
-    const phoneNumber = '2349030736173'; // 👈 replace with your number
-
-    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
     window.open(url, '_blank');
   }
 
-
-
-  increaseQty(product: any) {
-    product.quantity++;
-  }
-
-  decreaseQty(product: any) {
-    if (product.quantity > 1) {
-      product.quantity--;
-    }
-  }
+  
 }
