@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../../core/services/cart.service';
 import { Router } from '@angular/router';
-import emailjs from '@emailjs/browser';
+import * as emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -13,16 +13,22 @@ export class ProductcheckoutComponent implements OnInit {
 
   cartItems: any[] = [];
 
-  orderPlaced: boolean = false;
-  orderId: string = '';
-  totalAmount: number = 0;
-  selectedPayment: string = 'transfer';
-  isProcessing: boolean = false;
+  orderPlaced = false;
+  orderId = '';
+  totalAmount = 0;
+  selectedPayment = 'transfer';
+  isProcessing = false;
+
+  deliveryType = '';
+  deliveryMessage = '';
+
   formData = {
     firstName: '',
     lastName: '',
     phone: '',
+    altPhone: '',
     email: '',
+    company: '',
     address: '',
     city: ''
   };
@@ -33,25 +39,80 @@ export class ProductcheckoutComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.cartItems = this.cartService.getCart();
+    this.cartItems = this.cartService.getItems();
+    this.selectedPayment = 'transfer';
   }
 
   getTotal() {
     return this.cartService.getTotal();
   }
 
-  // ============================
-  // ✅ PLACE ORDER
-  // ============================
+  // ✅ ONLY DELIVERY LOGIC (NO CONFLICT)
+  onCityChange() {
+    const city = this.formData.city.toLowerCase().trim();
+
+    if (!city) {
+      this.deliveryType = '';
+      this.deliveryMessage = '';
+      this.selectedPayment = 'transfer';
+      return;
+    }
+
+    if (city.includes('lagos')) {
+      this.deliveryType = 'lagos';
+      this.deliveryMessage = '🚚 Lagos Delivery: Pay on delivery. Inspect before payment.';
+      this.selectedPayment = 'cod';
+    }
+    else if (
+      city.includes('uk') || city.includes('usa') || city.includes('canada') ||
+      city.includes('ghana') || city.includes('kenya') ||
+      city.includes('abroad') || city.includes('international')
+    ) {
+      this.deliveryType = 'international';
+      this.deliveryMessage = '🌍 International Delivery: Full payment required before shipping.';
+      this.selectedPayment = 'online';
+    }
+    else {
+      this.deliveryType = 'outside';
+      this.deliveryMessage = '📦 Nationwide Delivery: Pay 30% now, balance on delivery.';
+      this.selectedPayment = 'transfer';
+    }
+
+    // Force Angular to re-render the payment section
+    setTimeout(() => {
+      this.deliveryType = this.deliveryType;
+      this.selectedPayment = this.selectedPayment;
+    }, 50);
+  }
+
+  // ✅ PLACE ORDER WITH EMAIL
+  // ✅ IMPROVED placeOrder()
   placeOrder() {
 
-    if (!this.formData.email || !this.formData.firstName || !this.formData.phone) {
-      alert('Please fill all required fields');
+    // Validation
+    if (!this.formData.firstName || !this.formData.email || !this.formData.phone) {
+      Swal.fire('Error', 'Please fill all required fields', 'warning');
+      return;
+    }
+
+    if (!this.deliveryType) {
+      Swal.fire('Error', 'Please enter your city to see delivery options', 'warning');
+      return;
+    }
+
+    // Safety checks
+    if (this.deliveryType === 'international' && this.selectedPayment !== 'online') {
+      Swal.fire('Error', 'International orders must be paid online', 'warning');
+      return;
+    }
+
+    if (this.deliveryType === 'outside' && this.selectedPayment === 'cod') {
+      Swal.fire('Error', 'Pay on delivery is not available outside Lagos', 'warning');
       return;
     }
 
     this.orderId = 'AST-' + Math.floor(Math.random() * 100000);
-    this.totalAmount = this.getTotal() + 2000;
+    this.totalAmount = this.getTotal();
 
     const order = {
       orderId: this.orderId,
@@ -63,233 +124,191 @@ export class ProductcheckoutComponent implements OnInit {
 
     localStorage.setItem('lastOrder', JSON.stringify(order));
 
-    // If Paystack
+    // =================== DIFFERENT FLOWS ===================
+
     if (this.selectedPayment === 'online') {
+      // International or Optional Card Payment
       this.payWithPaystack();
       return;
     }
 
-    const itemsList = this.cartItems
-      .map(i => `${i.name} x${i.quantity}`)
-      .join(', ');
+    if (this.selectedPayment === 'cod') {
+      // Lagos - Pay on Delivery
+      this.sendEmailsAfterPayment();
 
-    // ============================
-    // EMAIL TO ADMIN (NEW ORDER)
-    // ============================
-    emailjs.send(
-      'service_rxui4gr',
-      'template_kuh2whe',
-      {
-        message: '🆕 NEW ORDER', // ✅ FIX ADDED HERE
-        order_id: this.orderId,
-        name: this.formData.firstName + ' ' + this.formData.lastName,
-        phone: this.formData.phone,
-        email: this.formData.email,
-        address: this.formData.address + ', ' + this.formData.city,
-        items: itemsList,
-        total: this.totalAmount
-      },
-      {
-        publicKey: 'F4cX3cLntLb5WG5ox'
-      }
-    );
+      Swal.fire({
+        icon: 'success',
+        title: 'Order Confirmed!',
+        text: 'Pay when your order arrives 🚚'
+      });
 
-    // ============================
-    // EMAIL TO CUSTOMER
-    // ============================
-    emailjs.send(
-      'service_rxui4gr',
-      'template_3ls7gg4',
-      {
-        order_id: this.orderId,
-        name: this.formData.firstName,
-        email: this.formData.email,
-        total: this.totalAmount
-      },
-      {
-        publicKey: 'F4cX3cLntLb5WG5ox'
-      }
-    );
+      this.cartService.clearCart();
 
-    // ============================
-    // BANK TRANSFER FLOW
-    // ============================
-    this.orderPlaced = true;
-    this.cartService.clearCart();
+      setTimeout(() => {
+        this.router.navigate(['/confirmation']);
+      }, 2000);
 
-    Swal.fire({
-      icon: 'success',
-      title: 'Order Placed!',
-      text: 'Please make payment using the bank details below.',
-      confirmButtonColor: '#3085d6'
-    });
+      return;
+    }
+
+    // =================== OUTSIDE LAGOS - TRANSFER ===================
+    if (this.selectedPayment === 'transfer') {
+      this.orderPlaced = true;        // Show bank details section
+      return;
+    }
   }
 
-  // ============================
-  // 🎉 SUCCESS MESSAGE FLOW
-  // ============================
-  showSuccessAndRedirect() {
 
-    this.orderPlaced = true;
-    this.cartService.clearCart();
-
-    Swal.fire({
-      icon: 'success',
-      title: 'Order Successful!',
-      html: `
-      <p><strong>Order ID:</strong> ${this.orderId}</p>
-      <p><strong>Total:</strong> ₦${this.totalAmount}</p>
-    `,
-      timer: 3000,
-      showConfirmButton: false
-    });
-
-    setTimeout(() => {
-      this.router.navigate(['/confirmation']);
-    }, 3000);
-  }
-  // ============================
-  // PAYSTACK
-  // ============================
+  // ✅ PAYSTACK
   payWithPaystack() {
-
-    this.totalAmount = this.getTotal() + 2000;
 
     const handler = (window as any).PaystackPop.setup({
       key: 'pk_test_471a1c1ff03a8170fa899296864a028542971127',
       email: this.formData.email,
-      amount: this.totalAmount * 100,
+      amount: this.getTotal() * 100,
       currency: 'NGN',
 
-      callback: (response: any) => {
-
-        Swal.fire({
-          icon: 'success',
-          title: 'Payment Successful!',
-          html: `Reference: <strong>${response.reference}</strong>`,
-          confirmButtonColor: '#28a745'
-        });
-
-        const itemsList = this.cartItems
-          .map(i => `${i.name} x${i.quantity}`)
-          .join(', ');
-
-        // ADMIN EMAIL (ONLINE PAYMENT)
-        emailjs.send(
-          'service_rxui4gr',
-          'template_kuh2whe',
-          {
-            message: '💳 ONLINE PAYMENT SUCCESSFUL',
-            order_id: this.orderId,
-            name: this.formData.firstName + ' ' + this.formData.lastName,
-            phone: this.formData.phone,
-            email: this.formData.email,
-            address: this.formData.address + ', ' + this.formData.city,
-            items: itemsList,
-            total: this.totalAmount
-          },
-          {
-            publicKey: 'F4cX3cLntLb5WG5ox'
-          }
-        );
-
-        // CUSTOMER EMAIL
-        emailjs.send(
-          'service_rxui4gr',
-          'template_3ls7gg4',
-          {
-            order_id: this.orderId,
-            name: this.formData.firstName,
-            email: this.formData.email,
-            total: this.totalAmount
-          },
-          {
-            publicKey: 'F4cX3cLntLb5WG5ox'
-          }
-        );
-
-        this.showSuccessAndRedirect();
+      callback: () => {
+        this.sendEmailsAfterPayment();
       },
 
       onClose: () => {
-        Swal.fire({
-          icon: 'warning',
-          title: 'Payment Cancelled',
-          text: 'You cancelled the payment.',
-        });
+        Swal.fire('Cancelled', 'Payment not completed', 'warning');
       }
     });
 
     handler.openIframe();
   }
 
-  // ============================
-  // CONFIRM PAYMENT
-  // ============================
-  confirmPayment() {
+  // ✅ EMAIL AFTER ONLINE PAYMENT
+  sendEmailsAfterPayment() {
 
-    // 🔒 STOP MULTIPLE CLICKS
-    if (this.isProcessing) return;
-    this.isProcessing = true;
-
-    const order = JSON.parse(localStorage.getItem('lastOrder') || '{}');
-
-    const itemsList = order.items
-      ?.map((i: any) => `${i.name} x${i.quantity}`)
+    const itemsList = this.cartItems
+      .map(i => `${i.name} x${i.quantity}`)
       .join(', ');
 
-    // 🔄 LOADING
-    Swal.fire({
-      title: 'Processing...',
-      text: 'Sending notification...',
-      allowOutsideClick: false,
-      didOpen: () => {
-        Swal.showLoading();
-      }
-    });
+    console.log('Sending email to:', this.formData.email);
 
-    emailjs.send(
-      'service_rxui4gr',
-      'template_kuh2whe',
-      {
-        message: '💰 CUSTOMER HAS MADE PAYMENT',
-        order_id: order.orderId,
-        name: order.customer.firstName + ' ' + order.customer.lastName,
-        phone: order.customer.phone,
-        email: order.customer.email,
-        address: order.customer.address + ', ' + order.customer.city,
-        items: itemsList,
-        total: order.total
-      },
-      {
-        publicKey: 'F4cX3cLntLb5WG5ox'
-      }
-    )
-      .then(() => {
+    Promise.all([
 
-        this.isProcessing = false; // 🔓 UNLOCK
+      emailjs.send(
+        'service_rxui4gr',
+        'template_kuh2whe',
+        {
+          title: '🛒 New Order - Astonic Mart',
+          order_id: this.orderId,
+          name: this.formData.firstName,
+          phone: this.formData.phone,
+          email: this.formData.email,
+          address: this.formData.address + ', ' + this.formData.city,
+          items: itemsList,
+          total: this.getTotal()
+        },
+        { publicKey: 'F4cX3cLntLb5WG5ox' }
+      ),
 
-        Swal.fire({
-          icon: 'success',
-          title: 'Payment Notified!',
-          text: 'We will confirm your payment shortly.',
-          timer: 2500,
-          showConfirmButton: false
-        });
+      emailjs.send(
+        'service_rxui4gr',
+        'template_3ls7gg4',
+        {
+          order_id: this.orderId,
+          name: this.formData.firstName,
+          email: this.formData.email,
+          total: this.getTotal()
+        },
+        { publicKey: 'F4cX3cLntLb5WG5ox' }
+      )
 
-        setTimeout(() => {
-          this.router.navigate(['/confirmation']);
-        }, 2500);
+    ])
+      .then((res) => {
+
+        console.log('EMAIL SUCCESS:', res);
+
+        this.cartService.clearCart();
+        this.router.navigate(['/confirmation']);
+
       })
-      .catch(() => {
+      .catch((error) => {
 
-        this.isProcessing = false; // 🔓 UNLOCK
+        console.error('EMAIL FAILED:', error);
 
         Swal.fire({
           icon: 'error',
-          title: 'Oops...',
-          text: 'Failed to send notification. Please try again.'
+          title: 'Email failed',
+          text: 'Payment successful but email not sent.'
         });
+
+      });
+  }
+
+  confirmPayment() {
+
+    if (this.isProcessing) return;
+
+    this.isProcessing = true;
+
+    const itemsList = this.cartItems
+      .map(i => `${i.name} x${i.quantity}`)
+      .join(', ');
+
+    Promise.all([
+
+      emailjs.send(
+        'service_rxui4gr',
+        'template_kuh2whe',
+        {
+          order_id: this.orderId,
+          name: this.formData.firstName,
+          phone: this.formData.phone,
+          email: this.formData.email,
+          address: this.formData.address + ', ' + this.formData.city,
+          items: itemsList,
+          total: this.totalAmount,
+          message: '💰 CUSTOMER PAID (TRANSFER)'
+        },
+        { publicKey: 'F4cX3cLntLb5WG5ox' }
+      ),
+
+      emailjs.send(
+        'service_rxui4gr',
+        'template_3ls7gg4',
+        {
+          order_id: this.orderId,
+          name: this.formData.firstName,
+          email: this.formData.email,
+          total: this.totalAmount
+        },
+        { publicKey: 'F4cX3cLntLb5WG5ox' }
+      )
+
+    ])
+      .then(() => {
+
+        this.isProcessing = false;
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Payment Confirmed!',
+          text: 'We will process your order shortly.'
+        });
+
+        this.cartService.clearCart();
+
+        setTimeout(() => {
+          this.router.navigate(['/confirmation']);
+        }, 2000);
+
+      })
+      .catch(() => {
+
+        this.isProcessing = false;
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Email failed',
+          text: 'But your order is saved.'
+        });
+
       });
   }
 }

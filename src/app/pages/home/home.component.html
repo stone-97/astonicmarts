@@ -2,9 +2,34 @@
 <!-- slider starts -->
   
 <app-slider></app-slider>
-<!-- <app-get-a-quote></app-get-a-quote> -->
+<div class="text-center my-4">
+<button class="btn btn-secondary text-dark d-block mx-auto"
+        data-bs-toggle="modal"
+        data-bs-target="#quoteModal">
+  Get a Quote
+</button>
+</div>
 
 <!-- slider end -->
+
+<div class="modal fade" id="quoteModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content quote-modal">
+
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold">Request a Quote</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <app-get-a-quote></app-get-a-quote>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
  <!-- Stats Section -->
 <section class="stats-section py-5 bg-light text-center" style="margin-top: 100px;">
  <div class="container-fluid px-4">

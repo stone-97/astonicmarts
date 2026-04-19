@@ -1,7 +1,6 @@
 
 
 import { FallarrestorsComponent } from './pages/ppe/bycategory/fallarrestors/fallarrestors.component';
-
 import { VacuumpumpsComponent } from './pages/pumpingmachines/vacuumpumps/vacuumpumps.component';
 import { DrumtrucksComponent } from './pages/constructionequipment/drumtrucks/drumtrucks.component';
 import { JumpingrammersComponent } from './pages/constructionequipment/jumpingrammers/jumpingrammers.component';
@@ -295,7 +294,6 @@ import { PalletetrucksComponent } from './pages/workshopgarage/lifting/palletetr
 import { PalletstackersComponent } from './pages/workshopgarage/lifting/palletstackers/palletstackers.component';
 import { ChainblocksandhoistsComponent } from './pages/workshopgarage/lifting/chainblocksandhoists/chainblocksandhoists.component';
 import { TrolleysComponent } from './pages/workshopgarage/lifting/trolleys/trolleys.component';
-import { ShoppingcartComponent } from './pages/shops/shoppingcart/shoppingcart.component';
 import { EdonComponent } from './pages/powertools/bybrands/edon/edon.component';
 import { SecurityandsurveillanceComponent } from './pages/ppe/bycategory/securityandsurveillance/securityandsurveillance.component';
 import { SecuritygearsComponent } from './pages/ppe/bycategory/securityandsurveillance/securitygears/securitygears.component';
@@ -340,6 +338,8 @@ import { UmbrellasComponent } from './pages/ppe/bycategory/clothing/umbrellas/um
 import { ElectricimpactwrenchesComponent } from './pages/powertools/bycategories/impactwrenches/electricimpactwrenches/electricimpactwrenches.component';
 import { HandsawsComponent } from './pages/handtoolsandaccessories/category/handsaws/handsaws.component';
 import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
+import { BulkordersComponent } from './pages/bulkorders/bulkorders.component';
+import { ShoppingcartComponent } from './pages/shops/shoppingcart/shoppingcart.component';
 
 
 
@@ -350,7 +350,6 @@ const routes: Routes = [
   { path: "dash", component: DashboardComponent },
   { path: "search-results", component: SearchResultsComponent },
   { path: "shopcategories", component: ShopcategoriesComponent },
-  { path: "shoppingcart", component: ShoppingcartComponent },
   { path: 'product/:id', component: ProductdetailsComponent },
   { path: "productcheckout", component: ProductcheckoutComponent },
   { path: "pages", component: PagesComponent },
@@ -362,6 +361,7 @@ const routes: Routes = [
   { path: "deliverypolicy", component: DeliverypolicyComponent },
   { path: "warrantyandreturns", component: WarrantyandreturnsComponent },
   { path: "confirmation", component: ConfirmationComponent },
+  {path: "shoppingcart", component: ShoppingcartComponent},
   { path: "contact", component: ContactComponent },
   { path: "get-a-quote", component: GetAQuoteComponent},
   { path: "blog", component: BlogComponent },
@@ -369,7 +369,7 @@ const routes: Routes = [
   { path: "blogdetails", component: BlogdetailsComponent },
   { path: "aboutus", component: AboutusComponent },
   { path: "pagnation", component:PaginationComponent },
-
+  { path: "bulkorders", component: BulkordersComponent },
   // ppe
   { path: "ppe", component: PPeComponent },
   // bybrands

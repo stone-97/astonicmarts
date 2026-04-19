@@ -343,10 +343,44 @@
 
 
 
+/* modal start */
+.modal-content {
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 
 
+.modal-header {
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
 
+.btn-close {
+  opacity: 1 !important;
+  filter: brightness(0);
+}
+.quote-modal {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal-dialog {
+  max-width: 850px !important;
+  /* reduce width */
+}
+/* modal ends */
 
 
 

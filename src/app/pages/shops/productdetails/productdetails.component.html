@@ -177,7 +177,12 @@
         <!-- QUANTITY -->
         <div class="product_count">
           <label for="qty">Quantity:</label>
-          <input type="text" id="sst" value="1" class="input-text qty" />
+         <input
+  type="number"
+  class="input-text qty"
+  [(ngModel)]="quantity"
+  min="1"
+/>
 
           <button class="increase items-count" type="button">
             <i class="lnr lnr-chevron-up"></i>
@@ -189,12 +194,29 @@
         </div>
 
         <!-- ACTION -->
-        <div class="card_area d-flex align-items-center gap-3">
-          <button class="primary-btn" [disabled]="!p.inStock">Add to Cart</button>
-          <a class="primary-btn bg-dark text-white">Buy Now</a>
-          <a class="icon_btn"><i class="lnr lnr-heart"></i></a>
-        </div>
+       <div class="card_area d-flex align-items-center gap-3 flex-wrap">
 
+  <!-- 🛒 ADD TO CART -->
+  <button
+    class="primary-btn"
+    [disabled]="!p.inStock"
+    (click)="addToCart()">
+    Add to Cart
+  </button>
+
+  <!-- ⚡ BUY NOW -->
+  <button
+    class="primary-btn bg-dark text-white"
+    (click)="buyNow()">
+    Buy Now
+  </button>
+
+  <!-- 💬 GET QUOTE -->
+ <button class="primary-btn" (click)="getQuote(p)">
+  Get a Quote
+</button>
+
+</div>
         <!-- WHATSAPP -->
         <a href="https://wa.me/2349030736173"
            target="_blank"
@@ -227,10 +249,30 @@
 <!-- SOCIAL -->
 <div class="mt-4 social-links">
   <h6>Follow us for updates</h6>
-  <a class="social-icon facebook"><i class="fa fa-facebook"></i></a>
-  <a class="social-icon instagram"><i class="fa fa-instagram"></i></a>
-  <a class="social-icon twitter"><i class="fa fa-twitter"></i></a>
-  <a class="social-icon linkedin"><i class="fa fa-linkedin"></i></a>
+
+  <a href="https://www.facebook.com/yourpage"
+     target="_blank"
+     class="social-icon facebook">
+    <i class="fa fa-facebook"></i>
+  </a>
+
+  <a href="https://www.instagram.com/astoni_cmart"
+     target="_blank"
+     class="social-icon instagram">
+    <i class="fa fa-instagram"></i>
+  </a>
+
+  <a href="https://twitter.com/yourhandle"
+     target="_blank"
+     class="social-icon twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/company/yourcompany"
+     target="_blank"
+     class="social-icon linkedin">
+    <i class="fa fa-linkedin"></i>
+  </a>
 </div>
 <!--================End Single Product Area =================-->
 
@@ -407,7 +449,31 @@
 </section>
 <!--================End Product Description Area =================-->
 
-<!--================Similar Products Area =================-->
+<!-- 🟢 CART POPUP -->
+<div id="cartPopup" class="cart-popup">
+
+  <div class="popup-content">
+
+    <div class="d-flex align-items-center justify-content-between">
+
+      <div>
+        <strong>✅ Added to Cart</strong>
+        <p class="mb-0">Your item has been added successfully</p>
+      </div>
+
+      <button class="close-btn" (click)="showCartPopup()">✖</button>
+
+    </div>
+
+    <div class="mt-2 text-end">
+      <a routerLink="/cart" class="btn btn-sm btn-dark">
+        View Cart 🛒
+      </a>
+    </div>
+
+  </div>
+
+</div>
 <!--================Similar Products Area =================-->
 <!-- Scrolling container -->
 <div class="infinite-scroll-wrapper mt-4" *ngIf="similarProducts.length > 0">

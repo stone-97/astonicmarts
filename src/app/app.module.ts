@@ -309,6 +309,10 @@ import { FarmequipmentsComponent } from './pages/farmequipments/farmequipments.c
 import { FarmmachinesComponent } from './pages/farmequipments/farmmachines/farmmachines.component';
 import { FarmtoolsComponent } from './pages/farmequipments/farmtools/farmtools.component';
 import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
+import { BulkordersComponent } from './pages/bulkorders/bulkorders.component';
+import { ProductcheckoutComponent } from './pages/shops/productcheckout/productcheckout.component';
+import { ConfirmationComponent } from './pages/shops/confirmation/confirmation.component';
+import { ShoppingcartComponent } from './pages/shops/shoppingcart/shoppingcart.component';
 
 
 
@@ -333,8 +337,10 @@ import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
     WarrantyandreturnsComponent,
     TermsandconditionsComponent,
     PrivacypolicyComponent,
-    FaqComponent,
+    ProductcheckoutComponent,
+    ConfirmationComponent,
     SearchBarComponent,
+    ShoppingcartComponent,
     PaginationComponent,
     SearchResultsComponent,
     ChemicalwearsComponent,
@@ -630,6 +636,8 @@ import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
     FarmmachinesComponent,
     FarmtoolsComponent,
     GetAQuoteComponent,
+    BulkordersComponent,
+    
     
     
 

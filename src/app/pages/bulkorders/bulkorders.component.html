@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <h2 class="mb-3">Bulk Order Request</h2>
+  <p>Send your list and get a custom quote with discount.</p>
+
+  <form (ngSubmit)="submitBulkOrder()" #bulkForm="ngForm">
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <input type="text" name="name" [(ngModel)]="form.name" class="form-control" placeholder="Full Name" required>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <input type="text" name="phone" [(ngModel)]="form.phone" class="form-control" placeholder="Phone Number" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <input type="email" name="email" [(ngModel)]="form.email" class="form-control" placeholder="Email Address">
+    </div>
+
+    <div class="mb-3">
+      <textarea name="orderList" [(ngModel)]="form.orderList" class="form-control" rows="6"
+        placeholder="Enter your bulk order list... e.g.&#10;2 × Air Compressor&#10;5 × Fire Extinguisher Ball"
+        required></textarea>
+    </div>
+
+    <button class="btn btn-danger w-100">Request Quote</button>
+  </form>
+
+  <div class="mt-4 text-center">
+  <a href="https://wa.me/234XXXXXXXXXX" class="btn btn-success">
+    Chat on WhatsApp Directly
+  </a>
+</div>
+</div>

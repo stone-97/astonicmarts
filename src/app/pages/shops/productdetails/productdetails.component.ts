@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SearchService } from '../../../core/services/search.service';
 import { Product } from '../../../core/models/Product';
-
+import { CartService } from '../../../core/services/cart.service';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-productdetails',
   templateUrl: './productdetails.component.html',
@@ -15,20 +17,34 @@ export class ProductdetailsComponent implements OnInit {
 
   categories: any[] = [];
   breadcrumb: any[] = [];
-
-  // ✅ ADD THIS RIGHT UNDER breadcrumb
   categoryMap: any = {};
-  // Required for click-to-pause functionality
-  isPaused: boolean = false;
 
+  isPaused: boolean = false;
+  quantity: number = 1;
+
+  selectedImage: string = '';
+  currentIndex = 0;
+
+  selectedColor: string = '';
+  selectedSize: string | number = '';
+  selectedPrice: number = 0;
+
+  
+  togglePause() {
+    this.isPaused = !this.isPaused;
+  }
 
   constructor(
     private route: ActivatedRoute,
-    private searchService: SearchService
+    private searchService: SearchService,
+    private cartService: CartService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+
     this.categories = this.searchService.getCategories();
+
     const idParam = this.route.snapshot.paramMap.get('id');
     const id = idParam ? Number(idParam) : NaN;
 
@@ -39,45 +55,25 @@ export class ProductdetailsComponent implements OnInit {
 
     this.product = this.searchService.getProductById(id);
 
-
     if (!this.product) {
       console.warn(`Product with ID ${id} not found`);
       return;
     }
 
+    this.generateBreadcrumb(this.product);
 
-    if (this.product) {
-      this.generateBreadcrumb(this.product);
-    }
-    console.log(`Loaded product → ID: ${id}, Name: ${this.product.name}`);
-
-    // Only load similar products if YOU enabled it on this product
+    // similar products
     if (this.product.showSimilar === true) {
       this.similarProducts = this.searchService.getSimilarProducts(
         this.product.category,
         this.product.id
       );
-
-      console.log(
-        `Similar products loaded: ${this.similarProducts.length} items`,
-        this.similarProducts.map(p => p.name)
-      );
-    } else {
-      console.log('Similar products disabled for this product (showSimilar !== true)');
     }
   }
 
-  // Required method for click-to-pause
-  togglePause() {
-    this.isPaused = !this.isPaused;
-    console.log('Scrolling paused state changed to:', this.isPaused);
-  }
-
-  selectedImage: string = '';
-
-
-  currentIndex = 0;
-
+  // =========================
+  // IMAGE CONTROL
+  // =========================
   changeImage(img: string, images: string[]) {
     this.selectedImage = img;
     this.currentIndex = images.indexOf(img);
@@ -94,15 +90,15 @@ export class ProductdetailsComponent implements OnInit {
     this.selectedImage = images[this.currentIndex];
   }
 
-  selectedColor: string = '';
-  selectedSize: string | number = '';
-
+  // =========================
+  // SELECTION
+  // =========================
   selectColor(color: string) {
     this.selectedColor = color;
   }
 
   selectSize(size: string | number | undefined) {
-    if (!size) return; // prevent error
+    if (!size) return;
 
     this.selectedSize = size;
 
@@ -115,9 +111,9 @@ export class ProductdetailsComponent implements OnInit {
     }
   }
 
-  selectedPrice: number = 0;
-
-  //  bread crumbs
+  // =========================
+  // BREADCRUMB
+  // =========================
   generateBreadcrumb(product: any) {
 
     this.breadcrumb = [
@@ -125,19 +121,15 @@ export class ProductdetailsComponent implements OnInit {
       { name: 'Shop', link: '/shop' }
     ];
 
-    // 🔥 GROUP
     if (product.group === 'power-tools') {
       this.breadcrumb.push({
         name: 'Power Tools',
-        link: '/powertools',
-        slug: 'combokits'
+        link: '/powertools'
       });
     }
 
-    // 🔥 CATEGORY (DECLARE FIRST ✅)
     const category = this.categoryMap[product.category];
 
-    // 🔥 THEN USE IT ✅
     if (category) {
       this.breadcrumb.push({
         name: category.name,
@@ -145,10 +137,104 @@ export class ProductdetailsComponent implements OnInit {
       });
     }
 
-    // 🔥 PRODUCT
     this.breadcrumb.push({
       name: product.name,
       link: null
+    });
+  }
+
+  // =========================
+  // CART
+  // =========================
+  addToCart() {
+    if (!this.product) return;
+
+    const item = {
+      id: this.product.id,
+      name: this.product.name,
+      price: this.selectedPrice || this.product.price,
+      quantity: this.quantity,
+      image: this.product.images?.[0] || '',
+      images: this.product.images || []
+    };
+
+    this.cartService.addToCart(item);
+
+    // ✅ MODERN ALERT
+    Swal.fire({
+      icon: 'success',
+      title: 'Added to Cart 🛒',
+      text: `${this.product.name} added successfully`,
+      showConfirmButton: true,
+      confirmButtonText: 'View Cart',
+      confirmButtonColor: '#ff6f00',
+
+      showCancelButton: true,
+      cancelButtonText: 'Continue Shopping',
+
+      timer: 5000, // ⏱ 5 seconds before auto close
+      timerProgressBar: true,
+
+      width: '420px', // ✅ makes popup wider
+      padding: '1.5rem',
+
+      backdrop: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.router.navigate(['/shoppingcart']);
+      }
+    });
+  }
+
+
+
+
+  showCartPopup() {
+    const popup = document.getElementById('cartPopup');
+    if (!popup) return;
+
+    popup.classList.add('show');
+
+    // Auto hide after 3 seconds
+    setTimeout(() => {
+      popup.classList.remove('show');
+    }, 3000);
+  }
+
+
+
+
+  buyNow() {
+    if (!this.product) return;
+
+    const item = {
+      id: this.product.id,
+      name: this.product.name,
+      price: this.selectedPrice || this.product.price,
+      quantity: this.quantity,
+
+      image: this.product.images?.[0] || '',
+      images: this.product.images || []
+    };
+
+    this.cartService.clearCart();
+    this.cartService.addToCart(item);
+
+    this.router.navigate(['/productcheckout']);
+  }
+
+  // =========================
+  // 💬 GET QUOTE (NEW FEATURE)
+  // =========================
+  getQuote(product: any) {
+    this.router.navigate(['/get-a-quote'], {
+      state: {
+        product: {
+          ...product,
+          price: this.selectedPrice || product.price,
+          quantity: this.quantity
+        }
+      }
     });
   }
 }
