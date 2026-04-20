@@ -7,85 +7,109 @@ import { Product } from '../../core/models/Product';
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.css']
+  styleUrls: ['./pagination.component.css'],
 })
 export class PaginationComponent implements OnInit, OnDestroy {
-
-  products: Product[] = [];           // Current displayed products
   private searchSubscription!: Subscription;
 
-  currentPage = 1;
-  itemsPerPage = 9;
+  // Filter state
+  uniqueBrands: string[] = [];
+  uniqueCategories: string[] = [];
+  selectedBrands: string[] = [];
+  selectedCategories: string[] = [];
+  minPrice: number = 0;
+  maxPrice: number = Infinity;
+
+  filteredProducts: Product[] = [];
 
   constructor(
     private router: Router,
-    private searchService: SearchService
-  ) { }
+    private searchService: SearchService,
+  ) {}
 
   ngOnInit(): void {
-    // Subscribe to search query changes
-    this.searchSubscription = this.searchService.currentSearchQuery$.subscribe(query => {
-      this.filterProducts(query);
-    });
+    this.loadUniqueFilters();
+    this.searchSubscription = this.searchService.currentSearchQuery$.subscribe(
+      (query) => {
+        this.applyFilters(query);
+      },
+    );
 
-    // Initial load (in case there's already a search term)
-    // this.filterProducts(this.searchService.currentSearchQuery$.value ?? '');
+    // Initial load
+    this.applyFilters(this.searchService.currentSearchQueryValue);
   }
 
-  private filterProducts(query: string): void {
-    if (!query || query.trim() === '') {
-      this.products = this.searchService.getProducts();
-    } else {
-      this.products = this.searchService.searchProducts(query);
+  private loadUniqueFilters() {
+    const allProducts = this.searchService.getProducts();
+    this.uniqueBrands = [...new Set(allProducts.map((p) => p.brand))].sort();
+    this.uniqueCategories = [
+      ...new Set(allProducts.map((p) => p.category)),
+    ].sort();
+  }
+
+   applyFilters(searchQuery: string = '') {
+    let list = this.searchService.getProducts();
+
+    // Search query
+    if (searchQuery?.trim()) {
+      list = this.searchService.searchProducts(searchQuery);
     }
 
-    // Reset to first page whenever search changes
-    this.currentPage = 1;
-  }
-
-  // Pagination logic
-  get paginatedProducts() {
-    const start = (this.currentPage - 1) * this.itemsPerPage;
-    return this.products.slice(start, start + this.itemsPerPage);
-  }
-
-  get totalPages(): number {
-    return Math.ceil(this.products.length / this.itemsPerPage);
-  }
-
-  nextPage() {
-    if (this.currentPage < this.totalPages) {
-      this.currentPage++;
+    // Brand filter
+    if (this.selectedBrands.length > 0) {
+      list = list.filter((p) => this.selectedBrands.includes(p.brand));
     }
-  }
 
-  prevPage() {
-    if (this.currentPage > 1) {
-      this.currentPage--;
+    // Category filter
+    if (this.selectedCategories.length > 0) {
+      list = list.filter((p) => this.selectedCategories.includes(p.category));
     }
-  }
 
-  goToPage(page: number) {
-    if (page >= 1 && page <= this.totalPages) {
-      this.currentPage = page;
+    // Price filter
+    if (this.minPrice > 0 || this.maxPrice < Infinity) {
+      list = list.filter(
+        (p) => p.price >= this.minPrice && p.price <= this.maxPrice,
+      );
     }
+
+    this.filteredProducts = list;
   }
 
-  openProduct(prod: any) {
-    this.router.navigate(['/product', prod.id]);
+  toggleBrandFilter(brand: string) {
+    const idx = this.selectedBrands.indexOf(brand);
+    if (idx > -1) this.selectedBrands.splice(idx, 1);
+    else this.selectedBrands.push(brand);
+    this.applyFilters(this.searchService.currentSearchQueryValue);
+  }
+
+  toggleCategoryFilter(cat: string) {
+    const idx = this.selectedCategories.indexOf(cat);
+    if (idx > -1) this.selectedCategories.splice(idx, 1);
+    else this.selectedCategories.push(cat);
+    this.applyFilters(this.searchService.currentSearchQueryValue);
+  }
+
+
+  // Add these methods
+removeBrand(brand: string) {
+  this.selectedBrands = this.selectedBrands.filter(b => b !== brand);
+  this.applyFilters(this.searchService.currentSearchQueryValue);
+}
+
+removeCategory(cat: string) {
+  this.selectedCategories = this.selectedCategories.filter(c => c !== cat);
+  this.applyFilters(this.searchService.currentSearchQueryValue);
+  }
+  
+  clearFilters() {
+    this.selectedBrands = [];
+    this.selectedCategories = [];
+    this.minPrice = 0;
+    this.maxPrice = Infinity;
+    this.applyFilters(this.searchService.currentSearchQueryValue);
   }
 
   ngOnDestroy(): void {
-    if (this.searchSubscription) {
-      this.searchSubscription.unsubscribe();
-    }
+    if (this.searchSubscription) this.searchSubscription.unsubscribe();
   }
-
-
-
-  
-
-
-
-  
 }

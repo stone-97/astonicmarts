@@ -309,6 +309,8 @@ import { FarmequipmentsComponent } from './pages/farmequipments/farmequipments.c
 import { FarmmachinesComponent } from './pages/farmequipments/farmmachines/farmmachines.component';
 import { FarmtoolsComponent } from './pages/farmequipments/farmtools/farmtools.component';
 import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
+import { PaginationControlsComponent } from './pages/pagination/pagination-controls/pagination-controls.component';
+import { ProductListComponent } from './shared/product-list/product-list.component';
 
 
 
@@ -630,6 +632,8 @@ import { GetAQuoteComponent } from './pages/get-a-quote/get-a-quote.component';
     FarmmachinesComponent,
     FarmtoolsComponent,
     GetAQuoteComponent,
+    PaginationControlsComponent,
+    ProductListComponent,
     
     
 
