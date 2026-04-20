@@ -90,7 +90,6 @@ export class PaginationComponent implements OnInit, OnDestroy {
   }
 
 
-  // Add these methods
 removeBrand(brand: string) {
   this.selectedBrands = this.selectedBrands.filter(b => b !== brand);
   this.applyFilters(this.searchService.currentSearchQueryValue);
